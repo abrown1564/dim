@@ -1,0 +1,322 @@
+{
+  "debate_id": "c4e409aa-a371-4be5-9d49-9d3686e5bd4c",
+  "title": "'People are so disgusted' - Economist Thomas Piketty on why we need a wealth tax",
+  "discourse_mode": "dialogic",
+  "speaker_count": 2,
+  "published_date": "2025-12-10",
+  "source_url": "https://www.youtube.com/watch?v=XeZoNTJgBZs",
+  "unit_count": 8,
+  "dialectical_conduct": {
+    "total_detections": 16,
+    "negative_count": 12,
+    "positive_count": 4,
+    "techniques": [
+      {
+        "type": "prolepsis",
+        "count": 4,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "we have to return to a narrative where, OK, redistribution is always complicated... But you cannot decide from the beginning that this is impossible.",
+            "confidence": 0.75,
+            "unit_id": "9a29c89e-3457-4870-888d-b5a7045e4233"
+          },
+          {
+            "evidence": "Because they're stuck in a set of international treaties and they cannot think the world without this",
+            "confidence": 0.65,
+            "unit_id": "866ac833-c488-49c9-83fb-fbfe69834a2a"
+          }
+        ]
+      },
+      {
+        "type": "false_cause",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "The entire sort of social contract of the post-war period is starting to collapse because of it.",
+            "confidence": 0.7,
+            "unit_id": "62a85e29-7009-402c-b2e4-27b630fbd677"
+          },
+          {
+            "evidence": "the entire sort of social contract of the post-war period is starting to collapse because of this",
+            "confidence": 0.65,
+            "unit_id": "866ac833-c488-49c9-83fb-fbfe69834a2a"
+          }
+        ]
+      },
+      {
+        "type": "false_causal_chain",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "So because we cannot get resources from people above us, we are going to eat the people below us... The entire sort of social contract of the post-war period is starting to collapse because of it.",
+            "confidence": 0.7,
+            "unit_id": "62a85e29-7009-402c-b2e4-27b630fbd677"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_disgust",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "we are going to eat the people below us",
+            "confidence": 0.65,
+            "unit_id": "62a85e29-7009-402c-b2e4-27b630fbd677"
+          }
+        ]
+      },
+      {
+        "type": "cum_hoc",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "Recent decades of rising wealth concentration in UK, France, US, and Germany did not bring better incomes for average households and coincided with growth slowdown.",
+            "confidence": 0.65,
+            "unit_id": "9a29c89e-3457-4870-888d-b5a7045e4233"
+          }
+        ]
+      },
+      {
+        "type": "proof_by_example",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "I was seeing prices for top properties in London. You know, who can pay for that with normal wage?",
+            "confidence": 0.7,
+            "unit_id": "24ea18c6-cb37-4bd7-a374-34a38e6985bd"
+          }
+        ]
+      },
+      {
+        "type": "distributional_anchoring",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "I was seeing prices for top properties in London.",
+            "confidence": 0.65,
+            "unit_id": "24ea18c6-cb37-4bd7-a374-34a38e6985bd"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_consequences",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "the entire sort of social contract of the post-war period is starting to collapse because of this. So, we need to change the rules.",
+            "confidence": 0.6,
+            "unit_id": "866ac833-c488-49c9-83fb-fbfe69834a2a"
+          }
+        ]
+      },
+      {
+        "type": "many_questions",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "What's the answer to tear up the rule of law?",
+            "confidence": 0.6,
+            "unit_id": "ce63a19a-6c4b-49be-9f3f-c9f3142a352b"
+          }
+        ]
+      },
+      {
+        "type": "semantic_dodge",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "What's the answer to tear up the rule of law? SPEAKER_00: No, we have to replace it by other rules of law.",
+            "confidence": 0.7,
+            "unit_id": "ce63a19a-6c4b-49be-9f3f-c9f3142a352b"
+          }
+        ]
+      },
+      {
+        "type": "straw_man",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "What's the answer to tear up the rule of law?",
+            "confidence": 0.75,
+            "unit_id": "ce63a19a-6c4b-49be-9f3f-c9f3142a352b"
+          }
+        ]
+      },
+      {
+        "type": "loaded_question",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "What's the answer to tear up the rule of law?",
+            "confidence": 0.7,
+            "unit_id": "ce63a19a-6c4b-49be-9f3f-c9f3142a352b"
+          }
+        ]
+      }
+    ]
+  },
+  "discourse_skeleton": {
+    "overall_topic": "Wealth inequality, the case for a wealth tax, and the political feasibility of redistribution",
+    "agreement_reached": "partial",
+    "consensus_reached": "partial",
+    "major_stasis_points": [
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Is wealth inequality rising in the UK and other Western economies, and has rising wealth concentration coincided with stagnant incomes for average households?",
+        "claims": [
+          "Wealth is increasingly concentrated at the top in the UK.",
+          "Recent decades of rising wealth concentration in the UK, France, US, and Germany did not bring better incomes for average households and coincided with a growth slowdown.",
+          "Top London property prices have risen beyond the reach of normal UK wages."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "Comparative wealth and income data across major Western economies; visible asset-price evidence such as London property."
+        ],
+        "status": "partial_convergence"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Why is the post-war social contract collapsing, and who bears the cost?",
+        "claims": [
+          "Because resources cannot be extracted from those at the top, the burden shifts onto the middle class and those at the bottom.",
+          "When people are told they cannot extract resources from those above, they turn against those below — the poor, migrants, and foreigners.",
+          "Allowing a minority to choose their own tax level is causing the post-war social contract to collapse."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "Historical pattern linking blocked upward redistribution to scapegoating dynamics and political backlash."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Why are mainstream politicians hesitant about wealth taxes, and is that hesitancy justified?",
+        "claims": [
+          "Politicians resist wealth taxes because they are locked into international treaties that constrain their thinking.",
+          "Governments avoid wealth taxes because they fear triggering international chaos in capital flows.",
+          "This fear is overstated and is being overtaken by the collapse of the free trade and free capital flow system.",
+          "Western states have over-sacralized private property rights and absolute free trade, even extending protections to Russian oligarchs and the Russian state.",
+          "It is illegitimate for the wealthy to build wealth using public infrastructure and then transfer assets abroad to avoid tax."
+        ],
+        "antitheses": [
+          "Treaty constraints and risk of capital flight make wealth taxation impractical (implicit mainstream view)."
+        ],
+        "warrants": [
+          "Trump-era trade actions and Chinese competition show the free-capital order is already eroding, weakening the rationale for inaction."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "definition",
+        "question_at_issue": "Does instituting new rules limiting private accumulation amount to abandoning the rule of law?",
+        "claims": [
+          "Reform replaces one set of rules of law with another; it is not abandonment of rule of law.",
+          "There must be legal limits on how much private individuals can accumulate."
+        ],
+        "antitheses": [
+          "Reforming the existing legal framework on accumulation amounts to tearing up the rule of law."
+        ],
+        "warrants": [
+          "Rule of law is defined by the existence and enforcement of legal rules, not by the immutability of any particular rule."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Is the UK Labour government's mansion tax surcharge a sufficient response, and is Labour being progressive enough?",
+        "claims": [
+          "The mansion tax surcharge is not nearly as large as it should be given public debt and investment needs.",
+          "Labour must shift to a much more redistributive economic and fiscal paradigm.",
+          "If Labour pursues policies similar to pro-business right-wing parties, it risks self-destruction as the French Socialist Party did under Hollande."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "Historical analogy to the collapse of the French Socialist Party under Hollande."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "What is the appropriate design of wealth-related taxation — annual wealth tax versus inheritance tax?",
+        "claims": [
+          "Inheritance tax should be very small or zero for most people, and high only for very high wealth holders.",
+          "An annual wealth or property tax is preferable to an inheritance tax.",
+          "An annual wealth tax yields more revenue than waiting for wealth transmission events."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "Billionaires' wealth-transmission events are too infrequent to generate adequate revenue via inheritance tax alone."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Should redistribution be treated as politically possible despite its difficulty?",
+        "claims": [
+          "We must change the discourse and not pre-emptively decide redistribution is impossible.",
+          "Political leaders are paralysed by long-standing fatalism that nothing can be done about inequality."
+        ],
+        "antitheses": [
+          "Mainstream view that redistribution at the required scale is not politically or economically feasible."
+        ],
+        "warrants": [
+          "Historical reductions in inequality have been achieved, though accompanied by major social struggles."
+        ],
+        "status": "unresolved"
+      }
+    ],
+    "facts_to_verify": [
+      "The bottom 50% of the population in the UK owns less than 5% of total wealth.",
+      "The bottom 50% of the population in France owns less than 5% of total wealth.",
+      "Average household incomes in the UK have stagnated during recent decades of rising wealth concentration.",
+      "Average household incomes in France have stagnated during recent decades of rising wealth concentration.",
+      "Average household incomes in the US have stagnated during recent decades of rising wealth concentration.",
+      "Average household incomes in Germany have stagnated during recent decades of rising wealth concentration.",
+      "Recent decades of rising wealth concentration coincided with a slowdown in economic growth.",
+      "Historical reductions in inequality have been accompanied by major social struggles and political conflict.",
+      "Zach Polanski of the UK Green Party has publicly stated that inequality is rising in the UK.",
+      "Top London property prices have risen beyond the reach of normal UK wages.",
+      "Wealth concentration at the top has increased in the UK in recent years.",
+      "UK political leaders have publicly stated that nothing can be done about inequality.",
+      "International treaties currently constrain the ability of states like Britain to impose a wealth tax.",
+      "SPEAKER_00 has authored a report proposing a wealth tax.",
+      "Wealthy individuals can transfer assets to other jurisdictions to avoid domestic taxation.",
+      "Trump administration actions are dismantling aspects of the free trade and free capital flow system.",
+      "Chinese economic competition is producing or threatening large-scale job destruction in Western economies.",
+      "Existing private property guarantees in Western jurisdictions extend protections to Russian oligarchs.",
+      "Existing private property guarantees extend protections to the Russian state.",
+      "The UK chancellor's recent budget added a surcharge on mansions.",
+      "The current level of UK public debt.",
+      "François Hollande's policies are associated with the decline of the French Socialist Party.",
+      "An annual tax on wealth generates more revenue than an inheritance tax.",
+      "Billionaires' wealth transmission events occur infrequently enough to limit inheritance tax revenue.",
+      "Scapegoating of the poor and of migrants has increased in recent years."
+    ],
+    "meta_comment": "Dialogic interview between an advocate (Piketty) and a moderator who largely frames questions and offers occasional counter-framings. Most stasis points are unresolved because the moderator does not advance a sustained opposing position; disagreement structure is preserved by treating mainstream/implicit counter-views as antitheses. Unit-level skeletons are reasonably reliable; factual claims about wealth shares, income stagnation, and treaty constraints should be independently verified."
+  },
+  "assembled_at": "2026-05-09T14:35:30.524590+00:00"
+}

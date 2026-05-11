@@ -1,0 +1,419 @@
+{
+  "debate_id": "25e6763a-439c-43a7-8d9a-7f8f7a472d64",
+  "title": "Debate: Would a Wealth Tax on the Top 1% Help Tackle Poverty?",
+  "discourse_mode": "multi_party",
+  "speaker_count": 6,
+  "published_date": "2025-08-18",
+  "source_url": "https://www.youtube.com/watch?v=-V6lLP3WWd0",
+  "unit_count": 5,
+  "dialectical_conduct": {
+    "total_detections": 22,
+    "negative_count": 20,
+    "positive_count": 2,
+    "techniques": [
+      {
+        "type": "appeal_to_authority",
+        "count": 3,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "I was a central bank economist.",
+            "confidence": 0.7,
+            "unit_id": "de4fa9e2-e5fa-4d4e-b540-6de917fc416a"
+          },
+          {
+            "evidence": "Even left wing economists say it doesn't work",
+            "confidence": 0.65,
+            "unit_id": "de4fa9e2-e5fa-4d4e-b540-6de917fc416a"
+          }
+        ]
+      },
+      {
+        "type": "no_true_scotsman",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "Even left wing economists say it doesn't work",
+            "confidence": 0.6,
+            "unit_id": "de4fa9e2-e5fa-4d4e-b540-6de917fc416a"
+          },
+          {
+            "evidence": "The reason why it didn't work in other places is because they cast the nets widely. They didn't go for a one percent tax.",
+            "confidence": 0.6,
+            "unit_id": "7196edd9-5354-4631-9c9e-24f230503a26"
+          }
+        ]
+      },
+      {
+        "type": "prolepsis",
+        "count": 2,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "The reason why it didn't work in other places is because they cast the nets widely. They didn't go for a one percent tax.",
+            "confidence": 0.75,
+            "unit_id": "7196edd9-5354-4631-9c9e-24f230503a26"
+          },
+          {
+            "evidence": "The reason why it didn't work in other places is because they cast the nets widely. They didn't go for a one percent tax. They went for much bigger tax",
+            "confidence": 0.8,
+            "unit_id": "32ae055d-096a-47d9-801d-5057763a8c9e"
+          }
+        ]
+      },
+      {
+        "type": "persuasive_definition",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "right now we are taxing earned income more than we're taxing unearned wealth. This is fundamentally about fairness.",
+            "confidence": 0.65,
+            "unit_id": "d1fcc174-ed74-428d-b3a2-a4f789830646"
+          }
+        ]
+      },
+      {
+        "type": "normative_laundering",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "right now we are taxing earned income more than we're taxing unearned wealth. This is fundamentally about fairness.",
+            "confidence": 0.7,
+            "unit_id": "d1fcc174-ed74-428d-b3a2-a4f789830646"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_emotion",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "This is fundamentally about fairness.",
+            "confidence": 0.6,
+            "unit_id": "d1fcc174-ed74-428d-b3a2-a4f789830646"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_probability",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "it'll cost it'll make everyone poorer",
+            "confidence": 0.6,
+            "unit_id": "de4fa9e2-e5fa-4d4e-b540-6de917fc416a"
+          }
+        ]
+      },
+      {
+        "type": "weasel_words",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "Even left wing economists say it doesn't work",
+            "confidence": 0.7,
+            "unit_id": "de4fa9e2-e5fa-4d4e-b540-6de917fc416a"
+          }
+        ]
+      },
+      {
+        "type": "performed_empiricism",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "I was a central bank economist. I looked it up because it sounds great. I looked it up about a month ago when this became a topic topic and it doesn't work.",
+            "confidence": 0.8,
+            "unit_id": "de4fa9e2-e5fa-4d4e-b540-6de917fc416a"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_fear",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "it'll make everyone poorer",
+            "confidence": 0.6,
+            "unit_id": "de4fa9e2-e5fa-4d4e-b540-6de917fc416a"
+          }
+        ]
+      },
+      {
+        "type": "false_precision",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "Zero point three percent of billionaires might leave.",
+            "confidence": 0.7,
+            "unit_id": "8fd613f3-d656-4f4d-b156-55686f062e57"
+          }
+        ]
+      },
+      {
+        "type": "false_equivalence",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "Zero point three percent of billionaires might leave. Thirty percent of doctors who are working for NHS are saying they're thinking about leaving",
+            "confidence": 0.7,
+            "unit_id": "8fd613f3-d656-4f4d-b156-55686f062e57"
+          }
+        ]
+      },
+      {
+        "type": "denying_the_antecedent",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "The reason why it didn't work in other places is because they cast the nets widely. They didn't go for a one percent tax.",
+            "confidence": 0.65,
+            "unit_id": "7196edd9-5354-4631-9c9e-24f230503a26"
+          }
+        ]
+      },
+      {
+        "type": "cherry_picking",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "Why did it fail in France and Germany. Why did they give it up. Why is it working in Norway",
+            "confidence": 0.65,
+            "unit_id": "7196edd9-5354-4631-9c9e-24f230503a26"
+          }
+        ]
+      },
+      {
+        "type": "definitional_retreat",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "The reason why it didn't work in other places is because they cast the nets widely. They didn't go for a one percent tax.",
+            "confidence": 0.65,
+            "unit_id": "7196edd9-5354-4631-9c9e-24f230503a26"
+          }
+        ]
+      },
+      {
+        "type": "jaqing",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "Why did it fail in France and Germany. Why did they give it up.",
+            "confidence": 0.6,
+            "unit_id": "7196edd9-5354-4631-9c9e-24f230503a26"
+          }
+        ]
+      },
+      {
+        "type": "hasty_conclusion",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "The reason why it didn't work in other places is because they cast the nets widely. They didn't go for a one percent tax. They went for much bigger tax",
+            "confidence": 0.6,
+            "unit_id": "32ae055d-096a-47d9-801d-5057763a8c9e"
+          }
+        ]
+      },
+      {
+        "type": "straw_man",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "The reason why it didn't work in other places is because they cast the nets widely. They didn't go for a one percent tax. They went for much bigger tax... What I am saying is a one percent tax on 10 million pounds or more.",
+            "confidence": 0.75,
+            "unit_id": "32ae055d-096a-47d9-801d-5057763a8c9e"
+          }
+        ]
+      }
+    ]
+  },
+  "discourse_skeleton": {
+    "overall_topic": "Whether a wealth tax on the top 1% would help tackle poverty in the UK",
+    "agreement_reached": "no",
+    "consensus_reached": "no",
+    "major_stasis_points": [
+      {
+        "stasis_type": "definition",
+        "question_at_issue": "What assets, thresholds, and rates define the proposed wealth tax?",
+        "claims": [
+          "The proposal is a 1% tax on assets above £10m, or 2% on assets above £1bn.",
+          "The tax targets assets (houses, pensions, investments, art, jewellery), not income."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "Defining the proposal narrowly is necessary to evaluate it on its own terms rather than via prior failed schemes."
+        ],
+        "status": "partial_convergence"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Have wealth taxes failed in comparable countries, and does that record apply to a narrow 1% tax?",
+        "claims": [
+          "Wealth taxes failed and were abandoned in France, Germany, Sweden, and Denmark.",
+          "Left-wing economists estimate a UK wealth tax would cost 2–5% of GDP.",
+          "Wealth taxes work in Switzerland and Norway.",
+          "Spain's progressive wealth tax has raised approximately £1.88bn (£1.25bn regional + £630m central).",
+          "Past failures stemmed from broad scope and high rates, not from wealth taxes per se."
+        ],
+        "antitheses": [
+          "Foreign failures generalise to any UK wealth tax.",
+          "Foreign failures are not relevant to a narrow 1% tax on £10m+."
+        ],
+        "warrants": [
+          "Comparative cross-national evidence is probative for predicting UK outcomes.",
+          "Design parameters (rate, threshold, scope) materially determine outcomes."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Will a wealth tax cause significant capital flight from the UK?",
+        "claims": [
+          "10,000 millionaires have already left the UK and more will leave.",
+          "Hollande's French wealth tax caused mass relocation of the wealthy to London.",
+          "Italy, Portugal, Greece, and Dubai are attracting wealthy migrants.",
+          "Only about 0.3% of billionaires would leave the UK in response.",
+          "30% of NHS doctors are considering leaving due to inequality and a crumbling NHS."
+        ],
+        "antitheses": [
+          "Capital flight is a decisive risk.",
+          "Capital flight risk is small and outweighed by losses of skilled workers."
+        ],
+        "warrants": [
+          "Behavioural responses of wealthy individuals constrain feasible tax policy.",
+          "Policy must weigh competing migration risks across populations."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Is it morally justified to require the very wealthy to pay more, and should fairness govern tax policy?",
+        "claims": [
+          "Refusing to pay 1% more while 4 million children live in poverty is morally reprehensible.",
+          "Fairness requires the very wealthy to contribute more to running the country.",
+          "Economics is about what works long-term, not fairness."
+        ],
+        "antitheses": [
+          "Fairness is the central criterion.",
+          "Effectiveness, not fairness, is the central criterion."
+        ],
+        "warrants": [
+          "Severe child poverty creates a moral claim on those with surplus wealth.",
+          "Long-run economic outcomes determine collective welfare more than fairness intuitions."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "definition",
+        "question_at_issue": "Does holding wealth in assets constitute economically harmful 'hoarding'?",
+        "claims": [
+          "Wealth held in assets that does not circulate productively is hoarding and damages the economy.",
+          "Wealthy people invest millions in businesses, including green ventures, and are not hoarding."
+        ],
+        "antitheses": [
+          "Asset holding = hoarding.",
+          "Asset holding = productive investment."
+        ],
+        "warrants": [
+          "Productive circulation of money drives economic health.",
+          "Investment in firms counts as productive deployment of wealth."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Would aligning capital gains tax with income tax harm low-income workers?",
+        "claims": [
+          "Equalising CGT with income tax disadvantages informal workers (waitresses, bartenders) who lack holiday/sick pay.",
+          "An economy where money is spent on services like the NHS is preferable."
+        ],
+        "antitheses": [
+          "CGT alignment harms low-income informal workers.",
+          "CGT alignment funds services that benefit those workers."
+        ],
+        "warrants": [
+          "Tax design must account for distributional effects on vulnerable workers."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "procedure",
+        "question_at_issue": "What policy instruments should be used to raise revenue from wealth?",
+        "claims": [
+          "Introduce a 1% wealth tax on assets above £10m.",
+          "Align capital gains tax with income tax.",
+          "Reform inheritance tax, which currently affects only about 4% of estates."
+        ],
+        "antitheses": [
+          "These instruments will be counterproductive due to flight and GDP loss."
+        ],
+        "warrants": [
+          "A package of reforms is more robust than a single instrument."
+        ],
+        "status": "unresolved"
+      }
+    ],
+    "facts_to_verify": [
+      "The Green Party proposal is a 1% tax on assets above £10m.",
+      "The Green Party proposal is a 2% tax on assets above £1bn.",
+      "UK capital gains tax is currently taxed at lower rates than income tax.",
+      "UK inheritance tax currently applies to approximately 4% of estates.",
+      "ONS uses the term 'wealth owners' for the top 1% by assets.",
+      "France abandoned its wealth tax (ISF).",
+      "Germany abandoned its wealth tax.",
+      "Sweden abandoned its wealth tax.",
+      "Denmark abandoned its wealth tax.",
+      "The UK had a wealth tax proposal that failed in the 1970s.",
+      "Norway currently operates a wealth tax.",
+      "Switzerland currently operates a wealth tax.",
+      "Wealth taxes in Switzerland and Norway apply at rates higher than 1%.",
+      "Spain's regional wealth taxes raised approximately £1.25bn (per Guardian).",
+      "Spain's central wealth tax raised approximately £630m (per Guardian).",
+      "The Guardian published an article this week on Spain's wealth tax revenue.",
+      "Approximately 10,000 millionaires have left the UK.",
+      "Under Hollande, large numbers of wealthy French people relocated to London.",
+      "Italy, Portugal, Greece, and Dubai operate tax regimes that attract wealthy migrants.",
+      "Left-wing economists estimate a UK wealth tax would cost 2–5% of GDP.",
+      "Approximately 0.3% of billionaires would leave the UK in response to a wealth tax.",
+      "Approximately 30% of NHS doctors report considering leaving the profession or country.",
+      "Approximately 4 million children in the UK live in poverty."
+    ],
+    "meta_comment": "Debate is structured around recurring stasis between empirical claims (foreign precedent, capital flight, revenue figures) and normative claims (fairness, moral obligation given child poverty). Disagreement is sharp and largely unresolved; the participants partially converge on the definition of the specific proposal but diverge on its likely effects and on whether fairness or long-run effectiveness should govern tax design. Reliability is moderate: many empirical claims are cited loosely and require verification, and the Spanish revenue figures and migration statistics are particularly load-bearing."
+  },
+  "assembled_at": "2026-05-09T14:59:22.000917+00:00"
+}

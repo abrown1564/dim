@@ -1,0 +1,582 @@
+{
+  "debate_id": "41550b8f-a878-45bd-8351-1bbf95076a4b",
+  "title": "Wealth tax: James O’Brien vs LBC caller ‘who comes from nothing’",
+  "discourse_mode": "dialogic",
+  "speaker_count": 2,
+  "published_date": "2025-07-08",
+  "source_url": "https://www.youtube.com/watch?v=Uu0vg83L43c",
+  "unit_count": 11,
+  "dialectical_conduct": {
+    "total_detections": 49,
+    "negative_count": 38,
+    "positive_count": 11,
+    "techniques": [
+      {
+        "type": "elenchus",
+        "count": 5,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "How are you paying income tax on the increase in your assets?",
+            "confidence": 0.7,
+            "unit_id": "ec36b1f4-804a-4ae5-8fd3-8eb79c36ecb1"
+          },
+          {
+            "evidence": "explain to me how the Duke of Westminster has been responsible for building his fortune... I want you to tell me why the Duke of Westminster shouldn't pay a wealth tax.",
+            "confidence": 0.7,
+            "unit_id": "31d8b793-f5bf-41ed-b1f8-aa8bda24cda8"
+          }
+        ]
+      },
+      {
+        "type": "hasty_generalisation",
+        "count": 5,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "I know a few that are thinking about...",
+            "confidence": 0.65,
+            "unit_id": "beecd69f-a1a8-49d3-ab7c-8be7b0650196"
+          },
+          {
+            "evidence": "mentality of British people, if it was to go and make something of yours, rather than take something of another",
+            "confidence": 0.75,
+            "unit_id": "444c9f4c-e729-4f31-a620-65d229216220"
+          }
+        ]
+      },
+      {
+        "type": "loaded_question",
+        "count": 4,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "Why does anybody feel entitled to go take anything of that?",
+            "confidence": 0.7,
+            "unit_id": "20623095-debd-4bc7-a963-5522b89d975d"
+          },
+          {
+            "evidence": "Why would you, as someone, are you likely ever to be taxed on assets over 10 million pounds?",
+            "confidence": 0.62,
+            "unit_id": "444c9f4c-e729-4f31-a620-65d229216220"
+          }
+        ]
+      },
+      {
+        "type": "ex_concessis",
+        "count": 3,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "I don't disagree with that necessarily.",
+            "confidence": 0.6,
+            "unit_id": "31d8b793-f5bf-41ed-b1f8-aa8bda24cda8"
+          },
+          {
+            "evidence": "Bill Gates himself has pointed out that if he paid 99% tax, he'd still be a billionaire",
+            "confidence": 0.75,
+            "unit_id": "02d4c741-7558-4f45-b0e4-e38438ea7f5d"
+          }
+        ]
+      },
+      {
+        "type": "begging_the_question",
+        "count": 3,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "if it was to go and make something of yours, rather than take something of another",
+            "confidence": 0.6,
+            "unit_id": "444c9f4c-e729-4f31-a620-65d229216220"
+          },
+          {
+            "evidence": "What do they lose by helping everybody else out more?",
+            "confidence": 0.7,
+            "unit_id": "93d9c980-7367-4d2a-9c76-92de7fdd4285"
+          }
+        ]
+      },
+      {
+        "type": "distributional_anchoring",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "But people that come into 20 million pounds through their own hard work.",
+            "confidence": 0.7,
+            "unit_id": "20623095-debd-4bc7-a963-5522b89d975d"
+          },
+          {
+            "evidence": "if he paid 99% tax, he'd still be a billionaire",
+            "confidence": 0.8,
+            "unit_id": "02d4c741-7558-4f45-b0e4-e38438ea7f5d"
+          }
+        ]
+      },
+      {
+        "type": "proof_by_example",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "Given that you already paid a 45% a year annually as is, to get to that point",
+            "confidence": 0.6,
+            "unit_id": "20623095-debd-4bc7-a963-5522b89d975d"
+          },
+          {
+            "evidence": "Bill Gates himself has pointed out that if he paid 99% tax, he'd still be a billionaire",
+            "confidence": 0.75,
+            "unit_id": "02d4c741-7558-4f45-b0e4-e38438ea7f5d"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_emotion",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "people that come into 20 million pounds through their own hard work. Why does anybody feel entitled to go take anything of that?",
+            "confidence": 0.6,
+            "unit_id": "20623095-debd-4bc7-a963-5522b89d975d"
+          },
+          {
+            "evidence": "They would still be the richest people in the country. They'd still be the richest people in the world... What do they lose by helping everybody else out more?",
+            "confidence": 0.6,
+            "unit_id": "93d9c980-7367-4d2a-9c76-92de7fdd4285"
+          }
+        ]
+      },
+      {
+        "type": "concept_capture",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "if it was to go and make something of yours, rather than take something of another",
+            "confidence": 0.6,
+            "unit_id": "444c9f4c-e729-4f31-a620-65d229216220"
+          },
+          {
+            "evidence": "Human nature, greed, ingrained into the DNA.",
+            "confidence": 0.6,
+            "unit_id": "92d8f47c-c566-456a-977c-3cf6146e0acb"
+          }
+        ]
+      },
+      {
+        "type": "motivational_delegitimisation",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "Why would you, as someone, are you likely ever to be taxed on assets over 10 million pounds?",
+            "confidence": 0.78,
+            "unit_id": "444c9f4c-e729-4f31-a620-65d229216220"
+          },
+          {
+            "evidence": "You don't talk about the king, you don't talk about the Duke of Westminster, you don't talk about the Earl of Leicester... because the only way you can possibly ever protect that inequality is by conjuring up people who've just left to go to Dubai",
+            "confidence": 0.65,
+            "unit_id": "19253568-9704-4952-baaa-66fe72b90ae9"
+          }
+        ]
+      },
+      {
+        "type": "bulverism",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "Why would you, as someone, are you likely ever to be taxed on assets over 10 million pounds?",
+            "confidence": 0.65,
+            "unit_id": "444c9f4c-e729-4f31-a620-65d229216220"
+          },
+          {
+            "evidence": "the only way you can possibly ever protect that inequality is by conjuring up people who've just left to go to Dubai",
+            "confidence": 0.7,
+            "unit_id": "19253568-9704-4952-baaa-66fe72b90ae9"
+          }
+        ]
+      },
+      {
+        "type": "straw_man",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "the only way you can possibly ever protect that inequality is by conjuring up people who've just left to go to Dubai",
+            "confidence": 0.6,
+            "unit_id": "19253568-9704-4952-baaa-66fe72b90ae9"
+          },
+          {
+            "evidence": "Better management, less waste. All of those things are interesting, but we've been listening to that mantra for 50 years.",
+            "confidence": 0.6,
+            "unit_id": "02d4c741-7558-4f45-b0e4-e38438ea7f5d"
+          }
+        ]
+      },
+      {
+        "type": "sweeping_generalisation",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "people that come into 20 million pounds through their own hard work",
+            "confidence": 0.65,
+            "unit_id": "20623095-debd-4bc7-a963-5522b89d975d"
+          }
+        ]
+      },
+      {
+        "type": "normative_laundering",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "Given that you already paid a 45% a year annually as is, to get to that point",
+            "confidence": 0.65,
+            "unit_id": "20623095-debd-4bc7-a963-5522b89d975d"
+          }
+        ]
+      },
+      {
+        "type": "ad_rem",
+        "count": 1,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "Yes, you are, but you're not paying tax on the profit you make from the rising value of the property.",
+            "confidence": 0.75,
+            "unit_id": "ec36b1f4-804a-4ae5-8fd3-8eb79c36ecb1"
+          }
+        ]
+      },
+      {
+        "type": "figure_of_speech_fallacy",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "I'm saying mentality of British people, if it was to go and make something of yours, rather than take something of another.",
+            "confidence": 0.65,
+            "unit_id": "444c9f4c-e729-4f31-a620-65d229216220"
+          }
+        ]
+      },
+      {
+        "type": "attribution_of_intent",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "source_attacks",
+        "examples": [
+          {
+            "evidence": "Why would you, as someone, are you likely ever to be taxed on assets over 10 million pounds?",
+            "confidence": 0.78,
+            "unit_id": "444c9f4c-e729-4f31-a620-65d229216220"
+          }
+        ]
+      },
+      {
+        "type": "ad_hominem_circumstantial",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "source_attacks",
+        "examples": [
+          {
+            "evidence": "Why would you, as someone, are you likely ever to be taxed on assets over 10 million pounds?",
+            "confidence": 0.7,
+            "unit_id": "444c9f4c-e729-4f31-a620-65d229216220"
+          }
+        ]
+      },
+      {
+        "type": "persuasive_definition",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "mentality of British people, if it was to go and make something of yours, rather than take something of another",
+            "confidence": 0.65,
+            "unit_id": "444c9f4c-e729-4f31-a620-65d229216220"
+          }
+        ]
+      },
+      {
+        "type": "cherry_picking",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "You don't talk about the king, you don't talk about the Duke of Westminster, you don't talk about the Earl of Leicester, you don't talk about any of these fortunes that have been around since 1066, because the only way you can possibly ever protect that inequality is by conjuring up people who've just left to go to Dubai",
+            "confidence": 0.65,
+            "unit_id": "19253568-9704-4952-baaa-66fe72b90ae9"
+          }
+        ]
+      },
+      {
+        "type": "non_sequitur",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "if he paid 99% tax, he'd still be a billionaire",
+            "confidence": 0.6,
+            "unit_id": "02d4c741-7558-4f45-b0e4-e38438ea7f5d"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_ridicule",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "if he paid 99% tax, he'd still be a billionaire",
+            "confidence": 0.6,
+            "unit_id": "02d4c741-7558-4f45-b0e4-e38438ea7f5d"
+          }
+        ]
+      },
+      {
+        "type": "prolepsis",
+        "count": 1,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "Better management, less waste. All of those things are interesting, but we've been listening to that mantra for 50 years.",
+            "confidence": 0.7,
+            "unit_id": "02d4c741-7558-4f45-b0e4-e38438ea7f5d"
+          }
+        ]
+      },
+      {
+        "type": "post_hoc",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "We had 14 years of cuts to everything from police numbers right through to filling in potholes and looking after newborn children. So we've done all that. We've tried it all. How do you think it's worked?",
+            "confidence": 0.65,
+            "unit_id": "7f7d9b21-1a5e-4538-8380-ad31711fc73e"
+          }
+        ]
+      },
+      {
+        "type": "many_questions",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "What do they lose by helping everybody else out more?",
+            "confidence": 0.62,
+            "unit_id": "93d9c980-7367-4d2a-9c76-92de7fdd4285"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_nature",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "Human nature, greed, ingrained into the DNA.",
+            "confidence": 0.7,
+            "unit_id": "92d8f47c-c566-456a-977c-3cf6146e0acb"
+          }
+        ]
+      },
+      {
+        "type": "reductio_ad_absurdum",
+        "count": 1,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "if you recognize under your own logic that these people are essentially the greediest, then surely they should be at the very front of the queue",
+            "confidence": 0.65,
+            "unit_id": "92d8f47c-c566-456a-977c-3cf6146e0acb"
+          }
+        ]
+      }
+    ]
+  },
+  "discourse_skeleton": {
+    "overall_topic": "Whether the UK should impose a wealth tax on assets over £10 million",
+    "agreement_reached": "partial",
+    "consensus_reached": "no",
+    "major_stasis_points": [
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Is it morally justified to impose a wealth tax on individuals who built fortunes through their own work and have already paid income tax?",
+        "claims": [
+          "SPEAKER_01: Self-made wealth holders already paid 45% income tax on the earnings used to acquire assets, so a wealth tax is unjust double taxation.",
+          "SPEAKER_00: A wealth tax on assets over £10m is justified because the country needs the revenue and the very wealthy lose nothing meaningful."
+        ],
+        "antitheses": [
+          "SPEAKER_00: A wealth tax targets accumulated wealth and untaxed appreciation, not the same income that was taxed.",
+          "SPEAKER_01: New taxation is unjustified when better management of existing resources is available."
+        ],
+        "warrants": [
+          "Tax legitimacy depends on whether the asset has previously been taxed (SPEAKER_01).",
+          "Tax legitimacy depends on social need and the marginal cost to the taxpayer (SPEAKER_00)."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Does existing income tax (and rental income tax) already capture the gains from appreciation in asset value?",
+        "claims": [
+          "SPEAKER_01: Money used to buy assets has already been taxed at 45%, and rental income is taxed annually, so further taxation is double taxation.",
+          "SPEAKER_00: Income tax applies to earnings, not to subsequent capital appreciation; rental income tax does not capture appreciation of the underlying asset."
+        ],
+        "antitheses": [
+          "SPEAKER_00 directly contradicts SPEAKER_01's framing of asset value as already taxed."
+        ],
+        "warrants": [
+          "Capital appreciation and income are conceptually distinct tax bases."
+        ],
+        "status": "partial_convergence"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Should inherited aristocratic fortunes (e.g. the Duke of Westminster) be subject to a wealth tax?",
+        "claims": [
+          "SPEAKER_00: Inheritors of ancient fortunes have no principled defence against a wealth tax.",
+          "SPEAKER_01: I do not necessarily disagree that such inherited fortunes should be taxed."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "The moral case against wealth taxation rests on personal effort, which is absent in inherited wealth."
+        ],
+        "status": "partial_convergence"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Are wealthy non-doms actually leaving the UK in significant numbers because of tax policy?",
+        "claims": [
+          "SPEAKER_01: Non-doms are leaving or considering leaving, e.g. one family who relocated to Dubai over inheritance tax on overseas assets.",
+          "SPEAKER_00: Many people talk about leaving but few actually do."
+        ],
+        "antitheses": [
+          "SPEAKER_00 contests the empirical scale of non-dom flight."
+        ],
+        "warrants": [
+          "Anecdotes versus aggregate emigration data are differently probative."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Should the prospect of wealthy emigration constrain UK tax policy?",
+        "claims": [
+          "SPEAKER_01: It is regrettable when wealthy residents leave; tax policy should avoid driving them out.",
+          "SPEAKER_00: Non-doms who leave rather than contribute have benefited from UK infrastructure and are not owed accommodation; anti-wealth-tax 'they'll flee' rhetoric shields entrenched aristocratic fortunes."
+        ],
+        "antitheses": [
+          "SPEAKER_00 reframes departure as ingratitude rather than policy failure."
+        ],
+        "warrants": [
+          "Reciprocity between beneficiaries of public infrastructure and the tax base (SPEAKER_00).",
+          "Tax base mobility imposes real fiscal constraints (SPEAKER_01)."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Has 14 years of UK austerity worked, and does its record justify trying a wealth tax?",
+        "claims": [
+          "SPEAKER_00: Austerity has produced cuts to police, roads, and childcare; public services, infrastructure, and social cohesion are worse than in 2010, so a new approach is warranted.",
+          "SPEAKER_01: Better management and less waste of existing resources is the preferable approach.",
+          "SPEAKER_00: The 'better management' argument has been promised for ~50 years without delivery."
+        ],
+        "antitheses": [
+          "SPEAKER_00 treats SPEAKER_01's alternative as already falsified by experience."
+        ],
+        "warrants": [
+          "Policy that has demonstrably failed should be replaced (SPEAKER_00).",
+          "Existing institutions can be reformed without new taxes (SPEAKER_01)."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "What do the very wealthy actually lose under a wealth tax?",
+        "claims": [
+          "SPEAKER_00: Even at 99% tax, billionaires like Bill Gates would remain billionaires; the personal cost is negligible relative to social benefit.",
+          "SPEAKER_01: (implicit) Such taxation still constitutes unjust expropriation regardless of remaining wealth."
+        ],
+        "antitheses": [
+          "SPEAKER_01's 'making not taking' framing rejects SPEAKER_00's marginal-utility framing."
+        ],
+        "warrants": [
+          "Marginal utility of money diminishes at extreme wealth (SPEAKER_00).",
+          "Property rights are not contingent on remaining wealth (SPEAKER_01)."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "What motivates opposition to a wealth tax — self-interest, principled British cultural values, or human greed?",
+        "claims": [
+          "SPEAKER_00: SPEAKER_01's opposition reflects identification with a future, much richer self.",
+          "SPEAKER_01: Opposition reflects a British mentality of making one's own wealth rather than taking from others; flight from tax reflects greed ingrained in human DNA.",
+          "SPEAKER_00: If the wealthy are the greediest, they should be first in line to be taxed; most people are not motivated by greed."
+        ],
+        "antitheses": [
+          "Each speaker rejects the other's motivational characterisation."
+        ],
+        "warrants": [
+          "Greed, if real, undercuts rather than excuses the wealthy's claim to retain assets (SPEAKER_00)."
+        ],
+        "status": "unresolved"
+      }
+    ],
+    "facts_to_verify": [
+      "The UK top marginal income tax rate is 45%.",
+      "The proposed wealth tax under discussion applies to assets over £10 million and exempts primary residences.",
+      "UK income tax does not tax unrealised capital appreciation on investment property.",
+      "UK rental income tax applies to rental receipts but not to capital appreciation of the underlying asset.",
+      "Central London flat values have declined on average since 2015 / since Brexit.",
+      "Bill Gates has publicly stated that a 99% tax would still leave him a billionaire.",
+      "The UK pursued austerity policies for approximately 14 years from around 2010.",
+      "UK police numbers declined during the austerity period.",
+      "Local road maintenance budgets were cut during the austerity period.",
+      "Early-years / newborn childcare services were cut during the austerity period.",
+      "UK public services, infrastructure, and measures of social cohesion have declined since 2010.",
+      "Median real living standards in the UK are lower now than in 2010.",
+      "The Duke of Westminster's fortune originates from holdings dating to around 1066.",
+      "The Earl of Leicester's family fortune dates to around 1066.",
+      "There is measurable net emigration of non-doms from the UK attributable to recent tax changes.",
+      "UK inheritance tax applies to overseas-held assets of non-doms under current or proposed rules.",
+      "Dubai is a common destination for departing UK non-doms.",
+      "John Steinbeck wrote that the poor in dust-bowl America saw themselves as 'temporarily frustrated millionaires'.",
+      "The 'clogs to clogs in three generations' adage reflects an empirical pattern of wealth dissipation."
+    ],
+    "meta_comment": "The exchange is a sharply asymmetric dialogic confrontation between an advocate (SPEAKER_00) deploying empirical, historical, and moral framings, and an opponent (SPEAKER_01) advancing a narrower fairness-based and behavioural-economic objection. Genuine convergence occurred only on the case of inherited aristocratic wealth; on the central question of a wealth tax on self-made fortunes the speakers remain at quality-stasis. Several factual stases (non-dom flight, austerity outcomes) are framed but not adjudicated. Reliability of unit skeletons is moderate to high; the most fragile elements are attributed quotations (Bill Gates, Steinbeck) and statistical claims about emigration and living standards."
+  },
+  "assembled_at": "2026-05-09T14:54:28.117086+00:00"
+}

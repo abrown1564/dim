@@ -1,0 +1,63 @@
+{
+  "debate_id": "500c69c2-892e-44f6-b4f6-10c1102b6e1d",
+  "title": "Is a wealth tax actually possible?",
+  "discourse_mode": "monologic",
+  "speaker_count": null,
+  "published_date": "2025-08-31",
+  "source_url": "https://www.youtube.com/watch?v=gHrxoKEnvEs",
+  "unit_count": 6,
+  "dialectical_conduct": {
+    "total_detections": 0,
+    "negative_count": 0,
+    "positive_count": 0,
+    "techniques": []
+  },
+  "discourse_skeleton": {
+    "overall_topic": "Feasibility and proper locus of designing and implementing a wealth tax",
+    "agreement_reached": "no",
+    "consensus_reached": "no",
+    "major_stasis_points": [
+      {
+        "stasis_type": "procedure",
+        "question_at_issue": "Whose responsibility is it to design and advance wealth tax policy?",
+        "claims": [
+          "Correct implementation of tax policy is the job of experts.",
+          "Policy design should not rest on a single individual, however intelligent.",
+          "It is not the job of campaigners/private actors like Gary and collaborators to do the detailed policy design work."
+        ],
+        "antitheses": [
+          "Advocates of a policy bear the burden of producing its detailed implementation design."
+        ],
+        "warrants": [
+          "Tax policy design requires institutional expertise and capacity that resides in governments, civil services, and think tanks.",
+          "Distributing design across institutions reduces error relative to reliance on any individual."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Can the UK feasibly implement a wealth tax unilaterally?",
+        "claims": [
+          "A wealth tax would be especially difficult for the UK to implement on its own.",
+          "Wealth inequality is not a UK-specific problem, so action need not (and arguably should not) be UK-only.",
+          "International tax coordination is feasible, as shown by the international minimum corporation tax."
+        ],
+        "antitheses": [
+          "The UK could and should implement a wealth tax unilaterally regardless of international coordination."
+        ],
+        "warrants": [
+          "Capital and wealth mobility make unilateral wealth taxation vulnerable to avoidance.",
+          "Existing international tax agreements demonstrate that multilateral coordination on taxing wealth/capital is achievable."
+        ],
+        "status": "partial_convergence"
+      }
+    ],
+    "facts_to_verify": [
+      "Whether the UK faces distinctive structural obstacles to implementing a wealth tax compared to other countries.",
+      "Whether wealth inequality of comparable magnitude exists in countries beyond the UK.",
+      "Whether an international minimum corporation tax currently exists and is in force."
+    ],
+    "meta_comment": "Monologic source: Gary's argument shifts the burden of detailed policy design away from himself toward institutional actors, while using the international corporation tax precedent to argue that the right scale for a wealth tax is multilateral, not UK-unilateral. No interlocutor present, so 'agreement' fields are not meaningfully applicable."
+  },
+  "assembled_at": "2026-05-09T15:20:42.533876+00:00"
+}

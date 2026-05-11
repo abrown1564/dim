@@ -1,0 +1,495 @@
+{
+  "debate_id": "556f5a81-0fa6-4cf2-9b8b-87d6ef62d063",
+  "title": "‘Preposterous!' LBC callers are divided over proposed wealth tax",
+  "discourse_mode": "multi_party",
+  "speaker_count": 4,
+  "published_date": "2025-07-07",
+  "source_url": "https://www.youtube.com/watch?v=no43SNtueL0",
+  "unit_count": 7,
+  "dialectical_conduct": {
+    "total_detections": 37,
+    "negative_count": 34,
+    "positive_count": 3,
+    "techniques": [
+      {
+        "type": "hasty_generalisation",
+        "count": 4,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "17,000 very wealthy people want to leave and take with them a lot of they create jobs",
+            "confidence": 0.65,
+            "unit_id": "36319241-43b5-43d5-bf1f-f93d85d74aae"
+          },
+          {
+            "evidence": "economists say these have been tried elsewhere in the world and they've never worked",
+            "confidence": 0.65,
+            "unit_id": "58ecd211-8ff1-4d62-89bf-203ecb652702"
+          }
+        ]
+      },
+      {
+        "type": "straw_man",
+        "count": 3,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "success is not a sin",
+            "confidence": 0.7,
+            "unit_id": "bd394f6a-69b0-45c4-9dce-4715491a7d73"
+          },
+          {
+            "evidence": "success is not a sin",
+            "confidence": 0.7,
+            "unit_id": "bd394f6a-69b0-45c4-9dce-4715491a7d73"
+          }
+        ]
+      },
+      {
+        "type": "weasel_words",
+        "count": 3,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "17,000 very wealthy people want to leave and take with them a lot of they create jobs",
+            "confidence": 0.65,
+            "unit_id": "36319241-43b5-43d5-bf1f-f93d85d74aae"
+          },
+          {
+            "evidence": "economists say these have been tried elsewhere in the world and they've never worked",
+            "confidence": 0.7,
+            "unit_id": "58ecd211-8ff1-4d62-89bf-203ecb652702"
+          }
+        ]
+      },
+      {
+        "type": "loaded_question",
+        "count": 3,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "Michael, what does it say about a country that 17,000 very wealthy people want to leave",
+            "confidence": 0.75,
+            "unit_id": "36319241-43b5-43d5-bf1f-f93d85d74aae"
+          },
+          {
+            "evidence": "economists say these have been tried elsewhere in the world and they've never worked. Should we be concerned over that?",
+            "confidence": 0.6,
+            "unit_id": "58ecd211-8ff1-4d62-89bf-203ecb652702"
+          }
+        ]
+      },
+      {
+        "type": "normative_laundering",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "success is not a sin",
+            "confidence": 0.6,
+            "unit_id": "bd394f6a-69b0-45c4-9dce-4715491a7d73"
+          },
+          {
+            "evidence": "17,000 very wealthy people want to leave and take with them a lot of they create jobs",
+            "confidence": 0.7,
+            "unit_id": "36319241-43b5-43d5-bf1f-f93d85d74aae"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_emotion",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "It's absolutely incredible",
+            "confidence": 0.6,
+            "unit_id": "bd394f6a-69b0-45c4-9dce-4715491a7d73"
+          },
+          {
+            "evidence": "Britain is increasingly becoming a poor country with rich people living in it",
+            "confidence": 0.6,
+            "unit_id": "46fe3d3a-441d-4b66-bb0d-597e33697cb8"
+          }
+        ]
+      },
+      {
+        "type": "cum_hoc",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "The collective wealth of Britain's billionaires is something like £795 billion. That is three times the annual operating budget of the NHS",
+            "confidence": 0.6,
+            "unit_id": "46fe3d3a-441d-4b66-bb0d-597e33697cb8"
+          },
+          {
+            "evidence": "the happiest countries in the world have wealth taxes",
+            "confidence": 0.7,
+            "unit_id": "cc5f69e3-b8e2-48e9-8a38-017183396ded"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_fear",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "17,000 very wealthy people want to leave and take with them a lot of they create jobs",
+            "confidence": 0.7,
+            "unit_id": "36319241-43b5-43d5-bf1f-f93d85d74aae"
+          },
+          {
+            "evidence": "wealthy people who launch businesses and employ people are looking elsewhere and heading off to Dubai, Italy and other countries",
+            "confidence": 0.65,
+            "unit_id": "58ecd211-8ff1-4d62-89bf-203ecb652702"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_authority",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "economists say these have been tried elsewhere in the world and they've never worked",
+            "confidence": 0.6,
+            "unit_id": "58ecd211-8ff1-4d62-89bf-203ecb652702"
+          },
+          {
+            "evidence": "economists say these have been tried elsewhere in the world and they've never worked",
+            "confidence": 0.7,
+            "unit_id": "58ecd211-8ff1-4d62-89bf-203ecb652702"
+          }
+        ]
+      },
+      {
+        "type": "prolepsis",
+        "count": 2,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "But economists say these have been tried elsewhere in the world and they've never worked. Should we be concerned over that?",
+            "confidence": 0.65,
+            "unit_id": "58ecd211-8ff1-4d62-89bf-203ecb652702"
+          },
+          {
+            "evidence": "We give the NHS £3 billion a week. How much do you want to give them? So it's important that that's in keeping as a percentage of our GDP.",
+            "confidence": 0.7,
+            "unit_id": "dad1c39a-8b60-4240-b126-721794b1711e"
+          }
+        ]
+      },
+      {
+        "type": "persuasive_definition",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "success is not a sin",
+            "confidence": 0.65,
+            "unit_id": "bd394f6a-69b0-45c4-9dce-4715491a7d73"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_ridicule",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "as soon as we start talking about taxing the rich, oh, well, they'll just have to leave",
+            "confidence": 0.6,
+            "unit_id": "36319241-43b5-43d5-bf1f-f93d85d74aae"
+          }
+        ]
+      },
+      {
+        "type": "false_dilemma",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "Do you agree with the principle of taxing wealth?",
+            "confidence": 0.6,
+            "unit_id": "36319241-43b5-43d5-bf1f-f93d85d74aae"
+          }
+        ]
+      },
+      {
+        "type": "elenchus",
+        "count": 1,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "Do you agree with the principle of taxing wealth?",
+            "confidence": 0.65,
+            "unit_id": "36319241-43b5-43d5-bf1f-f93d85d74aae"
+          }
+        ]
+      },
+      {
+        "type": "begging_the_question",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "we always end up here in this kind of race to the bottom, where no one's allowed to tax the wealthy because they'll always go everywhere",
+            "confidence": 0.6,
+            "unit_id": "cf1dfd6e-c313-4ff8-8a0a-92e3a0bcef14"
+          }
+        ]
+      },
+      {
+        "type": "slippery_slope",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "we always end up here in this kind of race to the bottom, where no one's allowed to tax the wealthy because they'll always go everywhere",
+            "confidence": 0.6,
+            "unit_id": "cf1dfd6e-c313-4ff8-8a0a-92e3a0bcef14"
+          }
+        ]
+      },
+      {
+        "type": "motivational_delegitimisation",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "we always end up here in this kind of race to the bottom, where no one's allowed to tax the wealthy because they'll always go everywhere",
+            "confidence": 0.6,
+            "unit_id": "cf1dfd6e-c313-4ff8-8a0a-92e3a0bcef14"
+          }
+        ]
+      },
+      {
+        "type": "non_sequitur",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "the happiest countries in the world... they all have wealth taxes... Denmark has the best tax... it's not wealth, it's income",
+            "confidence": 0.7,
+            "unit_id": "cc5f69e3-b8e2-48e9-8a38-017183396ded"
+          }
+        ]
+      },
+      {
+        "type": "affirming_the_consequent",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "the happiest countries in the world... they all have wealth taxes",
+            "confidence": 0.65,
+            "unit_id": "cc5f69e3-b8e2-48e9-8a38-017183396ded"
+          }
+        ]
+      },
+      {
+        "type": "equivocation",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "wealth taxes are a fine idea... These people are already paying 45 percent",
+            "confidence": 0.7,
+            "unit_id": "cc5f69e3-b8e2-48e9-8a38-017183396ded"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_the_masses",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "the happiest countries in the world all have wealth taxes",
+            "confidence": 0.6,
+            "unit_id": "cc5f69e3-b8e2-48e9-8a38-017183396ded"
+          }
+        ]
+      },
+      {
+        "type": "red_herring",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "Denmark has a very good tax... on income, not wealth",
+            "confidence": 0.65,
+            "unit_id": "cc5f69e3-b8e2-48e9-8a38-017183396ded"
+          }
+        ]
+      }
+    ]
+  },
+  "discourse_skeleton": {
+    "overall_topic": "Whether the UK should introduce a wealth tax to address inequality and fund public services",
+    "agreement_reached": "no",
+    "consensus_reached": "no",
+    "major_stasis_points": [
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Should the UK introduce a wealth tax to rebalance the economy?",
+        "claims": [
+          "A wealth tax is needed because wealth has concentrated among billionaires while wages stagnate and public services decline.",
+          "The Thatcherite consensus of privatisation, cuts and austerity has lost public support.",
+          "Wealth taxes are a fine idea and operate in some of the happiest countries."
+        ],
+        "antitheses": [
+          "Success is not a sin and should not be punished by additional taxation.",
+          "High earners already pay 45% and large absolute amounts of tax.",
+          "Wealth taxes have been tried elsewhere and have never worked."
+        ],
+        "warrants": [
+          "Concentrated wealth alongside declining services justifies redistributive taxation.",
+          "Outcomes in comparable countries are evidence for or against policy viability."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Is the threat of wealthy people leaving a legitimate reason to reject a wealth tax?",
+        "claims": [
+          "17,000 wealthy people leaving is a serious loss because they create jobs and employ workers.",
+          "Wealthy entrepreneurs are already relocating to Dubai, Italy, and elsewhere, which is harmful."
+        ],
+        "antitheses": [
+          "The 'they will leave' objection is a recurring deflection raised whenever taxing the rich is proposed.",
+          "Claiming a wealth tax is unworkable is dishonest; debate should focus on the principle and on workable implementation.",
+          "Austerity is readily imposed on the poor while objections only surface when the rich are asked to contribute."
+        ],
+        "warrants": [
+          "Job creation by the wealthy benefits the wider economy.",
+          "Symmetry of fiscal burden requires that the wealthy not be insulated from contribution."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Have wealth taxes succeeded where they have been tried?",
+        "claims": [
+          "Economists say wealth taxes have been tried elsewhere and have never worked.",
+          "Some economists say wealth taxes do work, and the happiest countries have wealth taxes."
+        ],
+        "antitheses": [
+          "Denmark, often cited, has high income tax rather than a wealth tax."
+        ],
+        "warrants": [
+          "International empirical evidence is decisive for assessing policy viability."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Do the wealthy pay more or less tax than the average person?",
+        "claims": [
+          "The wealthy are paying huge amounts in tax and are not getting away with anything.",
+          "High earners pay a 45% top marginal rate."
+        ],
+        "antitheses": [
+          "The super-wealthy often pay a lower effective tax rate than the average person due to avoidance schemes."
+        ],
+        "warrants": [
+          "Effective tax rate, not headline rate or absolute amount, is the appropriate measure of fairness."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Is a 45% top tax rate already sufficient, making further taxation unwarranted?",
+        "claims": [
+          "High earners already pay 45%, which is enough."
+        ],
+        "antitheses": [
+          "Current taxation of the wealthy is insufficient given concentrations of wealth and service decline."
+        ],
+        "warrants": [
+          "Sufficiency of taxation depends on social outcomes, not just rate levels."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "procedure",
+        "question_at_issue": "Should NHS/public spending be measured by share of GDP rather than absolute cash figures?",
+        "claims": [
+          "NHS spending should be restored to the same percentage of GDP it was at its height.",
+          "Headline cash figures (£3bn/week) are misleading; the relevant measure is share of GDP.",
+          "NHS spending as a percentage of GDP has fallen since the start of the Tory government."
+        ],
+        "antitheses": [
+          "It is wrong to assert that everyone wants to spend more on public services."
+        ],
+        "warrants": [
+          "Share of GDP normalises for inflation and economic growth and is the appropriate measure of fiscal commitment."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Is financial success morally blameworthy such that it warrants a wealth tax?",
+        "claims": [
+          "Success is not a sin."
+        ],
+        "antitheses": [
+          "Taxing wealth is not about punishing success but about rebalancing the economy and funding services."
+        ],
+        "warrants": [
+          "Moral framing of taxation shapes its political legitimacy."
+        ],
+        "status": "unresolved"
+      }
+    ],
+    "facts_to_verify": [
+      "UK real wages have only just recovered to pre-2008 financial crisis levels.",
+      "The collective wealth of UK billionaires is approximately £795 billion.",
+      "£795 billion is approximately three times the annual operating budget of the NHS.",
+      "£795 billion is approximately equal to the GDP of Poland.",
+      "Approximately 17,000 wealthy individuals are leaving or planning to leave the UK.",
+      "The top marginal income tax rate in the UK is 45%.",
+      "The super-wealthy in the UK often pay a lower effective tax rate than the average person.",
+      "Tax avoidance schemes are widely used by the super-wealthy.",
+      "Neil Kinnock has publicly called for a wealth tax.",
+      "Wealth taxes have been tried in multiple countries and failed (per economist consensus).",
+      "Some economists conclude wealth taxes have succeeded where implemented.",
+      "Countries ranked highest in happiness indices have wealth taxes.",
+      "Denmark does not have a wealth tax but has notably high income tax rates.",
+      "NHS spending as a percentage of UK GDP has fallen since the start of the 2010 Conservative-led government.",
+      "The UK is the 10th richest country in the world (by some specified measure).",
+      "UK NHS spending is approximately £3 billion per week.",
+      "Wealthy entrepreneurs are currently relocating from the UK to Dubai and Italy due to the tax regime.",
+      "Departing wealthy individuals employ domestic staff such as drivers, chefs, and gardeners.",
+      "The UK welfare budget has been described by government sources as unsustainable.",
+      "Recent UK policy has included cuts to welfare and increases to pension age.",
+      "There were 14 years of austerity under Conservative governments."
+    ],
+    "meta_comment": "Multi-caller phone-in with the host as moderator-but-also-participant. Disagreement is genuine and unresolved across factual, qualitative, and procedural stases. Several empirical claims (capital flight numbers, international wealth-tax outcomes, NHS GDP share) are asserted on both sides without sourcing and warrant verification. The host concedes the principle of taxing wealth, narrowing the dispute to implementation and consequences, but no convergence is reached."
+  },
+  "assembled_at": "2026-05-09T14:46:59.988250+00:00"
+}

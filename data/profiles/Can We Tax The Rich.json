@@ -1,0 +1,72 @@
+{
+  "debate_id": "0f150e4d-8e49-442b-9df0-4f019a5edf7c",
+  "title": "Can We Tax The Rich?",
+  "discourse_mode": "monologic",
+  "speaker_count": null,
+  "published_date": "2022-07-17",
+  "source_url": "https://www.youtube.com/watch?v=2iSsu_pwHSE",
+  "unit_count": 3,
+  "dialectical_conduct": {
+    "total_detections": 0,
+    "negative_count": 0,
+    "positive_count": 0,
+    "techniques": []
+  },
+  "discourse_skeleton": {
+    "overall_topic": "Whether the rich can be effectively taxed, and the validity of the 'they will leave' objection",
+    "agreement_reached": "no",
+    "consensus_reached": "no",
+    "major_stasis_points": [
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Will taxing the rich cause them to leave the country in a way that defeats the tax?",
+        "claims": [
+          "The belief that taxing the rich will cause them to leave (and thereby escape taxation) is based on a misunderstanding."
+        ],
+        "antitheses": [
+          "Implicit opponent view: taxing the rich will cause capital flight that renders wealth taxes self-defeating."
+        ],
+        "warrants": [
+          "Rich people are rich because they own assets, not because they earn income in a particular location.",
+          "Assets (especially land, property, and domestically-rooted holdings) remain locatable and taxable even if their owners relocate.",
+          "The fact that the rich currently appear to escape taxation by relocating reflects a feature of the current residence-based system, not an inherent limit on taxing wealth."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "What constitutes the wealth of rich people?",
+        "claims": [
+          "Rich people are rich because they own assets."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "Distinguishing wealth (asset ownership) from income reframes what a tax on the rich would target."
+        ],
+        "status": "partial_convergence"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Does the current tax system effectively let wealthy people choose their tax jurisdiction by choosing residence?",
+        "claims": [
+          "The current tax system largely allows rich people to choose where they live, and thus where (and whether) they are taxed."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "Tax liability is primarily determined by residence.",
+          "Wealthy individuals have practical mobility to relocate."
+        ],
+        "status": "unresolved"
+      }
+    ],
+    "facts_to_verify": [
+      "Empirical evidence on whether wealth taxes cause emigration of the rich.",
+      "The proportion of wealth held by rich individuals that is in assets versus income or cash.",
+      "The proportion of asset wealth that is geographically immobile (e.g. land, domestic property) versus mobile (e.g. financial securities).",
+      "Whether tax liability for wealthy individuals in the relevant jurisdiction is primarily determined by residence.",
+      "The practical ease with which wealthy individuals can relocate residence for tax purposes."
+    ],
+    "meta_comment": "Monologic advocacy by a single speaker; no opposing voice present in the transcript, so 'common ground' here consists of premises the speaker treats as shared with his imagined opponent. Reliability of the merged skeleton is moderate — the units are short and the speaker's argument is partially developed, with the asset-locatability premise implied rather than stated explicitly."
+  },
+  "assembled_at": "2026-05-09T14:45:45.189270+00:00"
+}

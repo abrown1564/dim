@@ -1,0 +1,70 @@
+{
+  "debate_id": "4980639d-4252-4864-89ae-5e861ae9e791",
+  "title": "Why a wealth tax doesn’t work | To the Point",
+  "discourse_mode": "monologic",
+  "speaker_count": null,
+  "published_date": "2026-02-14",
+  "source_url": "https://www.youtube.com/watch?v=YluUJWbY8ZI",
+  "unit_count": 1,
+  "dialectical_conduct": {
+    "total_detections": 1,
+    "negative_count": 1,
+    "positive_count": 0,
+    "techniques": [
+      {
+        "type": "post_hoc",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "Lots of OECD countries had wealth taxes in the 1990s. More or less all of them have abolished them for precisely that reason.",
+            "confidence": 0.7,
+            "unit_id": "c0ec5b8f-2ca0-426c-8709-f5475991bd21"
+          }
+        ]
+      }
+    ]
+  },
+  "discourse_skeleton": {
+    "overall_topic": "Whether wealth taxes are an effective policy instrument",
+    "agreement_reached": "n/a",
+    "consensus_reached": "n/a",
+    "major_stasis_points": [
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Are wealth taxes an effective policy instrument?",
+        "claims": [
+          "Wealth taxes are a poor idea because they do not work in practice.",
+          "Most OECD countries that adopted wealth taxes in the 1990s have since abolished them, indicating policy failure.",
+          "Wealth taxes raise less revenue than projected.",
+          "Valuing wealth for taxation purposes is very difficult.",
+          "Wealth taxes prompt wealthy individuals to leave the taxing jurisdiction, as illustrated by Page, Brin, and Thiel reportedly leaving California in response to a proposed 5% wealth tax."
+        ],
+        "antitheses": [
+          "Wealth taxes can be designed to raise meaningful revenue and address inequality (not articulated in this monologue).",
+          "Departures of specific wealthy individuals may have causes other than the wealth tax proposal."
+        ],
+        "warrants": [
+          "Cross-national policy abandonment is evidence of a policy's ineffectiveness.",
+          "Mobility of capital and persons constrains the feasibility of subnational or national wealth taxation.",
+          "Administrative feasibility (valuation) is a precondition for an effective tax."
+        ],
+        "status": "unresolved"
+      }
+    ],
+    "facts_to_verify": [
+      "Many OECD countries implemented wealth taxes in the 1990s.",
+      "Most OECD countries that had wealth taxes have since abolished them.",
+      "Wealth taxes have historically raised less revenue than projected.",
+      "California has a wealth tax proposal under consideration.",
+      "The California wealth tax proposal sets a rate of 5% of wealth.",
+      "Larry Page has left or begun leaving California.",
+      "Sergey Brin has left or begun leaving California.",
+      "Peter Thiel has left or begun leaving California.",
+      "The departures of Page, Brin, and Thiel from California are causally linked to the wealth tax proposal."
+    ],
+    "meta_comment": "Single-speaker monologue; no dialectical exchange present. Skeleton reflects one advocate's position with no opposing voice in the source. Reliability of factual claims about specific individuals' relocations and their causation is low and should be verified."
+  },
+  "assembled_at": "2026-05-09T01:15:26.959711+00:00"
+}

@@ -1,0 +1,391 @@
+{
+  "debate_id": "6368d072-65fa-4b16-8907-2f7abb2a0211",
+  "title": "Wealth Tax DISASTER? Experts CLASH Over Britain’s Future!",
+  "discourse_mode": "multi_party",
+  "speaker_count": 5,
+  "published_date": "2025-07-08",
+  "source_url": "https://www.youtube.com/watch?v=NiNcqO2ll3s",
+  "unit_count": 7,
+  "dialectical_conduct": {
+    "total_detections": 24,
+    "negative_count": 22,
+    "positive_count": 2,
+    "techniques": [
+      {
+        "type": "proof_by_example",
+        "count": 3,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "the owner of GB News, Paul Marshall, who's on the Sunday Times Reach list with a wealth of about 900 million pounds... probably pays a significantly lower average rate on their income than somebody like me who's a sort of upper-income earner level",
+            "confidence": 0.7,
+            "unit_id": "81a29157-c772-4285-9b26-865b56737591"
+          },
+          {
+            "evidence": "do we think of Paul Marshall, who's worth 900 million, according to Sunday Times, had to pay one or two percent of that a year? Do you think that his attachment to this country and to its values and culture is very minimal that he should leave the country?",
+            "confidence": 0.75,
+            "unit_id": "316ccadb-9e30-45b2-87d5-48c18858bd2a"
+          }
+        ]
+      },
+      {
+        "type": "loaded_question",
+        "count": 3,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "Do you know what it is through, Jonathan? Do you know what it is through? It's through risk.",
+            "confidence": 0.7,
+            "unit_id": "f66b9a49-8f1f-456e-8d50-7f9074a4a943"
+          },
+          {
+            "evidence": "Do you think that his attachment to this country and to its values and culture is very minimal that he should leave the country?",
+            "confidence": 0.7,
+            "unit_id": "316ccadb-9e30-45b2-87d5-48c18858bd2a"
+          }
+        ]
+      },
+      {
+        "type": "weasel_words",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "We know how hedge fund people who run hedge funds get most of the money out of the hedge funds. It's not through straightforward income.",
+            "confidence": 0.62,
+            "unit_id": "f66b9a49-8f1f-456e-8d50-7f9074a4a943"
+          },
+          {
+            "evidence": "there are about 16,000 millionaires estimated to leave the UK in 2025",
+            "confidence": 0.65,
+            "unit_id": "3df58ddc-5b68-40a9-b89c-ae1a58934f8f"
+          }
+        ]
+      },
+      {
+        "type": "hasty_conclusion",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "probably pays a significantly lower average rate on their income than somebody like me",
+            "confidence": 0.6,
+            "unit_id": "81a29157-c772-4285-9b26-865b56737591"
+          }
+        ]
+      },
+      {
+        "type": "ad_hominem_circumstantial",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "source_attacks",
+        "examples": [
+          {
+            "evidence": "We know how hedge fund people who run hedge funds get most of the money out of the hedge funds. It's not through straightforward income.",
+            "confidence": 0.65,
+            "unit_id": "f66b9a49-8f1f-456e-8d50-7f9074a4a943"
+          }
+        ]
+      },
+      {
+        "type": "foreclosing_interrogation",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "Do you know what it is through, Jonathan? Do you know what it is through? It's through risk.",
+            "confidence": 0.6,
+            "unit_id": "f66b9a49-8f1f-456e-8d50-7f9074a4a943"
+          }
+        ]
+      },
+      {
+        "type": "affirming_the_consequent",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "Now, in the 1990s, there are about 12 countries that had wealth taxes. Now there are only three.",
+            "confidence": 0.65,
+            "unit_id": "3df58ddc-5b68-40a9-b89c-ae1a58934f8f"
+          }
+        ]
+      },
+      {
+        "type": "post_hoc",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "in the 1990s, there are about 12 countries that had wealth taxes. Now there are only three.",
+            "confidence": 0.75,
+            "unit_id": "3df58ddc-5b68-40a9-b89c-ae1a58934f8f"
+          }
+        ]
+      },
+      {
+        "type": "false_cause",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "in the 1990s, there are about 12 countries that had wealth taxes. Now there are only three.",
+            "confidence": 0.7,
+            "unit_id": "3df58ddc-5b68-40a9-b89c-ae1a58934f8f"
+          }
+        ]
+      },
+      {
+        "type": "cherry_picking",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "What do we really think is going to happen if we implement a wealth tax?",
+            "confidence": 0.6,
+            "unit_id": "3df58ddc-5b68-40a9-b89c-ae1a58934f8f"
+          }
+        ]
+      },
+      {
+        "type": "normative_laundering",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "We know that there are about 16,000 millionaires estimated to leave the UK in 2025. What do we really think is going to happen if we implement a wealth tax?",
+            "confidence": 0.7,
+            "unit_id": "3df58ddc-5b68-40a9-b89c-ae1a58934f8f"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_consequences",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "We know that there are about 16,000 millionaires estimated to leave the UK in 2025. What do we really think is going to happen if we implement a wealth tax?",
+            "confidence": 0.65,
+            "unit_id": "3df58ddc-5b68-40a9-b89c-ae1a58934f8f"
+          }
+        ]
+      },
+      {
+        "type": "genetic_fallacy",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "source_attacks",
+        "examples": [
+          {
+            "evidence": "The 16,000 figure, for example, that Reeves quoted is simply an invented one, invented by a wealth management firm. It has actual no basis in reality",
+            "confidence": 0.7,
+            "unit_id": "782cb618-852d-4d5d-a053-7844a0fcff6b"
+          }
+        ]
+      },
+      {
+        "type": "many_questions",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "do you think that his attachment to this country and to its values and culture is very minimal that he should leave the country?",
+            "confidence": 0.62,
+            "unit_id": "316ccadb-9e30-45b2-87d5-48c18858bd2a"
+          }
+        ]
+      },
+      {
+        "type": "argument_from_incredulity",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "Do you think that his attachment to this country and to its values and culture is very minimal that he should leave the country?",
+            "confidence": 0.7,
+            "unit_id": "316ccadb-9e30-45b2-87d5-48c18858bd2a"
+          }
+        ]
+      },
+      {
+        "type": "jaqing",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "do we think that Paul Marshall, your owner, who, as I said, is part of my portfolio, do you think that he would leave the country?",
+            "confidence": 0.65,
+            "unit_id": "316ccadb-9e30-45b2-87d5-48c18858bd2a"
+          }
+        ]
+      },
+      {
+        "type": "elenchus",
+        "count": 1,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "do we think that Paul Marshall, your owner, who, as I said, is part of my portfolio, do you think that he would leave the country?",
+            "confidence": 0.7,
+            "unit_id": "316ccadb-9e30-45b2-87d5-48c18858bd2a"
+          }
+        ]
+      },
+      {
+        "type": "reductio_ad_absurdum",
+        "count": 1,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "Do you think that his attachment to this country and to its values and culture is very minimal that he should leave the country?",
+            "confidence": 0.65,
+            "unit_id": "316ccadb-9e30-45b2-87d5-48c18858bd2a"
+          }
+        ]
+      },
+      {
+        "type": "distributional_anchoring",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "if I had to pay one or two percent tax on my wealth, or one or two percent tax more on my income every year to fund decent quality public services, that I would not leave the country",
+            "confidence": 0.62,
+            "unit_id": "97623ed3-f89f-4064-8d86-b1c329622b93"
+          }
+        ]
+      }
+    ]
+  },
+  "discourse_skeleton": {
+    "overall_topic": "Whether the UK should introduce a wealth tax, and the empirical and normative consequences of doing so",
+    "agreement_reached": "no",
+    "consensus_reached": "no",
+    "major_stasis_points": [
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Should the UK introduce a wealth tax?",
+        "claims": [
+          "The UK should introduce a wealth tax because wealth is more unequally distributed than income and the very wealthy pay low effective rates.",
+          "A 1–2% wealth tax is modest and would fund public services without driving emigration."
+        ],
+        "antitheses": [
+          "A wealth tax would remove incentives to invest in British businesses and accelerate millionaire emigration.",
+          "Most countries that had wealth taxes have repealed them, indicating the policy does not work."
+        ],
+        "warrants": [
+          "Tax burden should track ability to pay, and wealth represents ability to pay.",
+          "Behavioural responses of the wealthy determine the viability of any tax policy.",
+          "International policy convergence is evidence about effectiveness."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "How many millionaires are leaving the UK and is this attributable to tax policy?",
+        "claims": [
+          "Approximately 16,000 millionaires are estimated to leave the UK in 2025, equivalent to one every 45 minutes.",
+          "Countries repealed wealth taxes because they caused exodus of high-value individuals."
+        ],
+        "antitheses": [
+          "The 16,000 / 45-minute figures were invented by a wealth management firm and lack credible empirical basis.",
+          "The vast majority of wealthy people do not emigrate in response to tax changes."
+        ],
+        "warrants": [
+          "Provenance of statistics affects their evidentiary weight.",
+          "Empirical behavioural evidence should govern policy claims about emigration."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "By what mechanism do hedge fund managers and the very wealthy actually receive compensation, and what is their effective tax rate?",
+        "claims": [
+          "Hedge fund managers receive most of their compensation through channels other than ordinary income (e.g., carried interest).",
+          "Very high-wealth individuals pay lower effective average tax rates than upper-income salaried earners."
+        ],
+        "antitheses": [
+          "Hedge fund managers' earnings come through legitimate risk-taking, pressure, hard work, and leveraging assets."
+        ],
+        "warrants": [
+          "The form in which income is received determines effective tax rates.",
+          "Effort and risk-taking justify compensation structures."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Do the very wealthy deserve their wealth as reward for risk and effort, such that further taxation is unjust?",
+        "claims": [
+          "Those who work hard, take risks, and create successful enterprises deserve to be rewarded rather than additionally taxed."
+        ],
+        "antitheses": [
+          "High wealth often reflects favourable tax treatment of non-earnings income, not solely risk and effort, and the very wealthy can afford to contribute more."
+        ],
+        "warrants": [
+          "Desert grounded in effort and risk justifies retention of wealth.",
+          "Distributive justice requires those with greatest capacity to contribute proportionally."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Would individuals like Paul Marshall actually leave the UK over a 1–2% wealth tax?",
+        "claims": [
+          "Paul Marshall, worth ~£900 million, would not leave the UK over a 1–2% wealth tax due to his attachment to the country's values and culture."
+        ],
+        "antitheses": [
+          "Wealthy individuals would respond to a wealth tax by relocating, as evidenced by emigration trends."
+        ],
+        "warrants": [
+          "Concrete test cases illuminate plausibility of behavioural claims."
+        ],
+        "status": "unresolved"
+      }
+    ],
+    "facts_to_verify": [
+      "Wealth is more unequally distributed than income in the UK.",
+      "UK middle-to-upper income earners face relatively high effective tax rates compared to peers.",
+      "Very high earners receiving income as non-earnings (capital gains, carried interest) pay lower effective tax rates than upper-income wage earners.",
+      "Paul Marshall is on the Sunday Times Rich List with wealth approximately £900 million.",
+      "£900 million is roughly 10,000 times the average wealth of a UK individual.",
+      "Paul Marshall owns GB News.",
+      "Hedge fund principals predominantly extract income through non-salary mechanisms such as carried interest.",
+      "Approximately 16,000 millionaires are projected to leave the UK in 2025.",
+      "The 16,000 figure originated from a wealth management firm rather than independent research.",
+      "Rachel Reeves cited the 16,000 figure.",
+      "Approximately 12 OECD countries had wealth taxes in the 1990s.",
+      "Only three countries currently levy a wealth tax.",
+      "Countries that repealed wealth taxes cited capital/wealth flight as a primary reason.",
+      "Lord Kinnock claimed a UK wealth tax could raise up to £10 billion.",
+      "Proposed UK wealth tax rates under discussion are in the 1–2% range.",
+      "Rachel Reeves rejected a wealth tax while in opposition.",
+      "Number 10 and the Treasury have declined to rule out a wealth tax.",
+      "Jeremy Hunt initiated changes to the non-dom regime.",
+      "Rachel Reeves continued changes to the non-dom regime.",
+      "Gold has appreciated at an average of over 11% per annum against the pound over the last 25 years.",
+      "Empirical evidence on whether the majority of wealthy individuals emigrate in response to wealth tax changes.",
+      "Paul Marshall's actual tax payments are not publicly known."
+    ],
+    "meta_comment": "Debate is genuinely unresolved across both factual and normative stasis points. The central empirical dispute concerns the credibility of the 16,000-millionaire-exodus figure and the broader behavioural response of the wealthy. The normative dispute concerns whether high wealth reflects deserved reward or under-taxed advantage. Unit skeletons are reasonably consistent; the 16,000 figure is flagged as low-reliability by SPEAKER_03 and should be treated as contested."
+  },
+  "assembled_at": "2026-05-09T14:30:27.158270+00:00"
+}

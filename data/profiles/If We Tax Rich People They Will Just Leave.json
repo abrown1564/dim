@@ -1,0 +1,560 @@
+{
+  "debate_id": "6835406a-5581-47d6-b098-791853807a86",
+  "title": "If We Tax Rich People... They Will Just Leave!",
+  "discourse_mode": "monologic",
+  "speaker_count": 3,
+  "published_date": "2025-11-16",
+  "source_url": "https://www.youtube.com/watch?v=6DXZMXZCY0I",
+  "unit_count": 16,
+  "dialectical_conduct": {
+    "total_detections": 49,
+    "negative_count": 40,
+    "positive_count": 9,
+    "techniques": [
+      {
+        "type": "prolepsis",
+        "count": 7,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "the second mistake that people make by trying to read these lines is assuming that the one and only goal of tax policy is to milk the maximum possible amount of money out of people",
+            "confidence": 0.7,
+            "unit_id": "fb617518-98fe-4d94-b5bf-bb331e16cab4"
+          },
+          {
+            "evidence": "So yeah, millionaire exoduses do happen, but London is more of the exception that proves the rule.",
+            "confidence": 0.8,
+            "unit_id": "698b2dc0-c639-4206-a49d-dd2796ff7045"
+          }
+        ]
+      },
+      {
+        "type": "hasty_generalisation",
+        "count": 6,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "When a country was filled up to begin with by people just looking for the best deal for them and their money, then of course those are the same kind of people to move on just as quickly when a better deal becomes available.",
+            "confidence": 0.7,
+            "unit_id": "698b2dc0-c639-4206-a49d-dd2796ff7045"
+          },
+          {
+            "evidence": "Most people, even those with extremely high incomes, aren't going to leave their home cities, social networks, families, customs, and way of life over some tax savings.",
+            "confidence": 0.7,
+            "unit_id": "52c555a4-0ca2-4800-bdde-a9e23c138a88"
+          }
+        ]
+      },
+      {
+        "type": "false_precision",
+        "count": 5,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "the UK lost almost 10,000 high net worth individuals in the last calendar year to net outward migration",
+            "confidence": 0.7,
+            "unit_id": "56660664-3195-4ac7-be89-69218a0f7a84"
+          },
+          {
+            "evidence": "The study's method found that we could set top marginal tax rates as high as 76%",
+            "confidence": 0.7,
+            "unit_id": "0d40ac09-9ddf-4fda-9f0c-da53eadf5c20"
+          }
+        ]
+      },
+      {
+        "type": "false_cause",
+        "count": 3,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "by trying to increase revenue, we might actually end up shrinking it",
+            "confidence": 0.6,
+            "unit_id": "45fefd44-6e1c-45dc-8bb3-bcc53e261f31"
+          },
+          {
+            "evidence": "almost nobody does it because having unfettered access to Silicon Valley, Wall Street, American real estate, or financial system is worth more to most wealthy people than some tax savings",
+            "confidence": 0.6,
+            "unit_id": "e313039c-0065-45f3-9d2f-31e4c161ad46"
+          }
+        ]
+      },
+      {
+        "type": "weasel_words",
+        "count": 3,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "According to some estimates, the UK lost almost 10,000 high net worth individuals",
+            "confidence": 0.7,
+            "unit_id": "56660664-3195-4ac7-be89-69218a0f7a84"
+          },
+          {
+            "evidence": "London is more of the exception that proves the rule",
+            "confidence": 0.65,
+            "unit_id": "698b2dc0-c639-4206-a49d-dd2796ff7045"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_authority",
+        "count": 3,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "In that 2017 study on the Laffer Curve, America had the highest revenue-maximizing tax rate out of all OECD countries",
+            "confidence": 0.6,
+            "unit_id": "0d40ac09-9ddf-4fda-9f0c-da53eadf5c20"
+          },
+          {
+            "evidence": "several studies, including some from Nobel Prize winners, have been done on the impact of these people immigrating",
+            "confidence": 0.7,
+            "unit_id": "1183d9e0-afbd-47fb-b166-b46a9641df8a"
+          }
+        ]
+      },
+      {
+        "type": "straw_man",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "the second mistake that people make by trying to read these lines is assuming that the one and only goal of tax policy is to milk the maximum possible amount of money out of people",
+            "confidence": 0.7,
+            "unit_id": "fb617518-98fe-4d94-b5bf-bb331e16cab4"
+          },
+          {
+            "evidence": "the assumption that most rich people choose their home by sorting low to high on a global tax database, and they are ready to jump ship the second the bill arrives",
+            "confidence": 0.85,
+            "unit_id": "39301420-cf8b-4b11-ac2d-f0c7dbd1880a"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_ridicule",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "sorting low to high on a global tax database, and they are ready to jump ship the second the bill arrives",
+            "confidence": 0.7,
+            "unit_id": "39301420-cf8b-4b11-ac2d-f0c7dbd1880a"
+          },
+          {
+            "evidence": "Competing in a race to the bottom to be the lowest bidder for a few thousand wealthy individuals looking to pay back as little as possible is a losing proposition.",
+            "confidence": 0.6,
+            "unit_id": "698b2dc0-c639-4206-a49d-dd2796ff7045"
+          }
+        ]
+      },
+      {
+        "type": "phantom_quantification",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "According to some estimates, the UK lost almost 10,000 high net worth individuals",
+            "confidence": 0.6,
+            "unit_id": "56660664-3195-4ac7-be89-69218a0f7a84"
+          },
+          {
+            "evidence": "several studies, including some from Nobel Prize winners, have been done on the impact of these people immigrating",
+            "confidence": 0.7,
+            "unit_id": "1183d9e0-afbd-47fb-b166-b46a9641df8a"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_probability",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "If we try to tax rich people, they are just going to leave, taking with them their money, their jobs, and their businesses.",
+            "confidence": 0.7,
+            "unit_id": "45fefd44-6e1c-45dc-8bb3-bcc53e261f31"
+          }
+        ]
+      },
+      {
+        "type": "false_causal_chain",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "if all the rich people leave, then we won't even get the taxes they were paying, which means that by trying to increase revenue, we might actually end up shrinking it",
+            "confidence": 0.7,
+            "unit_id": "45fefd44-6e1c-45dc-8bb3-bcc53e261f31"
+          }
+        ]
+      },
+      {
+        "type": "slippery_slope",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "If we try to tax rich people, they are just going to leave, taking with them their money, their jobs, and their businesses. Ironically, if all the rich people leave, then we won't even get the taxes they were paying, which means that by trying to increase revenue, we might actually end up shrinking it.",
+            "confidence": 0.65,
+            "unit_id": "45fefd44-6e1c-45dc-8bb3-bcc53e261f31"
+          }
+        ]
+      },
+      {
+        "type": "sweeping_generalisation",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "If we try to tax rich people, they are just going to leave, taking with them their money, their jobs, and their businesses.",
+            "confidence": 0.7,
+            "unit_id": "45fefd44-6e1c-45dc-8bb3-bcc53e261f31"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_fear",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "If we try to tax rich people, they are just going to leave, taking with them their money, their jobs, and their businesses.",
+            "confidence": 0.7,
+            "unit_id": "45fefd44-6e1c-45dc-8bb3-bcc53e261f31"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_consequences",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "Ironically, if all the rich people leave, then we won't even get the taxes they were paying, which means that by trying to increase revenue, we might actually end up shrinking it.",
+            "confidence": 0.75,
+            "unit_id": "45fefd44-6e1c-45dc-8bb3-bcc53e261f31"
+          }
+        ]
+      },
+      {
+        "type": "begging_the_question",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "When a country was filled up to begin with by people just looking for the best deal for them and their money, then of course those are the same kind of people to move on just as quickly when a better deal becomes available.",
+            "confidence": 0.65,
+            "unit_id": "698b2dc0-c639-4206-a49d-dd2796ff7045"
+          }
+        ]
+      },
+      {
+        "type": "secundum_quid",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "London is more of the exception that proves the rule",
+            "confidence": 0.6,
+            "unit_id": "698b2dc0-c639-4206-a49d-dd2796ff7045"
+          }
+        ]
+      },
+      {
+        "type": "ecological_fallacy",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "those are the same kind of people to move on just as quickly when a better deal becomes available",
+            "confidence": 0.6,
+            "unit_id": "698b2dc0-c639-4206-a49d-dd2796ff7045"
+          }
+        ]
+      },
+      {
+        "type": "normative_laundering",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "Competing in a race to the bottom to be the lowest bidder for a few thousand wealthy individuals looking to pay back as little as possible is a losing proposition.",
+            "confidence": 0.7,
+            "unit_id": "698b2dc0-c639-4206-a49d-dd2796ff7045"
+          }
+        ]
+      },
+      {
+        "type": "motivational_delegitimisation",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "a few thousand wealthy individuals looking to pay back as little as possible",
+            "confidence": 0.7,
+            "unit_id": "698b2dc0-c639-4206-a49d-dd2796ff7045"
+          }
+        ]
+      },
+      {
+        "type": "reductio_ad_absurdum",
+        "count": 1,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "When a country was filled up to begin with by people just looking for the best deal for them and their money, then of course those are the same kind of people to move on just as quickly when a better deal becomes available.",
+            "confidence": 0.65,
+            "unit_id": "698b2dc0-c639-4206-a49d-dd2796ff7045"
+          }
+        ]
+      },
+      {
+        "type": "post_hoc",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "But even while all of this was happening, the number of millionaires in the UK actually increased. This homegrown wealth is also much less likely to leave because well, it's their home.",
+            "confidence": 0.6,
+            "unit_id": "52c555a4-0ca2-4800-bdde-a9e23c138a88"
+          }
+        ]
+      },
+      {
+        "type": "proof_by_example",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "On a small scale, we saw this play out over the last five years between California and Texas.",
+            "confidence": 0.7,
+            "unit_id": "e869bd32-49ba-4f01-a04f-7ea08eeb3599"
+          }
+        ]
+      },
+      {
+        "type": "ex_concessis",
+        "count": 1,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "let's say for the sake of argument that there was some kind of change that actually did scare way a lot of wealthy people",
+            "confidence": 0.65,
+            "unit_id": "cbe9ed8d-96f3-467d-8e6b-07a30333d54b"
+          }
+        ]
+      },
+      {
+        "type": "cargo_cult_science",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "several studies, including some from Nobel Prize winners, have been done on the impact of these people immigrating. What they have found is that overwhelmingly, the biggest loss is the expertise of skilled workers",
+            "confidence": 0.6,
+            "unit_id": "1183d9e0-afbd-47fb-b166-b46a9641df8a"
+          }
+        ]
+      }
+    ]
+  },
+  "discourse_skeleton": {
+    "overall_topic": "Whether taxing the wealthy causes capital flight that reduces revenue and harms the economy",
+    "agreement_reached": "no",
+    "consensus_reached": "no",
+    "major_stasis_points": [
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Will higher taxes on the wealthy cause enough relocation to reduce overall tax revenue?",
+        "claims": [
+          "Most wealthy people do not relocate primarily based on tax rates; for most, business opportunities outweigh slightly higher taxes.",
+          "Millionaire migration in 2024 was approximately 0% of the global ~60 million millionaire population.",
+          "Homegrown wealthy individuals are unlikely to leave their home country over tax savings due to family, social, and institutional ties.",
+          "Almost no wealthy Americans renounce citizenship for tax reasons."
+        ],
+        "antitheses": [
+          "Taxing the rich causes them to leave, taking money, jobs, and businesses with them, potentially shrinking revenue.",
+          "A record number of millionaires are expected to relocate internationally this year; ~16,500 very rich people will leave the US; 800,000 New Yorkers are prepared to leave NYC."
+        ],
+        "warrants": [
+          "Wealth is tied to specific institutions, industries, and markets, making relocation costly.",
+          "Aggregate migration figures must be evaluated relative to the total population of millionaires.",
+          "Capital flight in unstable countries (South Africa, Lebanon, Venezuela, Russia) was caused by prior instability, not taxation."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Where on the Laffer Curve are most developed economies, and at what top marginal rate does US revenue peak?",
+        "claims": [
+          "A 2017 study of 27 OECD countries found almost all are on the side of the Laffer curve where raising rates increases revenue.",
+          "The US, Mexico, and Slovakia have the largest gaps between actual and revenue-maximizing rates.",
+          "The US revenue-maximizing top marginal rate is approximately 76%, the highest among OECD countries."
+        ],
+        "antitheses": [
+          "Pundits for lower taxes argue the US is on the side of the curve where lowering rates would increase revenue."
+        ],
+        "warrants": [
+          "The US has more domestic wealth-generating industries than other OECD countries, raising its revenue-maximizing rate.",
+          "The Laffer model in the cited study incorporates emigration as a primary behavioral response."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "definition",
+        "question_at_issue": "Is revenue maximization the proper goal of tax policy?",
+        "claims": [
+          "The revenue-maximizing tax rate is not necessarily the optimum tax rate.",
+          "Lower rates may be optimal for household budgetary relief; higher rates on vices may be optimal to discourage consumption."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "Tax policy serves multiple legitimate goals beyond revenue (welfare, behavior modification)."
+        ],
+        "status": "partial_convergence"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Is the loss of wealthy residents (e.g., the UK exodus) economically significant?",
+        "claims": [
+          "UK wealthy residents contributed little relative to concessions made to attract them.",
+          "Wealthy foreign residents drove up home prices and enabled money laundering.",
+          "Most financial services work tied to UK HNWIs was performed offshore, providing little benefit to the UK.",
+          "London's millionaire exodus is exceptional, not representative.",
+          "1,000 millionaires generate more economic activity, jobs, and entrepreneurship than one billionaire."
+        ],
+        "antitheses": [
+          "The UK lost ~10,000 high-net-worth individuals in net outward migration in the last calendar year (Henley Partners), implying significant economic loss."
+        ],
+        "warrants": [
+          "Internationally mobile, tax-motivated residents have weak local attachment and will leave when a better deal appears.",
+          "Media attention to billionaire departures is disproportionate to their economic footprint."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Should countries lower taxes to retain or attract mobile wealthy individuals?",
+        "claims": [
+          "Tax competition to attract the wealthy is a self-defeating strategy.",
+          "Attracted residents have no local attachment and will leave again."
+        ],
+        "antitheses": [
+          "Lower taxes are necessary to retain wealth and prevent economic loss."
+        ],
+        "warrants": [
+          "Mobile wealthy individuals respond to the next better deal rather than building local commitment."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "What drove the California-to-Texas migration, and is it durable?",
+        "claims": [
+          "Remote work, not tax differentials alone, enabled the migration.",
+          "The migration is reversing as return-to-office mandates and AI concentration pull workers back.",
+          "Austin's housing market is experiencing shocks because it priced in continued inflows."
+        ],
+        "antitheses": [
+          "The migration was driven primarily by tax differentials and represents durable capital flight."
+        ],
+        "warrants": [
+          "Tech industry concentration is reasserting itself in established hubs."
+        ],
+        "status": "partial_convergence"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Is capital flight a cause or a consequence of national instability?",
+        "claims": [
+          "In South Africa, Lebanon, Venezuela, and Russia, prior instability caused wealthy people to leave, not the reverse."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "Historical case studies show instability preceding capital flight."
+        ],
+        "status": "partial_convergence"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Is loss of skilled professionals a greater concern than loss of wealthy asset holders?",
+        "claims": [
+          "The biggest emigration loss is the expertise of skilled workers, not wealthy investors' money.",
+          "Money can be replaced; skilled human capital cannot.",
+          "Skilled professionals are less mobile under normal conditions due to non-transferable credentials.",
+          "The best retention strategy is well-run institutions, not low taxes."
+        ],
+        "antitheses": [
+          "Loss of wealthy investors and their capital is the primary emigration concern."
+        ],
+        "warrants": [
+          "Nobel-laureate-authored studies support the relative importance of skilled human capital."
+        ],
+        "status": "partial_convergence"
+      }
+    ],
+    "facts_to_verify": [
+      "A record number of millionaires are expected to relocate internationally this year.",
+      "Approximately 16,500 very rich people will leave the US this year.",
+      "800,000 New Yorkers are prepared to leave New York City.",
+      "Capital flight is a major policy focus in the UK and New York City.",
+      "Miami, Dubai, Singapore, and Switzerland are common destinations for relocating wealthy individuals.",
+      "Arthur Laffer popularized the Laffer Curve during the Reagan administration.",
+      "A 2017 study examined 27 OECD countries' positions on the Laffer curve and found nearly all on the revenue-increasing side.",
+      "The 2017 study estimated the US revenue-maximizing top marginal rate at approximately 76%.",
+      "The US, Mexico, and Slovakia had the largest gaps between actual and revenue-maximizing rates.",
+      "The 2024 UBS Global Wealth Report finds higher-tax European countries had higher wealth growth over the last 15 years, even accounting for HNW immigration.",
+      "Countries with the highest median wealth per capita have high progressive income and consumption taxation.",
+      "New York City's inflation-adjusted millionaire population is at an all-time high.",
+      "Hedge fund billionaires commonly establish Miami residency while limiting NYC stays to under 182 days/year.",
+      "182 days is the relevant NY state tax residency threshold.",
+      "The UK lost almost 10,000 HNWIs to net outward migration in the last calendar year (Henley Partners).",
+      "Critics have identified structural problems with the Henley Partners methodology.",
+      "Henley Partners' methodology is consistent over time and draws on a wide range of industry sources.",
+      "A 2022 paper found a majority of financial services work tied to UK-resident HNWIs was performed offshore.",
+      "The UK introduced anti-money-laundering and wealth-extraction policies that preceded acceleration of HNW departures.",
+      "Wealthy individuals leaving the UK relocate primarily to Dubai.",
+      "The number of millionaires in the UK increased during the period referenced.",
+      "Remote workers and businesses shifted in significant numbers from California to Texas during 2020-2024.",
+      "Return-to-office mandates have increased over the past two years.",
+      "AI industry growth is concentrating in established tech hubs rather than Austin.",
+      "Austin's housing market has experienced significant declines or shocks recently.",
+      "Very few wealthy Americans renounce US citizenship for tax reasons.",
+      "The UBS Global Wealth Data Book estimates approximately 60 million millionaires worldwide.",
+      "Millionaire migration in 2024 was approximately 0% of millionaires globally and at the national level for top-outflow countries.",
+      "Some millionaire migration is motivated by conflict, political instability, or retirement rather than taxation.",
+      "South Africa, Lebanon, Venezuela, and Russia experienced significant capital flight, with broader instability preceding it in each case.",
+      "Nobel Prize winners have authored studies finding skilled-worker emigration impact exceeds wealthy-investor emigration impact.",
+      "Professional qualifications such as medical degrees often do not transfer across jurisdictions.",
+      "Skilled professionals have lower emigration rates than independently wealthy asset owners under normal conditions.",
+      "1,000 millionaires generate more aggregate economic activity, job creation, and entrepreneurship than one billionaire."
+    ],
+    "meta_comment": "Monologic content with a single advocate (narrator) responding to quoted foils (SPEAKER_00, SPEAKER_02). Stasis structure was reconstructed by treating quoted capital-flight claims as antitheses. Most disputes are factual/empirical and rest on contested studies (Henley Partners, the 2017 OECD Laffer study, UBS reports) that should be independently verified. Several unit skeletons had high overlap (units 10-12 on the 76% figure; units 1, 5, 8, 14 on relocation rates) and were merged. The narrator's position is internally consistent but relies heavily on a small number of cited sources; reliability of specific numerical claims is moderate pending verification."
+  },
+  "assembled_at": "2026-05-09T15:30:44.360727+00:00"
+}

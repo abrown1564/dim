@@ -1,0 +1,328 @@
+{
+  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+  "title": "'A wealth tax will target ordinary people like me'",
+  "discourse_mode": "multi_party",
+  "speaker_count": 2,
+  "published_date": "2025-07-10",
+  "source_url": "https://www.youtube.com/watch?v=WNk0xcuDah4",
+  "unit_count": 5,
+  "dialectical_conduct": {
+    "total_detections": 21,
+    "negative_count": 19,
+    "positive_count": 2,
+    "techniques": [
+      {
+        "type": "distributional_anchoring",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "it does very much seem like people who are hard workers like me just happen to have ordinary jobs in the city",
+            "confidence": 0.78,
+            "unit_id": "c8f4992f-72c3-4963-bcdb-05325d6f0db0"
+          },
+          {
+            "evidence": "Those ordinary people who are in 9 to 5 jobs... working ordinary jobs in the city, they should not be the people who have to pay more than their fair share",
+            "confidence": 0.85,
+            "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+          }
+        ]
+      },
+      {
+        "type": "non_sequitur",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "The people with one million say, oh, it's the people with 10 million. The people with 10 million say it's the people with 100 million. It's the people with 100 million who say, go after the billionaires, not me. I can't afford it. And ultimately, you know, we've all got to have to pay our fair share, don't we?",
+            "confidence": 0.65,
+            "unit_id": "eb57b654-cd67-4989-bae2-b80d1bc470ea"
+          },
+          {
+            "evidence": "they should not be the people who have to pay more than their fair share, which is what we will have to do if there is any sort of wealth tax. Because of course, to an ordinary family working... the amount of money that I earn in the city is a huge amount",
+            "confidence": 0.6,
+            "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+          }
+        ]
+      },
+      {
+        "type": "proof_by_example",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "The people with one million say, oh, it's the people with 10 million. The people with 10 million say it's the people with 100 million. It's the people with 100 million who say, go after the billionaires, not me.",
+            "confidence": 0.65,
+            "unit_id": "eb57b654-cd67-4989-bae2-b80d1bc470ea"
+          },
+          {
+            "evidence": "Because of course, to an ordinary family working, I don't know, in the north-east of England, the amount of money that I earn in the city is a huge amount.",
+            "confidence": 0.7,
+            "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+          }
+        ]
+      },
+      {
+        "type": "weasel_words",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "we've all got to have to pay our fair share, don't we?",
+            "confidence": 0.6,
+            "unit_id": "eb57b654-cd67-4989-bae2-b80d1bc470ea"
+          },
+          {
+            "evidence": "they should not be the people who have to pay more than their fair share, which is what we will have to do if there is any sort of wealth tax",
+            "confidence": 0.65,
+            "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+          }
+        ]
+      },
+      {
+        "type": "equivocation",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "to an ordinary family working, I don't know, in the north-east of England, the amount of money that I earn in the city is a huge amount",
+            "confidence": 0.65,
+            "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+          },
+          {
+            "evidence": "working ordinary jobs in the city, they should not be the people who have to pay more than their fair share... to an ordinary family working, I don't know, in the north-east of England, the amount of money that I earn in the city is a huge amount",
+            "confidence": 0.75,
+            "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+          }
+        ]
+      },
+      {
+        "type": "false_dilemma",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "if we're not willing to actually put those figures out there and say we're talking about people who have more than 50 million, then it does very much seem like people who are hard workers like me just happen to have ordinary jobs in the city",
+            "confidence": 0.6,
+            "unit_id": "c8f4992f-72c3-4963-bcdb-05325d6f0db0"
+          }
+        ]
+      },
+      {
+        "type": "prolepsis",
+        "count": 1,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "I am not the equivalent of the Duke of Westminster, who is often talked about when we talk about why aren't people paying the fair share of tax.",
+            "confidence": 0.7,
+            "unit_id": "c8f4992f-72c3-4963-bcdb-05325d6f0db0"
+          }
+        ]
+      },
+      {
+        "type": "hasty_generalisation",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "The people with one million say, oh, it's the people with 10 million. The people with 10 million say it's the people with 100 million. It's the people with 100 million who say, go after the billionaires, not me.",
+            "confidence": 0.7,
+            "unit_id": "eb57b654-cd67-4989-bae2-b80d1bc470ea"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_the_masses",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "we've all got to have to pay our fair share, don't we?",
+            "confidence": 0.6,
+            "unit_id": "eb57b654-cd67-4989-bae2-b80d1bc470ea"
+          }
+        ]
+      },
+      {
+        "type": "begging_the_question",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "they should not be the people who have to pay more than their fair share, which is what we will have to do if there is any sort of wealth tax",
+            "confidence": 0.7,
+            "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+          }
+        ]
+      },
+      {
+        "type": "sweeping_generalisation",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "they should not be the people who have to pay more than their fair share, which is what we will have to do if there is any sort of wealth tax",
+            "confidence": 0.65,
+            "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+          }
+        ]
+      },
+      {
+        "type": "persuasive_definition",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "working ordinary jobs in the city",
+            "confidence": 0.65,
+            "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+          }
+        ]
+      },
+      {
+        "type": "straw_man",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "they should not be the people who have to pay more than their fair share, which is what we will have to do if there is any sort of wealth tax",
+            "confidence": 0.75,
+            "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_pity",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "Those ordinary people who are in 9 to 5 jobs... working ordinary jobs in the city, they should not be the people who have to pay more than their fair share",
+            "confidence": 0.65,
+            "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+          }
+        ]
+      },
+      {
+        "type": "false_equivalence",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "to an ordinary family working, I don't know, in the north-east of England, the amount of money that I earn in the city is a huge amount",
+            "confidence": 0.7,
+            "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+          }
+        ]
+      },
+      {
+        "type": "ex_concessis",
+        "count": 1,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "unless you're a very, very good lawyer doing very, very well for yourself, which you might be, that wouldn't affect you, would it?",
+            "confidence": 0.65,
+            "unit_id": "2bec19a7-5db2-4a98-89a9-3236820ab895"
+          }
+        ]
+      }
+    ]
+  },
+  "discourse_skeleton": {
+    "overall_topic": "Whether a UK wealth tax would target ordinary high earners or only the truly wealthy",
+    "agreement_reached": "partial",
+    "consensus_reached": "0",
+    "major_stasis_points": [
+      {
+        "stasis_type": "definition",
+        "question_at_issue": "Who counts as 'wealthy' for the purposes of a wealth tax?",
+        "claims": [
+          "SPEAKER_00: Wealth tax advocates must specify a concrete high threshold (e.g., £50 million) to identify whom the tax targets.",
+          "SPEAKER_00: Ordinary city workers are not comparable to the truly wealthy like the Duke of Westminster."
+        ],
+        "antitheses": [
+          "SPEAKER_01: Kinnock's proposal already specifies a concrete threshold of £10 million in assets."
+        ],
+        "warrants": [
+          "Tax fairness requires that 'wealthy' be operationally defined by an asset threshold."
+        ],
+        "status": "partial_convergence"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Would the proposed wealth tax actually affect ordinary city professionals?",
+        "claims": [
+          "SPEAKER_00: Any wealth tax would force ordinary city workers to pay more than their fair share, because city salaries look large relative to ordinary family incomes elsewhere.",
+          "SPEAKER_01: Kinnock's proposal (2% on assets above £10m) would not affect the interlocutor or ordinary professionals."
+        ],
+        "antitheses": [
+          "SPEAKER_00 implicitly disputes that high-earning city professionals would fall below the £10m asset threshold, or argues income and asset wealth are conflated."
+        ],
+        "warrants": [
+          "If a tax threshold is set above an individual's asset level, that individual is not affected by the tax."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Can a Labour government be trusted to keep the wealth tax limited to the stated threshold?",
+        "claims": [
+          "SPEAKER_00: The Labour government cannot be trusted to stop the wealth tax at the proposed £10m threshold."
+        ],
+        "antitheses": [
+          "SPEAKER_01 (implicit): The proposal as stated should be evaluated on its actual terms."
+        ],
+        "warrants": [
+          "Stated policy thresholds may be expanded over time once a tax is introduced (slippery slope)."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "mixed",
+        "question_at_issue": "Should wealth tax obligations be deflected up the wealth ladder, or must all wealth tiers contribute their fair share?",
+        "claims": [
+          "SPEAKER_01: At every wealth tier, individuals deflect tax liability onto a wealthier tier.",
+          "SPEAKER_01: Everyone must pay their fair share."
+        ],
+        "antitheses": [
+          "SPEAKER_00: The truly wealthy (e.g., Duke of Westminster) are the appropriate target, not ordinary high earners."
+        ],
+        "warrants": [
+          "Fairness requires that tax burdens not be perpetually deflected upward."
+        ],
+        "status": "unresolved"
+      }
+    ],
+    "facts_to_verify": [
+      "Neil Kinnock proposed a wealth tax this weekend.",
+      "The Kinnock proposal sets the rate at 2%.",
+      "The Kinnock proposal applies to assets above £10 million.",
+      "Neil Kinnock is a former Labour leader.",
+      "Whether current UK wealth tax proposals specify an asset threshold.",
+      "Whether proposed wealth tax thresholds would in fact apply to ordinary salaried workers in the City.",
+      "The income differential between City workers and ordinary workers in the north-east of England.",
+      "Whether the Duke of Westminster is commonly cited in UK tax fairness debates.",
+      "Wealth holders at successive tiers (£1M, £10M, £100M) commonly argue that tax should target the next higher tier."
+    ],
+    "meta_comment": "Brief multi-party exchange in which SPEAKER_00 shifts position across units: initially demanding a high threshold, then conceding the £10m proposal exists, then retreating to a trust-based objection. The core disagreement migrates from definitional (who counts as wealthy) to factual (who is affected) to qualitative (slippery slope / trust in government). No resolution is reached, though there is partial convergence on the principle that ordinary workers should not be burdened."
+  },
+  "assembled_at": "2026-05-09T01:22:21.889152+00:00"
+}

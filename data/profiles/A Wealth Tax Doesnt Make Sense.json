@@ -1,0 +1,264 @@
+{
+  "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+  "title": "A Wealth Tax Doesn’t Make Sense",
+  "discourse_mode": "monologic",
+  "speaker_count": 2,
+  "published_date": "2023-07-25",
+  "source_url": "https://www.youtube.com/watch?v=g2sHvMjsFJs",
+  "unit_count": 3,
+  "dialectical_conduct": {
+    "total_detections": 13,
+    "negative_count": 13,
+    "positive_count": 0,
+    "techniques": [
+      {
+        "type": "appeal_to_fear",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "That is if politicians don't get their way. Just look at Elizabeth Warren, who for years has been promising a wealth tax.",
+            "confidence": 0.7,
+            "unit_id": "24e5af10-59f1-4a71-9a71-05797fcea145"
+          },
+          {
+            "evidence": "This whole thing sounds like a massive invasion of privacy and almost impossible to implement.",
+            "confidence": 0.65,
+            "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+          }
+        ]
+      },
+      {
+        "type": "hasty_generalisation",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "especially if we're talking about investment in things like art, or boats, or anything else really",
+            "confidence": 0.6,
+            "unit_id": "58a3fddf-1fda-46f3-aa60-7eb754461b48"
+          }
+        ]
+      },
+      {
+        "type": "jaqing",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "How's the government going to determine how much it's worth?",
+            "confidence": 0.65,
+            "unit_id": "58a3fddf-1fda-46f3-aa60-7eb754461b48"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_probability",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "Or maybe in Elizabeth Warren's head, the plan is to send agents out door to door to look at what you might be hiding",
+            "confidence": 0.65,
+            "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+          }
+        ]
+      },
+      {
+        "type": "false_causal_chain",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "Do I have to register them?... Or maybe... the plan is to send agents out door to door... This whole thing sounds like a massive invasion of privacy and almost impossible to implement.",
+            "confidence": 0.6,
+            "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+          }
+        ]
+      },
+      {
+        "type": "attribution_of_intent",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "source_attacks",
+        "examples": [
+          {
+            "evidence": "Or maybe in Elizabeth Warren's head, the plan is to send agents out door to door to look at what you might be hiding",
+            "confidence": 0.7,
+            "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+          }
+        ]
+      },
+      {
+        "type": "slippery_slope",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "the plan is to send agents out door to door to look at what you might be hiding",
+            "confidence": 0.7,
+            "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+          }
+        ]
+      },
+      {
+        "type": "argument_from_incredulity",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "This whole thing sounds like a massive invasion of privacy and almost impossible to implement.",
+            "confidence": 0.65,
+            "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+          }
+        ]
+      },
+      {
+        "type": "nirvana_fallacy",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "This whole thing sounds like a massive invasion of privacy and almost impossible to implement.",
+            "confidence": 0.65,
+            "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+          }
+        ]
+      },
+      {
+        "type": "weasel_words",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "Or maybe in Elizabeth Warren's head, the plan is to send agents out door to door to look at what you might be hiding",
+            "confidence": 0.7,
+            "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+          }
+        ]
+      },
+      {
+        "type": "straw_man",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "Or maybe in Elizabeth Warren's head, the plan is to send agents out door to door to look at what you might be hiding",
+            "confidence": 0.8,
+            "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_ridicule",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "Or maybe in Elizabeth Warren's head, the plan is to send agents out door to door to look at what you might be hiding",
+            "confidence": 0.7,
+            "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+          }
+        ]
+      }
+    ]
+  },
+  "discourse_skeleton": {
+    "overall_topic": "Critique of Elizabeth Warren's proposed wealth tax, particularly as applied to illiquid assets like fine art",
+    "agreement_reached": "1",
+    "consensus_reached": "1",
+    "major_stasis_points": [
+      {
+        "stasis_type": "procedure",
+        "question_at_issue": "How would a wealth tax actually be enacted, and what mechanism would Elizabeth Warren use?",
+        "claims": [
+          "It is unclear how Warren plans to enact a wealth tax.",
+          "Politicians pursuing a wealth tax could undermine the value of art as an investment."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "A tax proposal lacking a clear enactment mechanism is suspect."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "procedure",
+        "question_at_issue": "Can the government feasibly and fairly assess the value of non-cash assets for taxation?",
+        "claims": [
+          "Valuing non-cash assets like art, boats, or animals is much harder than measuring income.",
+          "Income tax makes sense because it is a percentage of measurable income; a wealth tax does not."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "Taxes should be based on values that can be objectively and easily measured."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Is it acceptable to require taxpayers to sell illiquid assets in order to pay a wealth tax?",
+        "claims": [
+          "A wealth tax forces asset-rich, cash-poor owners to sell their property to pay the tax.",
+          "Being forced to sell one's property to pay taxes is unacceptable."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "Tax policy should not coerce people into liquidating personal property."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Will a wealth tax aimed at the very rich also affect ordinary people?",
+        "claims": [
+          "A wealth tax intended to punish the very rich will trickle down and affect ordinary people.",
+          "Appreciation of assets like paintings could bring non-wealthy owners under the wealth tax.",
+          "The wealth tax should not impact non-wealthy people."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "Tax regimes historically expand in scope beyond their original targets."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "procedure",
+        "question_at_issue": "Can a wealth tax on illiquid assets be enforced without invasive privacy violations?",
+        "claims": [
+          "A wealth tax would be a massive invasion of privacy and almost impossible to implement.",
+          "Enforcement could require registration of assets or door-to-door agent inspections.",
+          "The government will find a way to locate hidden wealth wherever it is."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "Tax enforcement mechanisms that intrude into private homes and possessions are unacceptable."
+        ],
+        "status": "unresolved"
+      }
+    ],
+    "facts_to_verify": [
+      "Elizabeth Warren has proposed a wealth tax.",
+      "Elizabeth Warren has been promoting a wealth tax for years.",
+      "Whether Elizabeth Warren's wealth tax proposal specifies a clear mechanism of enactment.",
+      "Whether Elizabeth Warren's wealth tax proposal would tax unrealized appreciation of assets like paintings.",
+      "Whether Elizabeth Warren's wealth tax proposal applies to people who are not currently wealthy.",
+      "Whether historical wealth or luxury taxes have expanded in scope to affect non-wealthy taxpayers.",
+      "Whether Warren's proposal includes a registration requirement for assets like art.",
+      "Whether Warren's proposal includes door-to-door inspection enforcement.",
+      "What enforcement mechanisms existing wealth taxes in other countries use to identify illiquid assets."
+    ],
+    "meta_comment": "Monologic discourse with two aligned speakers; no opposing voice is represented, so all stasis points lack genuine antitheses. Skeleton preserves the critical claims but flags the absence of counter-positions and the need for factual verification of Warren's actual proposal."
+  },
+  "assembled_at": "2026-05-09T01:04:52.036651+00:00"
+}

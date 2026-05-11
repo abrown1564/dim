@@ -1,0 +1,104 @@
+{
+  "debate_id": "f2efa803-6228-410d-8938-0e7596544eb5",
+  "title": "Why the Left and Right Are Both Wrong About Wealth - Barry's Economics",
+  "discourse_mode": "monologic",
+  "speaker_count": null,
+  "published_date": "2025-11-09",
+  "source_url": "https://www.youtube.com/watch?v=ARkosek5ZZs",
+  "unit_count": 7,
+  "dialectical_conduct": {
+    "total_detections": 1,
+    "negative_count": 1,
+    "positive_count": 0,
+    "techniques": [
+      {
+        "type": "hasty_generalisation",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "Most politicians still imagine humans as individual actors.",
+            "confidence": 0.7,
+            "unit_id": "af0d263e-b599-4a26-a079-154dafd775ba"
+          }
+        ]
+      }
+    ]
+  },
+  "discourse_skeleton": {
+    "overall_topic": "Whether a wealth tax should be understood as a left/right ideological issue or as a matter of systemic economic health",
+    "agreement_reached": "no",
+    "consensus_reached": "no",
+    "major_stasis_points": [
+      {
+        "stasis_type": "definition",
+        "question_at_issue": "Is a wealth tax properly classified as a left-wing or right-wing policy?",
+        "claims": [
+          "A wealth tax is neither a left-wing nor a right-wing policy.",
+          "A wealth tax should be reframed as a question of systemic economic and social health."
+        ],
+        "antitheses": [
+          "A wealth tax is a left-wing idea (the conventional surface framing Barry rejects)."
+        ],
+        "warrants": [
+          "If wealth is collectively produced rather than individually earned, then taxing it is not an ideological redistribution but a systemic-maintenance question."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "definition",
+        "question_at_issue": "Are humans best understood as individual actors or as fundamentally relational/collective beings?",
+        "claims": [
+          "Most politicians conceptualize humans as individual actors.",
+          "This individualist conception is a blind spot in policy debate."
+        ],
+        "antitheses": [
+          "Humans are properly understood as individual actors whose wealth is individually earned and owned."
+        ],
+        "warrants": [
+          "Policy framings rest on anthropological assumptions; flawed assumptions produce flawed policy."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "definition",
+        "question_at_issue": "How should wealth be conceptualized — as an individual achievement or as a collective product?",
+        "claims": [
+          "Wealth is not earned or owned in isolation by individuals.",
+          "Wealth functions in society analogously to how calories function in a body.",
+          "Both left and right framings of wealth ownership are incorrect."
+        ],
+        "antitheses": [
+          "Wealth is earned and owned by individuals in isolation."
+        ],
+        "warrants": [
+          "Productive economic activity depends on social cooperation, infrastructure, and institutions.",
+          "A biological/systemic analogy clarifies that resources must circulate adequately for the whole to function."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Are the profits and wealth produced by a healthy society currently distributed well?",
+        "claims": [
+          "The profits and wealth that are the benefits of a healthy society are not currently being distributed well."
+        ],
+        "antitheses": [
+          "Current wealth and profit distribution is acceptable or just."
+        ],
+        "warrants": [
+          "If wealth is a collective product, then poor distribution indicates systemic dysfunction."
+        ],
+        "status": "unresolved"
+      }
+    ],
+    "facts_to_verify": [
+      "Most politicians frame humans as individual actors in policy discourse.",
+      "Empirical measures of current wealth distribution in the relevant society.",
+      "Empirical measures of current profit distribution in the relevant society."
+    ],
+    "meta_comment": "This is a short monologic argument by a single speaker (Barry) advancing a reframing thesis. There are no opposing speakers present; antitheses are reconstructed from the conventional left/right framings Barry explicitly rejects. All stasis points are unresolved within the transcript because no interlocutor responds. Reliability is moderate: claims are clear but largely assertive and metaphor-driven, with little empirical support provided."
+  },
+  "assembled_at": "2026-05-09T14:22:33.674080+00:00"
+}

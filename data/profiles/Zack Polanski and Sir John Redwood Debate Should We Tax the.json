@@ -1,0 +1,687 @@
+{
+  "debate_id": "04c24ef8-a700-4f8d-9794-372bb3915ee8",
+  "title": "Zack Polanski and Sir John Redwood Debate: Should We Tax the Rich More?",
+  "discourse_mode": "multi_party",
+  "speaker_count": 4,
+  "published_date": "2025-11-26",
+  "source_url": "https://www.youtube.com/watch?v=iyWpCfCvIR8",
+  "unit_count": 15,
+  "dialectical_conduct": {
+    "total_detections": 52,
+    "negative_count": 47,
+    "positive_count": 5,
+    "techniques": [
+      {
+        "type": "false_cause",
+        "count": 5,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "We had 16,000 millionaires leave over this Labour government so far, probably more by now.",
+            "confidence": 0.7,
+            "unit_id": "bcb138a6-71ce-4b38-96fc-26659a0173f7"
+          },
+          {
+            "evidence": "Industries leave because they see no reason to give excess money to the government.",
+            "confidence": 0.7,
+            "unit_id": "69bf2963-263e-4e7f-b1ee-91bd2aaa5e18"
+          }
+        ]
+      },
+      {
+        "type": "hasty_generalisation",
+        "count": 4,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "And we see billionaires pulling out who make really big contributions to tax.",
+            "confidence": 0.65,
+            "unit_id": "bcb138a6-71ce-4b38-96fc-26659a0173f7"
+          },
+          {
+            "evidence": "Wealthy people will not relocate over a 1% wealth tax.",
+            "confidence": 0.65,
+            "unit_id": "8f5271e3-8570-44ae-9c2c-adcacdafaedb"
+          }
+        ]
+      },
+      {
+        "type": "straw_man",
+        "count": 3,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "it's the magic money tree world, isn't it?",
+            "confidence": 0.6,
+            "unit_id": "35d35a53-41db-49ad-9a9c-98cd26e3f6dd"
+          },
+          {
+            "evidence": "If people want to flee because we're asking for a tiny amount of money relatively to their wealth, then I think we should wave them off out the door.",
+            "confidence": 0.6,
+            "unit_id": "8f5271e3-8570-44ae-9c2c-adcacdafaedb"
+          }
+        ]
+      },
+      {
+        "type": "prolepsis",
+        "count": 3,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "We keep hearing the name of this billionaire, and that's because it's one exceptional circumstance where someone's left the country. Actually, all evidence has pretty much been debunked",
+            "confidence": 0.75,
+            "unit_id": "8f5271e3-8570-44ae-9c2c-adcacdafaedb"
+          },
+          {
+            "evidence": "I think that economists who've looked at this say, you can do a big wealth tax if it's a surprise and you do it once. But if you try and do it every year, then what then happens is people change the behaviour, they move the assets and you don't raise any money.",
+            "confidence": 0.7,
+            "unit_id": "cba6e334-d474-4939-ba07-ee3c1a075df8"
+          }
+        ]
+      },
+      {
+        "type": "red_herring",
+        "count": 3,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "The solar farms that are being put in, they're Chinese solar farms... And they burn coal to make them.",
+            "confidence": 0.65,
+            "unit_id": "e84087bf-1fbe-46fb-b4ec-7b9f8397f73d"
+          },
+          {
+            "evidence": "I'm just saying that nobody does what you're proposing. So what I'm suggesting is we're a global leader in reducing inequality. We have one in three children living in poverty.",
+            "confidence": 0.7,
+            "unit_id": "151d8cbb-b448-46f7-bce0-70a52c5e78b2"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_ridicule",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "No, it's totally unrealistic. I mean, it's the magic money tree world, isn't it?",
+            "confidence": 0.75,
+            "unit_id": "35d35a53-41db-49ad-9a9c-98cd26e3f6dd"
+          },
+          {
+            "evidence": "then I think we should wave them off out the door",
+            "confidence": 0.6,
+            "unit_id": "8f5271e3-8570-44ae-9c2c-adcacdafaedb"
+          }
+        ]
+      },
+      {
+        "type": "weasel_words",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "Actually, all evidence has pretty much been debunked",
+            "confidence": 0.7,
+            "unit_id": "8f5271e3-8570-44ae-9c2c-adcacdafaedb"
+          },
+          {
+            "evidence": "And they burn coal to make them.",
+            "confidence": 0.6,
+            "unit_id": "e84087bf-1fbe-46fb-b4ec-7b9f8397f73d"
+          }
+        ]
+      },
+      {
+        "type": "false_causal_chain",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "Refusing to extract UK oil and gas systematically destroys British industry and petrochemicals.",
+            "confidence": 0.7,
+            "unit_id": "69bf2963-263e-4e7f-b1ee-91bd2aaa5e18"
+          },
+          {
+            "evidence": "you start with the £47 billion of spending cuts, and then you can actually price people back into buying houses and into jobs",
+            "confidence": 0.75,
+            "unit_id": "4e6ba318-6e33-43e4-af5b-5810af7ab69f"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_consequences",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "Importing instead of producing domestically increases world CO2.",
+            "confidence": 0.6,
+            "unit_id": "69bf2963-263e-4e7f-b1ee-91bd2aaa5e18"
+          },
+          {
+            "evidence": "if you add even more taxes on top as Rachel Reeves did last budget, that was an absolute economy killer",
+            "confidence": 0.6,
+            "unit_id": "1769e84e-a19e-46d8-80cd-b6c887fc7130"
+          }
+        ]
+      },
+      {
+        "type": "ex_concessis",
+        "count": 2,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "If we weren't giving £3.2 billion to fossil fuels, those are those big oil and gas companies, in fossil fuel subsidies, we could actually spend that money on a jobs guarantee",
+            "confidence": 0.65,
+            "unit_id": "e84087bf-1fbe-46fb-b4ec-7b9f8397f73d"
+          },
+          {
+            "evidence": "you can do a big wealth tax if it's a surprise and you do it once. But if you try and do it every year, then what then happens is people change the behaviour",
+            "confidence": 0.65,
+            "unit_id": "cba6e334-d474-4939-ba07-ee3c1a075df8"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_authority",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "economists who've looked at this say",
+            "confidence": 0.4,
+            "unit_id": "cba6e334-d474-4939-ba07-ee3c1a075df8"
+          },
+          {
+            "evidence": "economists who've looked at this say, you can do a big wealth tax if it's a surprise and you do it once",
+            "confidence": 0.65,
+            "unit_id": "cba6e334-d474-4939-ba07-ee3c1a075df8"
+          }
+        ]
+      },
+      {
+        "type": "loaded_question",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "When are we going to see tough choices for multimillionaires and billionaires?",
+            "confidence": 0.7,
+            "unit_id": "35d61572-30ed-4f19-a28f-7c3ebeadc57c"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_fear",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "We had 16,000 millionaires leave over this Labour government so far, probably more by now. And we see billionaires pulling out who make really big contributions to tax.",
+            "confidence": 0.6,
+            "unit_id": "bcb138a6-71ce-4b38-96fc-26659a0173f7"
+          }
+        ]
+      },
+      {
+        "type": "genetic_fallacy",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "source_attacks",
+        "examples": [
+          {
+            "evidence": "it's the magic money tree world, isn't it?",
+            "confidence": 0.65,
+            "unit_id": "35d35a53-41db-49ad-9a9c-98cd26e3f6dd"
+          }
+        ]
+      },
+      {
+        "type": "argument_from_incredulity",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "If people want to flee because we're asking for a tiny amount of money relatively to their wealth, then I think we should wave them off out the door.",
+            "confidence": 0.6,
+            "unit_id": "8f5271e3-8570-44ae-9c2c-adcacdafaedb"
+          }
+        ]
+      },
+      {
+        "type": "no_true_scotsman",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "If people want to flee because we're asking for a tiny amount of money relatively to their wealth, then I think we should wave them off out the door.",
+            "confidence": 0.65,
+            "unit_id": "8f5271e3-8570-44ae-9c2c-adcacdafaedb"
+          }
+        ]
+      },
+      {
+        "type": "fallacy_of_composition",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "The solar farms that are being put in, they're Chinese solar farms... And they burn coal to make them.",
+            "confidence": 0.6,
+            "unit_id": "e84087bf-1fbe-46fb-b4ec-7b9f8397f73d"
+          }
+        ]
+      },
+      {
+        "type": "cherry_picking",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "The solar farms that are being put in, they're Chinese solar farms... And they burn coal to make them.",
+            "confidence": 0.65,
+            "unit_id": "e84087bf-1fbe-46fb-b4ec-7b9f8397f73d"
+          }
+        ]
+      },
+      {
+        "type": "composition_fallacy",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "it's not really easy to move an asset. So if we look at the Duke of Westminster, he owns half of Mayfair, you can't just pick up Mayfair and move with it",
+            "confidence": 0.6,
+            "unit_id": "60e8a5b0-e383-4f8e-808e-6a0f8a3c0971"
+          }
+        ]
+      },
+      {
+        "type": "ad_hominem_circumstantial",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "source_attacks",
+        "examples": [
+          {
+            "evidence": "economists are often not just independent minds",
+            "confidence": 0.85,
+            "unit_id": "60e8a5b0-e383-4f8e-808e-6a0f8a3c0971"
+          }
+        ]
+      },
+      {
+        "type": "poisoning_the_well",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "source_attacks",
+        "examples": [
+          {
+            "evidence": "when we talk about economists, it's important to say that economists are often not just independent minds",
+            "confidence": 0.7,
+            "unit_id": "60e8a5b0-e383-4f8e-808e-6a0f8a3c0971"
+          }
+        ]
+      },
+      {
+        "type": "proof_by_example",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "if we look at the Duke of Westminster, he owns half of Mayfair, you can't just pick up Mayfair and move with it",
+            "confidence": 0.7,
+            "unit_id": "60e8a5b0-e383-4f8e-808e-6a0f8a3c0971"
+          }
+        ]
+      },
+      {
+        "type": "ad_hominem",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "economists are often not just independent minds",
+            "confidence": 0.65,
+            "unit_id": "60e8a5b0-e383-4f8e-808e-6a0f8a3c0971"
+          }
+        ]
+      },
+      {
+        "type": "bulverism",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "economists are often not just independent minds",
+            "confidence": 0.75,
+            "unit_id": "60e8a5b0-e383-4f8e-808e-6a0f8a3c0971"
+          }
+        ]
+      },
+      {
+        "type": "motivational_delegitimisation",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "economists are often not just independent minds",
+            "confidence": 0.7,
+            "unit_id": "60e8a5b0-e383-4f8e-808e-6a0f8a3c0971"
+          }
+        ]
+      },
+      {
+        "type": "phantom_quantification",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "We have one in three children living in poverty",
+            "confidence": 0.6,
+            "unit_id": "151d8cbb-b448-46f7-bce0-70a52c5e78b2"
+          }
+        ]
+      },
+      {
+        "type": "normative_laundering",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "So what I'm suggesting is we're a global leader in reducing inequality. We have one in three children living in poverty.",
+            "confidence": 0.65,
+            "unit_id": "151d8cbb-b448-46f7-bce0-70a52c5e78b2"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_pity",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "We have one in three children living in poverty.",
+            "confidence": 0.75,
+            "unit_id": "151d8cbb-b448-46f7-bce0-70a52c5e78b2"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_emotion",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "we're a global leader in reducing inequality. We have one in three children living in poverty.",
+            "confidence": 0.65,
+            "unit_id": "151d8cbb-b448-46f7-bce0-70a52c5e78b2"
+          }
+        ]
+      },
+      {
+        "type": "begging_the_question",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "they've got exactly the right economic strategy, you start with the £47 billion of spending cuts",
+            "confidence": 0.65,
+            "unit_id": "4e6ba318-6e33-43e4-af5b-5810af7ab69f"
+          }
+        ]
+      },
+      {
+        "type": "post_hoc",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "young people are not getting jobs now because of the jobs tax and the dreadful budget",
+            "confidence": 0.65,
+            "unit_id": "4e6ba318-6e33-43e4-af5b-5810af7ab69f"
+          }
+        ]
+      },
+      {
+        "type": "false_precision",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "you start with the £47 billion of spending cuts, and then you can actually price people back into buying houses and into jobs",
+            "confidence": 0.6,
+            "unit_id": "4e6ba318-6e33-43e4-af5b-5810af7ab69f"
+          }
+        ]
+      },
+      {
+        "type": "attribution_of_intent",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "source_attacks",
+        "examples": [
+          {
+            "evidence": "Attack on Wokery is all a distraction from protecting the power and wealth of the super-rich.",
+            "confidence": 0.8,
+            "unit_id": "4ef63165-33a6-4e38-80db-762b5e70f6e1"
+          }
+        ]
+      }
+    ]
+  },
+  "discourse_skeleton": {
+    "overall_topic": "Whether the UK should impose an annual wealth tax on the very wealthy, and related disputes over capital flight, energy/industrial policy, and fiscal strategy",
+    "agreement_reached": "no",
+    "consensus_reached": "no",
+    "major_stasis_points": [
+      {
+        "stasis_type": "definition",
+        "question_at_issue": "At what asset thresholds and rates should a wealth tax apply?",
+        "claims": [
+          "SPEAKER_00: A wealth tax should apply at 1% on assets of £10m or more, and 2% on assets of £1bn or more."
+        ],
+        "antitheses": [
+          "SPEAKER_02: Any such tax is the wrong approach; 1% per year is not a tiny amount."
+        ],
+        "warrants": [
+          "Tax design must specify thresholds and rates to be evaluated as workable policy."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Is it realistic to raise £14.9bn per year from an annual wealth tax?",
+        "claims": [
+          "SPEAKER_00: The £14.9bn estimate is realistic because major assets (e.g. land) cannot be moved offshore.",
+          "SPEAKER_00: Spain, Norway, and Switzerland operate annual wealth taxes, demonstrating workability."
+        ],
+        "antitheses": [
+          "SPEAKER_02: £14.9bn/year is unrealistic 'magic money tree' thinking.",
+          "SPEAKER_03: Comparator countries raise closer to £400m than £14bn, and no country implements what SPEAKER_00 proposes."
+        ],
+        "warrants": [
+          "Comparable international experience is evidence for feasibility.",
+          "Empirical revenue figures in similar regimes constrain credible projections."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Will a wealth tax cause capital flight, and is such flight already occurring?",
+        "claims": [
+          "SPEAKER_02: 16,000 millionaires have left under the current Labour government; billionaires like Lakshmi Mittal have moved assets to Switzerland.",
+          "SPEAKER_02: The wealthy have houses elsewhere and private jets ready and will refuse to pay more."
+        ],
+        "antitheses": [
+          "SPEAKER_00: The Mittal case is exceptional and broader flight evidence has been debunked.",
+          "SPEAKER_00: Wealthy people will not relocate over a 1% tax; immobile assets like Mayfair land cannot be moved."
+        ],
+        "warrants": [
+          "Past behavioural responses predict future ones.",
+          "Asset mobility determines whether avoidance is possible."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Do annually recurring wealth taxes raise meaningful revenue or fail due to behavioural change?",
+        "claims": [
+          "SPEAKER_03: Economists hold that one-off surprise wealth taxes can work, but annual wealth taxes fail because behaviour changes."
+        ],
+        "antitheses": [
+          "SPEAKER_00: Economists who oppose wealth taxes are often funded by the wealthy and not impartial; comparator countries demonstrate workability."
+        ],
+        "warrants": [
+          "Mainstream empirical economics is authoritative on tax incidence.",
+          "Funding sources may bias expert opinion."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Should the super-rich pay more to fund public services given current inequality and child poverty?",
+        "claims": [
+          "SPEAKER_00: With one in three children in poverty, the super-rich should contribute more.",
+          "SPEAKER_00: Patriotism entails willingness to contribute to public services, arts, culture, and community.",
+          "SPEAKER_00: Wealthy people who would leave over a small tax should be let go rather than appeased."
+        ],
+        "antitheses": [
+          "SPEAKER_02: Adding further taxes is an economy killer; cutting wasteful spending is the right strategy."
+        ],
+        "warrants": [
+          "Distributive fairness obliges greater contribution from those with greater means.",
+          "Tax policy must not damage the productive economy on which all depend."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Should fossil fuel subsidies be redirected to a renewables jobs guarantee, and is current renewables/net-zero policy harming UK industry?",
+        "claims": [
+          "SPEAKER_00: The £3.2bn in fossil fuel subsidies should fund a renewables jobs guarantee; renewables are more secure, popular, and cheaper.",
+          "SPEAKER_00: Britain should manufacture renewables domestically rather than rely on Chinese imports."
+        ],
+        "antitheses": [
+          "SPEAKER_02: Refusal to extract UK oil and gas, plus high energy prices, is destroying British industry and petrochemicals.",
+          "SPEAKER_02: UK solar farms use Chinese coal-powered manufacturing, raising global CO2."
+        ],
+        "warrants": [
+          "Energy policy should optimise jobs, security, cost, and emissions jointly.",
+          "Domestic production reduces global emissions relative to higher-carbon imports (contested)."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Is cutting public spending preferable to raising taxes as fiscal strategy?",
+        "claims": [
+          "SPEAKER_02: The correct strategy is £47bn of spending cuts to price people back into work and housing.",
+          "SPEAKER_02: Reeves's last budget's tax rises were an economy killer."
+        ],
+        "antitheses": [
+          "SPEAKER_01: The Conservatives presided over the highest tax rises.",
+          "SPEAKER_00 (implicit): Public services require greater revenue, not cuts."
+        ],
+        "warrants": [
+          "Lower taxes and reduced waste stimulate employment and growth.",
+          "Track record on past tax decisions bears on credibility of current proposals."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "What is the function of anti-woke rhetoric, and is the Conservative opposition effective?",
+        "claims": [
+          "SPEAKER_02: The Conservatives are an effective opposition leading on the 'Mandelson problem' and 'wokery'."
+        ],
+        "antitheses": [
+          "SPEAKER_00: Anti-woke rhetoric functions as a distraction protecting the wealth and power of the super-rich."
+        ],
+        "warrants": [
+          "Political rhetoric should be assessed by what material interests it serves."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Does agreement with Nigel Farage on the two-child benefit cap carry argumentative weight?",
+        "claims": [
+          "SPEAKER_03: SPEAKER_00 agrees with Farage on scrapping the cap."
+        ],
+        "antitheses": [
+          "SPEAKER_00: Farage's agreement is incidental and self-interested, not principled."
+        ],
+        "warrants": [
+          "Shared positions across opponents may indicate either consensus or coincidence."
+        ],
+        "status": "partial_convergence"
+      }
+    ],
+    "facts_to_verify": [
+      "A 1% annual tax on UK assets over £10m (2% over £1bn) would raise approximately £14.9bn per year.",
+      "16,000 millionaires have left the UK under the current Labour government.",
+      "Lakshmi Mittal has relocated his tax residence/assets to Switzerland.",
+      "Lakshmi Mittal was previously a Labour Party donor.",
+      "The UK provides approximately £3.2bn in fossil fuel subsidies annually.",
+      "The Labour government is moving to scrap the two-child benefit cap.",
+      "Lifting the two-child benefit cap would lift hundreds of thousands of children out of poverty.",
+      "The Green Party has gained over 100,000 new members in the two months since SPEAKER_00 became leader.",
+      "The Duke of Westminster owns approximately half of Mayfair.",
+      "George Osborne previously advocated a mansion tax.",
+      "The current Chancellor has proposed a mansion tax on the largest properties.",
+      "Spain, Norway, and Switzerland levy annual wealth taxes.",
+      "Annual wealth tax revenue in Spain, Norway, and Switzerland is closer to £400m than £14bn.",
+      "No country currently implements an annual wealth tax of the specific design SPEAKER_00 proposes.",
+      "Empirical studies show recurring annual wealth taxes raise less revenue over time due to behavioural responses.",
+      "One-off surprise wealth taxes can raise substantial revenue per peer-reviewed economics literature.",
+      "One in three children in the UK live in poverty.",
+      "UK unemployment has risen in every month over the last year.",
+      "The Institute for Fiscal Studies (referenced as 'Institute for Physical Studies' / 'Dillnacht report') stated that a household economy cannot be compared to a national economy.",
+      "UK refineries and ethylene plants are being shut down.",
+      "Solar farms currently being installed in the UK are predominantly manufactured in China.",
+      "Chinese solar panel manufacturing is powered substantially by coal.",
+      "Renewable energy is cheaper than fossil fuel energy in the UK.",
+      "UK business taxes and industrial energy prices are high relative to comparable economies.",
+      "UK government policy restricts new domestic oil and gas extraction.",
+      "Importing petrochemicals/energy produces higher global CO2 emissions than domestic UK production.",
+      "Rachel Reeves's last budget raised taxes.",
+      "The previous Conservative government oversaw the highest tax rises in some specified period.",
+      "SPEAKER_02 voted against the prior Conservative budget that raised taxes.",
+      "The Conservatives have proposed £47bn of spending cuts.",
+      "The recent budget introduced a 'jobs tax' (e.g., employer NICs increase).",
+      "Youth employment has declined since the recent budget.",
+      "Charlie Mullins, founder of Pimlico Plumbers, has assets of £10m or more.",
+      "Economists who comment on wealth taxes commonly receive funding from wealthy donors."
+    ],
+    "meta_comment": "Debate is structurally unresolved with sharply opposed positions on every major stasis point. Empirical disputes (revenue projections, capital flight, comparator-country yields) are central but neither side cites primary sources adequately for adjudication; SPEAKER_03's moderator interventions surface the strongest empirical pressure on SPEAKER_00's revenue claim. Several factual claims are garbled in transcription (e.g. 'Institute for Physical Studies', 'Dillnacht report') and require careful verification. Normative disputes about fairness, patriotism, and the function of cultural rhetoric run alongside the empirical disputes and are not resolved. Unit-level skeletons are reasonably reliable but the speaker attribution for SPEAKER_03 oscillates between moderator framing and substantive challenge — preserved here as moderator with substantive empirical interventions."
+  },
+  "assembled_at": "2026-05-09T15:10:13.954846+00:00"
+}

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DIM - Technique × Stance Heatmap</title>
+  <style>
+    :root {
+      --bg:      #f4efe6;
+      --panel:   #fffaf2;
+      --ink:     #1f1a17;
+      --muted:   #6f655d;
+      --line:    #d7c9b7;
+      --accent:  #a3472f;
+      --shadow:  0 18px 40px rgba(74,46,22,0.08);
+      --anti:    #a3472f;
+      --pro:     #2e7d55;
+      --mixed:   #3a5f8a;
+      --neutral: #7a6220;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, "Palatino Linotype", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(163,71,47,0.12), transparent 28%),
+        linear-gradient(180deg, #f7f1e8 0%, var(--bg) 100%);
+      min-height: 100vh;
+    }
+    .page { max-width: 1300px; margin: 0 auto; padding: 68px 24px 64px; }
+    .topnav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: flex-end; align-items: center;
+      padding: 0 32px; height: 48px;
+      background: rgba(255, 250, 242, 0.88);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line); font-size: 0.85rem; gap: 4px;
+    }
+    .topnav a { color: var(--accent); text-decoration: none; padding: 4px 10px; border-radius: 6px; transition: background 0.13s; }
+    .topnav a:hover { background: rgba(163,71,47,0.08); }
+
+    .hero {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 28px 32px 24px;
+      margin-bottom: 28px;
+    }
+    h1 { font-size: clamp(1.6rem, 3.5vw, 2.8rem); line-height: 1.1; margin-bottom: 8px; }
+    .subtitle { color: var(--muted); font-size: 1rem; line-height: 1.6; max-width: 760px; }
+    nav { font-size: 0.88rem; margin-top: 16px; }
+    nav a { color: var(--accent); text-decoration: none; margin-right: 18px; }
+    nav a:hover { text-decoration: underline; }
+
+    /* stat pills */
+    .stats { display: flex; gap: 16px; flex-wrap: wrap; margin: 18px 0 0; }
+    .stat {
+      background: linear-gradient(135deg, #fdf7ef, #f5ede0);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 10px 18px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .stat strong { display: block; font-size: 1.4rem; color: var(--ink); line-height: 1; }
+
+    /* unit-count denominator row */
+    .denom-note {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+      font-family: ui-monospace, monospace;
+    }
+
+    /* main table wrapper */
+    .table-wrap {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 28px 24px;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    /* column headers */
+    thead th {
+      padding: 8px 14px 14px;
+      text-align: center;
+      font-size: 0.88rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    thead th.th-technique {
+      text-align: left;
+      color: var(--muted);
+      font-weight: 400;
+      width: 220px;
+      min-width: 180px;
+    }
+    .stance-dot {
+      display: inline-block;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    /* group header rows */
+    tr.group-header td {
+      padding: 20px 14px 6px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-family: ui-monospace, monospace;
+    }
+    tr.group-header:first-child td { border-top: none; padding-top: 4px; }
+
+    /* technique rows */
+    tr.tech-row td {
+      padding: 3px 4px;
+      vertical-align: middle;
+    }
+    td.tech-name {
+      padding: 3px 10px 3px 4px;
+      font-size: 0.88rem;
+      white-space: nowrap;
+      color: var(--ink);
+    }
+
+    /* heat cells */
+    td.cell {
+      width: 90px;
+      min-width: 70px;
+      text-align: center;
+    }
+    .cell-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 34px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-family: ui-monospace, monospace;
+      font-weight: 600;
+      cursor: default;
+      transition: transform 0.1s;
+      color: transparent; /* shown on hover via JS */
+    }
+    .cell-inner:hover { transform: scale(1.08); }
+    .cell-inner.has-value { color: rgba(255,255,255,0.0); }
+    .cell-inner.has-value:hover { color: rgba(255,255,255,0.9); }
+
+    /* tooltip */
+    #tooltip {
+      position: fixed;
+      background: #1f1a17ee;
+      color: #fdf7ef;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.12s;
+      max-width: 240px;
+      z-index: 100;
+      font-family: Georgia, serif;
+    }
+    #tooltip strong { display: block; margin-bottom: 4px; font-size: 0.9rem; }
+    #tooltip .tt-rate { font-family: ui-monospace, monospace; font-size: 0.78rem; color: #e8c4b8; }
+
+    /* legend */
+    .legend {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 24px;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .legend-swatch {
+      display: inline-block;
+      width: 80px; height: 16px;
+      border-radius: 4px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<nav class="topnav">
+  <a href="report.html">Report</a>
+  <a href="positions.html">Agora</a>
+  <a href="corpus.html">Corpus</a>
+  <a href="debate.html">Debate</a>
+  <a href="taxonomy.html">Taxonomy</a>
+  <a href="traditions.html">Traditions</a>
+  <a href="map.html">Map</a>
+  <a href="dissertation.html">Dissertation</a>
+</nav>
+<div class="page">
+
+  <div class="hero">
+    <h1>Technique × Stance</h1>
+    <p class="subtitle">
+      Detection rate for each rhetorical technique, broken down by the policy stance of the
+      argumentative unit in which it appeared. Rates are <strong>normalised by the number of
+      usable units per stance</strong> - so anti and pro are comparable even if one stance
+      dominates the corpus. Colour intensity = rate relative to the corpus maximum.
+    </p>
+    <div class="stats" id="stats"></div>
+  </div>
+
+  <div class="table-wrap">
+    <p class="denom-note" id="denom-note"></p>
+    <table id="heatmap-table">
+      <thead>
+        <tr>
+          <th class="th-technique">technique</th>
+          <th><span class="stance-dot" style="background:var(--anti)"></span>anti</th>
+          <th><span class="stance-dot" style="background:var(--pro)"></span>pro</th>
+          <th><span class="stance-dot" style="background:var(--mixed)"></span>mixed</th>
+          <th><span class="stance-dot" style="background:var(--neutral)"></span>neutral</th>
+        </tr>
+      </thead>
+      <tbody id="heatmap-body"></tbody>
+    </table>
+
+    <div class="legend">
+      <span>lower rate</span>
+      <span class="legend-swatch" id="legend-swatch"></span>
+      <span>higher rate</span>
+      <span style="margin-left:16px;color:var(--muted)">- colour = stance, opacity = normalised detection rate</span>
+    </div>
+  </div>
+
+</div>
+
+<div id="tooltip"></div>
+
+<script>
+// ── colour helpers ────────────────────────────────────────────────────────────
+const STANCE_RGB = {
+  anti:    [163, 71,  47],
+  pro:     [46,  125, 85],
+  mixed:   [58,  95,  138],
+  neutral: [122, 98,  32],
+};
+
+// Convert a rate (0–max_rate) to a CSS rgba string for the given stance.
+// We use sqrt so that low-frequency techniques don't completely vanish.
+function cellColor(stance, rate, maxRate) {
+  if (rate === 0 || maxRate === 0) return "rgba(235,226,212,0.4)";
+  const opacity = Math.sqrt(rate / maxRate);  // sqrt stretches low values
+  const [r, g, b] = STANCE_RGB[stance] || [100, 100, 100];
+  return `rgba(${r},${g},${b},${opacity.toFixed(3)})`;
+}
+
+// ── render ────────────────────────────────────────────────────────────────────
+fetch("data/heatmap.json")
+  .then(r => r.json())
+  .then(data => {
+    const { stances, unit_counts, max_rate, groups, debate_count, detection_count } = data;
+
+    // stat pills
+    document.getElementById("stats").innerHTML = [
+      ["debates",    debate_count],
+      ["detections", detection_count],
+      ["techniques", groups.reduce((n, g) => n + g.techniques.length, 0)],
+    ].map(([label, val]) =>
+      `<div class="stat"><strong>${val}</strong>${label}</div>`
+    ).join("");
+
+    // denominator note - shows the reader what we're normalising by
+    document.getElementById("denom-note").textContent =
+      "Normalised by usable units per stance - " +
+      stances.map(st => `${st}: ${unit_counts[st] ?? 0} units`).join(" · ");
+
+    // legend swatch: gradient from faint anti to full anti
+    const [r, g, b] = STANCE_RGB.anti;
+    document.getElementById("legend-swatch").style.background =
+      `linear-gradient(to right, rgba(${r},${g},${b},0.08), rgba(${r},${g},${b},1))`;
+
+    // build table rows
+    const tbody = document.getElementById("heatmap-body");
+    for (const group of groups) {
+      // group header row
+      const gRow = document.createElement("tr");
+      gRow.className = "group-header";
+      gRow.innerHTML = `<td colspan="5">${group.name}</td>`;
+      tbody.appendChild(gRow);
+
+      // one row per technique
+      for (const tech of group.techniques) {
+        const row = document.createElement("tr");
+        row.className = "tech-row";
+
+        // technique name cell
+        const nameCell = document.createElement("td");
+        nameCell.className = "tech-name";
+        nameCell.textContent = tech.name;
+        row.appendChild(nameCell);
+
+        // one cell per stance
+        for (const stance of stances) {
+          const rate  = tech.rates[stance] ?? 0;
+          const count = tech.counts[stance] ?? 0;
+
+          const td = document.createElement("td");
+          td.className = "cell";
+
+          const inner = document.createElement("div");
+          inner.className = "cell-inner" + (count > 0 ? " has-value" : "");
+          inner.style.background = cellColor(stance, rate, max_rate);
+          // show raw count as text (revealed on hover via CSS)
+          if (count > 0) inner.textContent = count;
+
+          // tooltip data stored as attributes for the event handler below
+          inner.dataset.tech   = tech.name;
+          inner.dataset.stance = stance;
+          inner.dataset.count  = count;
+          inner.dataset.rate   = rate.toFixed(4);
+          inner.dataset.units  = unit_counts[stance] ?? 0;
+
+          td.appendChild(inner);
+          row.appendChild(td);
+        }
+        tbody.appendChild(row);
+      }
+    }
+
+    // ── tooltip ───────────────────────────────────────────────────────────────
+    const tt = document.getElementById("tooltip");
+
+    document.querySelectorAll(".cell-inner").forEach(el => {
+      el.addEventListener("mouseenter", e => {
+        const { tech, stance, count, rate, units } = e.target.dataset;
+        if (count === "0") return;
+        tt.innerHTML = `
+          <strong>${tech}</strong>
+          stance: <strong>${stance}</strong><br>
+          detections: <strong>${count}</strong> / ${units} units<br>
+          <span class="tt-rate">rate: ${rate} detections per unit</span>
+        `;
+        tt.style.opacity = "1";
+      });
+      el.addEventListener("mousemove", e => {
+        tt.style.left = (e.clientX + 14) + "px";
+        tt.style.top  = (e.clientY - 10) + "px";
+      });
+      el.addEventListener("mouseleave", () => {
+        tt.style.opacity = "0";
+      });
+    });
+  });
+</script>
+</body>
+</html>

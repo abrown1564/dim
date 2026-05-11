@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Report | Discourse Integrity Map</title>
+    <style>
+      :root {
+        --bg: #f4efe6;
+        --paper: #fffaf2;
+        --ink: #201a16;
+        --muted: #62574c;
+        --line: rgba(32, 26, 22, 0.14);
+        --accent: #8f3b2e;
+        --accent-soft: #d88f61;
+        --olive: #667255;
+        --navy: #29445a;
+        --gold: #c49a57;
+        --shadow: 0 22px 60px rgba(38, 27, 16, 0.1);
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(196, 154, 87, 0.16), transparent 28%),
+          radial-gradient(circle at top right, rgba(143, 59, 46, 0.12), transparent 24%),
+          linear-gradient(180deg, #f7f1e8 0%, var(--bg) 100%);
+        font-family: "Avenir Next", "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+
+      a { color: var(--accent); }
+
+      .page {
+        width: min(860px, calc(100% - 2rem));
+        margin: 0 auto;
+        padding: 4.5rem 0 5rem;
+      }
+
+      /* ── hero ──────────────────────────────────────────────────── */
+      .hero {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background:
+          linear-gradient(135deg, rgba(41, 68, 90, 0.08), transparent 42%),
+          linear-gradient(180deg, rgba(255, 250, 242, 0.98), rgba(251, 243, 230, 0.96));
+        box-shadow: var(--shadow);
+        padding: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto -6% -10% auto;
+        width: 260px;
+        height: 260px;
+        background: radial-gradient(circle, rgba(143, 59, 46, 0.13), transparent 68%);
+        pointer-events: none;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 1rem;
+        padding: 0.35rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(143, 59, 46, 0.08);
+        color: var(--accent);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1, h2, h3 {
+        font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: clamp(2.4rem, 6vw, 4.2rem);
+        line-height: 0.96;
+        margin-bottom: 0.6rem;
+      }
+
+      .hero-meta {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .topnav {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 100;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 32px;
+        height: 48px;
+        background: rgba(255, 250, 242, 0.88);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+        font-size: 0.85rem;
+        gap: 4px;
+      }
+
+      .topnav a {
+        color: var(--accent);
+        text-decoration: none;
+        padding: 4px 10px;
+        border-radius: 6px;
+        transition: background 0.13s;
+      }
+
+      .topnav a:hover { background: rgba(143, 59, 46, 0.08); }
+
+      .jump-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-top: 1.4rem;
+      }
+
+      .jump-links a {
+        text-decoration: none;
+        color: var(--ink);
+        padding: 0.5rem 0.95rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.76);
+        font-size: 0.88rem;
+        transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+      }
+
+      .jump-links a:hover {
+        transform: translateY(-1px);
+        border-color: rgba(32, 26, 22, 0.28);
+        background: #fff;
+      }
+
+      /* ── sections ──────────────────────────────────────────────── */
+      .section {
+        margin-top: 1.8rem;
+        padding: 2.4rem 2.8rem;
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        background: rgba(255, 250, 242, 0.92);
+        box-shadow: var(--shadow);
+      }
+
+      .section h2 {
+        font-size: clamp(1.5rem, 3vw, 2.1rem);
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.7rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .prose p {
+        font-size: 1.04rem;
+        line-height: 1.78;
+        color: var(--ink);
+        margin: 0 0 1.2em;
+        max-width: 72ch;
+      }
+
+      .prose p:last-child { margin-bottom: 0; }
+
+      .prose em { font-style: italic; }
+
+      .prose strong {
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      .prose a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+
+      /* ── stat callouts ─────────────────────────────────────────── */
+      .stat-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1rem;
+        margin: 1.8rem 0;
+      }
+
+      .stat {
+        padding: 1.1rem 1.2rem;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.6);
+        text-align: center;
+      }
+
+      .stat-number {
+        font-family: "Iowan Old Style", "Palatino Linotype", serif;
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--accent);
+        display: block;
+        margin-bottom: 0.3rem;
+      }
+
+      .stat-label {
+        font-size: 0.8rem;
+        color: var(--muted);
+        line-height: 1.3;
+      }
+
+      /* ── overview section ─────────────────────────────────────── */
+      .summary-box {
+        padding: 1.3rem 1.6rem;
+        border-left: 4px solid var(--accent);
+        background: rgba(143, 59, 46, 0.05);
+        border-radius: 0 16px 16px 0;
+        font-size: 1.04rem;
+        line-height: 1.72;
+        color: var(--ink);
+        margin-bottom: 1.8rem;
+      }
+
+      .charts-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+        margin: 1.6rem 0;
+      }
+
+      .mini-chart {
+        padding: 1.1rem 1.2rem;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: rgba(255,255,255,0.55);
+      }
+
+      .mini-chart-title {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: var(--muted);
+        font-weight: 700;
+        margin-bottom: 0.9rem;
+      }
+
+      .bar-row {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-bottom: 0.55rem;
+        font-size: 0.83rem;
+      }
+
+      .bar-label {
+        width: 80px;
+        flex-shrink: 0;
+        color: var(--ink);
+        text-align: right;
+      }
+
+      .bar-track {
+        flex: 1;
+        height: 14px;
+        background: rgba(32,26,22,0.07);
+        border-radius: 99px;
+        overflow: hidden;
+      }
+
+      .bar-fill {
+        height: 100%;
+        border-radius: 99px;
+        transition: width 0.4s ease;
+      }
+
+      .bar-value {
+        width: 28px;
+        flex-shrink: 0;
+        color: var(--muted);
+        font-size: 0.78rem;
+      }
+
+      .site-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 0.9rem;
+        margin-top: 1.6rem;
+      }
+
+      .site-card {
+        display: block;
+        text-decoration: none;
+        padding: 1.1rem 1.2rem;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(255,255,255,0.6);
+        transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+      }
+
+      .site-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(38,27,16,0.1);
+        border-color: rgba(143,59,46,0.3);
+      }
+
+      .site-card-name {
+        font-family: "Iowan Old Style", "Palatino Linotype", serif;
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--accent);
+        margin-bottom: 0.35rem;
+      }
+
+      .site-card-desc {
+        font-size: 0.82rem;
+        color: var(--muted);
+        line-height: 1.45;
+      }
+
+      @media (max-width: 560px) {
+        .charts-row { grid-template-columns: 1fr; }
+      }
+
+      /* ── pipeline diagram ──────────────────────────────────────── */
+      .pipeline {
+        margin: 1.6rem 0;
+        padding: 1.4rem 1.6rem;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(41, 68, 90, 0.04);
+        font-family: ui-monospace, "Cascadia Code", monospace;
+        font-size: 0.83rem;
+        color: #3a3028;
+        line-height: 2;
+        overflow-x: auto;
+      }
+
+      .pipeline .stage { color: var(--navy); font-weight: 700; }
+      .pipeline .desc { color: var(--muted); }
+
+      /* ── callout blocks ────────────────────────────────────────── */
+      .callout {
+        margin: 1.6rem 0;
+        padding: 1.1rem 1.3rem;
+        border-left: 4px solid var(--gold);
+        background: rgba(196, 154, 87, 0.08);
+        border-radius: 0 14px 14px 0;
+        color: #4f4336;
+        font-size: 0.97rem;
+        line-height: 1.65;
+      }
+
+      .callout strong { color: var(--ink); }
+
+      /* ── finding cards ─────────────────────────────────────────── */
+      .findings {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin: 1.6rem 0;
+      }
+
+      .finding {
+        padding: 1.2rem 1.25rem;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.6);
+      }
+
+      .finding .tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        padding: 0.22rem 0.6rem;
+        border-radius: 999px;
+        margin-bottom: 0.6rem;
+      }
+
+      .finding.anti .tag { background: rgba(143, 59, 46, 0.1); color: #8f3b2e; }
+      .finding.pro  .tag { background: rgba(102, 114, 85, 0.12); color: #4a6040; }
+
+      .finding h3 {
+        font-size: 0.98rem;
+        line-height: 1.35;
+        margin-bottom: 0.45rem;
+      }
+
+      .finding p {
+        font-size: 0.86rem;
+        color: var(--muted);
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      .finding .freq {
+        font-family: ui-monospace, monospace;
+        font-size: 0.82rem;
+        color: var(--accent);
+        margin-top: 0.5rem;
+      }
+
+      /* ── stasis breakdown ──────────────────────────────────────── */
+      .stasis-bar {
+        margin: 1.4rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+
+      .stasis-row {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 0.88rem;
+      }
+
+      .stasis-name {
+        width: 70px;
+        color: var(--muted);
+        flex-shrink: 0;
+      }
+
+      .stasis-track {
+        flex: 1;
+        height: 10px;
+        background: rgba(32,26,22,0.07);
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .stasis-fill {
+        height: 100%;
+        border-radius: 5px;
+      }
+
+      .stasis-fill.fact    { background: #29445a; }
+      .stasis-fill.value   { background: #8f3b2e; }
+      .stasis-fill.policy  { background: #667255; }
+      .stasis-fill.other   { background: #c49a57; }
+
+      .stasis-count {
+        font-family: ui-monospace, monospace;
+        font-size: 0.8rem;
+        color: var(--muted);
+        width: 28px;
+        text-align: right;
+        flex-shrink: 0;
+      }
+
+      /* ── in brief boxes ────────────────────────────────────────── */
+      .in-brief {
+        margin-bottom: 1.8rem;
+        padding: 1.1rem 1.5rem 1.2rem;
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid var(--line);
+        border-left: 3px solid var(--accent);
+        border-radius: 0 14px 14px 0;
+        box-shadow: 0 4px 18px rgba(38, 27, 16, 0.07);
+      }
+      .in-brief-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.65rem;
+      }
+      .in-brief ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .in-brief ul li {
+        font-size: 0.92rem;
+        line-height: 1.65;
+        color: var(--ink);
+        margin-bottom: 0.35rem;
+        padding-left: 1.1rem;
+        position: relative;
+      }
+      .in-brief ul li:last-child { margin-bottom: 0; }
+      .in-brief ul li::before {
+        content: "-";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      /* ── further work items ────────────────────────────────────── */
+      .work-items {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1.4rem;
+      }
+
+      .work-item {
+        padding: 1.15rem 1.3rem;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      .work-item h3 {
+        font-family: "Avenir Next", "Segoe UI", sans-serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 0.4rem;
+      }
+
+      .work-item p {
+        font-size: 0.9rem;
+        color: var(--muted);
+        margin: 0;
+        line-height: 1.55;
+      }
+
+      /* ── responsive ────────────────────────────────────────────── */
+      @media (max-width: 640px) {
+        .hero, .section { padding: 1.5rem; }
+        .findings { grid-template-columns: 1fr; }
+        .stat-row { grid-template-columns: 1fr 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="topnav">
+      <a href="positions.html">Agora</a>
+      <a href="corpus.html">Corpus</a>
+      <a href="heatmap.html">Heatmap</a>
+      <a href="debate.html">Debate</a>
+      <a href="taxonomy.html">Taxonomy</a>
+      <a href="traditions.html">Traditions</a>
+      <a href="map.html">Map</a>
+      <a href="dissertation.html">Dissertation</a>
+    </nav>
+    <main class="page">
+
+      <!-- ── HERO ────────────────────────────────────────────────── -->
+      <section class="hero">
+        <span class="eyebrow">Project Report</span>
+        <h1>Discourse Integrity Map Project</h1>
+        <p class="hero-meta">A portfolio submission for the CIP Research Fellowship &nbsp;·&nbsp; Alice Pateman-Brown &nbsp;·&nbsp; Prepared May 2026</p>
+
+        <div class="jump-links">
+          <a href="#background">Background</a>
+          <a href="#built">What Was Built</a>
+          <a href="#methodology">Methodology</a>
+          <a href="#output">What the Output Reveals</a>
+          <a href="#limitations">Limitations</a>
+          <a href="#further">Further Work</a>
+        </div>
+      </section>
+
+      <!-- ── OVERVIEW ──────────────────────────────────────────────── -->
+      <section class="section">
+        <h2>Overview</h2>
+        <div class="summary-box">
+          DIM is a computational pipeline for mapping the quality and structure of public argument. Applied here to the UK and US wealth tax debate, it extracted 456 speaker claims from 17 debates, aggregated them into 37 canonical positions, and classified 390 rhetorical technique detections - surfacing where the two sides diverge, where latent agreement already exists, and what kind of disagreement underlies the debate.
+        </div>
+        <div style="margin-bottom:1.8rem;padding:1rem 1.4rem;border-left:4px solid var(--navy);background:rgba(41,68,90,0.05);border-radius:0 14px 14px 0;font-size:1rem;line-height:1.7;color:var(--ink);">
+          <span style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.07em;font-weight:700;color:var(--navy);display:block;margin-bottom:0.4rem;">Research question</span>
+          Can we identify common ground and point to the nature of disagreement outside of rhetoric, by mapping a debate space and aggregating speaker claims into canonical positions?
+        </div>
+
+        <div class="stat-row">
+          <div class="stat">
+            <span class="stat-number">17</span>
+            <span class="stat-label">debates processed</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">456</span>
+            <span class="stat-label">speaker claims extracted</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">37</span>
+            <span class="stat-label">canonical positions<br>(incl. 5 shared ground)</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">390</span>
+            <span class="stat-label">rhetorical technique detections</span>
+          </div>
+        </div>
+
+        <div class="charts-row">
+          <div class="mini-chart">
+            <div class="mini-chart-title">Positions by stasis type</div>
+            <div class="bar-row">
+              <div class="bar-label">fact</div>
+              <div class="bar-track"><div class="bar-fill" style="width:43%;background:var(--accent)"></div></div>
+              <div class="bar-value">16</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">value</div>
+              <div class="bar-track"><div class="bar-fill" style="width:30%;background:var(--olive)"></div></div>
+              <div class="bar-value">11</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">policy</div>
+              <div class="bar-track"><div class="bar-fill" style="width:16%;background:var(--navy)"></div></div>
+              <div class="bar-value">6</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">definition</div>
+              <div class="bar-track"><div class="bar-fill" style="width:5%;background:var(--gold)"></div></div>
+              <div class="bar-value">2</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">procedure</div>
+              <div class="bar-track"><div class="bar-fill" style="width:5%;background:var(--muted)"></div></div>
+              <div class="bar-value">2</div>
+            </div>
+          </div>
+
+          <div class="mini-chart">
+            <div class="mini-chart-title">Detections by stance</div>
+            <div class="bar-row">
+              <div class="bar-label">pro</div>
+              <div class="bar-track"><div class="bar-fill" style="width:51%;background:#2e7d55"></div></div>
+              <div class="bar-value">197</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">anti</div>
+              <div class="bar-track"><div class="bar-fill" style="width:27%;background:var(--accent)"></div></div>
+              <div class="bar-value">105</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">mixed</div>
+              <div class="bar-track"><div class="bar-fill" style="width:16%;background:#3a5f8a"></div></div>
+              <div class="bar-value">61</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">neutral</div>
+              <div class="bar-track"><div class="bar-fill" style="width:7%;background:#7a6220"></div></div>
+              <div class="bar-value">27</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin:1.8rem 0;padding:1.4rem 1.8rem;border:1px solid rgba(102,114,85,0.35);border-left:4px solid var(--olive);border-radius:0 18px 18px 0;background:rgba(102,114,85,0.06);">
+          <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;font-weight:700;color:var(--olive);margin-bottom:0.7rem;">Key finding · Shared ground</div>
+          <p style="font-size:1.04rem;line-height:1.72;color:var(--ink);margin:0 0 0.8rem;">Beneath the surface heat of the wealth tax debate, the two sides agree on more than they appear to. The <a href="positions.html" style="color:var(--olive);text-underline-offset:2px;">Agora</a> identifies five shared ground positions - claims that recur on both sides of the debate, including that <em>some</em> wealthy individuals do relocate in response to tax changes, that avoidance loopholes should be closed, and that design and thresholds are decisive. The real disagreement is about magnitude and mechanism, not about whether inequality is a problem or whether the tax system needs reform.</p>
+          <p style="font-size:0.92rem;color:var(--muted);margin:0;line-height:1.6;">This is where deliberative design can start: not from opposed positions, but from the claims both sides already accept - and which currently get lost in the argument about the instrument.</p>
+        </div>
+
+        <div class="site-cards">
+          <a href="positions.html" class="site-card">
+            <div class="site-card-name">Agora</div>
+            <div class="site-card-desc">Browse all 37 canonical positions, filterable by stance and stasis type</div>
+            <div style="margin-top:0.6rem;font-size:0.78rem;font-style:italic;font-weight:700;color:var(--accent);line-height:1.4;">What might a deliberative platform look like?</div>
+          </a>
+          <a href="heatmap.html" class="site-card">
+            <div class="site-card-name">Heatmap</div>
+            <div class="site-card-desc">390 rhetorical technique detections across 17 debates, broken down by stance</div>
+            <div style="margin-top:0.6rem;font-size:0.78rem;font-style:italic;font-weight:700;color:var(--accent);line-height:1.4;">Do patterns of rhetorical technique vary systematically across political positions?</div>
+          </a>
+          <a href="corpus.html" class="site-card">
+            <div class="site-card-name">Corpus</div>
+            <div class="site-card-desc">Per-debate view with speaker claims and discourse profiles for all 17 debates</div>
+            <div style="margin-top:0.6rem;font-size:0.78rem;font-style:italic;font-weight:700;color:var(--accent);line-height:1.4;">Where do the claims actually come from?</div>
+          </a>
+          <a href="debate.html" class="site-card">
+            <div class="site-card-name">Debate</div>
+            <div class="site-card-desc">A multi-agent debate replay built from AI personas derived from the corpus</div>
+            <div style="margin-top:0.6rem;font-size:0.78rem;font-style:italic;font-weight:700;color:var(--accent);line-height:1.4;">Can AI agents standing in for real positions model what genuine deliberation might look like?</div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ── INTRODUCTION ─────────────────────────────────────────── -->
+      <section class="section" id="background">
+        <h2>Background</h2>
+        <div class="in-brief">
+          <div class="in-brief-label">In brief</div>
+          <ul>
+            <li>DIM grew from an MSc dissertation that proved the right structure but exposed poor classifier quality - the redesign addresses that directly.</li>
+            <li>The core design principle: make the structure of argument visible without delivering a verdict on truth.</li>
+            <li>A central design goal was surfacing common ground - identifying where apparent opponents already agree, and using that as a foundation for more productive deliberation. This connects directly to CIP's interest in collective intelligence and tools that improve the quality of group reasoning rather than simply amplifying existing positions.</li>
+            <li>Scope narrowed to the UK/US wealth tax debate for the MVP; unit of analysis shifted from whole interventions to individual speaker claims.</li>
+            <li>Grounded in Aristotle's dialectic/eristic distinction - the difference between arguing to find truth and arguing to win.</li>
+          </ul>
+        </div>
+        <div class="prose">
+          <p>This report accompanies a portfolio submission for the <a href="https://www.cip.org/research-fellowship" target="_blank">Collective Intelligence Project (CIP) Research Fellowship</a>. The fellowship supports original research at the intersection of AI, democratic deliberation, and public reasoning about contested questions - a set of concerns that have shaped my thinking long before I had vocabulary for them. Discovering the CIP's work, among others such as Audrey Tang's work, gave me a framework for ideas I had been circling: that the quality of collective reasoning matters, that it can be measured, and that the design of the systems through which people argue and decide together is not a technical afterthought but a foundational political question - one that becomes more urgent the more political polarisation deepens and social media and wider societal and media friction continues to fragment shared epistemic ground. DIM is a computational pipeline for mapping the quality and structure of public argument: identifying where sides disagree, where latent agreement already exists, and what kinds of disagreement they are. It is offered here as a working proof of concept that speaks directly to the fellowship's interest in communication and deliberation in policy settings, and in the design of tools that support more rigorous collective reasoning.</p>
+
+          <p>This project has roots in my <a href="dissertation.html">MSc Data Science dissertation</a>, in which I assembled a corpus of 853 UK and US immigration news articles collected via three APIs (GNews, NewsAPI, NewsData.io) and enriched with media bias metadata from four rating sources - Ad Fontes, MBFC, AllSides, and Ground News - as well as sentiment analysis via VADER and TextBlob. The overall aim of the project was to lay the foundations of a non-prescriptive media literacy tool: a system that could make the rhetorical construction of public argument visible without delivering a verdict on its truth, helping readers see not just <em>what</em> was being argued but <em>how</em>. To that end, I applied the SemEval-2020 Task 11 propaganda detection model - a publicly released RoBERTa-based pipeline trained to identify rhetorical techniques in news text - to this corpus. Due to significant compute constraints - the model ran on CPU only, making full-corpus inference prohibitively slow - span identification (SI) and technique classification (TC) were applied to a balanced sample of 70 articles rather than the full dataset. Both stages were successfully completed and merged, and the results integrated into a deployed front-end. What I found was that while the pipeline ran successfully, many of the propaganda technique labels it produced - classical logical fallacies such as "ad hominem" - were inaccurate or poorly grounded. The structure was solid and the design philosophy promising, but the project was let down by the quality of the model's output. That failure clarified what the project was actually asking: not a pipeline question, but a classifier question. The design principle - surface the structure of argument without prescribing conclusions - was worth pursuing. What was needed was a model that could be trusted to do it reliably. The deployment can be viewed at <a href="https://abrown1564.github.io/truthspace/" target="_blank">abrown1564.github.io/truthspace</a>.</p>
+
+          <p>The DIM (Discourse Integrity Map) was envisaged as a follow-up to that project - an attempt to do what the dissertation had shown was worth doing, but with a classifier that could actually be trusted. The animating idea was a kind of "pulse-taking" of contemporary public discourse: a system capable of designating, for any given debate, whether its character was primarily <em>dialectic</em> or <em>eristic</em> - terms borrowed from Aristotle, who distinguished between argument conducted in pursuit of truth and argument conducted in pursuit of winning. Alongside this quality dimension, the original brief envisaged a visual map in the style of an Overton Window: showing where arguments cluster across the political landscape, how far they travel, and - weighted by reach - which low-quality arguments were achieving the widest audiences.</p>
+
+          <p>However, after beginning the project, the scope and nature of the project changed in two important ways. First, on topic: given the time and resource constraints of a fellowship application, I focused the MVP on a single issue - the UK and US public debate over wealth taxation, currently a widely and frequently debated issue in public discourse, stemming primarily from the success of economist Gary Stevenson in his aim to encourage discussion and consideration of wealth taxes as a method of reducing inequality in the UK. This decision traded breadth for depth, allowing me to build something analytically rigorous within a defined domain rather than something superficial across many. Second, and more significantly, the unit of analysis shifted. The original design treated the whole intervention - a video, a speech - as the atomic unit, with one quality score per piece of content visualised on a reach/quality scatter plot. What I actually built uses the individual speaker's claim as the unit instead: discrete argumentative moves extracted from transcripts, classified, and then aggregated upward into canonical positions that recur across multiple debates. This is a more granular and analytically richer approach, and it is what made the <a href="positions.html">Agora</a> possible.</p>
+
+          <p>The research question the project settled on was: can you identify common ground and point to the nature of disagreement outside of rhetoric, by mapping a debate space and aggregating speaker claims into canonical positions? The theoretical grounding for this draws on the eristic/dialectic distinction and its modern formalisation in pragma-dialectics (van Eemeren and Grootendorst), which operationalises good-faith argument as ten rules for critical discussion whose violations correspond to named fallacies. Pragma-dialectics represents a direction for deeper engagement with more time rather than a framework applied in full here. What DIM does in this version is different in scope but equally distinct from a fact-checker or bias rater: it does not ask whether a claim is true, but maps what is being argued, how often, and where positions converge and diverge - treating the structure of the debate as the object of analysis rather than the truth value of any individual claim within it.</p>
+        </div>
+      </section>
+
+      <!-- ── WHAT WAS BUILT ────────────────────────────────────────── -->
+      <section class="section" id="built">
+        <h2>What Was Built</h2>
+        <div class="in-brief">
+          <div class="in-brief-label">In brief</div>
+          <ul>
+            <li>A 5-stage LLM pipeline: ingest transcripts, extract claims, aggregate canonical positions, classify rhetorical techniques, assemble discourse profile.</li>
+            <li>456 claims extracted across 17 debates; aggregated into 37 canonical argument positions split pro, anti, and shared ground.</li>
+            <li>390 rhetorical technique detections produced by classifying speaker turns against a curated fallacy taxonomy.</li>
+            <li>Deployed as a static site on GitHub Pages - no backend, all data pre-built into JSON files.</li>
+          </ul>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat">
+            <span class="stat-number">17</span>
+            <span class="stat-label">debates processed through the full pipeline</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">456</span>
+            <span class="stat-label">individual claims extracted</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">37</span>
+            <span class="stat-label">canonical argument positions aggregated</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">5</span>
+            <span class="stat-label">stasis types: fact, definition, value, policy, procedure</span>
+          </div>
+        </div>
+
+        <div class="pipeline">
+          <div><span class="stage">Stage 1</span> &nbsp;detect_units &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="desc">- segment transcript into argumentative units</span></div>
+          <div><span class="stage">Stage 2</span> &nbsp;skeletonize &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="desc">- extract claims, warrants, stasis points per unit</span></div>
+          <div><span class="stage">Stage 3</span> &nbsp;merge_discourse &nbsp;&nbsp; <span class="desc">- merge into one unified discourse skeleton</span></div>
+          <div><span class="stage">Stage 4</span> &nbsp;classify_units &nbsp;&nbsp;&nbsp; <span class="desc">- detect rhetorical / fallacious techniques</span></div>
+          <div><span class="stage">Stage 5</span> &nbsp;assemble_profile &nbsp; <span class="desc">- aggregate detections into discourse profile</span></div>
+        </div>
+
+        <div class="prose">
+          <p>The pipeline has five stages. First, YouTube transcripts for 17 wealth-tax debates and monologues were ingested, diarised into speaker turns, and loaded into a SQLite database. Second, each debate was tagged with a discourse mode - monologic, dialogic, or multi-party - because certain fallacies are only structurally possible in interactive formats and should not be applied to a single speaker talking to camera. Third, speaker turns were processed by a large language model (Claude) to extract individual claims, each tagged with a stasis type (fact, definition, value, policy, or procedure) - stasis being the central point of contention in a debate, from the Greek "a standing still" - a debate stance, and a geographic context (UK or US). 456 individual claims were extracted across the 17 debates.</p>
+
+          <p>Those 456 claims were then aggregated into 37 canonical argument positions - the distinct, recurring arguments that appear and reappear across different debates - via a two-stage LLM pipeline. The first stage condensed the claims into canonical positions with metadata. The second mapped each position back to its source claims, source debates, and example quotes. Positions were divided into pro-wealth-tax, anti-wealth-tax, and shared ground.</p>
+
+          <p>The output is a static site hosted on GitHub Pages, with no backend - the pipeline stores all its data in a SQLite database, but the site itself reads from pre-built JSON files rather than querying a database at runtime. It includes a <a href="positions.html">positions map</a> filterable by side, stasis type, and context; a <a href="corpus.html">per-debate view</a>; a <a href="heatmap.html">heatmap</a> of rhetorical technique detections; and a <a href="debate.html">multi-agent debate replay</a> built from AI agents assigned argumentative personas derived from the corpus.</p>
+
+          <p>The system was designed from the outset to be subject-agnostic and non-partisan, with the same analytical rubric applied to pro- and anti-wealth-tax arguments alike.</p>
+        </div>
+      </section>
+
+      <!-- ── METHODOLOGY ────────────────────────────────────────────── -->
+      <section class="section" id="methodology">
+        <h2>Methodology</h2>
+        <div class="in-brief">
+          <div class="in-brief-label">In brief</div>
+          <ul>
+            <li>The atomic unit is the individual speaker claim, tagged with stasis type (fact, definition, value, policy, procedure) and debate stance.</li>
+            <li>Fallacies were chosen because they are formally defined and structurally detectable - the kinds of epistemic failures invisible to fact-checkers.</li>
+            <li>The taxonomy was developed against real examples from live public discourse, which were then used directly as grounding material in LLM classification prompts.</li>
+            <li>A composite quality score was deliberately set aside: practical constraints limited the corpus, and encoding "good reasoning" as a single metric raises normative questions the system is not positioned to resolve.</li>
+          </ul>
+        </div>
+        <div class="prose">
+          <p>The DIM is grounded in Aristotle's distinction between <em>dialectic</em> - argument conducted in pursuit of truth - and <em>eristic</em> - argument conducted in pursuit of winning. The modern formalisation of this distinction in pragma-dialectics (van Eemeren &amp; Grootendorst) - which operationalises good-faith argument as ten rules for critical discussion whose violations correspond to named fallacies - represents a framework for closer engagement with more time; it is an influence and a direction rather than a methodology applied in full. What the system does in this version is ask a more tractable prior question: not whether an argument is conducted in good faith, but what is being argued, how the debate space is structured, and where positions coincide or diverge - independently of rhetoric.</p>
+
+          <p>The focus on logical fallacies specifically is deliberate. Fact-checkers operate on a true/false axis — they can tell you a statistic is wrong, but they cannot tell you that a valid statistic is being deployed in a context designed to mislead, or that a conclusion is being drawn from a premise that was never argued for, or that someone is attacking the person making an argument rather than the argument itself. These are structural failures in reasoning that are invisible to fact-checking but arguably constitute the most common and most damaging epistemic moves in contemporary public discourse. Fallacies are also, crucially, detectable: they have names, formal definitions, and centuries of documented structure. That is what makes the classification task tractable — you cannot build a classifier for "bad argument" in the abstract, but you can build one for <em>ad hominem circumstantial</em> or <em>hasty generalisation</em> because there is a precise definition of what each move looks like.</p>
+
+          <p>The original design intended to produce a single composite dialectic/eristic quality score per intervention - a mechanical derivation from classified outputs, reach-weighted by audience size, that would position each piece of content on a two-dimensional map of volume against quality. This direction was set aside for two reasons, one practical and one methodological. The practical reason: API credit constraints limited the pipeline to 17 of the 31 intended debates, producing a corpus too partial to support reliable aggregate scoring. The methodological reason, and the more significant one: working toward a quality score quickly revealed that applying a single composite metric to argument quality requires encoding normative judgements about what counts as good reasoning - judgements that are not as neutral as a mechanical derivation suggests. For a system designed to be non-partisan and non-prescriptive, that is a problem that deserves careful treatment rather than a quick fix. The quality score remains a potential direction; the claim-level substrate built here is what any such score would need to sit on top of.</p>
+
+          <p>What was built is the claim-level substrate: the atomic unit of analysis is the individual speaker claim rather than the intervention as a whole, tagged with a stasis type (fact, definition, value, policy, or procedure) and a debate stance. 456 claims were extracted across 17 debates and aggregated into 37 canonical positions via a two-stage LLM pipeline. Separately, 390 rhetorical technique detections were produced by classifying speaker turns against a curated fallacy taxonomy.</p>
+
+          <p>The taxonomy is the epistemic spine of the system. It draws from classical rhetorical theory, pragma-dialectical violation categories, and the modern argumentation literature, and includes a small number of coined terms for phenomena not yet formalised (or not yet identified) in existing literature - <em>phantom quantification</em>, <em>normative laundering</em>, <em>mechanistic laundering</em>, <em>performed empiricism</em>. These are flagged as coined rather than established. Every detection references a specific taxonomy entry, making the classification auditable and improvable: when a definition is refined, content can be reclassified.</p>
+
+          <p>Taxonomy development was grounded in real examples rather than constructed ones. Candidate entries were tested against observed rhetorical moves drawn from live public discourse - including a <a href="https://www.spiked-online.com/2026/04/14/no-sadiq-londons-decline-isnt-disinformation/" target="_blank" rel="noopener">Spiked Online article</a> analysed for technique density, and a public exchange in which Rory Stewart challenged Gary Stevenson's credentials as an economist during <a href="https://www.youtube.com/watch?v=_DC2MHOiUf0" target="_blank" rel="noopener">an interview with Zack Polanski</a>, followed by <a href="https://www.youtube.com/watch?v=TSs18iYE20w&amp;t=2s" target="_blank" rel="noopener">Stevenson's rebuttal</a>. These provided concrete, contested instances of credential-based dismissal, counter-framing, and asymmetric burden-of-proof moves - exactly the phenomena the coined entries were designed to capture. Those examples were then used directly in the classification prompts given to the LLMs, as grounding material for what each taxonomy entry was intended to detect in practice.</p>
+
+          <p>The system was designed explicitly to be non-partisan, with the same taxonomy and the same prompts applied to pro- and anti-wealth-tax arguments alike. The discourse quality score, when built, would be a mechanical derivation from classification output. A core design principle was that any challenge to a finding must necessarily engage with a specific classification against a specific taxonomy entry, and not with the methodology in the abstract - which is why provenance of quote, debate and label has been explicitly retained throughout.</p>
+        </div>
+      </section>
+
+      <!-- ── WHAT THE OUTPUT REVEALS ───────────────────────────────── -->
+      <section class="section" id="output">
+        <h2>What the Output Reveals</h2>
+        <div class="in-brief">
+          <div class="in-brief-label">In brief</div>
+          <ul>
+            <li>The two most frequent positions are mirror consequence claims: capital flight (anti, 33 claims) vs. rising inequality (pro, 30 claims).</li>
+            <li>Shared ground is more substantial than the debate's surface heat suggests - both sides agree on several empirical facts; the real dispute is about magnitude and design.</li>
+            <li>Most of the debate is stuck at factual and value stasis before it ever reaches policy - only 5 of 32 positions are policy claims.</li>
+            <li>A deliberative process that resolves the factual disputes first could find more common ground than current debate formats suggest.</li>
+          </ul>
+        </div>
+
+        <div class="findings">
+          <div class="finding anti">
+            <span class="tag">Anti-wealth-tax · Fact</span>
+            <h3>Wealthy individuals will relocate if taxed</h3>
+            <p>Capital flight is the dominant factual stasis point of the debate - the most frequently recurring argument in the entire dataset.</p>
+            <div class="freq">frequency: 33 claims</div>
+          </div>
+          <div class="finding pro">
+            <span class="tag">Pro-wealth-tax · Fact</span>
+            <h3>Rising inequality harms society</h3>
+            <p>Notably a fact claim, not a value claim - suggesting the pro side leads with empirical framing rather than moral argument.</p>
+            <div class="freq">frequency: 30 claims</div>
+          </div>
+        </div>
+
+        <div class="prose">
+          <p>Even from a partial corpus, the <a href="positions.html">Agora</a> produces some analytically interesting results. These two positions are the core of the debate: one side leads with a consequence claim about what a wealth tax would cause, the other with a condition claim about what the absence of one is already causing.</p>
+
+          <p>The shared ground is more substantial than the debate's surface heat suggests. Both sides agree that some wealthy individuals do relocate in response to tax changes - the dispute is about magnitude, not the phenomenon itself. Both agree that the current tax system has problems, that avoidance loopholes should be closed, and that design and thresholds determine whether any wealth tax would be workable. This means the disagreement is not primarily about principle - it is about empirical facts (does capital flight happen at scale?) and policy design (what threshold, what assets, what enforcement mechanism?).</p>
+        </div>
+
+        <div class="callout">
+          <strong>Stasis breakdown across 32 pro/anti positions:</strong> 14 fact claims, 10 value claims, 5 policy claims. Most of the debate is stuck at the factual and evaluative level before it ever reaches the question of what to actually do.
+        </div>
+
+        <div class="stasis-bar">
+          <div class="stasis-row">
+            <span class="stasis-name">Fact</span>
+            <div class="stasis-track"><div class="stasis-fill fact" style="width: 43.75%"></div></div>
+            <span class="stasis-count">14</span>
+          </div>
+          <div class="stasis-row">
+            <span class="stasis-name">Value</span>
+            <div class="stasis-track"><div class="stasis-fill value" style="width: 31.25%"></div></div>
+            <span class="stasis-count">10</span>
+          </div>
+          <div class="stasis-row">
+            <span class="stasis-name">Policy</span>
+            <div class="stasis-track"><div class="stasis-fill policy" style="width: 15.6%"></div></div>
+            <span class="stasis-count">5</span>
+          </div>
+          <div class="stasis-row">
+            <span class="stasis-name">Other</span>
+            <div class="stasis-track"><div class="stasis-fill other" style="width: 9.4%"></div></div>
+            <span class="stasis-count">3</span>
+          </div>
+        </div>
+
+        <div class="prose">
+          <p>A deliberative process designed to resolve the factual disputes first - through shared engagement with evidence - might find more policy common ground than the debate's current format suggests is possible.</p>
+        </div>
+      </section>
+
+      <!-- ── LIMITATIONS ───────────────────────────────────────────── -->
+      <section class="section" id="limitations">
+        <h2>Limitations</h2>
+        <div class="in-brief">
+          <div class="in-brief-label">In brief</div>
+          <ul>
+            <li>API cost cut the corpus to 17 of 31 intended debates - the Agora is partial and should not be read as a complete account of the debate landscape.</li>
+            <li>Several unprocessed debates came from high-prestige sources (LSE and comparable forums) whose absence is a real analytical loss.</li>
+            <li>Speaker diarisation errors limit speaker-level analysis, particularly at moments of overlap and interruption.</li>
+            <li>Any fallacy taxonomy encodes contestable normative judgements; deploying it as an evaluative tool would require co-design with the intended audience.</li>
+          </ul>
+        </div>
+        <div class="prose">
+          <p>The most significant limitation in this demo was cost and dependency. The pipeline relies on Claude for claim extraction, classification, and aggregation. Processing cost grows linearly with corpus size, and in practice API credits were exhausted before the pipeline could be run across the full intended corpus. Of the 31 debates identified for inclusion, only 17 were processed. The remaining 14 were ingested but not classified. The Agora should not be read as a comprehensive account of the wealth tax debate landscape - it reflects a partial corpus, and many arguments are likely underrepresented or absent. The quality bar established here should be treated as a benchmark for a future open-source pipeline.</p>
+
+          <p>Among the unprocessed debates were several from high-prestige institutional sources - including LSE public events and comparable academic forums - which would likely have surfaced considerably more evidential rigour, longer chains of reasoning, and expert-level nuance than is currently visible in the corpus. Their absence is something that future work should resolve: debates of that kind are exactly where the system's ability to distinguish substantive from rhetorical argument would be most tested and most useful.</p>
+
+          <p>Automated speaker diarisation was also imperfect. YouTube's automatic captions frequently misattribute or merge speakers, and Whisper diarisation still struggles with overlapping speech and rapid turn-taking. This limits the pipeline's ability to reliably detect interruptions, speaker-specific fallacy patterns, or responsiveness failures - all of which are analytically important in dialogic and multi-party formats and formed part of the initial intended project brief. The inaccuracies were most visible precisely where these features matter most: moments of speaker overlap, sustained interruption, and negotiation of the floor.</p>
+
+          <p>In addition, any fallacy taxonomy encodes normative judgements about what constitutes good and bad reasoning. I have tried to ground the taxonomy in established, peer-reviewed traditions - principally Aristotelian rhetoric, pragma-dialectics, and the classical fallacy literature - rather than in ad hoc or politically motivated categories. The taxonomy also includes a small number of entries I have labelled "coined" - terms generated to describe real, distinct phenomena not yet formalised (or not yet identified) in the existing literature (for example, <em>mechanistic_laundering</em>, <em>phantom_quantification</em>, <em>lexical_credentialism</em>). But the selection of which fallacies to include, how to define them, and how to weight them inevitably reflects choices that could be contested. This is an inherent limitation of any discourse quality framework, and would need careful work with the intended audience to surface and validate those normative assumptions before the taxonomy is deployed as the foundation of a deliberative tool - so that the standards of "good reasoning" it encodes reflect the deliberative values of the community it serves.</p>
+
+          <p>The frequency count assigned to each canonical position reflects the number of individual claims mapped to it by the LLM - not a count of speakers, debates, or reach-weighted instances. These counts are indicative of LLM-identified argumentative salience within the corpus when given a <a href="https://github.com/abrown1564/dim/blob/main/prompts/aggregation_prompt.txt" target="_blank">strictly bounded prompt</a>.</p>
+        </div>
+      </section>
+
+      <!-- ── FURTHER WORK ───────────────────────────────────────────── -->
+      <section class="section" id="further">
+        <h2>Further Work</h2>
+        <div class="in-brief">
+          <div class="in-brief-label">In brief</div>
+          <ul>
+            <li>Complete the 14 debates already ingested but not yet classified, including LSE and comparable institutional sources - the infrastructure exists, only API cost prevented it.</li>
+            <li>Rebuild the pipeline on open-source models to remove dependency on frontier APIs.</li>
+            <li>Add live ingestion so the system becomes a real-time discourse monitor rather than a retrospective one.</li>
+            <li>Integrate a formal dialectic/eristic scoring layer, connecting to Lewandowsky et al.'s research linking rhetorical patterns to radicalisation outcomes.</li>
+            <li>Use identified shared ground as deliberative launchpads - co-design starting points rather than debate findings.</li>
+            <li>Distributed audit architecture and human-in-the-loop annotation to improve classification rigour and build ground-truth data.</li>
+          </ul>
+        </div>
+
+        <div class="work-items">
+          <div class="work-item">
+            <h3>Open-source pipeline</h3>
+            <p>The most significant near-term step is rebuilding the claim extraction and aggregation pipeline using open-source models, benchmarked against the quality of output produced here. The current pipeline establishes the ceiling; the future work is reaching that ceiling without frontier model dependency.</p>
+          </div>
+
+          <div class="work-item">
+            <h3>Live ingestion</h3>
+            <p>The step change in the system's value comes when it can ingest new content continuously - a live feed of parliamentary debate, a public consultation portal, a social media stream - and update the argument landscape in near-real time. This shifts the tool from a retrospective analysis instrument to a live discourse monitor.</p>
+          </div>
+
+          <div class="work-item">
+            <h3>Eristic/dialogic scoring layer</h3>
+            <p>A natural extension is to integrate a formal dialectic/eristic scoring layer. This connects to significant prior work: Lewandowsky and colleagues (Teitelbaum, Saltz, Lewandowsky and Simchon, 2025) have demonstrated empirical links between rhetorical features in social media content and real-world outcomes, including radicalisation and political violence.<sup style="font-size:0.75em;line-height:1;"> <a href="https://osf.io/preprints/psyarxiv/26q7w_v1" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">[preprint]</a> <a href="https://www.youtube.com/watch?v=xz2zMQLqFOY" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">[talk]</a></sup> A discourse quality score grounded in the dialectic/eristic axis, cross-referenced with reach metrics, could contribute meaningfully to that research direction.</p>
+          </div>
+
+          <div class="work-item">
+            <h3>From stasis points to deliberative launchpads</h3>
+            <p>The platform is currently claim-focused: it surfaces positions, maps agreement and disagreement, and invites users to respond. But many of the positions in the shared ground category - for instance, "rising inequality harms society" - command near-universal assent outside the specific framing of a wealth tax debate. Within that debate, they become stasis points, contested or obscured by the surrounding argument. The more generative move would be to identify claims where latent agreement already exists across apparent opponents and treat those claims not as findings to display but as launchpads for a new deliberative process - one oriented toward co-designing solutions rather than continuing to argue about the instrument. The deliberative literature on integrative negotiation and principled agreement - Fisher and Ury on principled negotiation<sup style="font-size:0.75em;line-height:1;"> <a href="https://en.wikipedia.org/wiki/Getting_to_Yes" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">[book]</a></sup>, Habermas on communicative rationality<sup style="font-size:0.75em;line-height:1;"> <a href="https://en.wikipedia.org/wiki/The_Theory_of_Communicative_Action" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">[book]</a></sup> - offers a theoretical basis for what that platform would need to do.</p>
+          </div>
+
+          <div class="work-item">
+            <h3>Distributed audit architecture</h3>
+            <p>A more rigorous version of the pipeline could replace the current single-pass classifier with a distributed audit architecture. Rather than one model making a monolithic judgement across all taxonomy categories using a recursive prompting strategy, as is the current methodology, narrow specialist auditors could each be responsible for a single taxonomy entry or tightly scoped family, required to either return an evidence-backed detection or explicitly abstain. An arbiter layer - a larger, slower model - could then reconcile conflicting auditor outputs and assemble a final discourse profile. Small models act as sensors; larger models act as interpreters and verifiers.</p>
+          </div>
+
+          <div class="work-item">
+            <h3>Human-in-the-loop annotation</h3>
+            <p>A meaningful improvement on the system would be to allow human review of model-generated labels, routing each detection to three or more reviewers who independently assess whether the label is accurate. Aggregating responses using inter-rater agreement measures (e.g. Cohen's kappa) would produce a reliability score per detection, flagging low-confidence labels for further review and gradually building a ground-truth dataset that could be used to fine-tune future classifiers.</p>
+          </div>
+
+          <div class="work-item">
+            <h3>Completing the wealth tax corpus</h3>
+            <p>The most immediate next step is processing the 14 debates already ingested but not yet classified - including several from high-prestige institutional sources such as LSE public events. Completing the corpus would substantially improve the Agora's coverage and is likely to surface more evidentially rigorous argument than is currently visible. This is the lowest-hanging fruit: the infrastructure exists, the content is already ingested, and the only constraint was API cost.</p>
+          </div>
+
+          <div class="work-item">
+            <h3>Multi-topic expansion</h3>
+            <p>The system was designed to be subject-agnostic. Extending the corpus to other high-salience debates - net zero, immigration, NHS reform - would test the generalisability of the pipeline and the taxonomy, and allow cross-topic comparison of discourse quality patterns.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

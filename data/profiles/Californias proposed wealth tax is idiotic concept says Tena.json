@@ -1,0 +1,374 @@
+{
+  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+  "title": "California's proposed wealth tax is 'idiotic concept,' says Tenacity Venture Capital's Narasin",
+  "discourse_mode": "dialogic",
+  "speaker_count": 2,
+  "published_date": "2025-12-30",
+  "source_url": "https://www.youtube.com/watch?v=ui_QxmMyYKQ",
+  "unit_count": 5,
+  "dialectical_conduct": {
+    "total_detections": 26,
+    "negative_count": 24,
+    "positive_count": 2,
+    "techniques": [
+      {
+        "type": "loaded_question",
+        "count": 4,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "does California need more money to waste?",
+            "confidence": 0.9,
+            "unit_id": "de85ded1-e6eb-4192-9049-366ecf421095"
+          },
+          {
+            "evidence": "does California need more money to waste? Is that really the answer for how to deal with things out there?",
+            "confidence": 0.92,
+            "unit_id": "de85ded1-e6eb-4192-9049-366ecf421095"
+          }
+        ]
+      },
+      {
+        "type": "hasty_generalisation",
+        "count": 3,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "does California need more money to waste? Is that really the answer for how to deal with things out there?",
+            "confidence": 0.65,
+            "unit_id": "de85ded1-e6eb-4192-9049-366ecf421095"
+          },
+          {
+            "evidence": "There's no country in the world where a wealth tax has worked with one exception at Switzerland",
+            "confidence": 0.65,
+            "unit_id": "d8c007a9-8822-48ed-8e73-75c1f2905b97"
+          }
+        ]
+      },
+      {
+        "type": "many_questions",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "does California need more money to waste? Is that really the answer for how to deal with things out there?",
+            "confidence": 0.65,
+            "unit_id": "de85ded1-e6eb-4192-9049-366ecf421095"
+          },
+          {
+            "evidence": "And then I think about does California need more money to waste?",
+            "confidence": 0.6,
+            "unit_id": "31939c4d-b178-4626-ab8c-60d2f5bf3827"
+          }
+        ]
+      },
+      {
+        "type": "attribution_of_intent",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "source_attacks",
+        "examples": [
+          {
+            "evidence": "I don't think he always did support what he's now calling a moderate wealth tax.",
+            "confidence": 0.6,
+            "unit_id": "31939c4d-b178-4626-ab8c-60d2f5bf3827"
+          },
+          {
+            "evidence": "This is political pandering to the proletariat... it's just an idiotic concept that is nothing more than political positioning",
+            "confidence": 0.8,
+            "unit_id": "d8c007a9-8822-48ed-8e73-75c1f2905b97"
+          }
+        ]
+      },
+      {
+        "type": "phantom_quantification",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "I don't know how much money it would raise. It's not going to solve California's problems",
+            "confidence": 0.6,
+            "unit_id": "cce9f856-cc92-4f72-8c8b-956728e1a8b7"
+          },
+          {
+            "evidence": "there's well documented cases where people, countries and states create wealth taxes",
+            "confidence": 0.6,
+            "unit_id": "ef607cc9-990f-44f1-8ade-e2eaef537cf2"
+          }
+        ]
+      },
+      {
+        "type": "begging_the_question",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "does California need more money to waste?",
+            "confidence": 0.85,
+            "unit_id": "de85ded1-e6eb-4192-9049-366ecf421095"
+          }
+        ]
+      },
+      {
+        "type": "poisoning_the_well",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "source_attacks",
+        "examples": [
+          {
+            "evidence": "does California need more money to waste?",
+            "confidence": 0.7,
+            "unit_id": "de85ded1-e6eb-4192-9049-366ecf421095"
+          }
+        ]
+      },
+      {
+        "type": "persuasive_definition",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "does California need more money to waste?",
+            "confidence": 0.7,
+            "unit_id": "de85ded1-e6eb-4192-9049-366ecf421095"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_emotion",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "California's tech elite are angry over a potential wealth tax in the Golden State",
+            "confidence": 0.65,
+            "unit_id": "de85ded1-e6eb-4192-9049-366ecf421095"
+          }
+        ]
+      },
+      {
+        "type": "weasel_words",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "he's come down on the side of a lot of his constituents",
+            "confidence": 0.6,
+            "unit_id": "31939c4d-b178-4626-ab8c-60d2f5bf3827"
+          }
+        ]
+      },
+      {
+        "type": "epistemic_cowardice",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "I don't think he always did support what he's now calling a moderate wealth tax. I think in the past he's come down on the side of a lot of his constituents and not.",
+            "confidence": 0.6,
+            "unit_id": "31939c4d-b178-4626-ab8c-60d2f5bf3827"
+          }
+        ]
+      },
+      {
+        "type": "elenchus",
+        "count": 1,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "I don't think he always did support what he's now calling a moderate wealth tax. I think in the past he's come down on the side of a lot of his constituents and not.",
+            "confidence": 0.65,
+            "unit_id": "31939c4d-b178-4626-ab8c-60d2f5bf3827"
+          }
+        ]
+      },
+      {
+        "type": "appeal_to_ridicule",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "it's just an idiotic concept that is nothing more than political positioning",
+            "confidence": 0.75,
+            "unit_id": "d8c007a9-8822-48ed-8e73-75c1f2905b97"
+          }
+        ]
+      },
+      {
+        "type": "motivational_delegitimisation",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "This is political pandering to the proletariat... a let's tax the rich and help you little guy and gal. It has no basis in anything that works.",
+            "confidence": 0.75,
+            "unit_id": "d8c007a9-8822-48ed-8e73-75c1f2905b97"
+          }
+        ]
+      },
+      {
+        "type": "ad_hominem_tu_quoque",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "source_attacks",
+        "examples": [
+          {
+            "evidence": "It's pretty tough to be so, I don't know, proven to be poor at your job of spending money that isn't yours and then to ask for more",
+            "confidence": 0.7,
+            "unit_id": "d8c007a9-8822-48ed-8e73-75c1f2905b97"
+          }
+        ]
+      },
+      {
+        "type": "ad_rem",
+        "count": 1,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "There's two issues here... one is if someone accrues a lot of wealth paying... Then there's founder shares that people that found a company... it's never taxed, basically.",
+            "confidence": 0.65,
+            "unit_id": "cce9f856-cc92-4f72-8c8b-956728e1a8b7"
+          }
+        ]
+      },
+      {
+        "type": "proof_by_example",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "France in 1989 lost, by their own numbers, 10 to 12,000 millionaires",
+            "confidence": 0.7,
+            "unit_id": "ef607cc9-990f-44f1-8ade-e2eaef537cf2"
+          }
+        ]
+      },
+      {
+        "type": "post_hoc",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "France in 1989 lost, by their own numbers, 10 to 12,000 millionaires when millionaires mattered",
+            "confidence": 0.65,
+            "unit_id": "ef607cc9-990f-44f1-8ade-e2eaef537cf2"
+          }
+        ]
+      }
+    ]
+  },
+  "discourse_skeleton": {
+    "overall_topic": "California's proposed wealth tax and whether it is sound fiscal policy",
+    "agreement_reached": "partial",
+    "consensus_reached": "partial",
+    "major_stasis_points": [
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Does California need more tax revenue, or does it already misuse existing funds?",
+        "claims": [
+          "California does not need more revenue because it wastes what it already has.",
+          "California's own accounting group found $9.6bn of waste and fiscal malfeasance, and the state moved from surplus to deficit."
+        ],
+        "antitheses": [
+          "(Implied, via Khanna) California requires additional revenue from the wealthy to address fiscal needs."
+        ],
+        "warrants": [
+          "A government that mismanages existing funds should not be granted additional taxing powers."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Has Ro Khanna consistently supported a moderate wealth tax, or has his position shifted?",
+        "claims": [
+          "Khanna previously sided with his constituents against a wealth tax.",
+          "Khanna now characterizes his proposal as a 'moderate wealth tax.'"
+        ],
+        "antitheses": [],
+        "warrants": [
+          "A politician's shifting stance is relevant to evaluating the credibility of a proposal."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Have wealth taxes worked in other countries or jurisdictions?",
+        "claims": [
+          "No country has made a wealth tax work, except Switzerland, which operates it in a uniquely logical and fair way.",
+          "Wealth taxes cause flight of wealthy individuals; France in 1989 lost 10,000-12,000 millionaires per its own figures."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "Repeated international failure is strong evidence against adopting the same policy domestically.",
+          "Capital and high-net-worth individuals are mobile and respond to tax incentives."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Is the California wealth tax proposal genuine policy or political positioning?",
+        "claims": [
+          "The proposal is political pandering — a 'tax the rich, help the little guy' message with no basis in workable policy."
+        ],
+        "antitheses": [
+          "(Implied) The proposal is a substantive moderate reform."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "definition",
+        "question_at_issue": "Which forms of wealth taxation are legitimate versus confiscatory?",
+        "claims": [
+          "Taxing wealth accumulated from already-taxed income (effective rate ~53%) is confiscatory.",
+          "Taxing founder unrealized gains that are borrowed against and pass to heirs untaxed via step-up in basis is a legitimate tax gap."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "Double taxation of post-tax income is unjust.",
+          "Income-like economic benefits that escape taxation entirely represent a defensible target for reform."
+        ],
+        "status": "partial_convergence"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Would closing the founder-shares/step-up loophole materially solve California's fiscal problems?",
+        "claims": [
+          "Closing this loophole would not raise enough to solve California's fiscal problems."
+        ],
+        "antitheses": [],
+        "status": "unresolved"
+      }
+    ],
+    "facts_to_verify": [
+      "Ro Khanna's prior public positions on a wealth tax and whether they conflict with his current stance.",
+      "The specific terms of the California wealth tax proposal Khanna supports.",
+      "Whether California's accounting group identified $9.6bn of waste and fiscal malfeasance.",
+      "Whether and when California moved from budget surplus to deficit.",
+      "Whether Switzerland operates a functioning wealth tax and how its design differs from the California proposal.",
+      "Which specific countries have tried and abandoned wealth taxes.",
+      "Whether France enacted a wealth tax around or before 1989.",
+      "Whether France lost 10,000-12,000 millionaires attributable to its wealth tax, per official French figures.",
+      "Whether high earners face an effective tax rate near 53% on accumulated wealth.",
+      "Whether founders commonly borrow against appreciated shares to fund living expenses.",
+      "Whether heirs receive a step-up in basis allowing unrealized gains to escape income taxation at death.",
+      "Whether Bill Ackman has proposed a mechanism to tax founder unrealized gains or borrowed-against shares."
+    ],
+    "meta_comment": "The discourse is one-sided: only the moderator and Narasin speak, both opposing the California proposal, while Khanna's position is characterized rather than directly presented. Several factual claims (France's millionaire exodus figures, the $9.6bn waste figure, Switzerland's uniqueness) are asserted without sourcing and warrant verification. Genuine convergence appears only on the narrow definitional point about founder unrealized gains and step-up in basis."
+  },
+  "assembled_at": "2026-05-09T01:49:05.379208+00:00"
+}

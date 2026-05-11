@@ -1,0 +1,384 @@
+{
+  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+  "title": "Do you agree with Jacob Rees Mogg's opinion on wealth tax? #clip #fyp #debate #viral #money",
+  "discourse_mode": "dialogic",
+  "speaker_count": 3,
+  "published_date": "2026-01-11",
+  "source_url": "https://www.youtube.com/watch?v=iZiWd_-Dy1A",
+  "unit_count": 4,
+  "dialectical_conduct": {
+    "total_detections": 27,
+    "negative_count": 24,
+    "positive_count": 3,
+    "techniques": [
+      {
+        "type": "motivational_delegitimisation",
+        "count": 3,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "a wealth tax is purely there to make people poorer as your objective",
+            "confidence": 0.75,
+            "unit_id": "ac1ad8eb-5ca5-463e-88b8-0f25a9023527"
+          },
+          {
+            "evidence": "Well, why? Just because you're jealous?",
+            "confidence": 0.92,
+            "unit_id": "388c3fc6-0976-46db-b15a-b59b81694167"
+          }
+        ]
+      },
+      {
+        "type": "straw_man",
+        "count": 3,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "a wealth tax is purely there to make people poorer as your objective",
+            "confidence": 0.7,
+            "unit_id": "ac1ad8eb-5ca5-463e-88b8-0f25a9023527"
+          },
+          {
+            "evidence": "So, are you saying they should sell their shares to pay this tax when they've got no income or borrow money to do it?",
+            "confidence": 0.65,
+            "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+          }
+        ]
+      },
+      {
+        "type": "hasty_generalisation",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "in every country that's tried it, it's failed.",
+            "confidence": 0.7,
+            "unit_id": "ac1ad8eb-5ca5-463e-88b8-0f25a9023527"
+          },
+          {
+            "evidence": "People running tech companies may have assets of billions, but their income may be very small, because it may purely be in the paper of the company that they have founded.",
+            "confidence": 0.65,
+            "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+          }
+        ]
+      },
+      {
+        "type": "weasel_words",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "in every country that's tried it, it's failed",
+            "confidence": 0.65,
+            "unit_id": "ac1ad8eb-5ca5-463e-88b8-0f25a9023527"
+          },
+          {
+            "evidence": "may have assets of billions, but their income may be very small, because it may purely be in the paper",
+            "confidence": 0.6,
+            "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+          }
+        ]
+      },
+      {
+        "type": "many_questions",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "Well, why? Just because you're jealous? No, but more because... Well, why? Why do you want to? He's paying tax anyway.",
+            "confidence": 0.6,
+            "unit_id": "388c3fc6-0976-46db-b15a-b59b81694167"
+          },
+          {
+            "evidence": "How do you know they've got a surplus? What are their commitments? How many people are they employing?",
+            "confidence": 0.7,
+            "unit_id": "e7c04844-8fac-4015-8cbe-8a49ceace3d8"
+          }
+        ]
+      },
+      {
+        "type": "red_herring",
+        "count": 2,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "He's paying tax anyway.",
+            "confidence": 0.65,
+            "unit_id": "388c3fc6-0976-46db-b15a-b59b81694167"
+          },
+          {
+            "evidence": "He's paying tax anyway.",
+            "confidence": 0.65,
+            "unit_id": "388c3fc6-0976-46db-b15a-b59b81694167"
+          }
+        ]
+      },
+      {
+        "type": "begging_the_question",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "formal_structure",
+        "examples": [
+          {
+            "evidence": "a wealth tax is purely there to make people poorer as your objective",
+            "confidence": 0.65,
+            "unit_id": "ac1ad8eb-5ca5-463e-88b8-0f25a9023527"
+          }
+        ]
+      },
+      {
+        "type": "sweeping_generalisation",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "a wealth tax is purely there to make people poorer as your objective",
+            "confidence": 0.65,
+            "unit_id": "ac1ad8eb-5ca5-463e-88b8-0f25a9023527"
+          }
+        ]
+      },
+      {
+        "type": "normative_laundering",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "a wealth tax is purely there to make people poorer as your objective",
+            "confidence": 0.7,
+            "unit_id": "ac1ad8eb-5ca5-463e-88b8-0f25a9023527"
+          }
+        ]
+      },
+      {
+        "type": "attribution_of_intent",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "source_attacks",
+        "examples": [
+          {
+            "evidence": "Well, why? Just because you're jealous?",
+            "confidence": 0.9,
+            "unit_id": "388c3fc6-0976-46db-b15a-b59b81694167"
+          }
+        ]
+      },
+      {
+        "type": "ad_hominem",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "Just because you're jealous?",
+            "confidence": 0.7,
+            "unit_id": "388c3fc6-0976-46db-b15a-b59b81694167"
+          }
+        ]
+      },
+      {
+        "type": "foreclosing_interrogation",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "semantic_manipulation",
+        "examples": [
+          {
+            "evidence": "How do you know they've got a surplus? What are their commitments? How many people are they employing?",
+            "confidence": 0.7,
+            "unit_id": "e7c04844-8fac-4015-8cbe-8a49ceace3d8"
+          }
+        ]
+      },
+      {
+        "type": "sealioning",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "In what view have they got a surplus? Well, if they've... / SPEAKER_00: How do you know they've got a surplus? What are their commitments? How many people are they employing?",
+            "confidence": 0.6,
+            "unit_id": "e7c04844-8fac-4015-8cbe-8a49ceace3d8"
+          }
+        ]
+      },
+      {
+        "type": "elenchus",
+        "count": 1,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "In what view have they got a surplus? Well, if they've... / SPEAKER_00: How do you know they've got a surplus? What are their commitments? How many people are they employing?",
+            "confidence": 0.75,
+            "unit_id": "e7c04844-8fac-4015-8cbe-8a49ceace3d8"
+          }
+        ]
+      },
+      {
+        "type": "proof_by_example",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "People running tech companies may have assets of billions, but their income may be very small, because it may purely be in the paper of the company that they have founded.",
+            "confidence": 0.7,
+            "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+          }
+        ]
+      },
+      {
+        "type": "distributional_anchoring",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "evidence_quality",
+        "examples": [
+          {
+            "evidence": "are you saying they should sell their shares to pay this tax when they've got no income or borrow money to do it?",
+            "confidence": 0.6,
+            "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+          }
+        ]
+      },
+      {
+        "type": "loaded_question",
+        "count": 1,
+        "polarity": "negative",
+        "classifier_group": "psychological_rhetoric",
+        "examples": [
+          {
+            "evidence": "are you saying they should sell their shares to pay this tax when they've got no income or borrow money to do it?",
+            "confidence": 0.6,
+            "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+          }
+        ]
+      },
+      {
+        "type": "reductio_ad_absurdum",
+        "count": 1,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "So, are you saying they should sell their shares to pay this tax when they've got no income or borrow money to do it?",
+            "confidence": 0.75,
+            "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+          }
+        ]
+      },
+      {
+        "type": "prolepsis",
+        "count": 1,
+        "polarity": "positive",
+        "classifier_group": "counter_techniques",
+        "examples": [
+          {
+            "evidence": "People running tech companies may have assets of billions, but their income may be very small, because it may purely be in the paper of the company that they have founded.",
+            "confidence": 0.6,
+            "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+          }
+        ]
+      }
+    ]
+  },
+  "discourse_skeleton": {
+    "overall_topic": "Whether a wealth tax (in particular on billionaires) is justified, effective, or motivated by envy",
+    "agreement_reached": "0",
+    "consensus_reached": "0",
+    "major_stasis_points": [
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Is the purpose of a wealth tax to make people poorer rather than to raise revenue?",
+        "claims": [
+          "A wealth tax is purely intended to make people poorer, not to raise revenue (SPEAKER_00)."
+        ],
+        "antitheses": [
+          "A wealth tax can be a legitimate revenue-raising and redistributive policy (implicit in SPEAKER_01, SPEAKER_02)."
+        ],
+        "warrants": [
+          "If a tax does not raise net revenue, its motivation must lie elsewhere (e.g., punitive)."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Have wealth taxes failed in every country that has tried them?",
+        "claims": [
+          "Every country that has tried a wealth tax has seen it fail (SPEAKER_01)."
+        ],
+        "antitheses": [],
+        "warrants": [
+          "Past international policy outcomes are predictive of UK outcomes."
+        ],
+        "status": "partial_convergence"
+      },
+      {
+        "stasis_type": "quality",
+        "question_at_issue": "Is a 1% levy on wealth above £1bn justifiable, or is it motivated by envy?",
+        "claims": [
+          "A 1% levy on those with over £1bn is a reasonable and winnable policy (SPEAKER_01).",
+          "The desire to tax billionaires is motivated by jealousy, not principle (SPEAKER_00)."
+        ],
+        "antitheses": [
+          "Taxing concentrated wealth is principled redistribution, not envy.",
+          "Billionaires already pay tax, so additional levies are punitive."
+        ],
+        "warrants": [
+          "A small percentage levy on extreme wealth imposes minimal hardship on the wealthy.",
+          "Motivation behind a policy bears on its legitimacy."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "definition",
+        "question_at_issue": "In what sense, if any, do billionaires have a 'surplus' of wealth available for taxation?",
+        "claims": [
+          "Billionaires have a large surplus of wealth while others cannot escape poverty (SPEAKER_00 [as quoted in Unit 3]; aligns with SPEAKER_02's framing)."
+        ],
+        "antitheses": [
+          "'Surplus' is ill-defined when wealth is tied up in operating businesses and employment commitments (SPEAKER_02 challenge; SPEAKER_00 rebuttal in Unit 4)."
+        ],
+        "warrants": [
+          "Only genuinely surplus/disposable wealth is a legitimate target for redistribution."
+        ],
+        "status": "unresolved"
+      },
+      {
+        "stasis_type": "fact",
+        "question_at_issue": "Do billionaires actually receive large liquid profits/income, or is their wealth primarily illiquid paper assets?",
+        "claims": [
+          "Billionaires are making lots of profit that could be taxed (SPEAKER_02).",
+          "Many billionaires (e.g., tech founders) have low income; their wealth is paper value in company shares (SPEAKER_00)."
+        ],
+        "antitheses": [
+          "Illiquid equity wealth still generates taxable realisations and dividends."
+        ],
+        "warrants": [
+          "Tax policy must distinguish income from unrealised capital."
+        ],
+        "status": "unresolved"
+      }
+    ],
+    "facts_to_verify": [
+      "Whether wealth taxes have failed in every country that has tried them.",
+      "Which countries have implemented wealth taxes and the documented outcomes.",
+      "Whether UK billionaires pay income and capital gains tax on their wealth and at what effective rates.",
+      "The specific structure of SPEAKER_01's proposed 1% levy on wealth above £1bn.",
+      "The proportion of billionaire wealth held in liquid/personal assets versus tied up in operating businesses.",
+      "The number of people employed by firms owned or controlled by UK billionaires.",
+      "Whether tech company founders with billion-dollar holdings typically report low taxable income.",
+      "Whether wealth taxes typically force asset sales or borrowing to meet liability when income is low."
+    ],
+    "meta_comment": "Debate is short and adversarial; no convergence reached. Disputes span quality (motivation/legitimacy), fact (empirical record and liquidity), and definition (what counts as surplus). Speaker attribution in Unit 3 regarding the 'surplus' claim should be treated as low-reliability since it appears inconsistent with SPEAKER_00's stance elsewhere."
+  },
+  "assembled_at": "2026-05-09T01:43:25.045988+00:00"
+}
