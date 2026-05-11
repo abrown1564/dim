@@ -1,0 +1,1579 @@
+{
+  "name": "The Wealth Tax Debate",
+  "type": "root",
+  "children": [
+    {
+      "name": "anti",
+      "type": "stance",
+      "children": [
+        {
+          "name": "California's proposed wealth tax is 'idiotic concept,' says Tenacity Venture Capital's Narasin",
+          "type": "debate",
+          "stance": "anti",
+          "discourse_mode": "dialogic",
+          "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+          "source_url": "https://www.youtube.com/watch?v=ui_QxmMyYKQ",
+          "children": [
+            {
+              "name": "moderator frame",
+              "type": "unit",
+              "policy_stance": "neutral",
+              "summary": "The moderator frames the debate around California's proposed wealth tax and Congressman Ro Khanna's support for it, while editorially questioning whether Califo",
+              "unit_id": "de85ded1-e6eb-4192-9049-366ecf421095",
+              "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+              "children": [
+                {
+                  "name": "many_questions",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "formal_structure",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "does California need more money to waste? Is that really the answer for how to deal with things out there?",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "de85ded1-e6eb-4192-9049-366ecf421095"
+                },
+                {
+                  "name": "begging_the_question",
+                  "value": 0.85,
+                  "type": "detection",
+                  "group": "formal_structure",
+                  "polarity": "negative",
+                  "confidence": 0.85,
+                  "evidence": "does California need more money to waste?",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "de85ded1-e6eb-4192-9049-366ecf421095"
+                },
+                {
+                  "name": "poisoning_the_well",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "source_attacks",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "does California need more money to waste?",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "de85ded1-e6eb-4192-9049-366ecf421095"
+                },
+                {
+                  "name": "hasty_generalisation",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "does California need more money to waste? Is that really the answer for how to deal with things out there?",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "de85ded1-e6eb-4192-9049-366ecf421095"
+                },
+                {
+                  "name": "loaded_question",
+                  "value": 0.9,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.9,
+                  "evidence": "does California need more money to waste?",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "de85ded1-e6eb-4192-9049-366ecf421095"
+                },
+                {
+                  "name": "persuasive_definition",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "does California need more money to waste?",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "de85ded1-e6eb-4192-9049-366ecf421095"
+                },
+                {
+                  "name": "loaded_question",
+                  "value": 0.92,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.92,
+                  "evidence": "does California need more money to waste? Is that really the answer for how to deal with things out there?",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "de85ded1-e6eb-4192-9049-366ecf421095"
+                },
+                {
+                  "name": "appeal_to_emotion",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "California's tech elite are angry over a potential wealth tax in the Golden State",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "de85ded1-e6eb-4192-9049-366ecf421095"
+                }
+              ]
+            },
+            {
+              "name": "opening position",
+              "type": "unit",
+              "policy_stance": "anti",
+              "summary": "Speaker questions the consistency of Ro Khanna's current support for a moderate wealth tax and challenges whether California needs additional tax revenue.",
+              "unit_id": "31939c4d-b178-4626-ab8c-60d2f5bf3827",
+              "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+              "children": [
+                {
+                  "name": "many_questions",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "formal_structure",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "And then I think about does California need more money to waste?",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "31939c4d-b178-4626-ab8c-60d2f5bf3827"
+                },
+                {
+                  "name": "attribution_of_intent",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "source_attacks",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "I don't think he always did support what he's now calling a moderate wealth tax.",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "31939c4d-b178-4626-ab8c-60d2f5bf3827"
+                },
+                {
+                  "name": "loaded_question",
+                  "value": 0.85,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.85,
+                  "evidence": "does California need more money to waste?",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "31939c4d-b178-4626-ab8c-60d2f5bf3827"
+                },
+                {
+                  "name": "weasel_words",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "he's come down on the side of a lot of his constituents",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "31939c4d-b178-4626-ab8c-60d2f5bf3827"
+                },
+                {
+                  "name": "loaded_question",
+                  "value": 0.85,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.85,
+                  "evidence": "And then I think about does California need more money to waste?",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "31939c4d-b178-4626-ab8c-60d2f5bf3827"
+                },
+                {
+                  "name": "epistemic_cowardice",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "I don't think he always did support what he's now calling a moderate wealth tax. I think in the past he's come down on the side of a lot of his constituents and not.",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "31939c4d-b178-4626-ab8c-60d2f5bf3827"
+                },
+                {
+                  "name": "elenchus",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "counter_techniques",
+                  "polarity": "positive",
+                  "confidence": 0.65,
+                  "evidence": "I don't think he always did support what he's now calling a moderate wealth tax. I think in the past he's come down on the side of a lot of his constituents and not.",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "31939c4d-b178-4626-ab8c-60d2f5bf3827"
+                }
+              ]
+            },
+            {
+              "name": "opening position",
+              "type": "unit",
+              "policy_stance": "anti",
+              "summary": "Narasin argues the California wealth tax is political pandering with no basis in workable policy. He cites California's documented fiscal waste and the near-uni",
+              "unit_id": "d8c007a9-8822-48ed-8e73-75c1f2905b97",
+              "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+              "children": [
+                {
+                  "name": "appeal_to_ridicule",
+                  "value": 0.75,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.75,
+                  "evidence": "it's just an idiotic concept that is nothing more than political positioning",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "d8c007a9-8822-48ed-8e73-75c1f2905b97"
+                },
+                {
+                  "name": "attribution_of_intent",
+                  "value": 0.8,
+                  "type": "detection",
+                  "group": "source_attacks",
+                  "polarity": "negative",
+                  "confidence": 0.8,
+                  "evidence": "This is political pandering to the proletariat... it's just an idiotic concept that is nothing more than political positioning",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "d8c007a9-8822-48ed-8e73-75c1f2905b97"
+                },
+                {
+                  "name": "motivational_delegitimisation",
+                  "value": 0.75,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.75,
+                  "evidence": "This is political pandering to the proletariat... a let's tax the rich and help you little guy and gal. It has no basis in anything that works.",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "d8c007a9-8822-48ed-8e73-75c1f2905b97"
+                },
+                {
+                  "name": "ad_hominem_tu_quoque",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "source_attacks",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "It's pretty tough to be so, I don't know, proven to be poor at your job of spending money that isn't yours and then to ask for more",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "d8c007a9-8822-48ed-8e73-75c1f2905b97"
+                },
+                {
+                  "name": "hasty_generalisation",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "There's no country in the world where a wealth tax has worked with one exception at Switzerland",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "d8c007a9-8822-48ed-8e73-75c1f2905b97"
+                }
+              ]
+            },
+            {
+              "name": "clarification",
+              "type": "unit",
+              "policy_stance": "mixed",
+              "summary": "Speaker distinguishes two cases: taxing already-taxed accrued wealth (confiscatory) versus taxing founder unrealized gains borrowed against and passed untaxed a",
+              "unit_id": "cce9f856-cc92-4f72-8c8b-956728e1a8b7",
+              "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+              "children": [
+                {
+                  "name": "ad_rem",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "counter_techniques",
+                  "polarity": "positive",
+                  "confidence": 0.65,
+                  "evidence": "There's two issues here... one is if someone accrues a lot of wealth paying... Then there's founder shares that people that found a company... it's never taxed, basically.",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "cce9f856-cc92-4f72-8c8b-956728e1a8b7"
+                },
+                {
+                  "name": "phantom_quantification",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "I don't know how much money it would raise. It's not going to solve California's problems",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "cce9f856-cc92-4f72-8c8b-956728e1a8b7"
+                }
+              ]
+            },
+            {
+              "name": "rebuttal",
+              "type": "unit",
+              "policy_stance": "anti",
+              "summary": "Speaker argues wealth taxes cause wealth flight, citing France 1989 losing 10-12,000 millionaires.",
+              "unit_id": "ef607cc9-990f-44f1-8ade-e2eaef537cf2",
+              "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+              "children": [
+                {
+                  "name": "proof_by_example",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "France in 1989 lost, by their own numbers, 10 to 12,000 millionaires",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "ef607cc9-990f-44f1-8ade-e2eaef537cf2"
+                },
+                {
+                  "name": "post_hoc",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "France in 1989 lost, by their own numbers, 10 to 12,000 millionaires when millionaires mattered",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "ef607cc9-990f-44f1-8ade-e2eaef537cf2"
+                },
+                {
+                  "name": "hasty_generalisation",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "there's well documented cases where people, countries and states create wealth taxes and you see massive fleeing of wealth",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "ef607cc9-990f-44f1-8ade-e2eaef537cf2"
+                },
+                {
+                  "name": "phantom_quantification",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "there's well documented cases where people, countries and states create wealth taxes",
+                  "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+                  "unit_id": "ef607cc9-990f-44f1-8ade-e2eaef537cf2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "'A wealth tax will target ordinary people like me'",
+          "type": "debate",
+          "stance": "anti",
+          "discourse_mode": "multi_party",
+          "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+          "source_url": "https://www.youtube.com/watch?v=WNk0xcuDah4",
+          "children": [
+            {
+              "name": "opening position",
+              "type": "unit",
+              "policy_stance": "anti",
+              "summary": "Speaker argues that wealth tax proposals must specify a high threshold (e.g., £50 million) or they risk capturing ordinary high earners rather than the truly we",
+              "unit_id": "c8f4992f-72c3-4963-bcdb-05325d6f0db0",
+              "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+              "children": [
+                {
+                  "name": "distributional_anchoring",
+                  "value": 0.78,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.78,
+                  "evidence": "it does very much seem like people who are hard workers like me just happen to have ordinary jobs in the city",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "c8f4992f-72c3-4963-bcdb-05325d6f0db0"
+                },
+                {
+                  "name": "false_dilemma",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "if we're not willing to actually put those figures out there and say we're talking about people who have more than 50 million, then it does very much seem like people who are hard workers like me just",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "c8f4992f-72c3-4963-bcdb-05325d6f0db0"
+                },
+                {
+                  "name": "prolepsis",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "counter_techniques",
+                  "polarity": "positive",
+                  "confidence": 0.7,
+                  "evidence": "I am not the equivalent of the Duke of Westminster, who is often talked about when we talk about why aren't people paying the fair share of tax.",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "c8f4992f-72c3-4963-bcdb-05325d6f0db0"
+                }
+              ]
+            },
+            {
+              "name": "counterargument",
+              "type": "unit",
+              "policy_stance": "neutral",
+              "summary": "Speaker observes a recursive deflection pattern in wealth tax debates—each tier points to the tier above—and concludes that everyone must pay their fair share.",
+              "unit_id": "eb57b654-cd67-4989-bae2-b80d1bc470ea",
+              "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+              "children": [
+                {
+                  "name": "non_sequitur",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "formal_structure",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "The people with one million say, oh, it's the people with 10 million. The people with 10 million say it's the people with 100 million. It's the people with 100 million who say, go after the billionair",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "eb57b654-cd67-4989-bae2-b80d1bc470ea"
+                },
+                {
+                  "name": "hasty_generalisation",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "The people with one million say, oh, it's the people with 10 million. The people with 10 million say it's the people with 100 million. It's the people with 100 million who say, go after the billionair",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "eb57b654-cd67-4989-bae2-b80d1bc470ea"
+                },
+                {
+                  "name": "proof_by_example",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "The people with one million say, oh, it's the people with 10 million. The people with 10 million say it's the people with 100 million. It's the people with 100 million who say, go after the billionair",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "eb57b654-cd67-4989-bae2-b80d1bc470ea"
+                },
+                {
+                  "name": "weasel_words",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "we've all got to have to pay our fair share, don't we?",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "eb57b654-cd67-4989-bae2-b80d1bc470ea"
+                },
+                {
+                  "name": "appeal_to_the_masses",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "we've all got to have to pay our fair share, don't we?",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "eb57b654-cd67-4989-bae2-b80d1bc470ea"
+                }
+              ]
+            },
+            {
+              "name": "rebuttal",
+              "type": "unit",
+              "policy_stance": "anti",
+              "summary": "Speaker concedes that ordinary city workers should not pay more than their fair share, and argues a wealth tax would force them to do so because their city earn",
+              "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d",
+              "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+              "children": [
+                {
+                  "name": "begging_the_question",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "formal_structure",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "they should not be the people who have to pay more than their fair share, which is what we will have to do if there is any sort of wealth tax",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+                },
+                {
+                  "name": "equivocation",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "formal_structure",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "to an ordinary family working, I don't know, in the north-east of England, the amount of money that I earn in the city is a huge amount",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+                },
+                {
+                  "name": "non_sequitur",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "formal_structure",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "they should not be the people who have to pay more than their fair share, which is what we will have to do if there is any sort of wealth tax. Because of course, to an ordinary family working... the a",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+                },
+                {
+                  "name": "distributional_anchoring",
+                  "value": 0.85,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.85,
+                  "evidence": "Those ordinary people who are in 9 to 5 jobs... working ordinary jobs in the city, they should not be the people who have to pay more than their fair share",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+                },
+                {
+                  "name": "proof_by_example",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "Because of course, to an ordinary family working, I don't know, in the north-east of England, the amount of money that I earn in the city is a huge amount.",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+                },
+                {
+                  "name": "sweeping_generalisation",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "they should not be the people who have to pay more than their fair share, which is what we will have to do if there is any sort of wealth tax",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+                },
+                {
+                  "name": "equivocation",
+                  "value": 0.75,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.75,
+                  "evidence": "working ordinary jobs in the city, they should not be the people who have to pay more than their fair share... to an ordinary family working, I don't know, in the north-east of England, the amount of ",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+                },
+                {
+                  "name": "weasel_words",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "they should not be the people who have to pay more than their fair share, which is what we will have to do if there is any sort of wealth tax",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+                },
+                {
+                  "name": "persuasive_definition",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "working ordinary jobs in the city",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+                },
+                {
+                  "name": "straw_man",
+                  "value": 0.75,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.75,
+                  "evidence": "they should not be the people who have to pay more than their fair share, which is what we will have to do if there is any sort of wealth tax",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+                },
+                {
+                  "name": "appeal_to_pity",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "Those ordinary people who are in 9 to 5 jobs... working ordinary jobs in the city, they should not be the people who have to pay more than their fair share",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+                },
+                {
+                  "name": "false_equivalence",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "to an ordinary family working, I don't know, in the north-east of England, the amount of money that I earn in the city is a huge amount",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "4d73f283-91f4-4bfe-a005-2e201389957d"
+                }
+              ]
+            },
+            {
+              "name": "counterargument",
+              "type": "unit",
+              "policy_stance": "pro",
+              "summary": "SPEAKER_01 challenges the lawyer's objection by noting that Kinnock's specific proposal—a 2% tax on assets above £10 million—would not affect ordinary professio",
+              "unit_id": "2bec19a7-5db2-4a98-89a9-3236820ab895",
+              "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+              "children": [
+                {
+                  "name": "ex_concessis",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "counter_techniques",
+                  "polarity": "positive",
+                  "confidence": 0.65,
+                  "evidence": "unless you're a very, very good lawyer doing very, very well for yourself, which you might be, that wouldn't affect you, would it?",
+                  "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+                  "unit_id": "2bec19a7-5db2-4a98-89a9-3236820ab895"
+                }
+              ]
+            },
+            {
+              "name": "rebuttal",
+              "type": "unit",
+              "policy_stance": "anti",
+              "summary": "Speaker concedes agreement on a prior point but expresses distrust that the Labour government would limit a wealth tax to the stated threshold.",
+              "unit_id": "f7aec684-05b2-4d89-9dee-a405949f0c9d",
+              "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+              "children": [
+                {
+                  "name": "—",
+                  "value": 0.3,
+                  "type": "empty",
+                  "group": null,
+                  "polarity": null,
+                  "confidence": 0,
+                  "evidence": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Why a wealth tax doesn’t work | To the Point",
+          "type": "debate",
+          "stance": "anti",
+          "discourse_mode": "monologic",
+          "debate_id": "4980639d-4252-4864-89ae-5e861ae9e791",
+          "source_url": "https://www.youtube.com/watch?v=YluUJWbY8ZI",
+          "children": [
+            {
+              "name": "opening position",
+              "type": "unit",
+              "policy_stance": "anti",
+              "summary": "Speaker argues wealth taxes are a poor idea, citing OECD abandonment, low revenue, valuation difficulties, and capital/person flight.",
+              "unit_id": "c0ec5b8f-2ca0-426c-8709-f5475991bd21",
+              "debate_id": "4980639d-4252-4864-89ae-5e861ae9e791",
+              "children": [
+                {
+                  "name": "post_hoc",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "Lots of OECD countries had wealth taxes in the 1990s. More or less all of them have abolished them for precisely that reason.",
+                  "debate_id": "4980639d-4252-4864-89ae-5e861ae9e791",
+                  "unit_id": "c0ec5b8f-2ca0-426c-8709-f5475991bd21"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "A Wealth Tax Doesn’t Make Sense",
+          "type": "debate",
+          "stance": "anti",
+          "discourse_mode": "monologic",
+          "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+          "source_url": "https://www.youtube.com/watch?v=g2sHvMjsFJs",
+          "children": [
+            {
+              "name": "non argumentative",
+              "type": "unit",
+              "policy_stance": null,
+              "summary": "",
+              "unit_id": "978c839e-fba0-496b-a561-4deaf086d433",
+              "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+              "children": [
+                {
+                  "name": "—",
+                  "value": 0.3,
+                  "type": "empty",
+                  "group": null,
+                  "polarity": null,
+                  "confidence": 0,
+                  "evidence": ""
+                }
+              ]
+            },
+            {
+              "name": "opening position",
+              "type": "unit",
+              "policy_stance": "anti",
+              "summary": "Speakers introduce Elizabeth Warren's proposed wealth tax as a potential threat to the value of investments such as fine art, while questioning the mechanism of",
+              "unit_id": "24e5af10-59f1-4a71-9a71-05797fcea145",
+              "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+              "children": [
+                {
+                  "name": "appeal_to_fear",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "That is if politicians don't get their way. Just look at Elizabeth Warren, who for years has been promising a wealth tax.",
+                  "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+                  "unit_id": "24e5af10-59f1-4a71-9a71-05797fcea145"
+                }
+              ]
+            },
+            {
+              "name": "opening position",
+              "type": "unit",
+              "policy_stance": "anti",
+              "summary": "Speaker argues a wealth tax is impractical because non-cash assets (art, boats, animals) are hard to value and taxing them forces owners to sell assets to pay, ",
+              "unit_id": "58a3fddf-1fda-46f3-aa60-7eb754461b48",
+              "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+              "children": [
+                {
+                  "name": "hasty_generalisation",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "especially if we're talking about investment in things like art, or boats, or anything else really",
+                  "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+                  "unit_id": "58a3fddf-1fda-46f3-aa60-7eb754461b48"
+                },
+                {
+                  "name": "jaqing",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "How's the government going to determine how much it's worth?",
+                  "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+                  "unit_id": "58a3fddf-1fda-46f3-aa60-7eb754461b48"
+                }
+              ]
+            },
+            {
+              "name": "opening position",
+              "type": "unit",
+              "policy_stance": "anti",
+              "summary": "Speakers argue that enforcing a wealth tax on assets like art would require invasive mechanisms (registration, door-to-door inspections), making it a privacy vi",
+              "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db",
+              "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+              "children": [
+                {
+                  "name": "appeal_to_probability",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "formal_structure",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "Or maybe in Elizabeth Warren's head, the plan is to send agents out door to door to look at what you might be hiding",
+                  "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+                  "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+                },
+                {
+                  "name": "false_causal_chain",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "formal_structure",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "Do I have to register them?... Or maybe... the plan is to send agents out door to door... This whole thing sounds like a massive invasion of privacy and almost impossible to implement.",
+                  "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+                  "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+                },
+                {
+                  "name": "attribution_of_intent",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "source_attacks",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "Or maybe in Elizabeth Warren's head, the plan is to send agents out door to door to look at what you might be hiding",
+                  "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+                  "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+                },
+                {
+                  "name": "slippery_slope",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "the plan is to send agents out door to door to look at what you might be hiding",
+                  "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+                  "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+                },
+                {
+                  "name": "argument_from_incredulity",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "This whole thing sounds like a massive invasion of privacy and almost impossible to implement.",
+                  "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+                  "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+                },
+                {
+                  "name": "nirvana_fallacy",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "This whole thing sounds like a massive invasion of privacy and almost impossible to implement.",
+                  "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+                  "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+                },
+                {
+                  "name": "weasel_words",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "Or maybe in Elizabeth Warren's head, the plan is to send agents out door to door to look at what you might be hiding",
+                  "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+                  "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+                },
+                {
+                  "name": "straw_man",
+                  "value": 0.8,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.8,
+                  "evidence": "Or maybe in Elizabeth Warren's head, the plan is to send agents out door to door to look at what you might be hiding",
+                  "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+                  "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+                },
+                {
+                  "name": "appeal_to_ridicule",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "Or maybe in Elizabeth Warren's head, the plan is to send agents out door to door to look at what you might be hiding",
+                  "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+                  "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+                },
+                {
+                  "name": "appeal_to_fear",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "This whole thing sounds like a massive invasion of privacy and almost impossible to implement.",
+                  "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+                  "unit_id": "6c6c7a71-52a0-45f7-85d4-07e11f18a5db"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pro",
+      "type": "stance",
+      "children": [
+        {
+          "name": "This Wealth Tax Could Change Everything #taxtherich #tax #economy",
+          "type": "debate",
+          "stance": "pro",
+          "discourse_mode": "monologic",
+          "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+          "source_url": "https://www.youtube.com/watch?v=pu89sXzGBAs",
+          "children": [
+            {
+              "name": "opening position",
+              "type": "unit",
+              "policy_stance": "pro",
+              "summary": "Speaker frames the unit as a defense of California's proposed wealth tax against billionaire opposition, but offers no substantive argument here — only an annou",
+              "unit_id": "b1feb584-2d06-454d-9785-9dd3a23e5310",
+              "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+              "children": [
+                {
+                  "name": "—",
+                  "value": 0.3,
+                  "type": "empty",
+                  "group": null,
+                  "polarity": null,
+                  "confidence": 0,
+                  "evidence": ""
+                }
+              ]
+            },
+            {
+              "name": "clarification",
+              "type": "unit",
+              "policy_stance": "neutral",
+              "summary": "Descriptive clarification of the proposed one-time 5% billionaire tax: who it applies to, payment terms, expected revenue, and intended use to offset Medicaid c",
+              "unit_id": "a5c95946-3f5a-491f-93bd-0ade3f1549df",
+              "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+              "children": [
+                {
+                  "name": "—",
+                  "value": 0.3,
+                  "type": "empty",
+                  "group": null,
+                  "polarity": null,
+                  "confidence": 0,
+                  "evidence": ""
+                }
+              ]
+            },
+            {
+              "name": "rebuttal",
+              "type": "unit",
+              "policy_stance": "pro",
+              "summary": "Speaker rebuts billionaire complaints about the tax bill by asserting the same bill gave them larger tax cuts.",
+              "unit_id": "108d8ee2-ad21-4ee5-a86f-b85f24fea03b",
+              "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+              "children": [
+                {
+                  "name": "appeal_to_hypocrisy",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "that same tax bill doled out far more in tax cuts for the richest Americans, including the California billionaires now crying foul",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "108d8ee2-ad21-4ee5-a86f-b85f24fea03b"
+                }
+              ]
+            },
+            {
+              "name": "counterargument",
+              "type": "unit",
+              "policy_stance": "pro",
+              "summary": "Speaker rebuts the objection that taxing billionaires causes them to flee, citing residency rules and the Massachusetts millionaire tax as evidence.",
+              "unit_id": "4f77a50f-1ed7-4fe1-84fd-11e40566b759",
+              "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+              "children": [
+                {
+                  "name": "hasty_generalisation",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "Massachusetts increased taxes on millionaires and billionaires in 2023.",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "4f77a50f-1ed7-4fe1-84fd-11e40566b759"
+                },
+                {
+                  "name": "prolepsis",
+                  "value": 0.9,
+                  "type": "detection",
+                  "group": "counter_techniques",
+                  "polarity": "positive",
+                  "confidence": 0.9,
+                  "evidence": "Now a few California billionaires will make headlines by leaving the state in a huff or by threatening to move assets. But if they lived in the state on January 1st, they'll be on the hook for the tax",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "4f77a50f-1ed7-4fe1-84fd-11e40566b759"
+                }
+              ]
+            },
+            {
+              "name": "opening position",
+              "type": "unit",
+              "policy_stance": "pro",
+              "summary": "Speaker argues California billionaires can easily afford the proposed wealth tax, citing Nvidia's CEO whose wealth grew $124B in five years and who reportedly a",
+              "unit_id": "27e7fe30-dfc1-4430-93e1-b38f8936a885",
+              "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+              "children": [
+                {
+                  "name": "hasty_generalisation",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "formal_structure",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "Let's be real, California's billionaires are wealthier than they've ever been. Take the CEO of AI, chipmaker, and video... That's an outcome that he says is perfectly fine with it.",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "27e7fe30-dfc1-4430-93e1-b38f8936a885"
+                },
+                {
+                  "name": "appeal_to_authority",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "source_attacks",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "That's an outcome that he says is perfectly fine with it.",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "27e7fe30-dfc1-4430-93e1-b38f8936a885"
+                },
+                {
+                  "name": "hasty_generalisation",
+                  "value": 0.75,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.75,
+                  "evidence": "Let's be real, California's billionaires are wealthier than they've ever been. Take the CEO of AI, chipmaker, and video. His wealth grew by $124 billion dollars over the past five years.",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "27e7fe30-dfc1-4430-93e1-b38f8936a885"
+                },
+                {
+                  "name": "proof_by_example",
+                  "value": 0.8,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.8,
+                  "evidence": "Take the CEO of AI, chipmaker, and video. His wealth grew by $124 billion dollars over the past five years. And he'd have to pay just under $10 billion in the next five under the California proposal.",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "27e7fe30-dfc1-4430-93e1-b38f8936a885"
+                },
+                {
+                  "name": "distributional_anchoring",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "Take the CEO of AI, chipmaker, and video. His wealth grew by $124 billion dollars over the past five years.",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "27e7fe30-dfc1-4430-93e1-b38f8936a885"
+                },
+                {
+                  "name": "normative_laundering",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "His wealth grew by $124 billion dollars over the past five years. And he'd have to pay just under $10 billion in the next five under the California proposal.",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "27e7fe30-dfc1-4430-93e1-b38f8936a885"
+                }
+              ]
+            },
+            {
+              "name": "opening position",
+              "type": "unit",
+              "policy_stance": "pro",
+              "summary": "Speaker argues that policy focus should prioritize the healthcare needs of millions of low-income Californians over objections from a small number of billionair",
+              "unit_id": "a82eccd3-31dc-489b-a266-b4041146cd35",
+              "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+              "children": [
+                {
+                  "name": "phantom_quantification",
+                  "value": 0.85,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.85,
+                  "evidence": "15 million poor and working class Californians, including 5 billion children who rely on California's Medicaid system",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "a82eccd3-31dc-489b-a266-b4041146cd35"
+                },
+                {
+                  "name": "false_dilemma",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "Why are we focused on the complaints of a handful of billionaires instead of the needs of millions of their neighbors?",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "a82eccd3-31dc-489b-a266-b4041146cd35"
+                },
+                {
+                  "name": "appeal_to_pity",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "15 million poor and working class Californians, including 5 billion children who rely on California's Medicaid system, would be able to go to the doctor and afford life-saving medicine",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "a82eccd3-31dc-489b-a266-b4041146cd35"
+                },
+                {
+                  "name": "straw_man",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "the complaints of a handful of billionaires",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "a82eccd3-31dc-489b-a266-b4041146cd35"
+                }
+              ]
+            },
+            {
+              "name": "opening position",
+              "type": "unit",
+              "policy_stance": "pro",
+              "summary": "Speaker frames California's billionaire tax as a necessary first step toward broader wealth taxation, justified by both funding needs and democratic preservatio",
+              "unit_id": "422450b7-0aa2-4053-955b-e2c204306212",
+              "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+              "children": [
+                {
+                  "name": "attribution_of_intent",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "source_attacks",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "It may open the way to further efforts to rein in the obscenely rich, which is what some billionaires probably fear.",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "422450b7-0aa2-4053-955b-e2c204306212"
+                },
+                {
+                  "name": "slippery_slope",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "It may open the way to further efforts to rein in the obscenely rich, which is what some billionaires probably fear.",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "422450b7-0aa2-4053-955b-e2c204306212"
+                },
+                {
+                  "name": "normative_laundering",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "These efforts are essential not only to funding what most people need, but also to preserving our democracy.",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "422450b7-0aa2-4053-955b-e2c204306212"
+                },
+                {
+                  "name": "weasel_words",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "which is what some billionaires probably fear",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "422450b7-0aa2-4053-955b-e2c204306212"
+                },
+                {
+                  "name": "persuasive_definition",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "to rein in the obscenely rich",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "422450b7-0aa2-4053-955b-e2c204306212"
+                },
+                {
+                  "name": "appeal_to_fear",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "These efforts are essential not only to funding what most people need, but also to preserving our democracy.",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "422450b7-0aa2-4053-955b-e2c204306212"
+                },
+                {
+                  "name": "loaded_language",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "rein in the obscenely rich",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "422450b7-0aa2-4053-955b-e2c204306212"
+                },
+                {
+                  "name": "prolepsis",
+                  "value": 0.75,
+                  "type": "detection",
+                  "group": "counter_techniques",
+                  "polarity": "positive",
+                  "confidence": 0.75,
+                  "evidence": "California's billionaire tax isn't the final answer to America's disgraceful inequalities of wealth and income, of course. But it's a start.",
+                  "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+                  "unit_id": "422450b7-0aa2-4053-955b-e2c204306212"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mixed",
+      "type": "stance",
+      "children": [
+        {
+          "name": "Do you agree with Jacob Rees Mogg's opinion on wealth tax? #clip #fyp #debate #viral #money",
+          "type": "debate",
+          "stance": "mixed",
+          "discourse_mode": "dialogic",
+          "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+          "source_url": "https://www.youtube.com/watch?v=iZiWd_-Dy1A",
+          "children": [
+            {
+              "name": "opening position",
+              "type": "unit",
+              "policy_stance": "anti",
+              "summary": "Rees-Mogg asserts a wealth tax is designed purely to make people poorer, not to raise revenue. His interlocutor adds the empirical claim that wealth taxes have ",
+              "unit_id": "ac1ad8eb-5ca5-463e-88b8-0f25a9023527",
+              "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+              "children": [
+                {
+                  "name": "begging_the_question",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "formal_structure",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "a wealth tax is purely there to make people poorer as your objective",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "ac1ad8eb-5ca5-463e-88b8-0f25a9023527"
+                },
+                {
+                  "name": "hasty_generalisation",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "in every country that's tried it, it's failed.",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "ac1ad8eb-5ca5-463e-88b8-0f25a9023527"
+                },
+                {
+                  "name": "sweeping_generalisation",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "a wealth tax is purely there to make people poorer as your objective",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "ac1ad8eb-5ca5-463e-88b8-0f25a9023527"
+                },
+                {
+                  "name": "normative_laundering",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "a wealth tax is purely there to make people poorer as your objective",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "ac1ad8eb-5ca5-463e-88b8-0f25a9023527"
+                },
+                {
+                  "name": "weasel_words",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "in every country that's tried it, it's failed",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "ac1ad8eb-5ca5-463e-88b8-0f25a9023527"
+                },
+                {
+                  "name": "motivational_delegitimisation",
+                  "value": 0.75,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.75,
+                  "evidence": "a wealth tax is purely there to make people poorer as your objective",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "ac1ad8eb-5ca5-463e-88b8-0f25a9023527"
+                },
+                {
+                  "name": "straw_man",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "a wealth tax is purely there to make people poorer as your objective",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "ac1ad8eb-5ca5-463e-88b8-0f25a9023527"
+                }
+              ]
+            },
+            {
+              "name": "counterargument",
+              "type": "unit",
+              "policy_stance": "mixed",
+              "summary": "SPEAKER_01 proposes that a 1% levy on those with over £1bn is justifiable. Rees-Mogg dismisses this as motivated by jealousy and notes the billionaire already p",
+              "unit_id": "388c3fc6-0976-46db-b15a-b59b81694167",
+              "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+              "children": [
+                {
+                  "name": "many_questions",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "formal_structure",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "Well, why? Just because you're jealous? No, but more because... Well, why? Why do you want to? He's paying tax anyway.",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "388c3fc6-0976-46db-b15a-b59b81694167"
+                },
+                {
+                  "name": "attribution_of_intent",
+                  "value": 0.9,
+                  "type": "detection",
+                  "group": "source_attacks",
+                  "polarity": "negative",
+                  "confidence": 0.9,
+                  "evidence": "Well, why? Just because you're jealous?",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "388c3fc6-0976-46db-b15a-b59b81694167"
+                },
+                {
+                  "name": "ad_hominem",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "Just because you're jealous?",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "388c3fc6-0976-46db-b15a-b59b81694167"
+                },
+                {
+                  "name": "red_herring",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "He's paying tax anyway.",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "388c3fc6-0976-46db-b15a-b59b81694167"
+                },
+                {
+                  "name": "motivational_delegitimisation",
+                  "value": 0.92,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.92,
+                  "evidence": "Well, why? Just because you're jealous?",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "388c3fc6-0976-46db-b15a-b59b81694167"
+                },
+                {
+                  "name": "red_herring",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "He's paying tax anyway.",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "388c3fc6-0976-46db-b15a-b59b81694167"
+                }
+              ]
+            },
+            {
+              "name": "rebuttal",
+              "type": "unit",
+              "policy_stance": "pro",
+              "summary": "SPEAKER_00 asserts billionaires have a surplus that should be redirected to those in need; SPEAKER_02 challenges the premise that a 'surplus' exists by question",
+              "unit_id": "e7c04844-8fac-4015-8cbe-8a49ceace3d8",
+              "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+              "children": [
+                {
+                  "name": "many_questions",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "formal_structure",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "How do you know they've got a surplus? What are their commitments? How many people are they employing?",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "e7c04844-8fac-4015-8cbe-8a49ceace3d8"
+                },
+                {
+                  "name": "foreclosing_interrogation",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "How do you know they've got a surplus? What are their commitments? How many people are they employing?",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "e7c04844-8fac-4015-8cbe-8a49ceace3d8"
+                },
+                {
+                  "name": "sealioning",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "In what view have they got a surplus? Well, if they've... / SPEAKER_00: How do you know they've got a surplus? What are their commitments? How many people are they employing?",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "e7c04844-8fac-4015-8cbe-8a49ceace3d8"
+                },
+                {
+                  "name": "elenchus",
+                  "value": 0.75,
+                  "type": "detection",
+                  "group": "counter_techniques",
+                  "polarity": "positive",
+                  "confidence": 0.75,
+                  "evidence": "In what view have they got a surplus? Well, if they've... / SPEAKER_00: How do you know they've got a surplus? What are their commitments? How many people are they employing?",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "e7c04844-8fac-4015-8cbe-8a49ceace3d8"
+                }
+              ]
+            },
+            {
+              "name": "rebuttal",
+              "type": "unit",
+              "policy_stance": "mixed",
+              "summary": "SPEAKER_02 suggests billionaires make significant profits that could be taxed; SPEAKER_00 rebuts that billionaire wealth is often illiquid paper assets in found",
+              "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4",
+              "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+              "children": [
+                {
+                  "name": "hasty_generalisation",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "People running tech companies may have assets of billions, but their income may be very small, because it may purely be in the paper of the company that they have founded.",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+                },
+                {
+                  "name": "proof_by_example",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "People running tech companies may have assets of billions, but their income may be very small, because it may purely be in the paper of the company that they have founded.",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+                },
+                {
+                  "name": "distributional_anchoring",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "evidence_quality",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "are you saying they should sell their shares to pay this tax when they've got no income or borrow money to do it?",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+                },
+                {
+                  "name": "straw_man",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "So, are you saying they should sell their shares to pay this tax when they've got no income or borrow money to do it?",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+                },
+                {
+                  "name": "weasel_words",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "semantic_manipulation",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "may have assets of billions, but their income may be very small, because it may purely be in the paper",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+                },
+                {
+                  "name": "motivational_delegitimisation",
+                  "value": 0.7,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.7,
+                  "evidence": "Advocacy for taxing billionaires is the politics of envy.",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+                },
+                {
+                  "name": "straw_man",
+                  "value": 0.65,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.65,
+                  "evidence": "So, are you saying they should sell their shares to pay this tax when they've got no income or borrow money to do it?",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+                },
+                {
+                  "name": "loaded_question",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "psychological_rhetoric",
+                  "polarity": "negative",
+                  "confidence": 0.6,
+                  "evidence": "are you saying they should sell their shares to pay this tax when they've got no income or borrow money to do it?",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+                },
+                {
+                  "name": "reductio_ad_absurdum",
+                  "value": 0.75,
+                  "type": "detection",
+                  "group": "counter_techniques",
+                  "polarity": "positive",
+                  "confidence": 0.75,
+                  "evidence": "So, are you saying they should sell their shares to pay this tax when they've got no income or borrow money to do it?",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+                },
+                {
+                  "name": "prolepsis",
+                  "value": 0.6,
+                  "type": "detection",
+                  "group": "counter_techniques",
+                  "polarity": "positive",
+                  "confidence": 0.6,
+                  "evidence": "People running tech companies may have assets of billions, but their income may be very small, because it may purely be in the paper of the company that they have founded.",
+                  "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+                  "unit_id": "1d540226-fd2d-48c4-985a-175db0e527b4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1415 @@
+{
+  "stances": [
+    "anti",
+    "pro",
+    "mixed",
+    "neutral"
+  ],
+  "unit_counts": {
+    "anti": 23,
+    "mixed": 18,
+    "neutral": 17,
+    "pro": 69
+  },
+  "max_rate": 0.3478,
+  "groups": [
+    {
+      "key": "psychological_rhetoric",
+      "name": "psychological rhetoric",
+      "techniques": [
+        {
+          "key": "straw_man",
+          "name": "straw man",
+          "counts": {
+            "anti": 4,
+            "pro": 8,
+            "mixed": 2,
+            "neutral": 2
+          },
+          "rates": {
+            "anti": 0.1739,
+            "pro": 0.1159,
+            "mixed": 0.1111,
+            "neutral": 0.1176
+          },
+          "total": 16
+        },
+        {
+          "key": "loaded_question",
+          "name": "loaded question",
+          "counts": {
+            "anti": 5,
+            "pro": 6,
+            "mixed": 2,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.2174,
+            "pro": 0.087,
+            "mixed": 0.1111,
+            "neutral": 0.0588
+          },
+          "total": 14
+        },
+        {
+          "key": "motivational_delegitimisation",
+          "name": "motivational delegitimisation",
+          "counts": {
+            "anti": 3,
+            "pro": 9,
+            "mixed": 2,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.1304,
+            "pro": 0.1304,
+            "mixed": 0.1111,
+            "neutral": 0.0
+          },
+          "total": 14
+        },
+        {
+          "key": "appeal_to_ridicule",
+          "name": "appeal to ridicule",
+          "counts": {
+            "anti": 2,
+            "pro": 7,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.087,
+            "pro": 0.1014,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 10
+        },
+        {
+          "key": "appeal_to_fear",
+          "name": "appeal to fear",
+          "counts": {
+            "anti": 3,
+            "pro": 2,
+            "mixed": 3,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.1304,
+            "pro": 0.029,
+            "mixed": 0.1667,
+            "neutral": 0.0
+          },
+          "total": 8
+        },
+        {
+          "key": "appeal_to_emotion",
+          "name": "appeal to emotion",
+          "counts": {
+            "anti": 2,
+            "pro": 3,
+            "mixed": 1,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.087,
+            "pro": 0.0435,
+            "mixed": 0.0556,
+            "neutral": 0.0588
+          },
+          "total": 7
+        },
+        {
+          "key": "appeal_to_consequences",
+          "name": "appeal to consequences",
+          "counts": {
+            "anti": 3,
+            "pro": 1,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.1304,
+            "pro": 0.0145,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 5
+        },
+        {
+          "key": "bulverism",
+          "name": "bulverism",
+          "counts": {
+            "anti": 1,
+            "pro": 4,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.058,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 5
+        },
+        {
+          "key": "appeal_to_authority",
+          "name": "appeal to authority",
+          "counts": {
+            "anti": 2,
+            "pro": 1,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.087,
+            "pro": 0.0145,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 4
+        },
+        {
+          "key": "red_herring",
+          "name": "red herring",
+          "counts": {
+            "anti": 0,
+            "pro": 0,
+            "mixed": 3,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0,
+            "mixed": 0.1667,
+            "neutral": 0.0588
+          },
+          "total": 4
+        },
+        {
+          "key": "appeal_to_pity",
+          "name": "appeal to pity",
+          "counts": {
+            "anti": 1,
+            "pro": 1,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0145,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 3
+        },
+        {
+          "key": "false_equivalence",
+          "name": "false equivalence",
+          "counts": {
+            "anti": 1,
+            "pro": 2,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.029,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 3
+        },
+        {
+          "key": "jaqing",
+          "name": "jaqing",
+          "counts": {
+            "anti": 1,
+            "pro": 1,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0145,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 3
+        },
+        {
+          "key": "appeal_to_the_masses",
+          "name": "appeal to the masses",
+          "counts": {
+            "anti": 0,
+            "pro": 0,
+            "mixed": 1,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0,
+            "mixed": 0.0556,
+            "neutral": 0.0588
+          },
+          "total": 2
+        },
+        {
+          "key": "false_dilemma",
+          "name": "false dilemma",
+          "counts": {
+            "anti": 0,
+            "pro": 2,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.029,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 2
+        },
+        {
+          "key": "appeal_to_disgust",
+          "name": "appeal to disgust",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        },
+        {
+          "key": "appeal_to_hypocrisy",
+          "name": "appeal to hypocrisy",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        },
+        {
+          "key": "appeal_to_nature",
+          "name": "appeal to nature",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        },
+        {
+          "key": "epistemic_cowardice",
+          "name": "epistemic cowardice",
+          "counts": {
+            "anti": 1,
+            "pro": 0,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        },
+        {
+          "key": "loaded_language",
+          "name": "loaded language",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        },
+        {
+          "key": "performed_empiricism",
+          "name": "performed empiricism",
+          "counts": {
+            "anti": 0,
+            "pro": 0,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 1
+        },
+        {
+          "key": "sealioning",
+          "name": "sealioning",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        }
+      ]
+    },
+    {
+      "key": "evidence_quality",
+      "name": "evidence quality",
+      "techniques": [
+        {
+          "key": "hasty_generalisation",
+          "name": "hasty generalisation",
+          "counts": {
+            "anti": 8,
+            "pro": 15,
+            "mixed": 4,
+            "neutral": 3
+          },
+          "rates": {
+            "anti": 0.3478,
+            "pro": 0.2174,
+            "mixed": 0.2222,
+            "neutral": 0.1765
+          },
+          "total": 30
+        },
+        {
+          "key": "proof_by_example",
+          "name": "proof by example",
+          "counts": {
+            "anti": 4,
+            "pro": 8,
+            "mixed": 1,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.1739,
+            "pro": 0.1159,
+            "mixed": 0.0556,
+            "neutral": 0.0588
+          },
+          "total": 14
+        },
+        {
+          "key": "false_cause",
+          "name": "false cause",
+          "counts": {
+            "anti": 4,
+            "pro": 5,
+            "mixed": 2,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.1739,
+            "pro": 0.0725,
+            "mixed": 0.1111,
+            "neutral": 0.0588
+          },
+          "total": 12
+        },
+        {
+          "key": "distributional_anchoring",
+          "name": "distributional anchoring",
+          "counts": {
+            "anti": 3,
+            "pro": 5,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.1304,
+            "pro": 0.0725,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 9
+        },
+        {
+          "key": "false_precision",
+          "name": "false precision",
+          "counts": {
+            "anti": 0,
+            "pro": 6,
+            "mixed": 0,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.087,
+            "mixed": 0.0,
+            "neutral": 0.0588
+          },
+          "total": 7
+        },
+        {
+          "key": "phantom_quantification",
+          "name": "phantom quantification",
+          "counts": {
+            "anti": 1,
+            "pro": 3,
+            "mixed": 2,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0435,
+            "mixed": 0.1111,
+            "neutral": 0.0
+          },
+          "total": 6
+        },
+        {
+          "key": "post_hoc",
+          "name": "post hoc",
+          "counts": {
+            "anti": 3,
+            "pro": 2,
+            "mixed": 0,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.1304,
+            "pro": 0.029,
+            "mixed": 0.0,
+            "neutral": 0.0588
+          },
+          "total": 6
+        },
+        {
+          "key": "cherry_picking",
+          "name": "cherry picking",
+          "counts": {
+            "anti": 1,
+            "pro": 2,
+            "mixed": 1,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.029,
+            "mixed": 0.0556,
+            "neutral": 0.0588
+          },
+          "total": 5
+        },
+        {
+          "key": "slippery_slope",
+          "name": "slippery slope",
+          "counts": {
+            "anti": 1,
+            "pro": 3,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0435,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 5
+        },
+        {
+          "key": "sweeping_generalisation",
+          "name": "sweeping generalisation",
+          "counts": {
+            "anti": 3,
+            "pro": 0,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.1304,
+            "pro": 0.0,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 4
+        },
+        {
+          "key": "appeal_to_authority",
+          "name": "appeal to authority",
+          "counts": {
+            "anti": 2,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.087,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 3
+        },
+        {
+          "key": "argument_from_incredulity",
+          "name": "argument from incredulity",
+          "counts": {
+            "anti": 1,
+            "pro": 2,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.029,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 3
+        },
+        {
+          "key": "cum_hoc",
+          "name": "cum hoc",
+          "counts": {
+            "anti": 0,
+            "pro": 2,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.029,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 3
+        },
+        {
+          "key": "hasty_conclusion",
+          "name": "hasty conclusion",
+          "counts": {
+            "anti": 0,
+            "pro": 2,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.029,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 2
+        },
+        {
+          "key": "cargo_cult_science",
+          "name": "cargo cult science",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        },
+        {
+          "key": "ecological_fallacy",
+          "name": "ecological fallacy",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        },
+        {
+          "key": "false_dilemma",
+          "name": "false dilemma",
+          "counts": {
+            "anti": 1,
+            "pro": 0,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        }
+      ]
+    },
+    {
+      "key": "semantic_manipulation",
+      "name": "semantic manipulation",
+      "techniques": [
+        {
+          "key": "weasel_words",
+          "name": "weasel words",
+          "counts": {
+            "anti": 7,
+            "pro": 8,
+            "mixed": 2,
+            "neutral": 2
+          },
+          "rates": {
+            "anti": 0.3043,
+            "pro": 0.1159,
+            "mixed": 0.1111,
+            "neutral": 0.1176
+          },
+          "total": 19
+        },
+        {
+          "key": "normative_laundering",
+          "name": "normative laundering",
+          "counts": {
+            "anti": 4,
+            "pro": 5,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.1739,
+            "pro": 0.0725,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 10
+        },
+        {
+          "key": "persuasive_definition",
+          "name": "persuasive definition",
+          "counts": {
+            "anti": 3,
+            "pro": 2,
+            "mixed": 0,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.1304,
+            "pro": 0.029,
+            "mixed": 0.0,
+            "neutral": 0.0588
+          },
+          "total": 6
+        },
+        {
+          "key": "loaded_question",
+          "name": "loaded question",
+          "counts": {
+            "anti": 1,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0588
+          },
+          "total": 3
+        },
+        {
+          "key": "no_true_scotsman",
+          "name": "no true scotsman",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 2,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.1111,
+            "neutral": 0.0
+          },
+          "total": 3
+        },
+        {
+          "key": "ad_hominem",
+          "name": "ad hominem",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 2
+        },
+        {
+          "key": "concept_capture",
+          "name": "concept capture",
+          "counts": {
+            "anti": 1,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 2
+        },
+        {
+          "key": "equivocation",
+          "name": "equivocation",
+          "counts": {
+            "anti": 1,
+            "pro": 0,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 2
+        },
+        {
+          "key": "foreclosing_interrogation",
+          "name": "foreclosing interrogation",
+          "counts": {
+            "anti": 1,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 2
+        },
+        {
+          "key": "red_herring",
+          "name": "red herring",
+          "counts": {
+            "anti": 0,
+            "pro": 0,
+            "mixed": 2,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0,
+            "mixed": 0.1111,
+            "neutral": 0.0
+          },
+          "total": 2
+        },
+        {
+          "key": "straw_man",
+          "name": "straw man",
+          "counts": {
+            "anti": 1,
+            "pro": 0,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 2
+        },
+        {
+          "key": "argument_from_prior",
+          "name": "argument from prior",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        },
+        {
+          "key": "attribution_of_intent",
+          "name": "attribution of intent",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        },
+        {
+          "key": "definitional_retreat",
+          "name": "definitional retreat",
+          "counts": {
+            "anti": 0,
+            "pro": 0,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 1
+        },
+        {
+          "key": "nirvana_fallacy",
+          "name": "nirvana fallacy",
+          "counts": {
+            "anti": 1,
+            "pro": 0,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        },
+        {
+          "key": "semantic_dodge",
+          "name": "semantic dodge",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        }
+      ]
+    },
+    {
+      "key": "formal_structure",
+      "name": "formal structure",
+      "techniques": [
+        {
+          "key": "begging_the_question",
+          "name": "begging the question",
+          "counts": {
+            "anti": 3,
+            "pro": 4,
+            "mixed": 0,
+            "neutral": 2
+          },
+          "rates": {
+            "anti": 0.1304,
+            "pro": 0.058,
+            "mixed": 0.0,
+            "neutral": 0.1176
+          },
+          "total": 9
+        },
+        {
+          "key": "many_questions",
+          "name": "many questions",
+          "counts": {
+            "anti": 1,
+            "pro": 4,
+            "mixed": 1,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.058,
+            "mixed": 0.0556,
+            "neutral": 0.0588
+          },
+          "total": 7
+        },
+        {
+          "key": "false_causal_chain",
+          "name": "false causal chain",
+          "counts": {
+            "anti": 2,
+            "pro": 1,
+            "mixed": 1,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.087,
+            "pro": 0.0145,
+            "mixed": 0.0556,
+            "neutral": 0.0588
+          },
+          "total": 5
+        },
+        {
+          "key": "non_sequitur",
+          "name": "non sequitur",
+          "counts": {
+            "anti": 1,
+            "pro": 1,
+            "mixed": 1,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0145,
+            "mixed": 0.0556,
+            "neutral": 0.0588
+          },
+          "total": 4
+        },
+        {
+          "key": "appeal_to_probability",
+          "name": "appeal to probability",
+          "counts": {
+            "anti": 1,
+            "pro": 0,
+            "mixed": 2,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0,
+            "mixed": 0.1111,
+            "neutral": 0.0
+          },
+          "total": 3
+        },
+        {
+          "key": "affirming_the_consequent",
+          "name": "affirming the consequent",
+          "counts": {
+            "anti": 1,
+            "pro": 0,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 2
+        },
+        {
+          "key": "figure_of_speech_fallacy",
+          "name": "figure of speech fallacy",
+          "counts": {
+            "anti": 1,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 2
+        },
+        {
+          "key": "composition_fallacy",
+          "name": "composition fallacy",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        },
+        {
+          "key": "denying_the_antecedent",
+          "name": "denying the antecedent",
+          "counts": {
+            "anti": 0,
+            "pro": 0,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 1
+        },
+        {
+          "key": "equivocation",
+          "name": "equivocation",
+          "counts": {
+            "anti": 1,
+            "pro": 0,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        },
+        {
+          "key": "fallacy_of_composition",
+          "name": "fallacy of composition",
+          "counts": {
+            "anti": 0,
+            "pro": 0,
+            "mixed": 0,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0,
+            "mixed": 0.0,
+            "neutral": 0.0588
+          },
+          "total": 1
+        },
+        {
+          "key": "hasty_generalisation",
+          "name": "hasty generalisation",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        },
+        {
+          "key": "secundum_quid",
+          "name": "secundum quid",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        }
+      ]
+    },
+    {
+      "key": "source_attacks",
+      "name": "source attacks",
+      "techniques": [
+        {
+          "key": "attribution_of_intent",
+          "name": "attribution of intent",
+          "counts": {
+            "anti": 4,
+            "pro": 4,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.1739,
+            "pro": 0.058,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 9
+        },
+        {
+          "key": "ad_hominem_circumstantial",
+          "name": "ad hominem circumstantial",
+          "counts": {
+            "anti": 2,
+            "pro": 4,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.087,
+            "pro": 0.058,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 6
+        },
+        {
+          "key": "appeal_to_authority",
+          "name": "appeal to authority",
+          "counts": {
+            "anti": 0,
+            "pro": 2,
+            "mixed": 2,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.029,
+            "mixed": 0.1111,
+            "neutral": 0.0
+          },
+          "total": 4
+        },
+        {
+          "key": "poisoning_the_well",
+          "name": "poisoning the well",
+          "counts": {
+            "anti": 0,
+            "pro": 2,
+            "mixed": 0,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.029,
+            "mixed": 0.0,
+            "neutral": 0.0588
+          },
+          "total": 3
+        },
+        {
+          "key": "genetic_fallacy",
+          "name": "genetic fallacy",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 2
+        },
+        {
+          "key": "ad_hominem",
+          "name": "ad hominem",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        },
+        {
+          "key": "ad_hominem_tu_quoque",
+          "name": "ad hominem tu quoque",
+          "counts": {
+            "anti": 1,
+            "pro": 0,
+            "mixed": 0,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.0,
+            "mixed": 0.0,
+            "neutral": 0.0
+          },
+          "total": 1
+        }
+      ]
+    },
+    {
+      "key": "counter_techniques",
+      "name": "counter techniques",
+      "techniques": [
+        {
+          "key": "prolepsis",
+          "name": "prolepsis",
+          "counts": {
+            "anti": 4,
+            "pro": 19,
+            "mixed": 2,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.1739,
+            "pro": 0.2754,
+            "mixed": 0.1111,
+            "neutral": 0.0588
+          },
+          "total": 26
+        },
+        {
+          "key": "elenchus",
+          "name": "elenchus",
+          "counts": {
+            "anti": 1,
+            "pro": 7,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.1014,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 9
+        },
+        {
+          "key": "ex_concessis",
+          "name": "ex concessis",
+          "counts": {
+            "anti": 1,
+            "pro": 6,
+            "mixed": 0,
+            "neutral": 1
+          },
+          "rates": {
+            "anti": 0.0435,
+            "pro": 0.087,
+            "mixed": 0.0,
+            "neutral": 0.0588
+          },
+          "total": 8
+        },
+        {
+          "key": "reductio_ad_absurdum",
+          "name": "reductio ad absurdum",
+          "counts": {
+            "anti": 0,
+            "pro": 3,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0435,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 4
+        },
+        {
+          "key": "ad_rem",
+          "name": "ad rem",
+          "counts": {
+            "anti": 0,
+            "pro": 1,
+            "mixed": 1,
+            "neutral": 0
+          },
+          "rates": {
+            "anti": 0.0,
+            "pro": 0.0145,
+            "mixed": 0.0556,
+            "neutral": 0.0
+          },
+          "total": 2
+        }
+      ]
+    }
+  ],
+  "debate_count": 17,
+  "detection_count": 390
+}

@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DIM - Live Agent Debate</title>
+  <style>
+    :root {
+      --bg:    #0d1117;
+      --panel: #161b22;
+      --ink:   #e6edf3;
+      --muted: #8b949e;
+      --line:  #30363d;
+      --anti:  #cf6679;
+      --pro:   #3fb950;
+      --neutral-c: #8b949e;
+      --accent:#58a6ff;
+      --agree-c:    #3fb950;
+      --disagree-c: #cf6679;
+      --evidence-c: #d29922;
+      --rebuttal-c: #a371f7;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+      background: var(--bg);
+      color: var(--ink);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ── top bar ────────────────────────────────────────────── */
+    .topbar {
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+    .topbar-title { font-size: 0.85rem; color: var(--muted); letter-spacing: 0.05em; }
+    .topbar-title strong { color: var(--ink); }
+    .round-badge {
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+    }
+    .round-badge.active { border-color: var(--accent); color: var(--accent); }
+
+    /* ── agent strip ────────────────────────────────────────── */
+    .agent-strip {
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+      padding: 8px 20px;
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      flex-shrink: 0;
+    }
+    .agent-chip {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 10px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      font-size: 0.72rem;
+      white-space: nowrap;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .agent-chip.active {
+      border-color: var(--accent);
+      box-shadow: 0 0 8px rgba(88,166,255,0.3);
+    }
+    .agent-avatar {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.6rem; font-weight: 700;
+      color: #fff; flex-shrink: 0;
+    }
+    .agent-name { color: var(--ink); }
+    .agent-status { color: var(--muted); font-size: 0.65rem; }
+
+    /* ── main layout ────────────────────────────────────────── */
+    .main {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      flex: 1;
+      overflow: hidden;
+      min-height: 0;
+    }
+
+    /* ── positions arena ────────────────────────────────────── */
+    .arena {
+      display: grid;
+      grid-template-columns: 1fr 160px 1fr;
+      gap: 0;
+      overflow-y: auto;
+      padding: 16px;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .col-header {
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 10px 10px;
+      border-bottom: 2px solid var(--line);
+      margin-bottom: 8px;
+    }
+    .col-header.anti   { color: var(--anti);    border-color: var(--anti); }
+    .col-header.pro    { color: var(--pro);      border-color: var(--pro); }
+    .col-header.shared { color: var(--muted);    }
+
+    .col-anti, .col-shared, .col-pro {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    /* ── position node ──────────────────────────────────────── */
+    .pos-node {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.75rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    .pos-node.pulse {
+      border-color: var(--accent);
+      box-shadow: 0 0 12px rgba(88,166,255,0.25);
+      animation: pulse-fade 1.5s ease-out forwards;
+    }
+    @keyframes pulse-fade {
+      0%   { box-shadow: 0 0 16px rgba(88,166,255,0.5); }
+      100% { box-shadow: none; border-color: var(--line); }
+    }
+    .pos-label {
+      font-weight: 700;
+      font-size: 0.78rem;
+      color: var(--ink);
+      margin-bottom: 6px;
+      text-transform: capitalize;
+    }
+    .vote-dots {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      margin-bottom: 5px;
+    }
+    .vote-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      cursor: default;
+      position: relative;
+      transition: transform 0.15s;
+      animation: dot-pop 0.3s ease-out;
+    }
+    @keyframes dot-pop {
+      0%   { transform: scale(0); }
+      70%  { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+    .vote-dot:hover::after {
+      content: attr(title);
+      position: absolute;
+      bottom: 14px; left: 50%;
+      transform: translateX(-50%);
+      background: #000;
+      color: #fff;
+      font-size: 0.65rem;
+      padding: 3px 7px;
+      border-radius: 6px;
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 10;
+    }
+    .pos-evidence-count {
+      font-size: 0.65rem;
+      color: var(--evidence-c);
+      margin-top: 3px;
+      display: none;
+    }
+    .pos-evidence-count.visible { display: block; }
+
+    /* ── feed panel ─────────────────────────────────────────── */
+    .feed-panel {
+      background: var(--panel);
+      border-left: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .feed-header {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.72rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .feed-live {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--agree-c);
+      animation: blink 1.2s ease-in-out infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.2; }
+    }
+    .feed-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px 0;
+    }
+    .feed-event {
+      padding: 10px 16px;
+      border-bottom: 1px solid rgba(48,54,61,0.5);
+      animation: slide-in 0.25s ease-out;
+    }
+    @keyframes slide-in {
+      from { opacity: 0; transform: translateX(12px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    .feed-event-header {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 5px;
+    }
+    .feed-avatar {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      font-size: 0.55rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .feed-agent-name { font-size: 0.75rem; font-weight: 700; color: var(--ink); }
+    .feed-action-badge {
+      font-size: 0.62rem;
+      padding: 1px 6px;
+      border-radius: 8px;
+      margin-left: auto;
+      font-weight: 700;
+    }
+    .feed-action-badge.voted-agree    { background: rgba(63,185,80,0.2);   color: var(--agree-c); }
+    .feed-action-badge.voted-disagree { background: rgba(207,102,121,0.2); color: var(--disagree-c); }
+    .feed-action-badge.voted-neutral  { background: rgba(139,148,158,0.2); color: var(--muted); }
+    .feed-action-badge.evidence       { background: rgba(210,153,34,0.2);  color: var(--evidence-c); }
+    .feed-action-badge.rebuttal       { background: rgba(163,113,247,0.2); color: var(--rebuttal-c); }
+    .feed-action-badge.concedes       { background: rgba(88,166,255,0.2);  color: var(--accent); }
+
+    .feed-position-label {
+      font-size: 0.68rem;
+      color: var(--muted);
+      margin-bottom: 4px;
+      text-transform: capitalize;
+    }
+    .feed-text {
+      font-size: 0.73rem;
+      color: var(--ink);
+      line-height: 1.55;
+      font-family: Georgia, serif;
+    }
+    .feed-evidence {
+      margin-top: 5px;
+      font-size: 0.68rem;
+      color: var(--evidence-c);
+      font-style: italic;
+      border-left: 2px solid var(--evidence-c);
+      padding-left: 7px;
+    }
+    .feed-source {
+      font-size: 0.62rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .feed-rebuttal-target {
+      font-size: 0.68rem;
+      color: var(--rebuttal-c);
+      margin-bottom: 3px;
+    }
+
+    /* ── playback bar ───────────────────────────────────────── */
+    .playback {
+      background: var(--panel);
+      border-top: 1px solid var(--line);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+    .play-btn {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: none;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.15s;
+      flex-shrink: 0;
+    }
+    .play-btn:hover { background: #79c0ff; }
+    .speed-btn {
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .speed-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .progress-wrap { flex: 1; position: relative; cursor: pointer; }
+    .progress-track {
+      height: 4px;
+      background: var(--line);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 2px;
+      transition: width 0.1s linear;
+    }
+    .progress-label {
+      font-size: 0.65rem;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+    .round-indicators {
+      display: flex; gap: 6px;
+    }
+    .round-pip {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--line);
+      transition: background 0.3s;
+    }
+    .round-pip.done { background: var(--accent); }
+
+    /* ── thinking indicator ─────────────────────────────────── */
+    .thinking-bar {
+      background: var(--panel);
+      border-top: 1px solid var(--line);
+      padding: 6px 20px;
+      font-size: 0.68rem;
+      color: var(--muted);
+      min-height: 26px;
+      flex-shrink: 0;
+    }
+    .thinking-text { display: none; }
+    .thinking-text.visible { display: inline; }
+    .dots::after {
+      content: '';
+      animation: ellipsis 1.2s steps(4, end) infinite;
+    }
+    @keyframes ellipsis {
+      0%   { content: ''; }
+      25%  { content: '.'; }
+      50%  { content: '..'; }
+      75%  { content: '...'; }
+      100% { content: ''; }
+    }
+
+    /* ── explainer modal ────────────────────────────────────── */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.72);
+      backdrop-filter: blur(4px);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .modal-backdrop.hidden { display: none; }
+    .explainer-modal {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      max-width: 580px;
+      width: 100%;
+      padding: 32px 36px 28px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+    }
+    .explainer-modal h2 {
+      font-family: ui-monospace, monospace;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: 0.04em;
+      margin: 0 0 6px;
+    }
+    .explainer-modal .em-sub {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+      letter-spacing: 0.03em;
+    }
+    .explainer-section { margin-bottom: 18px; }
+    .explainer-section h3 {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .explainer-section p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .explainer-modal .modal-btn {
+      margin-top: 24px;
+      width: 100%;
+      padding: 10px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-family: ui-monospace, monospace;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: opacity 0.13s;
+    }
+    .explainer-modal .modal-btn:hover { opacity: 0.85; }
+    .help-btn {
+      background: none;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      border-radius: 6px;
+      padding: 3px 9px;
+      font-family: ui-monospace, monospace;
+      font-size: 0.72rem;
+      cursor: pointer;
+      transition: color 0.13s, border-color 0.13s;
+    }
+    .help-btn:hover { color: var(--accent); border-color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<!-- explainer modal -->
+<div class="modal-backdrop" id="explainer-backdrop">
+  <div class="explainer-modal">
+    <h2>// AI Agent Debate</h2>
+    <div class="em-sub">Discourse Integrity Map &nbsp;·&nbsp; Wealth Taxation</div>
+
+    <div class="explainer-section">
+      <h3>What is this?</h3>
+      <p>A structured multi-agent debate in which AI agents argue the wealth tax question from positions derived directly from the corpus - the same canonical arguments that appear and reappear across 17 real debates. The agents are not free to invent positions; they are assigned argumentative personas grounded in the data.</p>
+    </div>
+
+    <div class="explainer-section">
+      <h3>How it works</h3>
+      <p>The debate runs in three rounds: agents first state and vote on their positions, then present evidence, then challenge each other with rebuttals. Each agent represents a distinct stance - pro, anti, or shared ground - drawn from the Agora's position map. Turn by turn, you can watch how arguments build, collide, and respond to each other in structured sequence.</p>
+    </div>
+
+    <div class="explainer-section">
+      <h3>How to use it</h3>
+      <p>Press <strong style="color:var(--ink)">Start</strong> to begin. The debate runs automatically, with each agent's turn appearing in sequence. Watch the agent strip at the top to see who is speaking. You can observe how positions develop across rounds and where agents converge or dig in.</p>
+    </div>
+
+    <div class="explainer-section">
+      <h3>Why we built it</h3>
+      <p>One purpose of mapping a debate is to ask: what would it look like if those arguments were actually engaged with each other directly, in sequence, under structured rules? The agent debate is a proof of concept for that question - and a way of stress-testing whether the canonical positions extracted from the corpus are coherent enough to sustain a real argument.</p>
+    </div>
+
+    <button class="modal-btn" id="explainer-close">Start the debate &rarr;</button>
+  </div>
+</div>
+
+<!-- top bar -->
+<div class="topbar">
+  <div class="topbar-title"><strong>DIM</strong> &nbsp;·&nbsp; AI Agent Debate: Wealth Taxation</div>
+  <div class="round-badge" id="rb-1">Round 1: Voting</div>
+  <div class="round-badge" id="rb-2">Round 2: Evidence</div>
+  <div class="round-badge" id="rb-3">Round 3: Rebuttals</div>
+  <div style="margin-left:auto;display:flex;align-items:center;gap:16px">
+    <nav style="font-size:0.72rem">
+      <a href="map.html" style="color:var(--muted);text-decoration:none;margin-right:12px" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Map</a>
+      
+      <a href="heatmap.html" style="color:var(--muted);text-decoration:none;margin-right:12px" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Heatmap</a>
+      <a href="corpus.html" style="color:var(--muted);text-decoration:none;margin-right:12px" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Corpus</a>
+      <a href="taxonomy.html" style="color:var(--muted);text-decoration:none;margin-right:12px" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Taxonomy</a>
+      <a href="positions.html" style="color:var(--muted);text-decoration:none;margin-right:12px" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Agora</a>
+      <a href="traditions.html" style="color:var(--muted);text-decoration:none;margin-right:12px" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Traditions</a>
+      <a href="report.html" style="color:var(--muted);text-decoration:none;margin-right:12px" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Report</a>
+      <a href="dissertation.html" style="color:var(--muted);text-decoration:none;margin-right:12px" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Dissertation</a>
+    </nav>
+    <div style="font-size:0.7rem;color:var(--muted)" id="event-counter">0 / 0 events</div>
+    <button class="help-btn" id="help-btn">? about</button>
+  </div>
+</div>
+
+<!-- agent strip -->
+<div class="agent-strip" id="agent-strip"></div>
+
+<!-- thinking bar -->
+<div class="thinking-bar">
+  <span class="thinking-text" id="thinking-text">
+    <span class="dots"></span>
+  </span>
+</div>
+
+<!-- main -->
+<div class="main">
+  <div class="arena">
+    <div>
+      <div class="col-header anti">Against wealth tax</div>
+      <div class="col-anti" id="col-anti"></div>
+    </div>
+    <div>
+      <div class="col-header shared">Shared</div>
+      <div class="col-shared" id="col-shared"></div>
+    </div>
+    <div>
+      <div class="col-header pro">For wealth tax</div>
+      <div class="col-pro" id="col-pro"></div>
+    </div>
+  </div>
+
+  <div class="feed-panel">
+    <div class="feed-header">
+      <div class="feed-live" id="feed-live"></div>
+      Activity feed
+    </div>
+    <div class="feed-list" id="feed-list"></div>
+  </div>
+</div>
+
+<!-- playback bar -->
+<div class="playback">
+  <button class="play-btn" id="play-btn">▶</button>
+  <button class="speed-btn active" data-speed="1">1×</button>
+  <button class="speed-btn" data-speed="2">2×</button>
+  <button class="speed-btn" data-speed="4">4×</button>
+  <button class="speed-btn" data-speed="0.5">½×</button>
+  <div class="progress-wrap" id="progress-wrap">
+    <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+    <div class="progress-label" id="progress-label">Event 0 of 0</div>
+  </div>
+  <div class="round-indicators">
+    <div class="round-pip" id="pip-1" title="Round 1: Voting"></div>
+    <div class="round-pip" id="pip-2" title="Round 2: Evidence"></div>
+    <div class="round-pip" id="pip-3" title="Round 3: Rebuttals"></div>
+  </div>
+</div>
+
+<script>
+const VOTE_COLOR = { agree: "#3fb950", disagree: "#cf6679", neutral: "#8b949e" };
+const ACTION_DELAY = { 1: 800, 2: 400, 4: 200, 0.5: 1600 };
+
+let events    = [];
+let personas  = [];
+let currentIdx = -1;
+let playing   = false;
+let speed     = 1;
+let timer     = null;
+
+// State: votes per position
+const positionVotes = {};     // label → [{agent, vote, color}]
+const positionEvidence = {};  // label → count
+const nodeElements = {};      // label → DOM element
+
+function escHtml(s) {
+  return String(s || "")
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+// ── Build initial position nodes ──────────────────────────────────────────────
+function buildArena(data) {
+  fetch("data/claim_positions.json")
+    .then(r => r.json())
+    .then(posData => {
+      const all = (posData.positions || []).concat(
+        (posData.shared || []).map(p => ({...p, side: "shared"}))
+      );
+
+      // Only show positions that appear in the debate
+      const debatedLabels = new Set(events.map(e => e.position_label));
+      const debated = all.filter(p => debatedLabels.has(p.label));
+      const anti   = debated.filter(p => p.side === "anti");
+      const pro    = debated.filter(p => p.side === "pro");
+      const shared = debated.filter(p => p.side === "shared");
+
+      buildColumn("col-anti",   anti);
+      buildColumn("col-shared", shared);
+      buildColumn("col-pro",    pro);
+    });
+}
+
+function buildColumn(colId, positions) {
+  const col = document.getElementById(colId);
+  positions.forEach(pos => {
+    const node = document.createElement("div");
+    node.className = "pos-node";
+    node.id = "pos-" + pos.label.replace(/\s+/g, "-");
+    node.innerHTML = `<div class="pos-label">${escHtml(pos.label)}</div>
+      <div class="vote-dots" id="dots-${escHtml(pos.label.replace(/\s+/g,'-'))}"></div>
+      <div class="pos-evidence-count" id="ev-${escHtml(pos.label.replace(/\s+/g,'-'))}"></div>`;
+    col.appendChild(node);
+    nodeElements[pos.label] = node;
+    positionVotes[pos.label] = [];
+    positionEvidence[pos.label] = 0;
+  });
+}
+
+// ── Build agent chips ─────────────────────────────────────────────────────────
+function buildAgentStrip() {
+  const strip = document.getElementById("agent-strip");
+  personas.forEach(p => {
+    const chip = document.createElement("div");
+    chip.className = "agent-chip";
+    chip.id = "chip-" + p.id;
+    chip.innerHTML = `<div class="agent-avatar" style="background:${p.avatar_color}">${p.avatar_initial}</div>
+      <div><div class="agent-name">${p.name}</div><div class="agent-status" id="status-${p.id}">waiting</div></div>`;
+    strip.appendChild(chip);
+  });
+}
+
+// ── Apply a single event ──────────────────────────────────────────────────────
+function applyEvent(ev) {
+  const label     = ev.position_label;
+  const nodeId    = label.replace(/\s+/g, "-");
+  const node      = nodeElements[label];
+  const dotsEl    = document.getElementById("dots-" + nodeId);
+  const evCountEl = document.getElementById("ev-"   + nodeId);
+
+  // Highlight active chip
+  document.querySelectorAll(".agent-chip").forEach(c => c.classList.remove("active"));
+  const chip = document.getElementById("chip-" + ev.agent);
+  if (chip) chip.classList.add("active");
+
+  // Thinking bar
+  const thinkEl = document.getElementById("thinking-text");
+  thinkEl.classList.add("visible");
+  thinkEl.firstChild.textContent = `${ev.agent_name} · ${label} · `;
+
+  // Pulse node
+  if (node) {
+    node.classList.remove("pulse");
+    void node.offsetWidth; // reflow
+    node.classList.add("pulse");
+  }
+
+  // Update round badges
+  [1,2,3].forEach(r => {
+    const rb = document.getElementById("rb-" + r);
+    rb.classList.toggle("active", ev.round === r);
+    document.getElementById("pip-" + r).classList.toggle("done", ev.round >= r);
+  });
+
+  // Vote dot
+  if (ev.action === "voted" && dotsEl) {
+    const dot = document.createElement("div");
+    dot.className = "vote-dot";
+    dot.style.background = VOTE_COLOR[ev.vote] || "#999";
+    dot.title = `${ev.agent_name}: ${ev.vote}`;
+    dotsEl.appendChild(dot);
+
+    // Update status
+    const statusEl = document.getElementById("status-" + ev.agent);
+    if (statusEl) statusEl.textContent = ev.vote;
+  }
+
+  // Evidence count
+  if (ev.action === "evidence" && evCountEl) {
+    positionEvidence[label] = (positionEvidence[label] || 0) + 1;
+    evCountEl.textContent = `${positionEvidence[label]} piece${positionEvidence[label] > 1 ? "s" : ""} of evidence`;
+    evCountEl.classList.add("visible");
+    const statusEl = document.getElementById("status-" + ev.agent);
+    if (statusEl) statusEl.textContent = "researching";
+  }
+
+  if (ev.action === "rebuttal") {
+    const statusEl = document.getElementById("status-" + ev.agent);
+    if (statusEl) statusEl.textContent = "rebutting";
+  }
+
+  // Feed entry
+  addFeedEvent(ev);
+
+  // Progress
+  const pct = ((currentIdx + 1) / events.length * 100).toFixed(1);
+  document.getElementById("progress-fill").style.width = pct + "%";
+  document.getElementById("progress-label").textContent =
+    `Event ${currentIdx + 1} of ${events.length}`;
+  document.getElementById("event-counter").textContent =
+    `${currentIdx + 1} / ${events.length} events`;
+}
+
+function addFeedEvent(ev) {
+  const feed = document.getElementById("feed-list");
+
+  let actionBadge, actionLabel;
+  if (ev.action === "voted") {
+    actionBadge = ev.concedes ? "concedes" : `voted-${ev.vote}`;
+    actionLabel = ev.vote;
+  } else if (ev.action === "evidence") {
+    actionBadge = "evidence";
+    actionLabel = "evidence";
+  } else {
+    actionBadge = ev.concedes ? "concedes" : "rebuttal";
+    actionLabel = ev.concedes ? "concedes" : "rebuttal";
+  }
+
+  let bodyHtml = "";
+  if (ev.action === "voted" && ev.reasoning) {
+    bodyHtml = `<div class="feed-text">${escHtml(ev.reasoning)}</div>`;
+  }
+  if (ev.action === "evidence") {
+    bodyHtml = `<div class="feed-evidence">&ldquo;${escHtml(ev.evidence_quote)}&rdquo;</div>
+      <div class="feed-source">- ${escHtml(ev.evidence_source)}</div>`;
+  }
+  if (ev.action === "rebuttal") {
+    bodyHtml = `<div class="feed-rebuttal-target">↩ replying to ${escHtml(ev.rebuttal_to_name)}</div>
+      <div class="feed-text">${escHtml(ev.reasoning)}</div>`;
+  }
+
+  const el = document.createElement("div");
+  el.className = "feed-event";
+  el.innerHTML = `
+    <div class="feed-event-header">
+      <div class="feed-avatar" style="background:${ev.agent_color}">${ev.agent_name.split(" ").map(w=>w[0]).join("").slice(0,2)}</div>
+      <span class="feed-agent-name">${escHtml(ev.agent_name)}</span>
+      <span class="feed-action-badge ${actionBadge}">${actionLabel}</span>
+    </div>
+    <div class="feed-position-label">${escHtml(ev.position_label)}</div>
+    ${bodyHtml}`;
+  feed.prepend(el);
+
+  // Keep feed scrolled to top (newest first)
+  feed.scrollTop = 0;
+}
+
+// ── Playback ──────────────────────────────────────────────────────────────────
+function stepForward() {
+  if (currentIdx >= events.length - 1) {
+    pause();
+    document.getElementById("feed-live").style.animation = "none";
+    document.getElementById("thinking-text").classList.remove("visible");
+    document.getElementById("play-btn").textContent = "↺";
+    return;
+  }
+  currentIdx++;
+  applyEvent(events[currentIdx]);
+}
+
+function play() {
+  if (currentIdx >= events.length - 1) {
+    // Restart
+    reset();
+  }
+  playing = true;
+  document.getElementById("play-btn").textContent = "⏸";
+  document.getElementById("feed-live").style.animation = "";
+  scheduleNext();
+}
+
+function pause() {
+  playing = false;
+  document.getElementById("play-btn").textContent = "▶";
+  clearTimeout(timer);
+}
+
+function scheduleNext() {
+  if (!playing) return;
+  const delay = ACTION_DELAY[speed] || 800;
+  // Add a pause between rounds
+  const next = events[currentIdx + 1];
+  const curr = events[currentIdx];
+  const roundBreak = (curr && next && next.round !== curr.round) ? 1200 : 0;
+  timer = setTimeout(() => { stepForward(); scheduleNext(); }, delay + roundBreak);
+}
+
+function reset() {
+  clearTimeout(timer);
+  currentIdx = -1;
+  playing = false;
+  document.getElementById("play-btn").textContent = "▶";
+  document.getElementById("progress-fill").style.width = "0%";
+  document.getElementById("progress-label").textContent = `Event 0 of ${events.length}`;
+  document.getElementById("event-counter").textContent = `0 / ${events.length} events`;
+  document.getElementById("feed-list").innerHTML = "";
+  document.getElementById("thinking-text").classList.remove("visible");
+  [1,2,3].forEach(r => {
+    document.getElementById("rb-" + r).classList.remove("active");
+    document.getElementById("pip-" + r).classList.remove("done");
+  });
+  document.querySelectorAll(".vote-dots").forEach(d => d.innerHTML = "");
+  document.querySelectorAll(".pos-evidence-count").forEach(e => {
+    e.textContent = ""; e.classList.remove("visible");
+  });
+  document.querySelectorAll(".agent-status").forEach(s => s.textContent = "waiting");
+  document.querySelectorAll(".agent-chip").forEach(c => c.classList.remove("active"));
+  Object.keys(positionEvidence).forEach(k => positionEvidence[k] = 0);
+}
+
+// Controls
+document.getElementById("play-btn").addEventListener("click", () => {
+  if (document.getElementById("play-btn").textContent === "↺") { reset(); return; }
+  playing ? pause() : play();
+});
+
+document.querySelectorAll(".speed-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    speed = parseFloat(btn.dataset.speed);
+    document.querySelectorAll(".speed-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    if (playing) { clearTimeout(timer); scheduleNext(); }
+  });
+});
+
+// Progress bar click to scrub
+document.getElementById("progress-wrap").addEventListener("click", e => {
+  const rect = e.currentTarget.getBoundingClientRect();
+  const pct = (e.clientX - rect.left) / rect.width;
+  const target = Math.floor(pct * events.length);
+  pause();
+  reset();
+  // Fast-forward to target
+  for (let i = 0; i < target; i++) {
+    currentIdx = i;
+    // Apply silently (no animation)
+    const ev = events[i];
+    const label = ev.position_label;
+    const nodeId = label.replace(/\s+/g, "-");
+    const dotsEl = document.getElementById("dots-" + nodeId);
+    const evCountEl = document.getElementById("ev-" + nodeId);
+    if (ev.action === "voted" && dotsEl) {
+      const dot = document.createElement("div");
+      dot.className = "vote-dot";
+      dot.style.background = VOTE_COLOR[ev.vote] || "#999";
+      dot.style.animation = "none";
+      dot.title = `${ev.agent_name}: ${ev.vote}`;
+      dotsEl.appendChild(dot);
+    }
+    if (ev.action === "evidence" && evCountEl) {
+      positionEvidence[label] = (positionEvidence[label] || 0) + 1;
+      evCountEl.textContent = `${positionEvidence[label]} piece${positionEvidence[label]>1?"s":""} of evidence`;
+      evCountEl.classList.add("visible");
+    }
+  }
+  const pctFinal = (target / events.length * 100).toFixed(1);
+  document.getElementById("progress-fill").style.width = pctFinal + "%";
+  document.getElementById("progress-label").textContent = `Event ${target} of ${events.length}`;
+  document.getElementById("event-counter").textContent = `${target} / ${events.length} events`;
+
+  // Update round pips
+  if (target > 0) {
+    const lastRound = events[target - 1].round;
+    [1,2,3].forEach(r => document.getElementById("pip-"+r).classList.toggle("done", r <= lastRound));
+  }
+});
+
+// ── Load and init ─────────────────────────────────────────────────────────────
+fetch("data/agent_debate_log.json")
+  .then(r => r.json())
+  .then(data => {
+    events   = data.events;
+    personas = data.personas;
+    document.getElementById("event-counter").textContent = `0 / ${events.length} events`;
+    document.getElementById("progress-label").textContent = `Event 0 of ${events.length}`;
+    buildAgentStrip();
+    buildArena(data);
+  });
+</script>
+<script>
+  const backdrop = document.getElementById('explainer-backdrop');
+  document.getElementById('explainer-close').addEventListener('click', () => backdrop.classList.add('hidden'));
+  document.getElementById('help-btn').addEventListener('click', () => backdrop.classList.remove('hidden'));
+</script>
+</body>
+</html>
