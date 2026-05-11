@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DIM - Technique Sunburst</title>
+  <style>
+    :root {
+      --bg: #f4efe6;
+      --panel: #fffaf2;
+      --ink: #1f1a17;
+      --muted: #6f655d;
+      --line: #d7c9b7;
+      --accent: #a3472f;
+      --shadow: 0 18px 40px rgba(74,46,22,0.08);
+      /* stance palette */
+      --anti:    #a3472f;
+      --pro:     #2e7d55;
+      --mixed:   #3a5f8a;
+      --neutral: #7a6220;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, "Palatino Linotype", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(163,71,47,0.12), transparent 28%),
+        linear-gradient(180deg, #f7f1e8 0%, var(--bg) 100%);
+      min-height: 100vh;
+    }
+    .page { max-width: 1500px; margin: 0 auto; padding: 40px 24px 64px; }
+
+    .hero {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 28px 32px 24px;
+      margin-bottom: 28px;
+    }
+    h1 { font-size: clamp(1.6rem, 3.5vw, 2.8rem); line-height: 1.1; margin-bottom: 8px; }
+    .subtitle { color: var(--muted); font-size: 1rem; line-height: 1.5; }
+
+    nav { font-size: 0.88rem; margin-top: 16px; }
+    nav a { color: var(--accent); text-decoration: none; margin-right: 18px; }
+    nav a:hover { text-decoration: underline; }
+
+    .chart-wrap {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* breadcrumb trail */
+    #trail {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1rem;
+      min-height: 36px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .crumb {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 1rem;
+      color: #fff;
+      font-family: ui-monospace, "Cascadia Code", monospace;
+    }
+    .crumb-sep { color: var(--muted); font-size: 1rem; }
+    #count-label {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-left: 8px;
+    }
+
+    #chart { position: relative; }
+    svg { display: block; }
+
+    /* center label */
+    #center-label {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      pointer-events: none; /* clicks go through to the SVG circle below */
+      width: 200px;
+    }
+    #center-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+    #center-count {
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin-top: 6px;
+      font-family: ui-monospace, monospace;
+    }
+    #center-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* side-by-side layout - chart left, panel right */
+    .chart-and-panel {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 24px;
+      align-items: start;
+    }
+
+    /* info panel */
+    #info-panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 18px 24px;
+    }
+    #info-content { display: block; }
+    .info-left { display: flex; flex-direction: column; gap: 6px; }
+    .info-right { margin-top: 8px; }
+    #info-quotes { margin-top: 8px; }
+    @media (max-width: 900px) {
+      .chart-and-panel { grid-template-columns: 1fr; }
+    }
+    #info-placeholder {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+    #info-badge {
+      display: inline-block;
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-family: ui-monospace, monospace;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+    #info-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      line-height: 1.15;
+    }
+    #info-count {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+      font-family: ui-monospace, monospace;
+    }
+    #info-def {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    #info-note {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.55;
+      border-left: 3px solid var(--line);
+      padding-left: 12px;
+      margin-bottom: 20px;
+    }
+    #info-quotes { margin-top: 4px; }
+    .q-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 10px;
+      font-family: ui-monospace, monospace;
+    }
+    .q-item {
+      border-left: 3px solid var(--accent-soft, #e8c4b8);
+      padding: 8px 12px;
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, #fdf7ef, #f9f0e6);
+      border-radius: 0 10px 10px 0;
+    }
+    .q-text {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      font-style: italic;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .q-meta {
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-family: ui-monospace, monospace;
+    }
+    .stance-pip {
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+
+    /* legend */
+    .legend {
+      display: flex;
+      gap: 24px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 1rem;
+    }
+    .leg-item { display: flex; align-items: center; gap: 8px; }
+    .leg-dot {
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .hint {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    path { cursor: pointer; transition: opacity 0.15s; }
+    path:hover { opacity: 0.82; }
+
+    #mode-btn {
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      padding: 9px 22px;
+      border-radius: 20px;
+      border: 2px solid var(--accent);
+      background: var(--panel);
+      color: var(--accent);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    #mode-btn:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="hero">
+    <h1>Technique Sunburst</h1>
+    <p class="subtitle">
+      Rhetorical technique detections across 16 debates, grouped by policy stance (inner ring),
+      classifier category (middle), and specific technique (outer). Click any segment to zoom in.
+    </p>
+    <nav>
+      <a href="map.html">Map</a>
+      <a href="heatmap.html">Heatmap</a>
+      <a href="corpus.html">Corpus</a>
+      <a href="taxonomy.html">Taxonomy</a>
+      <a href="positions.html">Agora</a>
+      <a href="debate.html">Debate</a>
+      <a href="traditions.html">Traditions</a>
+    </nav>
+  </div>
+
+  <div class="chart-and-panel">
+    <div class="chart-wrap">
+      <div id="trail"></div>
+      <div id="chart">
+        <div id="center-label">
+          <div id="center-name">corpus</div>
+          <div id="center-count">-</div>
+          <div id="center-sub">detections</div>
+        </div>
+      </div>
+      <div class="legend">
+        <div class="leg-item"><div class="leg-dot" style="background:var(--anti)"></div> anti-wealth-tax</div>
+        <div class="leg-item"><div class="leg-dot" style="background:var(--pro)"></div> pro-wealth-tax</div>
+        <div class="leg-item"><div class="leg-dot" style="background:var(--mixed)"></div> mixed</div>
+        <div class="leg-item"><div class="leg-dot" style="background:var(--neutral)"></div> neutral</div>
+      </div>
+      <div style="margin-top:20px">
+        <button id="mode-btn" onclick="switchMode()">View by category</button>
+      </div>
+      <p class="hint">Click a segment to zoom · click centre to zoom out</p>
+    </div>
+
+    <div id="info-panel">
+      <p id="info-placeholder">Hover over any segment to see the definition, clarification, and example quotes from the corpus.</p>
+      <div id="info-content" style="display:none">
+        <div class="info-left">
+          <div id="info-badge"></div>
+          <div id="info-name"></div>
+          <div id="info-count"></div>
+        </div>
+        <div class="info-right">
+          <p id="info-def"></p>
+          <p id="info-note"></p>
+          <div id="info-quotes"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script>
+// ── technique info (loaded async) ─────────────────────────────────────────────
+let INFO = { tech: {}, group: {}, quotes: {} };
+fetch("data/technique_info.json").then(r => r.json()).then(d => { INFO = d; });
+
+function toKey(name) { return name.replace(/ /g, "_"); }
+
+function showPanel(d) {
+  const placeholder = document.getElementById("info-placeholder");
+  const content     = document.getElementById("info-content");
+  const badge       = document.getElementById("info-badge");
+  const nameEl      = document.getElementById("info-name");
+  const countEl     = document.getElementById("info-count");
+  const defEl       = document.getElementById("info-def");
+  const noteEl      = document.getElementById("info-note");
+  const quotesEl    = document.getElementById("info-quotes");
+
+  placeholder.style.display = "none";
+  content.style.display = "grid";
+
+  const ancestors = d.ancestors().reverse();
+  const stance    = ancestors.length > 1 ? ancestors[1].data.name : null;
+  const stanceCol = stance ? (STANCE_COLOR[stance] || "#888") : "#888";
+  const key       = toKey(d.data.name);
+
+  // badge
+  badge.textContent = d.depth === 1 ? "stance" : d.depth === 2 ? "category" : "technique";
+  badge.style.background = stanceCol;
+
+  // name
+  nameEl.textContent = d.data.name;
+
+  // count
+  countEl.textContent = `${d.value} detection${d.value !== 1 ? "s" : ""}` +
+    (d.depth > 1 && stance ? ` · ${stance}` : "");
+
+  // definition
+  if (d.depth === 1) {
+    // stance node
+    defEl.textContent = {
+      anti:    "Arguments or framings that oppose a wealth tax.",
+      pro:     "Arguments or framings that support a wealth tax.",
+      mixed:   "Content containing substantive arguments on both sides.",
+      neutral: "Purely informational or procedural content with no evaluative stance."
+    }[d.data.name] || "";
+    noteEl.textContent = "";
+    quotesEl.innerHTML = "";
+  } else if (d.depth === 2) {
+    // group node
+    const groupKey = toKey(d.data.name).replace(/ /g, "_");
+    defEl.textContent = INFO.group[groupKey] || INFO.group[d.data.name.replace(/ /g, "_")] || "";
+    noteEl.textContent = "";
+    quotesEl.innerHTML = "";
+  } else {
+    // technique node
+    const info = INFO.tech[key] || {};
+    defEl.textContent = info.def || "";
+    if (info.note) {
+      noteEl.textContent = info.note;
+      noteEl.style.display = "block";
+    } else {
+      noteEl.style.display = "none";
+    }
+
+    // quotes
+    const qs = INFO.quotes[key] || [];
+    if (qs.length) {
+      const stanceColors = STANCE_COLOR;
+      quotesEl.innerHTML = `<div class="q-label">From the corpus</div>` +
+        qs.map(q => {
+          const pip = q.stance
+            ? `<span class="stance-pip" style="background:${stanceColors[q.stance]||'#aaa'}"></span>`
+            : "";
+          return `<div class="q-item">
+            <div class="q-text">"${q.q}"</div>
+            <div class="q-meta">${pip}${q.stance || ""} · ${q.src}</div>
+          </div>`;
+        }).join("");
+    } else {
+      quotesEl.innerHTML = "";
+    }
+  }
+}
+
+function hidePanel() {
+  document.getElementById("info-placeholder").style.display = "block";
+  document.getElementById("info-content").style.display = "none";
+}
+</script>
+<script>
+// ── data ─────────────────────────────────────────────────────────────────────
+const DATA_BY_STANCE = {"name":"corpus","children":[{"name":"anti","children":[{"name":"psychological rhetoric","children":[{"name":"loaded question","value":5},{"name":"straw man","value":4},{"name":"appeal to fear","value":3},{"name":"motivational delegitimisation","value":3},{"name":"appeal to consequences","value":3},{"name":"appeal to ridicule","value":2},{"name":"appeal to emotion","value":2},{"name":"appeal to authority","value":2},{"name":"jaqing","value":1},{"name":"appeal to pity","value":1},{"name":"false equivalence","value":1},{"name":"epistemic cowardice","value":1},{"name":"bulverism","value":1}]},{"name":"evidence quality","children":[{"name":"hasty generalisation","value":8},{"name":"proof by example","value":4},{"name":"false cause","value":4},{"name":"post hoc","value":3},{"name":"distributional anchoring","value":3},{"name":"sweeping generalisation","value":3},{"name":"appeal to authority","value":2},{"name":"slippery slope","value":1},{"name":"argument from incredulity","value":1},{"name":"false dilemma","value":1},{"name":"phantom quantification","value":1},{"name":"cherry picking","value":1}]},{"name":"semantic manipulation","children":[{"name":"weasel words","value":7},{"name":"normative laundering","value":4},{"name":"persuasive definition","value":3},{"name":"nirvana fallacy","value":1},{"name":"equivocation","value":1},{"name":"loaded question","value":1},{"name":"foreclosing interrogation","value":1},{"name":"straw man","value":1},{"name":"concept capture","value":1}]},{"name":"formal structure","children":[{"name":"begging the question","value":3},{"name":"false causal chain","value":2},{"name":"appeal to probability","value":1},{"name":"equivocation","value":1},{"name":"non sequitur","value":1},{"name":"many questions","value":1},{"name":"affirming the consequent","value":1},{"name":"figure of speech fallacy","value":1}]},{"name":"source attacks","children":[{"name":"attribution of intent","value":4},{"name":"ad hominem circumstantial","value":2},{"name":"ad hominem tu quoque","value":1}]},{"name":"counter techniques","children":[{"name":"prolepsis","value":4},{"name":"elenchus","value":1},{"name":"ex concessis","value":1}]}]},{"name":"pro","children":[{"name":"psychological rhetoric","children":[{"name":"motivational delegitimisation","value":9},{"name":"straw man","value":8},{"name":"appeal to ridicule","value":7},{"name":"loaded question","value":6},{"name":"bulverism","value":4},{"name":"appeal to emotion","value":3},{"name":"false dilemma","value":2},{"name":"appeal to fear","value":2},{"name":"false equivalence","value":2},{"name":"appeal to hypocrisy","value":1},{"name":"appeal to pity","value":1},{"name":"loaded language","value":1},{"name":"sealioning","value":1},{"name":"jaqing","value":1},{"name":"appeal to disgust","value":1},{"name":"appeal to consequences","value":1},{"name":"appeal to nature","value":1},{"name":"appeal to authority","value":1}]},{"name":"evidence quality","children":[{"name":"hasty generalisation","value":15},{"name":"proof by example","value":8},{"name":"false precision","value":6},{"name":"distributional anchoring","value":5},{"name":"false cause","value":5},{"name":"phantom quantification","value":3},{"name":"slippery slope","value":3},{"name":"hasty conclusion","value":2},{"name":"argument from incredulity","value":2},{"name":"cum hoc","value":2},{"name":"cherry picking","value":2},{"name":"post hoc","value":2},{"name":"ecological fallacy","value":1},{"name":"appeal to authority","value":1},{"name":"cargo cult science","value":1}]},{"name":"semantic manipulation","children":[{"name":"weasel words","value":8},{"name":"normative laundering","value":5},{"name":"persuasive definition","value":2},{"name":"foreclosing interrogation","value":1},{"name":"loaded question","value":1},{"name":"semantic dodge","value":1},{"name":"concept capture","value":1},{"name":"no true scotsman","value":1},{"name":"ad hominem","value":1},{"name":"attribution of intent","value":1},{"name":"argument from prior","value":1}]},{"name":"formal structure","children":[{"name":"many questions","value":4},{"name":"begging the question","value":4},{"name":"hasty generalisation","value":1},{"name":"false causal chain","value":1},{"name":"non sequitur","value":1},{"name":"composition fallacy","value":1},{"name":"figure of speech fallacy","value":1},{"name":"secundum quid","value":1}]},{"name":"source attacks","children":[{"name":"attribution of intent","value":4},{"name":"ad hominem circumstantial","value":4},{"name":"appeal to authority","value":2},{"name":"poisoning the well","value":2},{"name":"genetic fallacy","value":1},{"name":"ad hominem","value":1}]},{"name":"counter techniques","children":[{"name":"prolepsis","value":19},{"name":"elenchus","value":7},{"name":"ex concessis","value":6},{"name":"reductio ad absurdum","value":3},{"name":"ad rem","value":1}]}]},{"name":"mixed","children":[{"name":"psychological rhetoric","children":[{"name":"red herring","value":3},{"name":"appeal to fear","value":3},{"name":"motivational delegitimisation","value":2},{"name":"straw man","value":2},{"name":"loaded question","value":2},{"name":"appeal to the masses","value":1},{"name":"performed empiricism","value":1},{"name":"appeal to authority","value":1},{"name":"jaqing","value":1},{"name":"appeal to ridicule","value":1},{"name":"appeal to pity","value":1},{"name":"appeal to emotion","value":1},{"name":"appeal to consequences","value":1}]},{"name":"evidence quality","children":[{"name":"hasty generalisation","value":4},{"name":"phantom quantification","value":2},{"name":"false cause","value":2},{"name":"proof by example","value":1},{"name":"distributional anchoring","value":1},{"name":"cum hoc","value":1},{"name":"cherry picking","value":1},{"name":"slippery slope","value":1},{"name":"sweeping generalisation","value":1}]},{"name":"semantic manipulation","children":[{"name":"red herring","value":2},{"name":"weasel words","value":2},{"name":"no true scotsman","value":2},{"name":"ad hominem","value":1},{"name":"straw man","value":1},{"name":"equivocation","value":1},{"name":"definitional retreat","value":1},{"name":"normative laundering","value":1}]},{"name":"formal structure","children":[{"name":"appeal to probability","value":2},{"name":"many questions","value":1},{"name":"non sequitur","value":1},{"name":"affirming the consequent","value":1},{"name":"denying the antecedent","value":1},{"name":"false causal chain","value":1}]},{"name":"source attacks","children":[{"name":"appeal to authority","value":2},{"name":"attribution of intent","value":1},{"name":"genetic fallacy","value":1}]},{"name":"counter techniques","children":[{"name":"prolepsis","value":2},{"name":"reductio ad absurdum","value":1},{"name":"ad rem","value":1},{"name":"elenchus","value":1}]}]},{"name":"neutral","children":[{"name":"psychological rhetoric","children":[{"name":"straw man","value":2},{"name":"appeal to the masses","value":1},{"name":"loaded question","value":1},{"name":"appeal to emotion","value":1},{"name":"red herring","value":1}]},{"name":"evidence quality","children":[{"name":"hasty generalisation","value":3},{"name":"proof by example","value":1},{"name":"cherry picking","value":1},{"name":"false cause","value":1},{"name":"post hoc","value":1},{"name":"false precision","value":1}]},{"name":"semantic manipulation","children":[{"name":"weasel words","value":2},{"name":"loaded question","value":1},{"name":"persuasive definition","value":1}]},{"name":"formal structure","children":[{"name":"begging the question","value":2},{"name":"non sequitur","value":1},{"name":"many questions","value":1},{"name":"fallacy of composition","value":1},{"name":"false causal chain","value":1}]},{"name":"source attacks","children":[{"name":"poisoning the well","value":1}]},{"name":"counter techniques","children":[{"name":"ex concessis","value":1},{"name":"prolepsis","value":1}]}]}]};
+
+const DATA_BY_GROUP = {"name":"corpus","children":[{"name":"psychological rhetoric","children":[{"name":"straw man","children":[{"name":"anti","value":4},{"name":"pro","value":8},{"name":"mixed","value":2},{"name":"neutral","value":2}]},{"name":"motivational delegitimisation","children":[{"name":"anti","value":3},{"name":"pro","value":9},{"name":"mixed","value":2}]},{"name":"loaded question","children":[{"name":"anti","value":5},{"name":"pro","value":6},{"name":"mixed","value":2},{"name":"neutral","value":1}]},{"name":"appeal to ridicule","children":[{"name":"anti","value":2},{"name":"pro","value":7},{"name":"mixed","value":1}]},{"name":"appeal to fear","children":[{"name":"anti","value":3},{"name":"pro","value":2},{"name":"mixed","value":3}]},{"name":"appeal to emotion","children":[{"name":"anti","value":2},{"name":"pro","value":3},{"name":"mixed","value":1},{"name":"neutral","value":1}]},{"name":"appeal to consequences","children":[{"name":"anti","value":3},{"name":"pro","value":1},{"name":"mixed","value":1}]},{"name":"bulverism","children":[{"name":"anti","value":1},{"name":"pro","value":4}]},{"name":"red herring","children":[{"name":"mixed","value":3},{"name":"neutral","value":1}]},{"name":"appeal to authority","children":[{"name":"anti","value":2},{"name":"pro","value":1},{"name":"mixed","value":1}]},{"name":"jaqing","children":[{"name":"anti","value":1},{"name":"pro","value":1},{"name":"mixed","value":1}]},{"name":"appeal to pity","children":[{"name":"anti","value":1},{"name":"pro","value":1},{"name":"mixed","value":1}]},{"name":"false equivalence","children":[{"name":"anti","value":1},{"name":"pro","value":2}]},{"name":"appeal to the masses","children":[{"name":"mixed","value":1},{"name":"neutral","value":1}]},{"name":"false dilemma","children":[{"name":"pro","value":2}]},{"name":"appeal to hypocrisy","children":[{"name":"pro","value":1}]},{"name":"loaded language","children":[{"name":"pro","value":1}]},{"name":"sealioning","children":[{"name":"pro","value":1}]},{"name":"epistemic cowardice","children":[{"name":"anti","value":1}]},{"name":"appeal to disgust","children":[{"name":"pro","value":1}]},{"name":"appeal to nature","children":[{"name":"pro","value":1}]},{"name":"performed empiricism","children":[{"name":"mixed","value":1}]}]},{"name":"evidence quality","children":[{"name":"hasty generalisation","children":[{"name":"anti","value":8},{"name":"pro","value":15},{"name":"mixed","value":4},{"name":"neutral","value":3}]},{"name":"proof by example","children":[{"name":"anti","value":4},{"name":"pro","value":8},{"name":"mixed","value":1},{"name":"neutral","value":1}]},{"name":"false cause","children":[{"name":"anti","value":4},{"name":"pro","value":5},{"name":"mixed","value":2},{"name":"neutral","value":1}]},{"name":"distributional anchoring","children":[{"name":"anti","value":3},{"name":"pro","value":5},{"name":"mixed","value":1}]},{"name":"false precision","children":[{"name":"pro","value":6},{"name":"neutral","value":1}]},{"name":"post hoc","children":[{"name":"anti","value":3},{"name":"pro","value":2},{"name":"neutral","value":1}]},{"name":"phantom quantification","children":[{"name":"anti","value":1},{"name":"pro","value":3},{"name":"mixed","value":2}]},{"name":"slippery slope","children":[{"name":"anti","value":1},{"name":"pro","value":3},{"name":"mixed","value":1}]},{"name":"cherry picking","children":[{"name":"anti","value":1},{"name":"pro","value":2},{"name":"mixed","value":1},{"name":"neutral","value":1}]},{"name":"sweeping generalisation","children":[{"name":"anti","value":3},{"name":"mixed","value":1}]},{"name":"argument from incredulity","children":[{"name":"anti","value":1},{"name":"pro","value":2}]},{"name":"cum hoc","children":[{"name":"pro","value":2},{"name":"mixed","value":1}]},{"name":"appeal to authority","children":[{"name":"anti","value":2},{"name":"pro","value":1}]},{"name":"hasty conclusion","children":[{"name":"pro","value":2}]},{"name":"false dilemma","children":[{"name":"anti","value":1}]},{"name":"ecological fallacy","children":[{"name":"pro","value":1}]},{"name":"cargo cult science","children":[{"name":"pro","value":1}]}]},{"name":"semantic manipulation","children":[{"name":"weasel words","children":[{"name":"anti","value":7},{"name":"pro","value":8},{"name":"mixed","value":2},{"name":"neutral","value":2}]},{"name":"normative laundering","children":[{"name":"anti","value":4},{"name":"pro","value":5},{"name":"mixed","value":1}]},{"name":"persuasive definition","children":[{"name":"anti","value":3},{"name":"pro","value":2},{"name":"neutral","value":1}]},{"name":"loaded question","children":[{"name":"anti","value":1},{"name":"pro","value":1},{"name":"neutral","value":1}]},{"name":"no true scotsman","children":[{"name":"pro","value":1},{"name":"mixed","value":2}]},{"name":"equivocation","children":[{"name":"anti","value":1},{"name":"mixed","value":1}]},{"name":"ad hominem","children":[{"name":"pro","value":1},{"name":"mixed","value":1}]},{"name":"red herring","children":[{"name":"mixed","value":2}]},{"name":"foreclosing interrogation","children":[{"name":"anti","value":1},{"name":"pro","value":1}]},{"name":"straw man","children":[{"name":"anti","value":1},{"name":"mixed","value":1}]},{"name":"concept capture","children":[{"name":"anti","value":1},{"name":"pro","value":1}]},{"name":"nirvana fallacy","children":[{"name":"anti","value":1}]},{"name":"semantic dodge","children":[{"name":"pro","value":1}]},{"name":"definitional retreat","children":[{"name":"mixed","value":1}]},{"name":"attribution of intent","children":[{"name":"pro","value":1}]},{"name":"argument from prior","children":[{"name":"pro","value":1}]}]},{"name":"formal structure","children":[{"name":"begging the question","children":[{"name":"anti","value":3},{"name":"pro","value":4},{"name":"neutral","value":2}]},{"name":"many questions","children":[{"name":"anti","value":1},{"name":"pro","value":4},{"name":"mixed","value":1},{"name":"neutral","value":1}]},{"name":"false causal chain","children":[{"name":"anti","value":2},{"name":"pro","value":1},{"name":"mixed","value":1},{"name":"neutral","value":1}]},{"name":"non sequitur","children":[{"name":"anti","value":1},{"name":"pro","value":1},{"name":"mixed","value":1},{"name":"neutral","value":1}]},{"name":"appeal to probability","children":[{"name":"anti","value":1},{"name":"mixed","value":2}]},{"name":"affirming the consequent","children":[{"name":"anti","value":1},{"name":"mixed","value":1}]},{"name":"figure of speech fallacy","children":[{"name":"anti","value":1},{"name":"pro","value":1}]},{"name":"equivocation","children":[{"name":"anti","value":1}]},{"name":"hasty generalisation","children":[{"name":"pro","value":1}]},{"name":"denying the antecedent","children":[{"name":"mixed","value":1}]},{"name":"fallacy of composition","children":[{"name":"neutral","value":1}]},{"name":"composition fallacy","children":[{"name":"pro","value":1}]},{"name":"secundum quid","children":[{"name":"pro","value":1}]}]},{"name":"source attacks","children":[{"name":"attribution of intent","children":[{"name":"anti","value":4},{"name":"pro","value":4},{"name":"mixed","value":1}]},{"name":"ad hominem circumstantial","children":[{"name":"anti","value":2},{"name":"pro","value":4}]},{"name":"appeal to authority","children":[{"name":"pro","value":2},{"name":"mixed","value":2}]},{"name":"poisoning the well","children":[{"name":"pro","value":2},{"name":"neutral","value":1}]},{"name":"genetic fallacy","children":[{"name":"pro","value":1},{"name":"mixed","value":1}]},{"name":"ad hominem tu quoque","children":[{"name":"anti","value":1}]},{"name":"ad hominem","children":[{"name":"pro","value":1}]}]},{"name":"counter techniques","children":[{"name":"prolepsis","children":[{"name":"anti","value":4},{"name":"pro","value":19},{"name":"mixed","value":2},{"name":"neutral","value":1}]},{"name":"elenchus","children":[{"name":"anti","value":1},{"name":"pro","value":7},{"name":"mixed","value":1}]},{"name":"ex concessis","children":[{"name":"anti","value":1},{"name":"pro","value":6},{"name":"neutral","value":1}]},{"name":"reductio ad absurdum","children":[{"name":"pro","value":3},{"name":"mixed","value":1}]},{"name":"ad rem","children":[{"name":"pro","value":1},{"name":"mixed","value":1}]}]}]};
+
+// ── colours ───────────────────────────────────────────────────────────────────
+const STANCE_COLOR = { anti:"#a3472f", pro:"#2e7d55", mixed:"#3a5f8a", neutral:"#7a6220" };
+const STANCE_LIGHT = { anti:"#e8c4b8", pro:"#b8dcc8", mixed:"#b8cadf", neutral:"#ddd4a8" };
+
+const GROUP_COLOR = {
+  "psychological rhetoric": "#a3472f",
+  "evidence quality":       "#4a7a3a",
+  "semantic manipulation":  "#7a6220",
+  "formal structure":       "#5a3a7a",
+  "source attacks":         "#3a5f8a",
+  "counter techniques":     "#2e7d55"
+};
+const GROUP_LIGHT = {
+  "psychological rhetoric": "#e8c4b8",
+  "evidence quality":       "#c4ddb8",
+  "semantic manipulation":  "#ddd4a8",
+  "formal structure":       "#c8b8df",
+  "source attacks":         "#b8cadf",
+  "counter techniques":     "#b8dcc8"
+};
+
+// ── layout ────────────────────────────────────────────────────────────────────
+const SIZE   = Math.min(window.innerWidth - 120, 960);
+const R      = SIZE / 2;
+const INNER_R = R * 0.20;
+
+const arc = d3.arc()
+  .startAngle(d => d.x0)
+  .endAngle(d => d.x1)
+  .padAngle(d => Math.min((d.x1 - d.x0) / 2, 0.012))
+  .padRadius(R * 1.5)
+  .innerRadius(d => Math.max(0, d.y0 * (R - INNER_R) / 3 + INNER_R))
+  .outerRadius(d => Math.max(0, d.y1 * (R - INNER_R) / 3 + INNER_R - 2));
+
+// ── mutable render state ──────────────────────────────────────────────────────
+let _mode = 'stance';
+let _root, _path, _label, _g, _TOTAL;
+
+function getColor(d) {
+  const ancs = d.ancestors().reverse();
+  if (ancs.length <= 1) return "#e0d5c8";
+  if (_mode === 'stance') {
+    const stance = ancs[1].data.name;
+    if (d.depth === 1) return STANCE_COLOR[stance] || "#888";
+    if (d.depth === 2) return STANCE_LIGHT[stance] || "#bbb";
+    return d3.interpolate(STANCE_LIGHT[stance] || "#ccc", "#fdf7ef")(0.4);
+  } else {
+    const group = ancs[1].data.name;
+    if (d.depth === 1) return GROUP_COLOR[group] || "#888";
+    if (d.depth === 2) return GROUP_LIGHT[group] || "#bbb";
+    return STANCE_COLOR[d.data.name] || "#c8bdb0"; // outer ring = stance colour
+  }
+}
+
+function buildChart(data) {
+  d3.select("#chart svg").remove();
+
+  const root = d3.hierarchy(data)
+    .sum(d => d.value ?? 0)
+    .sort((a, b) => b.value - a.value);
+  d3.partition().size([2 * Math.PI, root.height + 1])(root);
+  root.each(d => d.current = d);
+  _root  = root;
+  _TOTAL = root.value;
+
+  const svg = d3.select("#chart").append("svg")
+    .attr("width", SIZE).attr("height", SIZE)
+    .attr("viewBox", `${-R} ${-R} ${SIZE} ${SIZE}`)
+    .style("font-family", "Georgia, serif");
+
+  _g = svg.append("g");
+
+  _path = _g.selectAll("path")
+    .data(root.descendants().slice(1))
+    .join("path")
+      .attr("fill", d => getColor(d))
+      .attr("fill-opacity", d => arcVisible(d.current) ? 1 : 0)
+      .attr("d", d => arc(d.current))
+      .attr("stroke", "#fffaf2")
+      .attr("stroke-width", 0.8);
+
+  _path.filter(d => d.children).style("cursor","pointer").on("click", clicked);
+  _path.on("mousemove", hovered).on("mouseleave", unhovered);
+
+  svg.append("circle")
+    .attr("r", INNER_R).attr("fill","transparent").style("cursor","pointer")
+    .on("click", () => clicked(null, root));
+
+  _label = _g.selectAll("text")
+    .data(root.descendants().slice(1))
+    .join("text")
+      .attr("dy","0.35em")
+      .attr("fill", d => {
+        if (_mode === 'group' && d.depth === 3) return "#fff";
+        return d.depth <= 2 ? "#fff" : "#3a2a22";
+      })
+      .style("font-size", d => d.depth === 1 ? "22px" : d.depth === 2 ? "16px" : "12px")
+      .style("font-weight", d => d.depth <= 2 ? "700" : "600")
+      .style("pointer-events","none")
+      .attr("text-anchor","middle")
+      .attr("fill-opacity", d => +labelVisible(d.current))
+      .attr("transform", d => labelTransform(d.current))
+      .each(function(d) {
+        const words = d.data.name.split(" ");
+        const el = d3.select(this);
+        if (words.length === 1 || d.depth < 3) {
+          el.text(d.data.name);
+        } else {
+          const mid = Math.ceil(words.length / 2);
+          el.append("tspan").attr("x",0).attr("dy","-0.5em").text(words.slice(0,mid).join(" "));
+          el.append("tspan").attr("x",0).attr("dy","1.1em").text(words.slice(mid).join(" "));
+        }
+      });
+
+  setCenter(root);
+  updateLegend();
+}
+
+// ── mode toggle ───────────────────────────────────────────────────────────────
+function switchMode() {
+  _mode = _mode === 'stance' ? 'group' : 'stance';
+  document.getElementById("mode-btn").textContent =
+    _mode === 'stance' ? 'View by category' : 'View by stance';
+
+  const svgEl = document.querySelector("#chart svg");
+  const rebuild = () => {
+    buildChart(_mode === 'stance' ? DATA_BY_STANCE : DATA_BY_GROUP);
+    const s = document.querySelector("#chart svg");
+    if (s) { s.style.opacity = "0"; s.style.transition = "opacity 0.25s"; requestAnimationFrame(() => s.style.opacity = "1"); }
+  };
+  if (svgEl) { svgEl.style.transition = "opacity 0.25s"; svgEl.style.opacity = "0"; setTimeout(rebuild, 250); }
+  else rebuild();
+
+  hidePanel();
+  document.getElementById("trail").innerHTML = "";
+}
+
+function updateLegend() {
+  const leg = document.querySelector(".legend");
+  if (_mode === 'stance') {
+    leg.innerHTML = `
+      <div class="leg-item"><div class="leg-dot" style="background:var(--anti)"></div> anti-wealth-tax</div>
+      <div class="leg-item"><div class="leg-dot" style="background:var(--pro)"></div> pro-wealth-tax</div>
+      <div class="leg-item"><div class="leg-dot" style="background:var(--mixed)"></div> mixed</div>
+      <div class="leg-item"><div class="leg-dot" style="background:var(--neutral)"></div> neutral</div>`;
+  } else {
+    leg.innerHTML = Object.entries(GROUP_COLOR).map(([k,v]) =>
+      `<div class="leg-item"><div class="leg-dot" style="background:${v}"></div> ${k}</div>`).join("") +
+      `<div class="leg-item" style="margin-left:12px;padding-left:12px;border-left:1px solid var(--line)">outer ring = stance</div>`;
+  }
+}
+
+// ── zoom ──────────────────────────────────────────────────────────────────────
+function clicked(event, p) {
+  if (p.depth === (_mode === 'stance' ? 3 : 3)) return;
+
+  _root.each(d => d.target = {
+    x0: Math.max(0, Math.min(1, (d.x0 - p.x0) / (p.x1 - p.x0))) * 2 * Math.PI,
+    x1: Math.max(0, Math.min(1, (d.x1 - p.x0) / (p.x1 - p.x0))) * 2 * Math.PI,
+    y0: Math.max(0, d.y0 - p.depth),
+    y1: Math.max(0, d.y1 - p.depth)
+  });
+
+  const t = _g.transition().duration(650).ease(d3.easeCubicInOut);
+
+  _path.transition(t)
+    .tween("data", d => { const i = d3.interpolate(d.current, d.target); return tt => d.current = i(tt); })
+    .attr("fill-opacity", d => arcVisible(d.target) ? 1 : 0)
+    .attrTween("d", d => () => arc(d.current));
+
+  _label.transition(t)
+    .attr("fill-opacity", d => +labelVisible(d.target))
+    .attrTween("transform", d => () => labelTransform(d.current));
+
+  setCenter(p);
+  setTrail(p);
+}
+
+// ── hover ─────────────────────────────────────────────────────────────────────
+function hovered(event, d) {
+  setTrail(d);
+  d3.select("#center-count").text(d.value);
+  showPanel(d);
+}
+function unhovered() { setTrail(null); hidePanel(); }
+
+// ── helpers ───────────────────────────────────────────────────────────────────
+function arcVisible(d) { return d.y1 <= 4 && d.y0 >= 1 && d.x1 > d.x0; }
+function labelVisible(d) { return d.y1 <= 4 && d.y0 >= 1 && (d.y1 - d.y0) * (d.x1 - d.x0) > 0.025; }
+function labelTransform(d) {
+  const x = (d.x0 + d.x1) / 2 * 180 / Math.PI;
+  const rI = Math.max(0, d.y0 * (R - INNER_R) / 3 + INNER_R);
+  const rO = Math.max(0, d.y1 * (R - INNER_R) / 3 + INNER_R - 2);
+  return `rotate(${x - 90}) translate(${(rI + rO) / 2},0) rotate(${x < 180 ? 0 : 180})`;
+}
+
+function setCenter(d) {
+  const nm = document.getElementById("center-name");
+  const ct = document.getElementById("center-count");
+  const sb = document.getElementById("center-sub");
+  if (!d || d.depth === 0) {
+    nm.textContent = "corpus"; ct.textContent = _TOTAL; sb.textContent = "detections";
+  } else {
+    nm.textContent = d.data.name;
+    ct.textContent = d.value;
+    sb.textContent = _mode === 'stance'
+      ? (d.depth === 1 ? "detections" : d.depth === 2 ? "in category" : "detections")
+      : (d.depth === 1 ? "detections" : d.depth === 2 ? "in technique" : "detections");
+  }
+}
+
+function setTrail(d) {
+  const trail = document.getElementById("trail");
+  if (!d || d.depth === 0) { trail.innerHTML = ""; setCenter(null); return; }
+  const ancs = d.ancestors().reverse().slice(1);
+  trail.innerHTML = ancs.map((a, i) => {
+    let col, ink = "#fff";
+    if (_mode === 'stance') {
+      const stance = ancs[0].data.name;
+      col = i === 0 ? (STANCE_COLOR[stance] || "#888") : i === 1 ? (STANCE_LIGHT[stance] || "#bbb") : "#d4c8b8";
+      if (i === 2) ink = "#3a2a22";
+    } else {
+      const group = ancs[0].data.name;
+      col = i === 0 ? (GROUP_COLOR[group] || "#888")
+          : i === 1 ? (GROUP_LIGHT[group] || "#bbb")
+          : (STANCE_COLOR[a.data.name] || "#c8bdb0");
+    }
+    const sep = i < ancs.length - 1 ? `<span class="crumb-sep">›</span>` : "";
+    return `<span class="crumb" style="background:${col};color:${ink}">${a.data.name}</span>${sep}`;
+  }).join("") + `<span id="count-label">n = ${d.value}</span>`;
+  setCenter(d);
+}
+
+// ── panel (mode-aware) ────────────────────────────────────────────────────────
+// showPanel/hidePanel defined in first <script> block - patch showPanel to be mode-aware
+const _showPanelOrig = showPanel;
+// override
+window.showPanel = function(d) {
+  const placeholder = document.getElementById("info-placeholder");
+  const content     = document.getElementById("info-content");
+  const badge       = document.getElementById("info-badge");
+  const nameEl      = document.getElementById("info-name");
+  const countEl     = document.getElementById("info-count");
+  const defEl       = document.getElementById("info-def");
+  const noteEl      = document.getElementById("info-note");
+  const quotesEl    = document.getElementById("info-quotes");
+
+  placeholder.style.display = "none";
+  content.style.display = "grid";
+
+  const ancs = d.ancestors().reverse();
+  const key  = d.data.name.replace(/ /g, "_");
+
+  // badge colour and label
+  let badgeCol, badgeLabel;
+  if (_mode === 'stance') {
+    const stance = ancs.length > 1 ? ancs[1].data.name : null;
+    badgeCol   = STANCE_COLOR[stance] || "#888";
+    badgeLabel = d.depth === 1 ? "stance" : d.depth === 2 ? "category" : "technique";
+  } else {
+    const group = ancs.length > 1 ? ancs[1].data.name : null;
+    badgeCol   = d.depth === 1 ? (GROUP_COLOR[d.data.name] || "#888")
+               : d.depth === 2 ? (GROUP_COLOR[group] || "#888")
+               : (STANCE_COLOR[d.data.name] || "#888");
+    badgeLabel = d.depth === 1 ? "category" : d.depth === 2 ? "technique" : "stance";
+  }
+  badge.textContent    = badgeLabel;
+  badge.style.background = badgeCol;
+  nameEl.textContent   = d.data.name;
+
+  // What depth maps to what concept in each mode
+  const isStance    = (_mode === 'stance' && d.depth === 1) || (_mode === 'group' && d.depth === 3);
+  const isGroup     = (_mode === 'stance' && d.depth === 2) || (_mode === 'group' && d.depth === 1);
+  const isTechnique = (_mode === 'stance' && d.depth === 3) || (_mode === 'group' && d.depth === 2);
+
+  const stanceCtx = _mode === 'stance'
+    ? (ancs.length > 1 ? ` · ${ancs[1].data.name}` : "")
+    : (d.depth === 3 ? "" : ancs.length > 1 ? ` · ${ancs[ancs.length-1].data.name}` : "");
+  countEl.textContent = `${d.value} detection${d.value !== 1 ? "s" : ""}${stanceCtx}`;
+
+  if (isStance) {
+    defEl.textContent = { anti:"Arguments or framings that oppose a wealth tax.", pro:"Arguments or framings that support a wealth tax.", mixed:"Content containing substantive arguments on both sides.", neutral:"Purely informational or procedural content with no evaluative stance." }[d.data.name] || "";
+    noteEl.style.display = "none";
+    quotesEl.innerHTML = "";
+  } else if (isGroup) {
+    defEl.textContent = INFO.group[key] || "";
+    noteEl.style.display = "none";
+    quotesEl.innerHTML = "";
+  } else if (isTechnique) {
+    const info = INFO.tech[key] || {};
+    defEl.textContent = info.def || "";
+    if (info.note) { noteEl.textContent = info.note; noteEl.style.display = "block"; }
+    else noteEl.style.display = "none";
+    const qs = INFO.quotes[key] || [];
+    quotesEl.innerHTML = qs.length
+      ? `<div class="q-label">From the corpus</div>` + qs.map(q =>
+          `<div class="q-item"><div class="q-text">"${q.q}"</div>
+           <div class="q-meta"><span class="stance-pip" style="background:${STANCE_COLOR[q.stance]||'#aaa'}"></span>${q.stance||""} · ${q.src}</div></div>`
+        ).join("")
+      : "";
+  }
+};
+
+// ── init ──────────────────────────────────────────────────────────────────────
+buildChart(DATA_BY_STANCE);
+</script>
+</body>
+</html>

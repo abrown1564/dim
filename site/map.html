@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wealth Tax Debate - Discourse Map</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0d0f14;
+    color: #e0e0e0;
+    font-family: 'Georgia', serif;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #canvas { width: 100vw; height: 100vh; }
+
+  /* ── Debate bubbles ── */
+  .debate-bubble circle.outer {
+    stroke-width: 1.5;
+    cursor: pointer;
+    transition: filter 0.2s;
+  }
+  .debate-bubble:hover circle.outer { filter: brightness(1.3); }
+  .debate-bubble circle.outer.monologic  { stroke-dasharray: none; }
+  .debate-bubble circle.outer.dialogic   { stroke-dasharray: 6 3; }
+  .debate-bubble circle.outer.multi_party{ stroke-dasharray: 2 2; }
+
+  .debate-label {
+    pointer-events: none;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font-size: 15px;
+    fill: #fff;
+    font-family: 'Georgia', serif;
+  }
+  .debate-label.title { font-size: 13px; opacity: 0.9; }
+  .debate-label.stat  { font-size: 12px; opacity: 0.55; fill: #aaa; }
+
+  /* ── Unit sub-circles ── */
+  .unit-bubble circle {
+    stroke: rgba(255,255,255,0.25);
+    stroke-width: 1;
+    cursor: pointer;
+  }
+  .unit-bubble:hover circle { filter: brightness(1.4); }
+  .unit-label {
+    pointer-events: none;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font-size: 12px;
+    fill: rgba(255,255,255,0.8);
+  }
+
+  /* ── Detection atoms ── */
+  .detection-atom circle {
+    stroke: rgba(255,255,255,0.15);
+    stroke-width: 0.5;
+    cursor: pointer;
+  }
+  .detection-atom:hover circle { filter: brightness(1.6); }
+
+  /* ── Breadcrumb / nav ── */
+  #nav {
+    position: fixed;
+    top: 18px;
+    left: 24px;
+    font-size: 15px;
+    color: #888;
+    letter-spacing: 0.05em;
+    pointer-events: none;
+    z-index: 10;
+  }
+  #nav span { color: #ccc; }
+  #back {
+    position: fixed;
+    top: 14px;
+    right: 24px;
+    font-size: 14px;
+    color: #888;
+    cursor: pointer;
+    padding: 6px 16px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    z-index: 10;
+    display: none;
+    background: #0d0f14;
+  }
+  #back:hover { color: #fff; border-color: #666; }
+
+  /* ── Tooltip ── */
+  #tooltip {
+    position: fixed;
+    background: rgba(10,12,18,0.97);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 14px;
+    max-width: 420px;
+    pointer-events: none;
+    display: none;
+    z-index: 100;
+    line-height: 1.7;
+  }
+  #tooltip strong { color: #fff; display: block; margin-bottom: 6px; font-size: 15px; }
+  #tooltip .tag {
+    display: inline-block;
+    background: #1e2230;
+    border-radius: 3px;
+    padding: 2px 8px;
+    margin: 2px 2px 0 0;
+    font-size: 12px;
+    color: #aaa;
+  }
+  #tooltip .evidence {
+    margin-top: 8px;
+    font-style: italic;
+    color: #aaa;
+    font-size: 13px;
+    border-left: 2px solid #333;
+    padding-left: 10px;
+  }
+
+  /* ── Legend ── */
+  #legend {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    font-size: 13px;
+    color: #666;
+    z-index: 10;
+    line-height: 2.2;
+  }
+  .legend-dot {
+    display: inline-block;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  #legend .section { margin-top: 10px; color: #444; font-size: 11px; letter-spacing: 0.08em; }
+</style>
+</head>
+<body>
+
+<div id="nav">DISCOURSE MAP &nbsp;/&nbsp; <span id="nav-label">The Wealth Tax Debate</span></div>
+<div id="site-nav" style="position:fixed;top:16px;right:100px;z-index:10;font-size:0.72rem;font-family:ui-monospace,monospace;display:flex;gap:14px">
+  
+  <a href="heatmap.html" style="color:#888;text-decoration:none" onmouseover="this.style.color='#ccc'" onmouseout="this.style.color='#888'">Heatmap</a>
+  <a href="corpus.html" style="color:#888;text-decoration:none" onmouseover="this.style.color='#ccc'" onmouseout="this.style.color='#888'">Corpus</a>
+  <a href="taxonomy.html" style="color:#888;text-decoration:none" onmouseover="this.style.color='#ccc'" onmouseout="this.style.color='#888'">Taxonomy</a>
+  <a href="positions.html" style="color:#888;text-decoration:none" onmouseover="this.style.color='#ccc'" onmouseout="this.style.color='#888'">Agora</a>
+  <a href="debate.html" style="color:#888;text-decoration:none" onmouseover="this.style.color='#ccc'" onmouseout="this.style.color='#888'">Debate</a>
+  <a href="traditions.html" style="color:#888;text-decoration:none" onmouseover="this.style.color='#ccc'" onmouseout="this.style.color='#888'">Traditions</a>
+  <a href="report.html" style="color:#888;text-decoration:none" onmouseover="this.style.color='#ccc'" onmouseout="this.style.color='#888'">Report</a>
+  <a href="dissertation.html" style="color:#888;text-decoration:none" onmouseover="this.style.color='#ccc'" onmouseout="this.style.color='#888'">Dissertation</a>
+</div>
+<div id="back" onclick="goBack()">← back</div>
+<svg id="canvas"></svg>
+<div id="tooltip"></div>
+
+<div id="legend">
+  <div class="section">STANCE</div>
+  <div><span class="legend-dot" style="background:#e07b54"></span>anti wealth tax</div>
+  <div><span class="legend-dot" style="background:#5b8dd9"></span>pro wealth tax</div>
+  <div><span class="legend-dot" style="background:#9b7ec8"></span>mixed</div>
+  <div><span class="legend-dot" style="background:#888"></span>neutral</div>
+  <div class="section" style="margin-top:12px">TECHNIQUE GROUP</div>
+  <div><span class="legend-dot" style="background:#e07b54"></span>psychological</div>
+  <div><span class="legend-dot" style="background:#e8b84b"></span>semantic</div>
+  <div><span class="legend-dot" style="background:#5b8dd9"></span>formal / logical</div>
+  <div><span class="legend-dot" style="background:#6dbfa0"></span>evidence quality</div>
+  <div><span class="legend-dot" style="background:#c97bb2"></span>source attacks</div>
+  <div><span class="legend-dot" style="background:#7ec8c8"></span>counter-technique</div>
+</div>
+
+<script>
+const W = window.innerWidth, H = window.innerHeight;
+const svg = d3.select('#canvas').attr('width', W).attr('height', H);
+const g = svg.append('g');
+
+// ── Zoom / pan ─────────────────────────────────────────────────────────────
+const zoom = d3.zoom()
+  .scaleExtent([0.3, 4])
+  .on('zoom', (event) => g.attr('transform', event.transform));
+svg.call(zoom);
+
+// Scroll-wheel hint (fades after first zoom)
+const zoomHint = document.createElement('div');
+zoomHint.textContent = 'Scroll to zoom · drag to pan';
+Object.assign(zoomHint.style, {
+  position: 'fixed', bottom: '20px', left: '50%', transform: 'translateX(-50%)',
+  fontSize: '0.72rem', color: '#555', fontFamily: 'ui-monospace,monospace',
+  pointerEvents: 'none', transition: 'opacity 1s', zIndex: 10,
+});
+document.body.appendChild(zoomHint);
+svg.call(zoom).on('zoom.hint', () => {
+  zoomHint.style.opacity = '0';
+  svg.on('zoom.hint', null);
+});
+
+// Reset zoom button
+const resetBtn = document.createElement('div');
+resetBtn.textContent = '⊙ reset view';
+Object.assign(resetBtn.style, {
+  position: 'fixed', bottom: '20px', right: '24px', fontSize: '0.72rem',
+  color: '#555', fontFamily: 'ui-monospace,monospace', cursor: 'pointer',
+  zIndex: 10, padding: '4px 10px', border: '1px solid #333', borderRadius: '6px',
+  background: '#0d0f14',
+});
+resetBtn.onmouseover = () => { resetBtn.style.color = '#ccc'; resetBtn.style.borderColor = '#666'; };
+resetBtn.onmouseout  = () => { resetBtn.style.color = '#555'; resetBtn.style.borderColor = '#333'; };
+resetBtn.onclick = () => svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity);
+document.body.appendChild(resetBtn);
+
+// ── Colour scales ──────────────────────────────────────────────────────────
+const stanceColor = {
+  anti:    '#e07b54',
+  pro:     '#5b8dd9',
+  mixed:   '#9b7ec8',
+  neutral: '#888888',
+  unknown: '#555555',
+};
+
+const groupColor = {
+  psychological_rhetoric: '#e07b54',
+  semantic_manipulation:  '#e8b84b',
+  formal_structure:       '#5b8dd9',
+  evidence_quality:       '#6dbfa0',
+  source_attacks:         '#c97bb2',
+  counter_techniques:     '#7ec8c8',
+  networked_platform:     '#a0c4ff',
+};
+
+const unitTypeColor = {
+  opening_position: '#8ab4f8',
+  counterargument:  '#f08080',
+  rebuttal:         '#f4a460',
+  clarification:    '#90ee90',
+  moderator_frame:  '#d3d3d3',
+};
+
+// ── State ──────────────────────────────────────────────────────────────────
+let state = { level: 'overview', debateId: null, unitId: null };
+let corpus = null;
+
+// ── Tooltip ────────────────────────────────────────────────────────────────
+const tip = document.getElementById('tooltip');
+function showTip(html, event) {
+  tip.innerHTML = html;
+  tip.style.display = 'block';
+  moveTip(event);
+}
+function moveTip(event) {
+  const x = event.clientX + 14, y = event.clientY - 10;
+  tip.style.left = Math.min(x, W - 340) + 'px';
+  tip.style.top  = Math.max(y, 10) + 'px';
+}
+function hideTip() { tip.style.display = 'none'; }
+svg.on('mousemove', moveTip).on('mouseleave', hideTip);
+
+// ── Main render ────────────────────────────────────────────────────────────
+fetch('data/corpus.json').then(r => r.json()).then(data => {
+  corpus = data;
+  renderOverview();
+});
+
+function renderOverview() {
+  state = { level: 'overview', debateId: null, unitId: null };
+  document.getElementById('nav-label').textContent = 'The Wealth Tax Debate';
+  document.getElementById('back').style.display = 'none';
+  g.selectAll('*').remove();
+
+  const debates = corpus.debates;
+
+  // Radius proportional to sqrt(detection_count), min size enforced
+  const rScale = d3.scaleSqrt()
+    .domain([0, d3.max(debates, d => d.detection_count)])
+    .range([65, 155]);
+
+  const nodes = debates.map(d => ({
+    ...d,
+    r: Math.max(rScale(d.detection_count), 65),
+    x: W / 2 + (Math.random() - 0.5) * 300,
+    y: H / 2 + (Math.random() - 0.5) * 200,
+  }));
+
+  // Force layout: similar stance → attracted together
+  const sim = d3.forceSimulation(nodes)
+    .force('center', d3.forceCenter(W / 2, H / 2).strength(0.04))
+    .force('charge', d3.forceManyBody().strength(-80))
+    .force('collide', d3.forceCollide(d => d.r + 18).strength(0.85))
+    .force('x', d3.forceX(d => {
+      // x-axis: anti ← → pro
+      if (d.stance === 'anti')    return W * 0.30;
+      if (d.stance === 'pro')     return W * 0.70;
+      return W * 0.50;
+    }).strength(0.12))
+    .force('y', d3.forceY(H / 2).strength(0.04))
+    .stop();
+
+  for (let i = 0; i < 300; i++) sim.tick();
+
+  // Common-ground bridges from LLM-identified common ground
+  const nodeById = Object.fromEntries(nodes.map(n => [n.id, n]));
+  const links = (corpus.cg_links || [])
+    .map(lnk => ({
+      ...lnk,
+      source: nodeById[lnk.source],
+      target: nodeById[lnk.target],
+    }))
+    .filter(lnk => lnk.source && lnk.target);
+
+  // Draw connection bridges
+  const linkG = g.append('g').attr('class', 'links');
+  linkG.selectAll('line')
+    .data(links)
+    .join('line')
+    .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+    .attr('x2', d => d.target.x).attr('y2', d => d.target.y)
+    .attr('stroke', '#c8d8ff')
+    .attr('stroke-opacity', d => 0.12 + d.strength * 0.3)
+    .attr('stroke-width', d => 1.5 + d.strength * 5)
+    .style('cursor', 'pointer')
+    .on('mouseover', (event, d) => {
+      const items = d.shared_items || [];
+      showTip(
+        `<strong>Common ground</strong>` +
+        `<div style="color:#666;font-size:10px;margin-bottom:6px">${d.source.title.slice(0,30)}… ↔ ${d.target.title.slice(0,30)}…</div>` +
+        items.map(it =>
+          `<div style="margin:4px 0;color:#aaa;font-size:11px;border-left:2px solid #3a4060;padding-left:8px">` +
+          `<span style="color:#ccc">${it.a}</span><br>` +
+          `<span style="color:#888">↔ ${it.b}</span></div>`
+        ).join(''),
+        event
+      );
+    })
+    .on('mouseleave', hideTip);
+
+  // Draw debate bubbles
+  const bubbleG = g.append('g').attr('class', 'bubbles');
+  const bubble = bubbleG.selectAll('.debate-bubble')
+    .data(nodes)
+    .join('g')
+    .attr('class', 'debate-bubble')
+    .attr('transform', d => `translate(${d.x},${d.y})`)
+    .style('cursor', 'pointer')
+    .on('click', (event, d) => { if (event.defaultPrevented) return; renderDebate(d.id); })
+    .on('mouseover', (event, d) => {
+      const cg = (d.common_ground || []);
+      const cgHtml = cg.length
+        ? `<div style="margin-top:10px;color:#888;font-size:11px;letter-spacing:0.05em">COMMON GROUND</div>` +
+          cg.map(item =>
+            `<div style="margin:4px 0;color:#aaa;font-size:13px;border-left:2px solid #3a4060;padding-left:9px">${item}</div>`
+          ).join('')
+        : '';
+      showTip(
+        `<strong>${d.title}</strong>` +
+        `<span class="tag">${d.discourse_mode}</span>` +
+        `<span class="tag">${d.stance}</span>` +
+        `<div style="margin-top:6px;color:#aaa;font-size:10px">` +
+        `${d.unit_count} units &nbsp;·&nbsp; ` +
+        `${d.neg_count} negative &nbsp;·&nbsp; ${d.pos_count} positive` +
+        `</div>` + cgHtml,
+        event
+      );
+    })
+    .on('mouseleave', hideTip);
+
+  // Glow / halo
+  bubble.append('circle')
+    .attr('r', d => d.r + 8)
+    .attr('fill', d => stanceColor[d.stance] || '#555')
+    .attr('opacity', 0.07);
+
+  bubble.append('circle')
+    .attr('class', d => `outer ${d.discourse_mode}`)
+    .attr('r', d => d.r)
+    .attr('fill', d => stanceColor[d.stance] || '#555')
+    .attr('fill-opacity', 0.18)
+    .attr('stroke', d => stanceColor[d.stance] || '#555');
+
+  // Mini technique bar inside bubble
+  bubble.each(function(d) {
+    const debateDetections = corpus.detections.filter(det => det.debate_id === d.id && det.polarity === 'negative');
+    const groupCounts = d3.rollup(debateDetections, v => v.length, det => det.group);
+    const total = debateDetections.length || 1;
+    const groups = [...groupCounts.entries()].sort((a,b) => b[1]-a[1]);
+    const barW = d.r * 1.1, barH = 7, x0 = -barW/2, y0 = d.r * 0.6;
+    let cx = x0;
+    groups.forEach(([grp, cnt]) => {
+      const w = (cnt / total) * barW;
+      d3.select(this).append('rect')
+        .attr('x', cx).attr('y', y0)
+        .attr('width', w).attr('height', barH)
+        .attr('fill', groupColor[grp] || '#666')
+        .attr('opacity', 0.7)
+        .attr('rx', 1);
+      cx += w;
+    });
+  });
+
+  bubble.append('text')
+    .attr('class', 'debate-label title')
+    .attr('y', -12)
+    .text(d => d.title.length > 34 ? d.title.slice(0, 32) + '…' : d.title);
+
+  bubble.append('text')
+    .attr('class', 'debate-label stat')
+    .attr('y', 10)
+    .text(d => `${d.detection_count} detections`);
+
+  // Animate in
+  bubble.attr('opacity', 0)
+    .transition().duration(600).delay((d,i) => i * 80)
+    .attr('opacity', 1);
+
+  linkG.attr('opacity', 0)
+    .transition().duration(800).delay(400)
+    .attr('opacity', 1);
+}
+
+function renderDebate(debateId) {
+  state = { level: 'debate', debateId, unitId: null };
+  const debate = corpus.debates.find(d => d.id === debateId);
+  document.getElementById('nav-label').textContent = debate.title;
+  document.getElementById('back').style.display = 'block';
+  g.selectAll('*').remove();
+
+  const units = corpus.units.filter(u => u.debate_id === debateId);
+
+  const rScale = d3.scaleSqrt()
+    .domain([0, d3.max(units, u => u.detection_count) || 1])
+    .range([36, 100]);
+
+  const nodes = units.map(u => ({
+    ...u,
+    r: Math.max(rScale(u.detection_count || 0), 36),
+    x: W/2 + (Math.random()-0.5)*200,
+    y: H/2 + (Math.random()-0.5)*150,
+  }));
+
+  const sim = d3.forceSimulation(nodes)
+    .force('center', d3.forceCenter(W/2, H/2).strength(0.05))
+    .force('charge', d3.forceManyBody().strength(-40))
+    .force('collide', d3.forceCollide(d => d.r + 12).strength(0.9))
+    .force('x', d3.forceX(d => {
+      if (d.policy_stance === 'anti')    return W * 0.28;
+      if (d.policy_stance === 'pro')     return W * 0.72;
+      return W * 0.50;
+    }).strength(0.1))
+    .force('y', d3.forceY(H/2).strength(0.04))
+    .stop();
+
+  for (let i = 0; i < 250; i++) sim.tick();
+
+  // Debate title header
+  g.append('text')
+    .attr('x', W/2).attr('y', 36)
+    .attr('text-anchor', 'middle')
+    .attr('fill', '#fff').attr('opacity', 0.4)
+    .attr('font-size', 13)
+    .attr('font-family', 'Georgia, serif')
+    .text(debate.title);
+
+  const unitG = g.append('g');
+  const unit = unitG.selectAll('.unit-bubble')
+    .data(nodes)
+    .join('g')
+    .attr('class', 'unit-bubble')
+    .attr('transform', d => `translate(${d.x},${d.y})`)
+    .on('click', (event, d) => { if (event.defaultPrevented) return; event.stopPropagation(); renderUnit(debateId, d.id); })
+    .on('mouseover', (event, d) => {
+      showTip(
+        `<strong>${d.type}</strong>` +
+        `<span class="tag">${d.policy_stance || '?'}</span>` +
+        `<div style="margin-top:6px;color:#ccc;font-size:13px">${(d.summary||'').slice(0,160)}…</div>` +
+        `<div style="margin-top:4px;color:#666;font-size:12px">${d.detection_count} detections · click to explore</div>`,
+        event
+      );
+    })
+    .on('mouseleave', hideTip);
+
+  unit.append('circle')
+    .attr('r', d => d.r + 6)
+    .attr('fill', d => stanceColor[d.policy_stance] || '#555')
+    .attr('opacity', 0.06);
+
+  unit.append('circle')
+    .attr('r', d => d.r)
+    .attr('fill', d => stanceColor[d.policy_stance] || '#444')
+    .attr('fill-opacity', 0.22)
+    .attr('stroke', d => stanceColor[d.policy_stance] || '#666');
+
+  unit.append('text')
+    .attr('class', 'unit-label')
+    .attr('y', -6)
+    .text(d => d.type ? d.type.replace(/_/g, ' ') : '');
+
+  unit.append('text')
+    .attr('class', 'unit-label')
+    .attr('y', 12)
+    .attr('fill', 'rgba(255,255,255,0.45)')
+    .attr('font-size', 11)
+    .text(d => d.detection_count ? `${d.detection_count} det.` : '-');
+
+  unit.attr('opacity', 0)
+    .transition().duration(500).delay((d,i) => i*60)
+    .attr('opacity', 1);
+}
+
+function renderUnit(debateId, unitId) {
+  state = { level: 'unit', debateId, unitId };
+  const unit = corpus.units.find(u => u.id === unitId);
+  const debate = corpus.debates.find(d => d.id === debateId);
+  document.getElementById('nav-label').textContent = `${debate.title.slice(0,35)}… / ${unit.type}`;
+  document.getElementById('back').style.display = 'block';
+  g.selectAll('*').remove();
+
+  const detections = corpus.detections.filter(d => d.unit_id === unitId);
+
+  if (detections.length === 0) {
+    g.append('text')
+      .attr('x', W/2).attr('y', H/2)
+      .attr('text-anchor', 'middle').attr('fill', '#666')
+      .attr('font-size', 14).attr('font-family', 'Georgia, serif')
+      .text('No detections for this unit.');
+    return;
+  }
+
+  // Unit summary
+  g.append('text')
+    .attr('x', W/2).attr('y', 44)
+    .attr('text-anchor', 'middle').attr('fill', '#fff').attr('opacity', 0.35)
+    .attr('font-size', 12).attr('font-family', 'Georgia, serif')
+    .text((unit.summary || '').slice(0, 90) + '…');
+
+  const nodes = detections.map(d => ({
+    ...d,
+    r: 22 + d.confidence * 32,
+    x: W/2 + (Math.random()-0.5)*300,
+    y: H/2 + (Math.random()-0.5)*200,
+  }));
+
+  const sim = d3.forceSimulation(nodes)
+    .force('center', d3.forceCenter(W/2, H/2).strength(0.06))
+    .force('charge', d3.forceManyBody().strength(-30))
+    .force('collide', d3.forceCollide(d => d.r + 8).strength(0.9))
+    .force('x', d3.forceX(d => {
+      // group by classifier_group horizontally
+      const groups = ['formal_structure','evidence_quality','source_attacks','semantic_manipulation','psychological_rhetoric','counter_techniques'];
+      const idx = groups.indexOf(d.group);
+      return W * 0.15 + (idx < 0 ? 2 : idx) * (W * 0.70 / 5);
+    }).strength(0.15))
+    .force('y', d3.forceY(H/2).strength(0.05))
+    .stop();
+
+  for (let i = 0; i < 250; i++) sim.tick();
+
+  // Group labels along the top
+  const groups = ['formal_structure','evidence_quality','source_attacks','semantic_manipulation','psychological_rhetoric','counter_techniques'];
+  groups.forEach((grp, idx) => {
+    const x = W * 0.15 + idx * (W * 0.70 / 5);
+    g.append('text')
+      .attr('x', x).attr('y', 72)
+      .attr('text-anchor', 'middle')
+      .attr('fill', groupColor[grp] || '#666')
+      .attr('opacity', 0.5)
+      .attr('font-size', 13)
+      .attr('font-family', 'Georgia, serif')
+      .text(grp.replace(/_/g,' '));
+  });
+
+  const atomG = g.append('g');
+  const atom = atomG.selectAll('.detection-atom')
+    .data(nodes)
+    .join('g')
+    .attr('class', 'detection-atom')
+    .attr('transform', d => `translate(${d.x},${d.y})`)
+    .on('mouseover', (event, d) => {
+      showTip(
+        `<strong>${d.type}</strong>` +
+        `<span class="tag">${d.group}</span>` +
+        `<span class="tag">${d.era || '?'}</span>` +
+        `<span class="tag">conf ${d.confidence.toFixed(2)}</span>` +
+        `<div class="evidence">"${(d.evidence||'').slice(0,200)}"</div>`,
+        event
+      );
+    })
+    .on('mouseleave', hideTip);
+
+  atom.append('circle')
+    .attr('r', d => d.r + 5)
+    .attr('fill', d => groupColor[d.group] || '#666')
+    .attr('opacity', 0.08);
+
+  atom.append('circle')
+    .attr('r', d => d.r)
+    .attr('fill', d => d.polarity === 'positive' ? '#7ec8c8' : (groupColor[d.group] || '#666'))
+    .attr('fill-opacity', 0.28)
+    .attr('stroke', d => groupColor[d.group] || '#666');
+
+  atom.append('text')
+    .attr('text-anchor', 'middle')
+    .attr('dominant-baseline', 'middle')
+    .attr('fill', '#fff')
+    .attr('font-size', d => d.r > 30 ? 12 : 10)
+    .attr('font-family', 'Georgia, serif')
+    .attr('pointer-events', 'none')
+    .text(d => d.type.replace(/_/g,' ').slice(0,20));
+
+  atom.attr('opacity', 0)
+    .transition().duration(400).delay((d,i) => i*40)
+    .attr('opacity', 1);
+}
+
+function goBack() {
+  if (state.level === 'unit') {
+    renderDebate(state.debateId);
+  } else if (state.level === 'debate') {
+    renderOverview();
+  }
+}
+
+// Keyboard shortcut
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') goBack();
+});
+</script>
+</body>
+</html>

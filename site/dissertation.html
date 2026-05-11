@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSc Dissertation | Discourse Integrity Map</title>
+    <style>
+      :root {
+        --bg: #f4efe6;
+        --paper: #fffaf2;
+        --ink: #201a16;
+        --muted: #62574c;
+        --line: rgba(32, 26, 22, 0.14);
+        --accent: #8f3b2e;
+        --navy: #29445a;
+        --gold: #c49a57;
+        --olive: #667255;
+        --shadow: 0 22px 60px rgba(38, 27, 16, 0.1);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(196, 154, 87, 0.14), transparent 28%),
+          radial-gradient(circle at top right, rgba(143, 59, 46, 0.10), transparent 24%),
+          linear-gradient(180deg, #f7f1e8 0%, var(--bg) 100%);
+        font-family: "Avenir Next", "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+
+      a { color: var(--accent); }
+
+      .page {
+        width: min(840px, calc(100% - 2rem));
+        margin: 0 auto;
+        padding: 4.5rem 0 5rem;
+      }
+      .topnav {
+        position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+        display: flex; justify-content: flex-end; align-items: center;
+        padding: 0 32px; height: 48px;
+        background: rgba(255, 250, 242, 0.88);
+        backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line); font-size: 0.85rem; gap: 4px;
+      }
+      .topnav a { color: var(--accent); text-decoration: none; padding: 4px 10px; border-radius: 6px; transition: background 0.13s; }
+      .topnav a:hover { background: rgba(143, 59, 46, 0.08); }
+
+      /* ── hero ──────────────────────────────────────────────────── */
+      .hero {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: linear-gradient(180deg, rgba(255,250,242,0.98), rgba(251,243,230,0.96));
+        box-shadow: var(--shadow);
+        padding: 2.8rem 3rem;
+        margin-bottom: 2rem;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 0.9rem;
+        padding: 0.32rem 0.65rem;
+        border-radius: 999px;
+        background: rgba(143, 59, 46, 0.08);
+        color: var(--accent);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-family: "Iowan Old Style", "Palatino Linotype", serif;
+        font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        margin: 0 0 0.5rem;
+      }
+
+      .hero-meta {
+        font-size: 0.88rem;
+        color: var(--muted);
+        margin-bottom: 1rem;
+      }
+
+      nav {
+        font-size: 0.85rem;
+        margin: 0.8rem 0 1.2rem;
+      }
+      nav a { color: var(--accent); text-decoration: none; margin-right: 16px; }
+      nav a:hover { text-decoration: underline; }
+
+      .jump-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1.2rem;
+      }
+      .jump-links a {
+        text-decoration: none;
+        color: var(--ink);
+        padding: 0.4rem 0.85rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255,255,255,0.76);
+        font-size: 0.83rem;
+        transition: border-color 120ms, background 120ms;
+      }
+      .jump-links a:hover { border-color: rgba(32,26,22,0.3); background: #fff; }
+
+      /* ── abstract callout ──────────────────────────────────────── */
+      .abstract {
+        margin-top: 1.5rem;
+        padding: 1.2rem 1.4rem;
+        border-left: 4px solid var(--gold);
+        background: rgba(196, 154, 87, 0.08);
+        border-radius: 0 14px 14px 0;
+        font-size: 0.94rem;
+        color: #4a3e34;
+        line-height: 1.7;
+      }
+      .abstract strong { color: var(--ink); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.07em; display: block; margin-bottom: 0.4rem; }
+
+      /* ── sections ──────────────────────────────────────────────── */
+      .section {
+        margin-top: 1.6rem;
+        padding: 2.2rem 2.6rem;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: rgba(255, 250, 242, 0.92);
+        box-shadow: var(--shadow);
+      }
+
+      h2 {
+        font-family: "Iowan Old Style", "Palatino Linotype", serif;
+        font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+        font-weight: 700;
+        letter-spacing: -0.015em;
+        margin: 0 0 1.4rem;
+        padding-bottom: 0.6rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      h3 {
+        font-family: "Iowan Old Style", "Palatino Linotype", serif;
+        font-size: 1.08rem;
+        font-weight: 700;
+        margin: 1.8rem 0 0.5rem;
+        color: var(--navy);
+      }
+
+      h4 {
+        font-size: 0.94rem;
+        font-weight: 700;
+        margin: 1.4rem 0 0.4rem;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.78;
+        margin: 0 0 1em;
+        color: var(--ink);
+      }
+
+      p:last-child { margin-bottom: 0; }
+
+      strong { font-weight: 700; }
+      em { font-style: italic; }
+
+      /* ── research questions / objectives ───────────────────────── */
+      .rq-list {
+        list-style: none;
+        padding: 0;
+        margin: 0.8rem 0 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .rq-list li {
+        padding: 0.8rem 1rem;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: rgba(41, 68, 90, 0.04);
+        font-size: 0.93rem;
+        line-height: 1.55;
+      }
+      .rq-list li strong { color: var(--navy); }
+
+      /* ── objectives list ───────────────────────────────────────── */
+      ul.obj-list {
+        padding-left: 1.4rem;
+        margin: 0.6rem 0 1rem;
+      }
+      ul.obj-list li {
+        font-size: 0.97rem;
+        line-height: 1.65;
+        margin-bottom: 0.45rem;
+      }
+
+      /* ── figures ───────────────────────────────────────────────── */
+      figure {
+        margin: 1.8rem 0;
+        padding: 1rem;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(255,255,255,0.6);
+        text-align: center;
+      }
+      figure img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      figcaption {
+        margin-top: 0.65rem;
+        font-size: 0.83rem;
+        color: var(--muted);
+        font-style: italic;
+        line-height: 1.45;
+      }
+
+      /* ── tables ────────────────────────────────────────────────── */
+      .table-wrap { overflow-x: auto; margin: 1.2rem 0; }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.88rem;
+      }
+      th {
+        background: rgba(41, 68, 90, 0.08);
+        color: var(--navy);
+        font-weight: 700;
+        text-align: left;
+        padding: 0.55rem 0.8rem;
+        border-bottom: 2px solid var(--line);
+      }
+      td {
+        padding: 0.5rem 0.8rem;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+        line-height: 1.45;
+      }
+      tr:last-child td { border-bottom: none; }
+
+      /* ── ethics / design-principle blocks ─────────────────────── */
+      .principle {
+        margin: 0.8rem 0;
+        padding: 0.9rem 1.1rem;
+        border-left: 3px solid var(--gold);
+        background: rgba(196,154,87,0.06);
+        border-radius: 0 12px 12px 0;
+        font-size: 0.93rem;
+        line-height: 1.6;
+      }
+      .principle strong { color: var(--ink); }
+
+      /* ── RQ outcomes ───────────────────────────────────────────── */
+      .outcomes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+        margin: 1rem 0;
+      }
+      .outcome {
+        padding: 0.85rem 1rem;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        font-size: 0.88rem;
+        line-height: 1.5;
+      }
+      .outcome.met { border-left: 3px solid var(--olive); background: rgba(102,114,85,0.06); }
+      .outcome.partial { border-left: 3px solid var(--gold); background: rgba(196,154,87,0.07); }
+      .outcome.unmet { border-left: 3px solid var(--accent); background: rgba(143,59,46,0.06); }
+      .outcome strong { display: block; margin-bottom: 0.2rem; color: var(--navy); }
+
+      /* ── references ────────────────────────────────────────────── */
+      .references-toggle {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        cursor: pointer;
+        user-select: none;
+        margin-bottom: 1rem;
+      }
+      .references-toggle h2 { margin: 0; border: none; padding: 0; }
+      .toggle-btn {
+        font-size: 0.78rem;
+        font-family: ui-monospace, monospace;
+        color: var(--muted);
+        background: none;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 0.2rem 0.6rem;
+        cursor: pointer;
+      }
+      .ref-list {
+        font-size: 0.86rem;
+        line-height: 1.65;
+        color: var(--muted);
+        display: none;
+      }
+      .ref-list.open { display: block; }
+      .ref-list p { font-size: 0.86rem; color: var(--muted); margin-bottom: 0.55rem; }
+
+      /* ── appendix screenshots ──────────────────────────────────── */
+      .appendix-note {
+        padding: 0.9rem 1.1rem;
+        border: 1px dashed var(--line);
+        border-radius: 12px;
+        font-size: 0.88rem;
+        color: var(--muted);
+        font-style: italic;
+        margin: 0.8rem 0;
+      }
+
+      /* ── responsive ────────────────────────────────────────────── */
+      @media (max-width: 640px) {
+        .hero, .section { padding: 1.5rem; }
+        .outcomes { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="topnav">
+      <a href="report.html">Report</a>
+      <a href="positions.html">Agora</a>
+      <a href="corpus.html">Corpus</a>
+      <a href="heatmap.html">Heatmap</a>
+      <a href="debate.html">Debate</a>
+      <a href="taxonomy.html">Taxonomy</a>
+      <a href="traditions.html">Traditions</a>
+      <a href="map.html">Map</a>
+    </nav>
+    <main class="page">
+
+      <!-- ── HERO ────────────────────────────────────────────────── -->
+      <section class="hero">
+        <span class="eyebrow">MSc Dissertation · Data Science</span>
+        <h1>Scaffolding Possible Frameworks for Media Literacy: NLP, Sentiment Analysis and Propaganda Detection in Immigration Reporting</h1>
+        <p class="hero-meta">The dissertation that preceded and motivated the DIM project &nbsp;·&nbsp; 2025</p>
+
+
+        <div class="jump-links">
+          <a href="#abstract">Abstract</a>
+          <a href="#ch1">Ch 1 · Introduction</a>
+          <a href="#ch2">Ch 2 · Research</a>
+          <a href="#ch3">Ch 3 · Artefact</a>
+          <a href="#ch4">Ch 4 · Methodology</a>
+          <a href="#ch5">Ch 5 · Evaluation</a>
+          <a href="#ch6">Ch 6 · Conclusion</a>
+          <a href="#references">References</a>
+          <a href="#appendices">Appendices</a>
+        </div>
+      </section>
+
+      <!-- ── CONTEXT NOTE ───────────────────────────────────────────── -->
+      <section class="section">
+        <h2>Background</h2>
+        <div class="prose">
+          <p>This dissertation was submitted in partial fulfilment of an MSc in Data Science at the University of the West of England. It is included here as the direct intellectual precursor to the <a href="report.html">DIM project</a>.</p>
+          <p>The motivating question was one I had been turning over for some time. Rhetorical features of language - logical fallacies, argumentative moves, persuasive techniques - have established names, definitions, and identifiable patterns. Such taxonomies exist across disciplines: philosophy, rhetoric, linguistics, pragma-dialectics. LLMs are, among other things, engines for large-scale pattern recognition in text. The question, then, was whether that taxonomy could be operationalised as a detection task - whether an LLM could be prompted to apply it reliably, and whether the resulting detections could give us quantifiable insight into the argumentative structure and rhetorical character of political discourse at scale.</p>
+          <p>The follow-on question was the one that interested me more: if you could do that reliably, could it form the basis of a platform that surfaces those techniques, explains them, and makes them visible - not to adjudicate truth, but to support deliberation by bridging the gap between arguing and reasoning, and finding the common ground between positions?</p>
+        </div>
+      </section>
+
+      <!-- ── ABSTRACT ─────────────────────────────────────────────── -->
+      <section class="section" id="abstract">
+        <h2>Abstract</h2>
+        <div style="font-size:0.85rem;color:var(--muted);border:1px solid var(--line);border-radius:12px;padding:0.8rem 1.1rem;margin-bottom:1.2rem;background:rgba(255,255,255,0.5);line-height:1.55;">
+          <strong style="color:var(--ink);">Note:</strong> This dissertation is reproduced as submitted. Following submission, Technique Classification was completed on the full 70-article sample and integrated into the deployed prototype at <a href="https://abrown1564.github.io/truthspace/" target="_blank">abrown1564.github.io/truthspace</a>.
+        </div>
+        <div class="abstract">
+          <strong>Abstract</strong>
+          This project prototypes a workflow to surface propaganda techniques, sentiment, and source bias in UK/US immigration reporting. Using a reproducible corpus (853 articles) enriched with bias metadata (Ad Fontes, MBFC, AllSides, Ground News) and sentiment (VADER, TextBlob), it revives the SemEval-2020 span identification stack within a 2025 toolchain and exports SI outputs offline. A lightweight UI prototype displays sentiment and bias; propaganda spans/technique labels are not integrated live. A balanced 70-article sample was processed for SI. TC (Technique Classification) was replicated only on the original SemEval test set and a few test articles from the data, not yet integrated into the dataset or UI. Data and compute constraints are discussed, methods for exploratory technique distributions by bias bucket are outlined, and design heuristics for transparency and multi-perspectivity are proposed.
+        </div>
+      </section>
+
+      <!-- ── CHAPTER 1 ─────────────────────────────────────────────── -->
+      <section class="section" id="ch1">
+        <h2>Chapter 1 · Introduction</h2>
+
+        <h3>1.1 Background and Rationale</h3>
+        <p>Public debate on immigration in the UK and US has become more identity-laden, affective, and fragmented since the mid-2010s. In parallel media ecosystems, how arguments are framed often matters as much as what is claimed (Suro, 2009; Conzo et al., 2021). Techniques such as fear appeals, scapegoating and loaded language can shape attitudes and policy preferences, yet existing platforms typically flag factual accuracy rather than surfacing rhetorical construction. This dissertation explores whether computational signals from propaganda technique detection can be revived from a 2020 benchmark and combined with sentiment and media-bias context to scaffold critical reading - supporting media literacy without prescribing conclusions.</p>
+        <p>The project concentrates on UK and US immigration reporting. It assembles a domain-specific dataset and applies an NLP and political bias-labelling pipeline that integrates (i) propaganda technique detection (SemEval-2020 Task 11), (ii) sentiment analysis (VADER, TextBlob), and (iii) source-level bias metadata (Ad Fontes, MBFC, AllSides, Ground News). These signals are planned for a lightweight interface; in the current prototype only sentiment is displayed. Propaganda spans/technique labels are shown via offline screenshots, not yet live overlays.</p>
+
+        <h3>1.2 Problem Statement and Scope</h3>
+        <p>Readers lack tools that make rhetorical techniques visible at the point of consumption. Research tools exist, but they are rarely integrated with sentiment and bias context, or released to the public, and they are not typically oriented toward non-prescriptive media-literacy support.</p>
+        <p>This is a feasibility-focused prototype. The work:</p>
+        <ul class="obj-list">
+          <li>Builds a reproducible dataset of 853 UK/US immigration articles (via GNews, NewsAPI, and NewsData.io), and enriches it with bias ratings</li>
+          <li>Demonstrates inference-time revival of the SemEval-2020 span-detection approach in a 2025 environment</li>
+          <li>Designs a front-end concept and partial prototype (sentiment/bias only); propaganda spans/technique labels not yet integrated (illustrated via screenshots in appendices)</li>
+        </ul>
+        <p>It does not aim to re-train large models, run user studies, or claim causal impact on beliefs. Given compute constraints, propaganda span inference is run on a balanced sample of 70 articles to evidence technical viability and inform design and future work.</p>
+
+        <h3>1.3 Aims and Objectives</h3>
+        <p><strong>Aim:</strong> To prototype and evaluate a non-prescriptive media-analysis workflow that surfaces rhetorical techniques, sentiment, and source bias in UK/US immigration reporting to support critical media literacy.</p>
+        <ul class="rq-list">
+          <li><strong>O1.</strong> Assemble a legally compliant, reproducible immigration-news dataset with UK/US coverage and mapped source-bias metadata.</li>
+          <li><strong>O2.</strong> Operationalise the SemEval-2020 propaganda span-detection pipeline in a 2025 toolchain and run inference on a balanced sample.</li>
+          <li><strong>O3.</strong> Define a schema to combine propaganda spans with sentiment and bias for future user-facing display; in this submission, spans remain offline outputs and are not yet rendered in the UI.</li>
+          <li><strong>O4.</strong> Prototype a front-end that sketches toggles; implemented for sentiment/bias only. Spans/technique labels are planned for demonstration in the viva.</li>
+          <li><strong>O5.</strong> Evaluate feasibility: (a) data readiness, (b) technical execution of span detection, (c) interpretability of technique distributions by bias bucket, and (d) design heuristics for transparency and multi-perspectivity.</li>
+        </ul>
+
+        <h3>1.4 Research Questions</h3>
+        <ul class="rq-list">
+          <li><strong>RQ0 (data feasibility):</strong> Can a legally compliant, reproducible UK/US immigration dataset be assembled with adequate topical/ideological coverage and pre-processing quality?</li>
+          <li><strong>RQ1 (technical feasibility):</strong> Can the SemEval-2020 approach be executed in a 2025 environment to identify technique-level spans on contemporary articles?</li>
+          <li><strong>RQ2 (exploratory analysis; conditional on RQ1):</strong> Do relative frequencies of the 14 techniques differ across canonical bias buckets (Left/Lean Left/Center/Lean Right/Right)?</li>
+          <li><strong>RQ3 (design integration; conditional on RQ1–2):</strong> Can ML outputs be combined with sentiment and media-bias metadata in a UI that scaffolds critical thinking (transparency, multi-perspectivity, non-prescriptive cues)?</li>
+        </ul>
+
+        <h3>1.5 Contributions</h3>
+        <ul class="obj-list">
+          <li><strong>Data/engineering:</strong> A modular, containerised pipeline and dataset of 853 articles with linked bias metadata for 267 sources (91% coverage), plus sentiment enrichment.</li>
+          <li><strong>Method revival:</strong> A practical recipe for reviving a 2020 span-detection stack in 2025, documenting brittleness and pinning strategies; inference on a 70-article balanced sample.</li>
+          <li><strong>Design prototype:</strong> A UI concept with working sentiment/bias panels. Propaganda span/technique overlays are deferred (illustrated in appendices only).</li>
+          <li><strong>Release:</strong> A reusable media-bias mapping table and code to support replication and extension.</li>
+        </ul>
+      </section>
+
+      <!-- ── CHAPTER 2 ─────────────────────────────────────────────── -->
+      <section class="section" id="ch2">
+        <h2>Chapter 2 · Research</h2>
+
+        <h3>2.1 Polarisation in Debate and Culture</h3>
+        <p>Since the mid-2010s, UK/US polarisation has centred less on economics than on group-identity divides around immigration, nation, race and values, accelerated by Brexit and Trump (Kaufmann, 2018; Norris & Inglehart, 2019). Party sorting and new opinion identities (e.g., Leave/Remain) hardened negative sentiment; in the UK, Brexit identity rivals party ID (Hobolt et al., 2021; Duffy et al., 2019). Parallel media ecosystems and social platforms amplify echo chambers and misinformation, fostering "separate realities" and distrust (Kleinfeld, 2023; Pew Research Center, 2023). The US shows greater democratic stress (election denial; 6 January) as polarisation meets norm-breaking (Kleinfeld, 2023; Pengelly, 2024). The UK's divide, more Brexit-focused, cooled somewhat post-2019 but remains culturally salient (Duffy et al., 2019; More in Common, 2025). Overall, hardened sentiment, media fragmentation, and rhetoric entrench adversarial politics across both contexts.</p>
+
+        <h3>2.2 Language in Immigration Reporting</h3>
+        <p>Post-2015 work shows UK/US media frequently frame immigration with negative, polarising language: othering, stereotypes, and crisis metaphors dominate; immigrant voices are under-represented (Eberl et al., 2018; Fuller, 2024). UK coverage sustains "waves/floods" metaphors that dehumanise and legitimise exclusion (Gonçalves, 2023; Baker et al., 2008).</p>
+        <p>Loaded and dehumanising labels persist: e.g., a 2015 UK Sun column calling migrants "cockroaches" drew UN condemnation (Stop Funding Hate & Ethical Consumer, 2022). In the US, Trump-era terms like "infest/animals" were normalised and amplified (Vasquez, 2021). Such language correlates with hostility and moral panic (Conzo et al., 2021) and often rides on fallacies - scapegoating, slippery slope, and false cause (Stop Funding Hate & Ethical Consumer, 2022; Gonçalves & David, 2024).</p>
+        <p>Terminology is a central battleground: AP's 2013 shift away from "illegal immigrant" reduced support for restrictive policies, evidencing lexical effects on opinion; the partisan divide in word choice endures (Djourelova, 2023). UK tabloids continue subtle threat/crisis frames (Stop Funding Hate & Ethical Consumer, 2022); US right-leaning outlets emphasise "invasion," while left-leaning outlets counter with humanitarian frames (Gonçalves & David, 2024). Thus, crisis metaphors and othering persist, alongside heightened polarisation, mainstreamed fallacy-driven rhetoric, and clear links between vocabulary and attitudes (Suro, 2009; Conzo et al., 2021).</p>
+
+        <h3>2.3 Fallacy Detection in Political Media</h3>
+        <p>Automated fallacy/propaganda detection has gained traction as a way to surface persuasive but logically weak or manipulative strategies at scale, with the aim of supporting moderation, improving debate quality, and scaffolding critical thinking (Larumbe & Vendrell, 2025).</p>
+        <p>The most widely used benchmark for propaganda-style argumentation in news is SemEval-2020 Task 11 (Da San Martino et al., 2020), which contains 536 news articles, 8,981 annotated text spans, and 14 propaganda technique categories. The shared task showed that propaganda detection is best approached as a two-step process: first identifying where the potentially manipulative span is, and then classifying the rhetorical technique. The top-performing systems relied on Transformer-CRF models for span identification and Transformer-based classifiers for categorisation, with ensembles and "silver" automatically labelled data used to address class imbalance. This established a baseline for propaganda detection in mainstream news reporting, and forms the backbone of one layer of the artefact proposed here.</p>
+        <p><strong>Span Identification (SI) and Technique Classification (TC).</strong> In the SemEval-2020 Task 11 setup, propaganda detection is a two-step pipeline. Span Identification (SI) treats an article as a sequence and locates contiguous text spans likely to contain propaganda. Technique Classification (TC) then assigns a rhetorical technique label (from 14 categories such as Loaded Language, Name Calling/Labeling, Flag-Waving, Appeal to Authority, etc.) to each detected span. SI answers "where is the persuasive/propaganda material?"; TC answers "what kind is it?" This decomposition improves precision and interpretability relative to single-step sentence classifiers, and it aligns naturally with UI designs that can highlight spans and explain techniques.</p>
+        <p>Capturing everyday online discourse, the CoCoLoFa dataset contributes 7.7k annotated news comments labelled for eight common fallacy types. Yeh et al. (2024) found that while models trained on CoCoLoFa achieve strong results within the dataset, performance drops significantly when applied cross-domain. This suggests that fallacy detection benefits from adaptive pretraining and careful label alignment when moving between domains.</p>
+        <p>US presidential debates provide multimodal tests: late-fusion text+audio improves up to +8 F1, especially for affective categories (Mancini et al., 2024), but text-only RoBERTa can beat multimodal under resource limits (Larumbe & Vendrell, 2025). Some systems boost performance via synthetic data (e.g., F-Detector), though altered label sets hinder comparability (Atarama, Pereira & Salas, 2024).</p>
+
+        <h4>2.3.1 Methods: From Rules to Transformers (and LLMs)</h4>
+        <p>Approaches span rule-based to deep learning. Rule-based methods are transparent and portable for targeted rhetoric with low data needs (Tao et al., 2024). Transformer fine-tuning dominates span/sentence detection across news, comments, and debates (Da San Martino et al., 2020; Mancini et al., 2024; Larumbe & Vendrell, 2025). LLMs are emerging few/zero-shot fallacy detectors and can outperform fine-tuned models out-of-domain (Pan et al., 2024). Framing/bias analysis via lexicons, embedding clustering, and topic models complements fallacy detection by quantifying how issues are framed alongside reasoning failures.</p>
+
+        <h4>2.3.2 Tools and Exemplars</h4>
+        <p>Prototype tools highlight practical possibilities. The Propaganda Research/Analysis line (e.g., PRTA, 2022) demonstrates span-level detection and article summaries. Browser-based overlays highlight loaded language or partisan cues in situ. These suggest a UX pattern for future platforms: lightweight, on-demand annotations that support rather than overwhelm.</p>
+
+        <h3>2.4 Designing for Deliberation and User Needs</h3>
+        <p>Design choices in online platforms shape how people encounter and interpret political information. Engagement-optimised feeds systematically privilege emotionally charged, out-group-hostile content (Milli et al., 2023; Rose-Stockwell, 2018), while recommender systems risk narrowing exposure (Pariser, 2011). Although some studies dispute the scale of filter bubbles (Flaxman, Goel and Rao, 2016), a lack of transparency around ranking can undermine deliberation. Experiments during the 2020 U.S. election show that interventions such as chronological feeds or exposure diversification can significantly shift what people see, even if attitudes change more slowly (Nyhan et al., 2023).</p>
+        <p>Research highlights several levers for embedding multi-perspectivity in design. Deliberative interfaces such as Pol.is cluster participants by viewpoint and surface consensus statements across divides (Horton, 2018). Argument-mapping tools like Kialo (2025) and Deliberatorium (Klein, 2011) reduce redundancy and separate claims from identities, supporting clarity and critical reasoning (Gürkan et al., 2010). Behavioural nudges such as accuracy prompts improve truth discernment (Pennycook and Rand, 2022), while prebunking videos can inoculate users against misinformation (Roozenbeek, van der Linden and Nygren, 2022).</p>
+        <p>At the same time, poorly framed interventions risk backfiring. Bail et al. (2018) found that exposing Republicans to liberal tweets increased partisan entrenchment. Such findings underline the importance of contextual framing, layered explanations, and psychologically safe prompts. Overall, the literature suggests an ensemble approach - combining propaganda detection, sentiment and bias overlays, and deliberative, interactive features - offers the most promise for scaffolding critical thinking without prescribing conclusions.</p>
+
+        <h3>2.5 Emerging Platforms Supporting Media Literacy</h3>
+        <p>Recent platforms operationalise these ideas. GovBrief offers structured daily political digests with indicators to reduce overload without partisan feeds (GovBrief, 2025). Tanbih analyses ~million-scale articles to visualise stance, bias, and propaganda via interactive dashboards. Pol.is, used in Taiwan's vTaiwan, clusters viewpoints and surfaces cross-group consensus while preserving diversity (Horton, 2018).</p>
+        <p>These embody complementary logics: GovBrief = curatorial simplification; Tanbih = algorithmic pluralisation; Pol.is = deliberative consensus-building. Together, they broaden epistemic horizons and support reflective engagement. The present artefact adopts these principles by combining automated propaganda detection with sentiment/bias overlays in a transparent, non-prescriptive interface designed to scaffold - rather than dictate - critical reading.</p>
+
+        <figure>
+          <img src="img/dissertation/appendix_d_1.png" alt="GovBrief Today showing intensity score, trending topics, and political news digest" style="max-width:580px" />
+          <img src="img/dissertation/appendix_d_2.png" alt="Tanbih media analysis platform showing framing distribution and bias/factuality scatter" style="max-width:580px;margin-top:0.8rem" />
+          <figcaption>Screenshots of GovBrief (left) and Tanbih (right) - two exemplary platforms demonstrating curatorial simplification and algorithmic pluralisation respectively (see Appendix D).</figcaption>
+        </figure>
+
+        <figure>
+          <img src="img/dissertation/fig1_polis.jpg" alt="Screenshot of the pol.is platform showing opinion groups and consensus statements" />
+          <figcaption>Figure 1: Screenshot of the pol.is platform in action, demonstrating visualisation of similar viewpoints to the user and interactive elements (Smith, 2017).</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── CHAPTER 3 ─────────────────────────────────────────────── -->
+      <section class="section" id="ch3">
+        <h2>Chapter 3 · Proposed Artefact</h2>
+
+        <p>This project proposes the development of a prototype artefact - a media analysis interface designed to represent how a platform could be designed to support critical engagement with political news by combining automated NLP pipelines with interactive visualisations. The artefact is not conceived as a finished product but as a research-driven proof-of-concept, demonstrating how recent advances in computational propaganda detection, media bias attribution, and UX design might be integrated into a single system. In the current build, only sentiment and bias are surfaced in the UI; propaganda spans and technique labels were proven but not integrated.</p>
+        <p>The purpose of the artefact is twofold. First, it seeks to explore the technical feasibility of applying fallacy and propaganda detection models, trained on benchmark corpora such as SemEval-2020 Task 11, to a novel dataset of 853 immigration-related news articles. Second, it aims to experiment with user-facing representations of sentiment, rhetorical and bias analysis to test the technical feasibility and potential design of a platform capable of fostering critical thinking in media consumption, helping users recognise not only what is being argued, but how arguments are constructed and framed.</p>
+
+        <h3>3.1 System Architecture</h3>
+        <p>The artefact consists of a data ingestion pipeline, an NLP enrichment layer (sentiment) and an offline SI layer (applied to a 70-article sample). The ingestion pipeline collects news articles from multiple APIs and the dataset is then enriched with bias metadata from external datasets that uses a separate media bias dataset covering each of the unique sources found within the article dataset. The NLP enrichment layer applies sentiment analysis (VADER, TextBlob), and the ML layer produces SI outputs offline (via a pretrained propaganda/fallacy detection model designed by Da San Martino et al).</p>
+
+        <figure>
+          <img src="img/dissertation/fig4_pipeline_diagram.png" alt="Data pipeline diagram showing flow from ingestion through ML to front-end" />
+          <figcaption>Figure 4: Data pipeline diagram.</figcaption>
+        </figure>
+
+        <h3>3.2 Design Principles</h3>
+
+        <div class="principle">
+          <strong>Transparency of analysis.</strong> Each automated label (e.g., "Appeal to Authority") is accompanied by a clear explanation and provenance, reducing the risk of "black-box" opacity (Diakopoulos, 2019). In the current prototype, technique labels are not yet integrated; only sentiment/bias are shown.
+        </div>
+        <div class="principle">
+          <strong>Multi-perspectivity.</strong> Rather than flagging content as "true/false," the system aims to surface contrasting framings, encouraging users to reflect on how issues are constructed across outlets (Helberger, Karppinen and D'Acunto, 2018).
+        </div>
+        <div class="principle">
+          <strong>Support, not prescription.</strong> The platform avoids prescriptive judgments (e.g., "this article is misleading") and instead provides analytical cues - fallacy spans, bias indicators, sentiment overlays - that scaffold critical thinking without dictating conclusions.
+        </div>
+      </section>
+
+      <!-- ── CHAPTER 4 ─────────────────────────────────────────────── -->
+      <section class="section" id="ch4">
+        <h2>Chapter 4 · Technical and Design Methodology</h2>
+
+        <h3>4.1 Dataset Creation</h3>
+        <p>To examine how immigration discourse varies across media ecosystems, a scalable pipeline was developed using three APIs: GNews, NewsAPI, and NewsData.io. Relying on a single provider risked skew - early tests with GNews, for instance, returned a disproportionate number of Guardian articles. Combining APIs with different strengths captured both mainstream and regional outlets across the UK and US.</p>
+        <p>Queries centred on nine terms reflecting political framings around immigration: immigration, migrant, refugee, asylum, deportation, border crisis, channel crossings, mass migration, and illegal alien. Where possible, country filters restricted results to UK/US sources. GNews offered rapid responses but strict rate limits; NewsAPI provided broad mainstream coverage but limited country filtering on its free endpoint; and NewsData.io delivered greater recall, including regional outlets, with pagination into deeper result pages.</p>
+        <p>Bias metadata was mapped for each outlet using Ad Fontes, Media Bias/Fact Check (MBFC), AllSides, and Ground News. Using multiple providers allowed inconsistencies to be compared and supported more nuanced analysis. In total, the bias dataset covers 267 unique sources, with bias information retrieved for 243 (91%). The dataset is skewed toward centre- and left-leaning outlets, reflecting the greater availability of open-access content in these categories and right-leaning paywalls - documented transparently as a limitation.</p>
+
+        <figure>
+          <img src="img/dissertation/fig2_dataset_distribution.png" alt="Stacked bar chart showing number of articles by news source, coloured by API" />
+          <figcaption>Figure 2: Distribution of final dataset counts, by API and source.</figcaption>
+        </figure>
+
+        <p>The final dataset bias distribution:</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Bias Bucket</th><th>Count</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Extreme Left</td><td>0</td></tr>
+              <tr><td>Left</td><td>30</td></tr>
+              <tr><td>Lean Left</td><td>338</td></tr>
+              <tr><td>Center</td><td>247</td></tr>
+              <tr><td>Lean Right</td><td>36</td></tr>
+              <tr><td>Right</td><td>120</td></tr>
+              <tr><td>Extreme Right</td><td>3</td></tr>
+              <tr><td>Unknown</td><td>80</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure>
+          <img src="img/dissertation/fig3_bias_distribution.png" alt="Bar chart showing articles per canonical bias bucket" />
+          <figcaption>Figure 3: Distribution of articles per canonical bias bucket, including unknowns.</figcaption>
+        </figure>
+
+        <h3>4.2 Data Cleaning</h3>
+        <p>Deduplication was performed using URL matching and near-duplicate title checks. Query drift was mitigated by excluding off-topic hits via spot checks. A sentiment sanity check was applied: if both TextBlob and VADER returned neutral on non-empty text, the article was flagged as a potential lexicon blind spot for manual inspection.</p>
+
+        <h3>4.3 Methods Applied</h3>
+
+        <h4>4.3.1 Data Ingestion and Enrichment</h4>
+        <p>The pipeline collected, parsed, and enriched articles via the three APIs; applied sentiment (VADER, TextBlob) and NER/SVO (spaCy); and matched outlets to bias ratings from Ad Fontes, MBFC, AllSides, and Ground News, producing 853 enriched articles with canonical bias mapping across 267 sources.</p>
+
+        <h4>4.3.2 Machine Learning Application</h4>
+        <p>Propaganda detection was applied to a balanced sample of 70 articles using Da San Martino et al.'s (2020) SemEval Task 11 span-identification model. The architecture used RoBERTa-large with a BiLSTM+CRF tagging head, decoded with Viterbi.</p>
+        <p>For reproducibility, the environment was containerised (Python 3.7) with pinned 2020-era dependencies (Transformers 2.3.0; Torch 1.7.1 CPU; Torchvision 0.8.2; NumPy 1.16.x; scikit-learn 0.21.x; SentencePiece 0.1.85). Exact replication proved more reliable than code upgrades. Articles were converted to canonical TSV inputs; spans were created successfully, but techniques not yet run and merged back into the dataset.</p>
+
+        <h4>4.3.3 Integration Layer</h4>
+        <ul class="obj-list">
+          <li><strong>Span highlights:</strong> Planned - propaganda spans mapped to article text with technique labels.</li>
+          <li><strong>Sentiment overlay:</strong> Polarity and subjectivity scores displayed per article.</li>
+          <li><strong>Bias context:</strong> Source-level bias and reliability indicators added from the external dataset.</li>
+          <li><strong>Transparency fields:</strong> Provenance data (source, date, API, query term) retained in the schema.</li>
+        </ul>
+
+        <h4>4.3.4 Front-End Artefact Creation</h4>
+        <p>A lightweight interface was developed to enable interaction with the enriched dataset. Sentiment and bias panels were implemented; propaganda span highlighting and technique tooltips are not implemented (illustrated via screenshots only). The deployed prototype is viewable at <a href="https://abrown1564.github.io/truthspace/" target="_blank">abrown1564.github.io/truthspace</a>.</p>
+
+        <h4>4.3.5 Evaluation Setup</h4>
+        <ul class="obj-list">
+          <li><strong>RQ0 (dataset feasibility):</strong> Assess coverage, ideological spread, rhetoric readiness, and reproducibility.</li>
+          <li><strong>RQ1 (feasibility of SemEval model):</strong> Test whether propaganda span detection runs successfully and yields plausible spans on the dataset.</li>
+          <li><strong>RQ2 (technique distributions by bias):</strong> Compute technique frequencies normalised by tokens and by spans-per-article, aggregated within canonical bias buckets.</li>
+          <li><strong>RQ3 (integration/design):</strong> Conduct a heuristic review of the UI for transparency, multi-perspectivity, and non-prescriptive design.</li>
+        </ul>
+
+        <h4>4.3.6 Ethics, Data and Reproducibility</h4>
+        <p>All data were collected via public APIs, ensuring compliance with provider terms. No copyrighted full-text articles are redistributed; only metadata, derived features, and analysis outputs are retained and shared. Key ethical considerations included:</p>
+        <ul class="obj-list">
+          <li><strong>Data provenance and consent:</strong> Only publicly accessible news sources and bias ratings were used. No private user data, comments, or social-media profiles were collected.</li>
+          <li><strong>Bias and representation:</strong> The dataset's skew toward centre- and left-leaning outlets is documented transparently and treated as a limitation rather than silently ignored.</li>
+          <li><strong>Epistemic responsibility:</strong> The project surfaces signals of propaganda and bias but deliberately avoids prescriptive judgments, reflecting an ethical commitment to scaffolding critical engagement without dictating conclusions.</li>
+          <li><strong>Environmental and computational ethics:</strong> Given limited hardware, inference was restricted to a small balanced sample (70 articles), balancing feasibility with a responsible approach to compute use.</li>
+          <li><strong>Pedagogical ethics:</strong> The design intentionally avoids shaming or adversarial cues that could entrench beliefs. Instead, the prototype foregrounds multi-perspectivity and transparency to encourage reflective engagement.</li>
+        </ul>
+      </section>
+
+      <!-- ── CHAPTER 5 ─────────────────────────────────────────────── -->
+      <section class="section" id="ch5">
+        <h2>Chapter 5 · Evaluation</h2>
+
+        <h3>5.1 Evaluation of Artefact</h3>
+        <p>The model output sensible spans for the 70 articles input, identifying spans of text containing assumed loaded/emotive language (pre-technique classification). Technique distributions across bias buckets were unfortunately not able to be interpreted fully. Despite substantial progress with Span Identification (SI), the Technique Classification (TC) module could not be applied to the dataset within the project timeline. The primary limitation was computational: running SI across the full set of over 800 articles proved infeasible within the available environment - prediction runs on single chunks of ~15k tokens often took multiple hours, and attempts to parallelise across chunks repeatedly led to memory exhaustion or killed processes.</p>
+        <p>Even with optimisations such as reducing batch size, execution remained prohibitively slow, forcing a pivot to a much smaller, manually sampled dataset of 70 articles. This allowed SI to be demonstrated, but there was insufficient time to build and debug the additional TC pipeline on top of this data.</p>
+        <p>The front-end prototype partially succeeded in scaffolding critical thinking. A heuristic review indicated that the sentiment and bias panels communicated transparency and multi-perspectivity effectively, but propaganda span and technique overlays were not implemented, limiting the prototype's scope.</p>
+
+        <div class="outcomes">
+          <div class="outcome met"><strong>RQ0 · Dataset feasibility</strong> Met - 853 articles, 91% bias coverage.</div>
+          <div class="outcome met"><strong>RQ1 · SI feasibility</strong> Met - SemEval-2020 model successfully revived in 2025 on 70-article sample.</div>
+          <div class="outcome unmet"><strong>RQ2 · Technique distributions by bias</strong> Could not be addressed due to absence of TC integration.</div>
+          <div class="outcome partial"><strong>RQ3 · Design integration</strong> Demonstrated conceptually; full integration of spans and techniques remains future work.</div>
+        </div>
+
+        <h3>5.2 Limitations</h3>
+
+        <h4>5.2.1 Technical Constraints</h4>
+        <p>Running a 2020-era propaganda detection model in a 2025 environment required careful replication of the original dependency stack. Even with containerisation, the pipeline proved brittle and prone to failure if libraries were not pinned to exact versions. The most significant challenge was compute. Running span identification with RoBERTa-large + CRF on CPU within a local Docker environment (~8–12GB RAM), each evaluation step took around 4–5 seconds at batch size 1. A single chunk of ~3,000 examples required 6–10 hours to process. Scaling to the full dataset of over 800 articles would have taken an estimated 150+ hours (~two weeks). The input was therefore reduced to a balanced sample of 70 articles.</p>
+
+        <h4>5.2.2 Data Constraints</h4>
+        <p>The dataset was skewed toward centre- and left-leaning outlets, reflecting the greater availability of open-access content in these categories, while right-leaning coverage was frequently paywalled. The scraper also pulled irrelevant articles due to polysemous terms such as <em>border</em>, as well as unavoidable keyword collisions like <em>asylum</em> (e.g., Batman's Arkham Asylum). Bias attribution added further complexity: The Guardian was categorised as "Center" by Ground News but "Left-Center" by MBFC.</p>
+
+        <h4>5.2.3 Methodological Constraints</h4>
+        <p>The small sample size of 70 articles means conclusions about propaganda technique distributions must be treated as exploratory rather than definitive. Because the SemEval-2020 model was trained on general news, domain transfer to immigration reporting may have reduced accuracy, particularly for subtler or domain-specific framings. No ground-truth re-annotation was conducted, meaning the model's predictions could not be validated within this niche domain.</p>
+      </section>
+
+      <!-- ── CHAPTER 6 ─────────────────────────────────────────────── -->
+      <section class="section" id="ch6">
+        <h2>Chapter 6 · Conclusion</h2>
+
+        <h3>6.1 Summary of Project</h3>
+        <p>This project set out to test whether propaganda detection methods from SemEval-2020 could be revived in 2025 and applied to a domain-specific dataset on UK/US immigration reporting. Despite the brittleness of legacy dependencies, the model was successfully deployed within a Dockerised environment, and a dataset of 853 articles was collected and enriched with sentiment and media bias metadata. The prototype focused on feasibility rather than completeness, demonstrating the potential of combining computational methods with design principles aimed at transparency, multi-perspectivity, and non-prescriptive support for media literacy.</p>
+
+        <h3>6.2 Summary of Results</h3>
+        <ul class="obj-list">
+          <li><strong>RQ0</strong> (dataset feasibility) and <strong>RQ1</strong> (SI feasibility) were achieved.</li>
+          <li><strong>RQ2</strong> (technique distributions by bias) could not be pursued because TC was not applied to the immigration dataset.</li>
+          <li><strong>RQ3</strong> (design integration) was demonstrated conceptually; integration of SI/TC outputs remains future work.</li>
+        </ul>
+
+        <h3>6.3 Discussion of Aims</h3>
+        <p>The artefact contributes both technically and conceptually. Technically, it demonstrates a modular, reproducible architecture with partial integration (sentiment/bias) and offline SI outputs. The media bias dataset containing the 267 individually labelled news sources will also be released publicly on GitHub. Conceptually, the project contributes to debates on how online platforms might be designed differently: shifting away from binary fact-checking toward tools that make rhetorical and persuasive structures visible, supporting critical literacy without prescribing conclusions.</p>
+
+        <h3>6.4 Future Work</h3>
+
+        <h4>6.4.1 Data Collection and Management</h4>
+        <ul class="obj-list">
+          <li>Expand keyword scraping to capture a broader range of framings (e.g., shorthand terms such as "illegals" may retrieve more right-leaning sources)</li>
+          <li>Oversample from right-wing outlets or apply weighting strategies to counterbalance ideological skew</li>
+          <li>Ground-truth re-annotation of a subset of articles to benchmark model reliability</li>
+          <li>Store and manage the dataset in a lightweight SQL database for easier updates and consistency checks</li>
+        </ul>
+
+        <h4>6.4.2 Modelling and Analytical Enhancements</h4>
+        <ul class="obj-list">
+          <li>Develop ensemble methods combining propaganda detection with framing analysis and argumentative structure mining</li>
+          <li>Introduce topic clustering techniques, grouping articles that report on the same events or themes</li>
+          <li>Integrate large language models for article summarisation, producing concise and neutral overviews</li>
+        </ul>
+
+        <h4>6.4.3 Design and User Support</h4>
+        <ul class="obj-list">
+          <li>Include prebunking cues: when a slippery slope fallacy is flagged, highlight that such arguments often rely on exaggerated consequences</li>
+          <li>Integrate the open-source pol.is codebase to enable structured, respectful, visual-first public debate around the analysed articles</li>
+          <li>Shift from a passive annotation tool toward an interactive platform that fosters constructive dialogue</li>
+        </ul>
+      </section>
+
+      <!-- ── REFERENCES ────────────────────────────────────────────── -->
+      <section class="section" id="references">
+        <div class="references-toggle" onclick="toggleRefs()">
+          <h2>References</h2>
+          <button class="toggle-btn" id="ref-btn">Show</button>
+        </div>
+        <div class="ref-list" id="ref-list">
+          <p>Ad Fontes Media (2021) <em>How We Rate the News</em>. Available at: https://adfontesmedia.com/how-we-rate/</p>
+          <p>AllSides (2024) <em>How We Rate Media Bias</em>. Available at: https://www.allsides.com/media-bias/media-bias-ratings</p>
+          <p>Atarama, D., Pereira, D. and Salas, C. (2024) 'F-Detector: Design of a solution based on machine learning to detect logical fallacies in digital texts', <em>Proceedings of ISCMI 2024</em>. doi:10.1109/ISCMI63661.2024.10851597.</p>
+          <p>Bail, C.A. et al. (2018) 'Exposure to opposing views on social media can increase political polarization', <em>PNAS</em>, 115(37), pp. 9216–9221. doi:10.1073/pnas.1804840115.</p>
+          <p>Chaves, M., Cabrio, E. and Villata, S. (2025) 'FALCON: A multi-label graph-based dataset for fallacy classification in the COVID-19 infodemic', <em>Proceedings of SAC 2025</em>. doi:10.1145/3672608.3707913.</p>
+          <p>Conzo, P. et al. (2021) 'Negative media portrayals of immigrants increase ingroup favoritism and hostile physiological and emotional reactions', <em>Scientific Reports</em>, 11(1), article 16407. doi:10.1038/s41598-021-95800-2.</p>
+          <p>Da San Martino, G. et al. (2020) 'SemEval-2020 Task 11: Detection of Propaganda Techniques in News Articles', <em>Proceedings of the Fourteenth Workshop on Semantic Evaluation</em>. doi:10.18653/v1/2020.semeval-1.186.</p>
+          <p>Diakopoulos, N. (2019) <em>Automating the news: How algorithms are rewriting the media</em>. Cambridge, MA: Harvard University Press.</p>
+          <p>Djourelova, M. (2023) 'Persuasion through slanted language: Evidence from the media coverage of immigration', <em>American Economic Review</em>, 113(3), pp. 800–835. doi:10.1257/aer.20211537.</p>
+          <p>Duffy, B. et al. (2019) <em>Divided Britain? Polarisation and fragmentation trends in the UK</em>. London: The Policy Institute, King's College London.</p>
+          <p>Eberl, J.-M. et al. (2018) 'The European media discourse on immigration and its effects: a literature review', <em>Annals of the International Communication Association</em>, 42(3), pp. 207–223.</p>
+          <p>Flaxman, S., Goel, S. and Rao, J.M. (2016) 'Filter bubbles, echo chambers, and online news consumption', <em>Public Opinion Quarterly</em>, 80(S1), pp. 298–320.</p>
+          <p>Fuller, J.M. (2024) 'Media discourses of migration', <em>Language and Linguistics Compass</em>, 18(4), Article e12526.</p>
+          <p>Gonçalves, I. (2023) 'Promoting hate speech by dehumanizing metaphors of immigration', <em>Journalism Practice</em>, 18(2), pp. 265–282.</p>
+          <p>Gonçalves, I. and David, Y. (2024) 'Threats, victims, or heroes? Media frames about migration in the United Kingdom and Brazil', <em>International Communication Gazette</em>, 87(3), pp. 217–237.</p>
+          <p>Ground News (2025) <em>Media Bias Ratings</em>. Available at: https://ground.news/media-bias</p>
+          <p>Gürkan, A. et al. (2010) 'Mediating debate through online large-scale argumentation', <em>Information Sciences</em>, 180(19), pp. 3686–3702.</p>
+          <p>Helberger, N., Karppinen, K. and D'Acunto, L. (2018) 'Exposure diversity as a design principle for recommender systems', <em>Information, Communication & Society</em>, 21(2), pp. 191–207.</p>
+          <p>Hobolt, S.B., Leeper, T.J. and Tilley, J. (2021) 'Divided by the vote: Affective polarization in the wake of the Brexit referendum', <em>British Journal of Political Science</em>, 51(4), pp. 1476–1493.</p>
+          <p>Horton, C. (2018) 'The simple but ingenious system Taiwan uses to crowdsource its laws', <em>MIT Technology Review</em>, 21 August.</p>
+          <p>Kaufmann, E. (2018) <em>Whiteshift: Populism, immigration and the future of white majorities</em>. London: Allen Lane.</p>
+          <p>Klein, M. (2011) 'How large-scale argumentation systems can help address global collective action problems', <em>2011 International Conference on Collaboration Technologies and Systems</em>.</p>
+          <p>Kleinfeld, R. (2023) <em>Polarization, democracy, and political violence in the United States</em>. Washington, DC: Carnegie Endowment for International Peace.</p>
+          <p>Larumbe, E. and Vendrell, A. (2025) 'Argumentative fallacy detection in political debates', <em>Proceedings of ArgMining 2025</em>. doi:10.18653/v1/2025.argmining-1.36.</p>
+          <p>Mancini, E., Ruggeri, F. and Torroni, P. (2024) 'Multimodal fallacy classification in political debates', <em>Proceedings of EACL 2024</em>. doi:10.18653/v1/2024.eacl-short.16.</p>
+          <p>Media Bias/Fact Check (2025) <em>Updated Methodology</em>. Available at: https://mediabiasfactcheck.com/methodology/</p>
+          <p>Milli, S. et al. (2023) 'Engagement, user satisfaction, and the amplification of divisive content on social media', <em>arXiv:2305.16941</em>.</p>
+          <p>More in Common (2025) <em>Shattered Britain</em>. London: More in Common UK.</p>
+          <p>Norris, P. and Inglehart, R. (2019) <em>Cultural Backlash: Trump, Brexit, and Authoritarian Populism</em>. Cambridge: Cambridge University Press.</p>
+          <p>Nyhan, B. et al. (2023) 'Like-minded sources on Facebook are prevalent but not polarizing', <em>Nature</em>, 620, pp. 137–144.</p>
+          <p>Pan, F. et al. (2024) 'Are LLMs Good Zero-Shot Fallacy Classifiers?', <em>Proceedings of EMNLP 2024</em>. doi:10.18653/v1/2024.emnlp-main.794.</p>
+          <p>Pariser, E. (2011) <em>The filter bubble: What the Internet is hiding from you</em>. New York: Penguin Press.</p>
+          <p>Pennycook, G. and Rand, D.G. (2022) 'Accuracy prompts are a replicable and generalizable approach for reducing the spread of misinformation', <em>Nature Communications</em>, 13, 2333.</p>
+          <p>Pew Research Center (2023) <em>Americans' Dismal Views of the Nation's Politics</em>. Washington, DC.</p>
+          <p>Rodrigo-Ginés, F.-J., Carrillo-de-Albornoz, J. and Plaza, L. (2024) 'A systematic review on media bias detection', <em>Expert Systems with Applications</em>, 237, 121641.</p>
+          <p>Roozenbeek, J. et al. (2022) 'Psychological inoculation improves resilience against misinformation on social media', <em>Science Advances</em>, 8(34), eabo6254.</p>
+          <p>Rose-Stockwell, T. (2018) 'How to design better social media', <em>Medium</em>, 13 April.</p>
+          <p>Stop Funding Hate and Ethical Consumer (2022) <em>Addressing subtle forms of hate in UK media coverage of migration</em>. London.</p>
+          <p>Suro, R. (2009) 'Promoting Misconceptions: News Media Coverage of Immigration'. Los Angeles, CA: USC.</p>
+          <p>Tao, Y. et al. (2024) 'Measuring Chinese online populist discourse', <em>Chinese Journal of Communication</em>, 18(2), pp. 121–141.</p>
+          <p>Vasquez, C. (2021) <em>Brown Moral Panic: Racism in the Trump Era</em> [Master's thesis, UT Rio Grande Valley].</p>
+          <p>Yeh, M.-H., Wan, R. and Huang, T.-H. (2024) 'CoCoLoFa: A dataset of news comments with common logical fallacies written by LLM-assisted crowds', <em>Proceedings of EMNLP 2024</em>. doi:10.18653/v1/2024.emnlp-main.39.</p>
+        </div>
+      </section>
+
+      <!-- ── APPENDICES ─────────────────────────────────────────────── -->
+      <section class="section" id="appendices">
+        <h2>Appendices</h2>
+
+        <h3>Appendix A: Literature Review Table of NLP Approaches</h3>
+        <figure>
+          <img src="img/dissertation/appendix_a_nlp_table.png" alt="Literature review table of NLP approaches to media and propaganda analysis, including papers on fallacy detection, propaganda spans, and multimodal methods" />
+          <figcaption>Appendix A: Literature Review Table of NLP Approaches to Media/Propaganda Analysis (Esp. Fallacies)</figcaption>
+        </figure>
+
+        <h3>Appendix B: Potential for Future Ensemble Methods</h3>
+        <figure>
+          <img src="img/dissertation/appendix_b_ensemble.png" alt="Table of potential future ensemble methods combining propaganda detection, framing analysis, and rhetorical figure recognition" />
+          <figcaption>Appendix B: Potential for future ensemble methods.</figcaption>
+        </figure>
+
+        <h3>Appendix C: Front-End Prototype</h3>
+        <p>The deployed prototype - sentiment panel, bias panel, and article view - is available at: <a href="https://abrown1564.github.io/truthspace/" target="_blank">abrown1564.github.io/truthspace</a>.</p>
+
+        <h3>Appendix D: Platform Screenshots - GovBrief and Tanbih</h3>
+        <figure>
+          <img src="img/dissertation/appendix_d_1.png" alt="GovBrief Today newsletter showing intensity score, trending topics, and curated political news digest" />
+          <figcaption>Appendix D (i): GovBrief Today - structured daily political digest with intensity scoring and topic categorisation (GovBrief, 2025).</figcaption>
+        </figure>
+        <figure>
+          <img src="img/dissertation/appendix_d_2.png" alt="Tanbih media analysis platform showing bias and factuality scatter plot for news organisations" />
+          <figcaption>Appendix D (ii): Tanbih Media Analysis platform - interactive visualisation of media bias, factuality, and framing across ~854,000 articles (Tanbih, n.d.).</figcaption>
+        </figure>
+        <figure>
+          <img src="img/dissertation/appendix_e_1.png" alt="Tanbih framing distribution chart and organisations bias-factuality scatter plot" />
+          <figcaption>Appendix D (iii): Tanbih - distribution of general frames of reporting and organisation-level bias/factuality scatter.</figcaption>
+        </figure>
+      </section>
+
+    </main>
+
+    <script>
+      function toggleRefs() {
+        const list = document.getElementById('ref-list');
+        const btn = document.getElementById('ref-btn');
+        list.classList.toggle('open');
+        btn.textContent = list.classList.contains('open') ? 'Hide' : 'Show';
+      }
+    </script>
+  </body>
+</html>

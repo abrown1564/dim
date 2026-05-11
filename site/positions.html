@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DIM - The Agora</title>
+  <style>
+    :root {
+      --bg:      #f4efe6;
+      --panel:   #fffaf2;
+      --ink:     #1f1a17;
+      --muted:   #6f655d;
+      --line:    #d7c9b7;
+      --accent:  #a3472f;
+      --shadow:  0 18px 40px rgba(74,46,22,0.08);
+      --anti:    #a3472f;
+      --pro:     #2e7d55;
+      --s-conjecture: #3a5f8a;
+      --s-definition: #7a4a8a;
+      --s-value:      #a3472f;
+      --s-policy:     #2e7d55;
+      --s-procedure:  #6f655d;
+      --s-quality:    #8a6220;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, "Palatino Linotype", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(163,71,47,0.10), transparent 28%),
+        linear-gradient(180deg, #f7f1e8 0%, var(--bg) 100%);
+      min-height: 100vh;
+    }
+    .page { max-width: 1400px; margin: 0 auto; padding: 40px 24px 80px; }
+
+    /* ── hero ─────────────────────────────────────────────────── */
+    .hero {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 32px 36px 28px;
+      margin-bottom: 28px;
+    }
+    .agora-banner {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 36px 32px 30px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .agora-icon { color: var(--accent); opacity: 0.88; margin-bottom: 16px; }
+    .agora-title {
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+      font-size: clamp(2.6rem, 6vw, 4.4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin: 0;
+    }
+    .agora-tagline {
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+      font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+    h1 { font-size: clamp(1.6rem, 3.5vw, 2.6rem); line-height: 1.1; margin-bottom: 8px; }
+    .subtitle { color: var(--muted); font-size: 1rem; line-height: 1.6; max-width: 680px; }
+    .topnav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 32px;
+      height: 48px;
+      background: rgba(255, 250, 242, 0.88);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      font-size: 0.85rem;
+      gap: 4px;
+    }
+    .topnav a { color: var(--accent); text-decoration: none; padding: 4px 10px; border-radius: 6px; transition: background 0.13s; }
+    .topnav a:hover { background: rgba(163,71,47,0.08); text-decoration: none; }
+    .page { padding-top: 68px; }
+
+    /* ── filter bar ───────────────────────────────────────────── */
+    .filter-bar {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+    .filter-group { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .filter-label { font-size: 0.82rem; color: var(--muted); white-space: nowrap; }
+    .pill {
+      font-family: ui-monospace, monospace;
+      font-size: 0.78rem;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1.5px solid var(--line);
+      background: var(--panel);
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.13s;
+    }
+    .pill:hover { border-color: var(--accent); color: var(--accent); }
+    .pill.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .pill[data-stasis="conjecture"].active { background: var(--s-conjecture); border-color: var(--s-conjecture); }
+    .pill[data-stasis="definition"].active { background: var(--s-definition); border-color: var(--s-definition); }
+    .pill[data-stasis="value"].active      { background: var(--s-value);      border-color: var(--s-value); }
+    .pill[data-stasis="policy"].active     { background: var(--s-policy);     border-color: var(--s-policy); }
+    .pill[data-stasis="procedure"].active  { background: var(--s-procedure);  border-color: var(--s-procedure); }
+    .pill[data-stasis="quality"].active    { background: var(--s-quality);    border-color: var(--s-quality); }
+
+    /* ── your stance bar ──────────────────────────────────────── */
+    #your-stance {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 18px;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+    }
+    #your-stance .stance-label { color: var(--muted); font-size: 0.78rem; }
+    .stance-tally {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-family: ui-monospace, monospace;
+      font-size: 0.78rem;
+    }
+    .stance-dot { width: 9px; height: 9px; border-radius: 50%; }
+    #stance-bar-wrap {
+      flex: 1;
+      min-width: 120px;
+      height: 6px;
+      background: #e8dfd2;
+      border-radius: 3px;
+      overflow: hidden;
+      display: flex;
+    }
+    .stance-seg { height: 100%; transition: width 0.35s ease; }
+    #stance-reset {
+      font-size: 0.72rem;
+      font-family: ui-monospace, monospace;
+      color: var(--muted);
+      background: none;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 2px 9px;
+      cursor: pointer;
+      margin-left: auto;
+    }
+    #stance-reset:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* ── three-column arena ───────────────────────────────────── */
+    .arena {
+      display: grid;
+      grid-template-columns: 1fr 220px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+    @media (max-width: 800px) { .arena { grid-template-columns: 1fr; } }
+
+    .column-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--line);
+    }
+    .column-header.anti { border-color: var(--anti); }
+    .column-header.pro  { border-color: var(--pro); }
+    .column-label { font-size: 0.75rem; font-family: ui-monospace, monospace; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+    .column-label.anti   { color: var(--anti); }
+    .column-label.pro    { color: var(--pro); }
+    .column-label.shared { color: var(--muted); }
+    .column-count { font-size: 0.72rem; font-family: ui-monospace, monospace; color: var(--muted); margin-left: auto; }
+    .column-cards { display: flex; flex-direction: column; gap: 12px; }
+
+    /* ── position card ────────────────────────────────────────── */
+    .pos-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(74,46,22,0.06);
+      overflow: hidden;
+      border-left: 4px solid var(--line);
+      transition: transform 0.13s, box-shadow 0.13s;
+    }
+    .pos-card:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(74,46,22,0.12); }
+    .pos-card.hidden { display: none; }
+    .pos-card[data-stasis="conjecture"] { border-left-color: var(--s-conjecture); }
+    .pos-card[data-stasis="definition"] { border-left-color: var(--s-definition); }
+    .pos-card[data-stasis="value"]      { border-left-color: var(--s-value); }
+    .pos-card[data-stasis="policy"]     { border-left-color: var(--s-policy); }
+    .pos-card[data-stasis="procedure"]  { border-left-color: var(--s-procedure); }
+    .pos-card[data-stasis="quality"]    { border-left-color: var(--s-quality); }
+
+    .card-main { padding: 14px 16px 10px; cursor: pointer; }
+    .pos-card.tier-3 .card-label { font-size: 1.05rem; }
+    .pos-card.tier-2 .card-label { font-size: 0.92rem; }
+    .pos-card.tier-1 .card-label { font-size: 0.83rem; }
+    .card-label { font-weight: 700; line-height: 1.3; margin-bottom: 6px; color: var(--ink); text-transform: capitalize; display: flex; align-items: center; gap: 7px; }
+    .user-vote-pip { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; display: none; }
+    .card-claim { font-size: 0.8rem; color: var(--muted); line-height: 1.5; margin-bottom: 8px; }
+    .card-meta { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+
+    .stasis-badge { font-size: 0.68rem; font-family: ui-monospace, monospace; padding: 2px 7px; border-radius: 8px; color: #fff; letter-spacing: 0.03em; }
+    .stasis-badge.conjecture { background: var(--s-conjecture); }
+    .stasis-badge.definition { background: var(--s-definition); }
+    .stasis-badge.value      { background: var(--s-value); }
+    .stasis-badge.policy     { background: var(--s-policy); }
+    .stasis-badge.procedure  { background: var(--s-procedure); }
+    .stasis-badge.quality    { background: var(--s-quality); }
+
+    .context-badge { font-size: 0.68rem; font-family: ui-monospace, monospace; padding: 2px 7px; border-radius: 8px; border: 1px solid var(--line); color: var(--muted); background: var(--bg); }
+    .freq-bar-wrap { flex: 1; display: flex; align-items: center; gap: 5px; margin-left: auto; }
+    .freq-bar-track { flex: 1; height: 4px; background: #e8dfd2; border-radius: 2px; overflow: hidden; max-width: 60px; }
+    .freq-bar-fill { height: 100%; border-radius: 2px; }
+    .freq-label { font-size: 0.68rem; font-family: ui-monospace, monospace; color: var(--muted); white-space: nowrap; }
+
+    /* ── participation row ────────────────────────────────────── */
+    .vote-bar {
+      border-top: 1px solid var(--line);
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(215,201,183,0.15);
+    }
+    .vote-bar-label { font-size: 0.68rem; color: var(--muted); margin-right: 2px; font-family: ui-monospace, monospace; }
+    .vote-btn {
+      font-family: Georgia, serif;
+      font-size: 0.72rem;
+      padding: 4px 11px;
+      border-radius: 12px;
+      border: 1.5px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.12s;
+    }
+    .vote-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .vote-btn.active-agree    { background: #2e7d55; color: #fff; border-color: #2e7d55; }
+    .vote-btn.active-disagree { background: #a3472f; color: #fff; border-color: #a3472f; }
+    .vote-btn.active-neutral  { background: var(--muted); color: #fff; border-color: var(--muted); }
+    .vote-detail-toggle {
+      font-size: 0.66rem;
+      color: var(--accent);
+      cursor: pointer;
+      margin-left: auto;
+      font-family: ui-monospace, monospace;
+      text-decoration: underline;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    /* ── reason/evidence form ─────────────────────────────────── */
+    .vote-detail {
+      display: none;
+      padding: 10px 12px 12px;
+      border-top: 1px solid var(--line);
+      background: rgba(215,201,183,0.1);
+    }
+    .vote-detail.open { display: block; }
+    .vote-detail textarea, .vote-detail input[type="text"] {
+      width: 100%;
+      font-family: Georgia, serif;
+      font-size: 0.78rem;
+      color: var(--ink);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 7px 10px;
+      resize: none;
+      outline: none;
+      transition: border-color 0.13s;
+      margin-bottom: 7px;
+    }
+    .vote-detail textarea:focus, .vote-detail input[type="text"]:focus { border-color: var(--accent); }
+    .vote-detail textarea { min-height: 60px; }
+    .vote-detail-label { font-size: 0.7rem; color: var(--muted); margin-bottom: 4px; font-family: ui-monospace, monospace; display: block; }
+    .vote-submit {
+      font-family: Georgia, serif;
+      font-size: 0.75rem;
+      padding: 5px 14px;
+      border-radius: 10px;
+      border: none;
+      background: var(--ink);
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.13s;
+    }
+    .vote-submit:hover { background: var(--accent); }
+    .vote-saved { font-size: 0.7rem; color: var(--pro); font-family: ui-monospace, monospace; margin-left: 8px; display: none; }
+    .vote-saved.visible { display: inline; }
+
+    /* ── legend ───────────────────────────────────────────────── */
+    .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; font-size: 0.78rem; color: var(--muted); align-items: center; }
+    .legend-item { display: flex; align-items: center; gap: 5px; }
+    .legend-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+
+    /* ── empty state ──────────────────────────────────────────── */
+    .empty-col { font-size: 0.85rem; color: var(--muted); font-style: italic; padding: 20px 0; display: none; }
+
+    /* ── modal ────────────────────────────────────────────────── */
+    #modal-backdrop {
+      display: none; position: fixed; inset: 0;
+      background: rgba(31,26,23,0.55); backdrop-filter: blur(3px);
+      z-index: 100; align-items: flex-start; justify-content: center;
+      padding: 48px 20px; overflow-y: auto;
+    }
+    #modal-backdrop.open { display: flex; }
+    #modal {
+      background: var(--panel); border: 1px solid var(--line);
+      border-radius: 24px; box-shadow: 0 32px 80px rgba(31,26,23,0.25);
+      width: 100%; max-width: 680px; margin: auto; overflow: hidden; position: relative;
+    }
+    .modal-top-bar { height: 6px; }
+    .modal-header { padding: 28px 32px 20px; border-bottom: 1px solid var(--line); }
+    .modal-label { font-size: 1.4rem; font-weight: 700; line-height: 1.2; margin-bottom: 10px; text-transform: capitalize; }
+    .modal-claim { font-size: 0.95rem; color: var(--muted); line-height: 1.6; font-style: italic; margin-bottom: 14px; }
+    .modal-badges { display: flex; gap: 7px; flex-wrap: wrap; }
+    .modal-body { padding: 24px 32px 32px; }
+    .modal-section { margin-bottom: 26px; }
+    .modal-section:last-child { margin-bottom: 0; }
+    .modal-section-title { font-size: 0.72rem; font-family: ui-monospace, monospace; text-transform: uppercase; letter-spacing: 0.09em; color: var(--muted); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+    .debate-list { display: flex; flex-direction: column; gap: 8px; }
+    .debate-item { display: flex; align-items: baseline; gap: 8px; font-size: 0.85rem; line-height: 1.4; }
+    .debate-item a { color: var(--accent); text-decoration: none; }
+    .debate-item a:hover { text-decoration: underline; }
+    .debate-ctx { font-size: 0.68rem; font-family: ui-monospace, monospace; padding: 1px 6px; border-radius: 6px; border: 1px solid var(--line); color: var(--muted); flex-shrink: 0; }
+    .quote-list { display: flex; flex-direction: column; gap: 10px; }
+    .modal-quote { font-style: italic; font-size: 0.85rem; color: var(--ink); border-left: 3px solid var(--line); padding: 6px 12px; line-height: 1.6; }
+    .modal-close {
+      position: absolute; top: 18px; right: 22px;
+      width: 34px; height: 34px; border-radius: 50%;
+      border: 1.5px solid var(--line); background: var(--bg); color: var(--muted);
+      font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.13s;
+    }
+    .modal-close:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+    /* user vote in modal */
+    .modal-user-vote {
+      display: flex; align-items: center; gap: 10px;
+      padding: 12px 16px; border-radius: 12px; border: 1.5px solid var(--line);
+      background: var(--bg); font-size: 0.85rem;
+    }
+    .modal-user-vote-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+    .modal-user-reasoning { font-style: italic; color: var(--muted); font-size: 0.82rem; margin-top: 6px; line-height: 1.5; }
+    .modal-user-evidence { font-size: 0.78rem; color: var(--accent); margin-top: 5px; }
+  </style>
+</head>
+<body>
+<nav class="topnav">
+  <a href="report.html">Report</a>
+  <a href="corpus.html">Corpus</a>
+  <a href="heatmap.html">Heatmap</a>
+  <a href="debate.html">Debate</a>
+  <a href="taxonomy.html">Taxonomy</a>
+  <a href="traditions.html">Traditions</a>
+  <a href="map.html">Map</a>
+  <a href="dissertation.html">Dissertation</a>
+</nav>
+<div class="page">
+
+  <div class="agora-banner">
+    <svg class="agora-icon" viewBox="0 0 88 66" width="80" height="60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- pediment -->
+      <polygon points="6,24 44,4 82,24" stroke="currentColor" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+      <!-- frieze -->
+      <rect x="6" y="24" width="76" height="5" rx="1.5" fill="currentColor" opacity="0.35"/>
+      <!-- columns -->
+      <rect x="11" y="29" width="6" height="26" rx="1.5" fill="currentColor"/>
+      <rect x="27" y="29" width="6" height="26" rx="1.5" fill="currentColor"/>
+      <rect x="45" y="29" width="6" height="26" rx="1.5" fill="currentColor"/>
+      <rect x="63" y="29" width="6" height="26" rx="1.5" fill="currentColor"/>
+      <!-- stylobate (two steps) -->
+      <rect x="6"  y="55" width="76" height="4.5" rx="1.5" fill="currentColor"/>
+      <rect x="2"  y="59.5" width="84" height="4.5" rx="1.5" fill="currentColor" opacity="0.6"/>
+    </svg>
+    <h1 class="agora-title">The Agora</h1>
+  </div>
+
+  <div class="hero">
+    <p class="agora-tagline">Wealth Taxes: What's the Argument Landscape?</p>
+    <p class="subtitle">
+      Canonical positions aggregated across 17 wealth-tax debates. Click any card to see which debates make the argument and what speakers actually said. Vote on each position to map your own stance.
+    </p>
+  </div>
+
+  <!-- filters -->
+  <div class="filter-bar">
+    <div class="filter-group">
+      <span class="filter-label">Context:</span>
+      <button class="pill active" data-ctx="all">All</button>
+      <button class="pill" data-ctx="UK">UK</button>
+      <button class="pill" data-ctx="US">US</button>
+    </div>
+    <div class="filter-group" style="margin-left:8px">
+      <span class="filter-label">Stasis:</span>
+      <button class="pill active" data-stasis="all">All</button>
+      <button class="pill" data-stasis="conjecture">conjecture</button>
+      <button class="pill" data-stasis="definition">definition</button>
+      <button class="pill" data-stasis="value">value</button>
+      <button class="pill" data-stasis="policy">policy</button>
+      <button class="pill" data-stasis="quality">quality</button>
+    </div>
+  </div>
+
+  <!-- your stance bar -->
+  <div id="your-stance">
+    <span class="stance-label">Your positions:</span>
+    <span class="stance-tally"><span class="stance-dot" style="background:#2e7d55"></span><span id="tally-agree">0</span> agree</span>
+    <span class="stance-tally"><span class="stance-dot" style="background:#a3472f"></span><span id="tally-disagree">0</span> disagree</span>
+    <span class="stance-tally"><span class="stance-dot" style="background:#6f655d"></span><span id="tally-neutral">0</span> neutral</span>
+    <div id="stance-bar-wrap">
+      <div class="stance-seg" id="seg-agree"    style="background:#2e7d55;width:0%"></div>
+      <div class="stance-seg" id="seg-disagree" style="background:#a3472f;width:0%"></div>
+      <div class="stance-seg" id="seg-neutral"  style="background:#d7c9b7;width:0%"></div>
+    </div>
+    <button id="stance-reset">clear all</button>
+  </div>
+
+  <!-- stasis legend -->
+  <div class="legend" id="stasis-legend"></div>
+
+  <!-- arena -->
+  <div class="arena">
+    <div class="column-wrap" id="col-anti">
+      <div class="column-header anti">
+        <span class="column-label anti">Against wealth tax</span>
+        <span class="column-count" id="count-anti"></span>
+      </div>
+      <div class="column-cards" id="cards-anti"></div>
+      <div class="empty-col" id="empty-anti">No positions match this filter.</div>
+    </div>
+
+    <div class="column-wrap" id="col-shared">
+      <div class="column-header">
+        <span class="column-label shared">Shared ground</span>
+        <span class="column-count" id="count-shared"></span>
+      </div>
+      <div class="column-cards" id="cards-shared"></div>
+      <div class="empty-col" id="empty-shared">None.</div>
+    </div>
+
+    <div class="column-wrap" id="col-pro">
+      <div class="column-header pro">
+        <span class="column-label pro">For wealth tax</span>
+        <span class="column-count" id="count-pro"></span>
+      </div>
+      <div class="column-cards" id="cards-pro"></div>
+      <div class="empty-col" id="empty-pro">No positions match this filter.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- modal -->
+<div id="modal-backdrop">
+  <div id="modal">
+    <div class="modal-top-bar" id="modal-bar"></div>
+    <button class="modal-close" id="modal-close">&times;</button>
+    <div class="modal-header" id="modal-header"></div>
+    <div class="modal-body"   id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+const STASIS_COLOR = {
+  conjecture: "#3a5f8a", definition: "#7a4a8a", value: "#a3472f",
+  policy: "#2e7d55",     procedure:  "#6f655d", quality: "#8a6220",
+};
+const SIDE_COLOR  = { anti: "#a3472f", pro: "#2e7d55", shared: "#6f655d" };
+const VOTE_COLOR  = { agree: "#2e7d55", disagree: "#a3472f", neutral: "#6f655d" };
+const STORAGE_KEY = "dim_votes";
+
+let allPositions = [];
+let maxFreq      = 1;
+let activeCtx    = "all";
+let activeStasis = "all";
+
+function escHtml(s) {
+  return String(s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+function tier(freq) {
+  return freq >= 18 ? "tier-3" : freq >= 8 ? "tier-2" : "tier-1";
+}
+function contextOf(pos) {
+  var has = { UK: false, US: false };
+  (pos.source_debates || []).forEach(function(d) {
+    if (d.context === "UK") has.UK = true;
+    if (d.context === "US") has.US = true;
+  });
+  return (has.UK && has.US) ? "both" : has.UK ? "UK" : has.US ? "US" : "both";
+}
+function matchesFilter(pos) {
+  if (activeStasis !== "all" && pos.stasis !== activeStasis) return false;
+  if (activeCtx !== "all") {
+    var ctx = contextOf(pos);
+    if (ctx !== "both" && ctx !== activeCtx) return false;
+  }
+  return true;
+}
+
+// ── localStorage votes ────────────────────────────────────────────────────────
+function getVotes() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); } catch(e) { return {}; }
+}
+function saveVote(label, vote, reason, evidenceUrl, evidenceQuote) {
+  var votes = getVotes();
+  votes[label] = { vote: vote, reason: reason || "", evidenceUrl: evidenceUrl || "", evidenceQuote: evidenceQuote || "", ts: Date.now() };
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(votes));
+  updateStanceBar();
+}
+function clearVotes() {
+  localStorage.removeItem(STORAGE_KEY);
+  updateStanceBar();
+}
+function getVote(label) { return (getVotes()[label] || null); }
+
+// ── stance bar ────────────────────────────────────────────────────────────────
+function updateStanceBar() {
+  var votes = getVotes();
+  var vals  = Object.values(votes);
+  var agree    = vals.filter(function(v) { return v.vote === "agree"; }).length;
+  var disagree = vals.filter(function(v) { return v.vote === "disagree"; }).length;
+  var neutral  = vals.filter(function(v) { return v.vote === "neutral"; }).length;
+  var total    = vals.length || 1;
+  document.getElementById("tally-agree").textContent    = agree;
+  document.getElementById("tally-disagree").textContent = disagree;
+  document.getElementById("tally-neutral").textContent  = neutral;
+  document.getElementById("seg-agree").style.width    = (agree    / total * 100) + "%";
+  document.getElementById("seg-disagree").style.width = (disagree / total * 100) + "%";
+  document.getElementById("seg-neutral").style.width  = (neutral  / total * 100) + "%";
+
+  // Update vote pips on all cards
+  document.querySelectorAll(".user-vote-pip").forEach(function(pip) {
+    var label = pip.closest(".pos-card").dataset.label;
+    var uv    = getVote(label);
+    if (uv) {
+      pip.style.background = VOTE_COLOR[uv.vote] || "#999";
+      pip.style.display    = "block";
+    } else {
+      pip.style.display = "none";
+    }
+  });
+
+  // Update vote button active states
+  document.querySelectorAll(".pos-card").forEach(function(card) {
+    var label = card.dataset.label;
+    var uv    = getVote(label);
+    card.querySelectorAll(".vote-btn").forEach(function(btn) {
+      btn.className = "vote-btn";
+      if (uv && btn.dataset.vote === uv.vote) btn.classList.add("active-" + uv.vote);
+    });
+  });
+}
+
+// ── build card HTML ───────────────────────────────────────────────────────────
+function buildCard(pos) {
+  var sc  = STASIS_COLOR[pos.stasis] || "#999";
+  var pct = Math.min(100, (pos.frequency / maxFreq) * 100).toFixed(0);
+  var ctx = contextOf(pos);
+  var uv  = getVote(pos.label);
+
+  var pipStyle = uv
+    ? 'style="background:' + VOTE_COLOR[uv.vote] + ';display:block"'
+    : 'style="display:none"';
+
+  var btnAgree    = "vote-btn" + (uv && uv.vote === "agree"    ? " active-agree"    : "");
+  var btnDisagree = "vote-btn" + (uv && uv.vote === "disagree" ? " active-disagree" : "");
+  var btnNeutral  = "vote-btn" + (uv && uv.vote === "neutral"  ? " active-neutral"  : "");
+
+  var detailOpen  = uv ? " open" : "";
+
+  return '<div class="pos-card ' + tier(pos.frequency) + '"'
+    + ' data-label="' + escHtml(pos.label) + '"'
+    + ' data-stasis="' + escHtml(pos.stasis) + '"'
+    + ' data-ctx="' + escHtml(ctx) + '">'
+
+    // clickable header area
+    + '<div class="card-main">'
+    + '<div class="card-label">'
+    + '<span class="user-vote-pip" ' + pipStyle + '></span>'
+    + escHtml(pos.label)
+    + '</div>'
+    + '<div class="card-claim">' + escHtml(pos.claim) + '</div>'
+    + '<div class="card-meta">'
+    + '<span class="stasis-badge ' + escHtml(pos.stasis) + '">' + escHtml(pos.stasis) + '</span>'
+    + '<span class="context-badge">' + escHtml(ctx === "both" ? "UK + US" : ctx) + '</span>'
+    + '<div class="freq-bar-wrap">'
+    + '<div class="freq-bar-track"><div class="freq-bar-fill" style="width:' + pct + '%;background:' + sc + '"></div></div>'
+    + '<span class="freq-label">' + pos.frequency + ' claims</span>'
+    + '</div></div></div>'
+
+    // vote bar
+    + '<div class="vote-bar" onclick="event.stopPropagation()">'
+    + '<span class="vote-bar-label">Your view:</span>'
+    + '<button class="' + btnAgree    + '" data-vote="agree">    agree</button>'
+    + '<button class="' + btnDisagree + '" data-vote="disagree"> disagree</button>'
+    + '<button class="' + btnNeutral  + '" data-vote="neutral">  neutral</button>'
+    + '<button class="vote-detail-toggle">' + (uv ? "edit ↓" : "+ add reason") + '</button>'
+    + '</div>'
+
+    // reason/evidence form
+    + '<div class="vote-detail' + detailOpen + '" onclick="event.stopPropagation()">'
+    + '<label class="vote-detail-label">Your reasoning (optional)</label>'
+    + '<textarea placeholder="Why do you hold this view?">' + escHtml(uv ? uv.reason : "") + '</textarea>'
+    + '<label class="vote-detail-label">Evidence URL (optional)</label>'
+    + '<input type="text" placeholder="https://..." value="' + escHtml(uv ? uv.evidenceUrl : "") + '">'
+    + '<label class="vote-detail-label">Evidence quote (optional)</label>'
+    + '<textarea placeholder="Paste a relevant quote..." style="min-height:44px">' + escHtml(uv ? uv.evidenceQuote : "") + '</textarea>'
+    + '<button class="vote-submit">Save</button>'
+    + '<span class="vote-saved">Saved ✓</span>'
+    + '</div>'
+
+    + '</div>';
+}
+
+// ── render columns ────────────────────────────────────────────────────────────
+function renderColumn(side) {
+  var positions = allPositions.filter(function(p) { return p.side === side; });
+  var container = document.getElementById("cards-" + side);
+  var emptyEl   = document.getElementById("empty-" + side);
+  var countEl   = document.getElementById("count-" + side);
+
+  var visible = positions.filter(matchesFilter);
+  container.innerHTML = visible.map(buildCard).join("");
+  countEl.textContent = visible.length + " / " + positions.length;
+  emptyEl.style.display = visible.length === 0 ? "block" : "none";
+
+  container.querySelectorAll(".pos-card").forEach(function(card) {
+    var label = card.dataset.label;
+    var pos   = allPositions.find(function(p) { return p.label === label; });
+
+    // card body click → modal
+    card.querySelector(".card-main").addEventListener("click", function() {
+      if (pos) openModal(pos);
+    });
+
+    // vote buttons
+    card.querySelectorAll(".vote-btn").forEach(function(btn) {
+      btn.addEventListener("click", function(e) {
+        e.stopPropagation();
+        var vote   = btn.dataset.vote;
+        var detail = card.querySelector(".vote-detail");
+        var toggle = card.querySelector(".vote-detail-toggle");
+        // Toggle off if same vote clicked again
+        var uv = getVote(label);
+        if (uv && uv.vote === vote) {
+          saveVote(label, vote, uv.reason, uv.evidenceUrl, uv.evidenceQuote);
+        } else {
+          var reason = detail.querySelector("textarea").value;
+          var url    = detail.querySelector('input[type="text"]').value;
+          var quote  = detail.querySelectorAll("textarea")[1].value;
+          saveVote(label, vote, reason, url, quote);
+          detail.classList.add("open");
+          toggle.textContent = "edit ↓";
+        }
+        // Refresh button states on this card
+        card.querySelectorAll(".vote-btn").forEach(function(b) {
+          b.className = "vote-btn";
+          if (b.dataset.vote === vote) b.classList.add("active-" + vote);
+        });
+        var pip = card.querySelector(".user-vote-pip");
+        pip.style.background = VOTE_COLOR[vote] || "#999";
+        pip.style.display    = "block";
+      });
+    });
+
+    // toggle detail form
+    card.querySelector(".vote-detail-toggle").addEventListener("click", function(e) {
+      e.stopPropagation();
+      card.querySelector(".vote-detail").classList.toggle("open");
+    });
+
+    // save button
+    card.querySelector(".vote-submit").addEventListener("click", function(e) {
+      e.stopPropagation();
+      var uv     = getVote(label);
+      var vote   = uv ? uv.vote : "neutral";
+      var texts  = card.querySelectorAll("textarea");
+      var reason = texts[0].value;
+      var url    = card.querySelector('input[type="text"]').value;
+      var quote  = texts[1].value;
+      saveVote(label, vote, reason, url, quote);
+      var saved = card.querySelector(".vote-saved");
+      saved.classList.add("visible");
+      setTimeout(function() { saved.classList.remove("visible"); }, 2000);
+    });
+  });
+}
+
+function renderAll() {
+  ["anti", "pro", "shared"].forEach(renderColumn);
+}
+
+// ── filters ───────────────────────────────────────────────────────────────────
+document.querySelectorAll(".pill[data-ctx]").forEach(function(btn) {
+  btn.addEventListener("click", function() {
+    activeCtx = btn.dataset.ctx;
+    document.querySelectorAll(".pill[data-ctx]").forEach(function(b) { b.classList.remove("active"); });
+    btn.classList.add("active");
+    renderAll();
+  });
+});
+document.querySelectorAll(".pill[data-stasis]").forEach(function(btn) {
+  btn.addEventListener("click", function() {
+    activeStasis = btn.dataset.stasis;
+    document.querySelectorAll(".pill[data-stasis]").forEach(function(b) { b.classList.remove("active"); });
+    btn.classList.add("active");
+    renderAll();
+  });
+});
+
+document.getElementById("stance-reset").addEventListener("click", function() {
+  if (confirm("Clear all your votes?")) { clearVotes(); renderAll(); }
+});
+
+// ── modal ─────────────────────────────────────────────────────────────────────
+function openModal(pos) {
+  var sideColor = SIDE_COLOR[pos.side] || "#999";
+  document.getElementById("modal-bar").style.background = sideColor;
+
+  var ctx = contextOf(pos);
+  var sideLabel = pos.side === "anti" ? "Against wealth tax" : pos.side === "pro" ? "For wealth tax" : "Shared ground";
+
+  document.getElementById("modal-header").innerHTML =
+    '<div class="modal-label">' + escHtml(pos.label) + '</div>'
+    + '<div class="modal-claim">' + escHtml(pos.claim) + '</div>'
+    + '<div class="modal-badges">'
+    + '<span class="stasis-badge ' + escHtml(pos.stasis) + '">' + escHtml(pos.stasis) + '</span>'
+    + '<span class="context-badge">' + escHtml(ctx === "both" ? "UK + US" : ctx) + '</span>'
+    + '<span class="context-badge" style="background:' + sideColor + ';color:#fff;border:none">' + escHtml(sideLabel) + '</span>'
+    + '<span class="context-badge">' + pos.frequency + ' claims</span>'
+    + '</div>';
+
+  var debatesHtml = "";
+  if (pos.source_debates && pos.source_debates.length) {
+    debatesHtml = '<div class="modal-section"><div class="modal-section-title">'
+      + pos.source_debates.length + ' debates make this argument</div><div class="debate-list">'
+      + pos.source_debates.map(function(d) {
+          var link = d.url
+            ? '<a href="' + escHtml(d.url) + '" target="_blank" rel="noopener">' + escHtml(d.title) + ' &#8599;</a>'
+            : escHtml(d.title);
+          return '<div class="debate-item"><span class="debate-ctx">' + escHtml(d.context || "?") + '</span>' + link + '</div>';
+        }).join("") + '</div></div>';
+  }
+
+  var quotesHtml = "";
+  if (pos.example_quotes && pos.example_quotes.length) {
+    quotesHtml = '<div class="modal-section"><div class="modal-section-title">Example quotes</div><div class="quote-list">'
+      + pos.example_quotes.map(function(q) {
+          return '<div class="modal-quote">&ldquo;' + escHtml(q) + '&rdquo;</div>';
+        }).join("") + '</div></div>';
+  }
+
+  // User's own vote in modal
+  var uv = getVote(pos.label);
+  var userHtml = "";
+  if (uv) {
+    userHtml = '<div class="modal-section"><div class="modal-section-title">Your position</div>'
+      + '<div class="modal-user-vote">'
+      + '<div class="modal-user-vote-dot" style="background:' + (VOTE_COLOR[uv.vote] || "#999") + '"></div>'
+      + '<strong>' + escHtml(uv.vote) + '</strong>'
+      + (uv.reason ? '<div class="modal-user-reasoning">&ldquo;' + escHtml(uv.reason) + '&rdquo;</div>' : "")
+      + (uv.evidenceUrl ? '<div class="modal-user-evidence"><a href="' + escHtml(uv.evidenceUrl) + '" target="_blank" rel="noopener">Your evidence &#8599;</a></div>' : "")
+      + '</div></div>';
+  }
+
+  document.getElementById("modal-body").innerHTML = userHtml + debatesHtml + quotesHtml;
+  document.getElementById("modal-backdrop").classList.add("open");
+  document.getElementById("modal-backdrop").scrollTop = 0;
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  document.getElementById("modal-backdrop").classList.remove("open");
+  document.body.style.overflow = "";
+}
+document.getElementById("modal-close").addEventListener("click", closeModal);
+document.getElementById("modal-backdrop").addEventListener("click", function(e) { if (e.target === this) closeModal(); });
+document.addEventListener("keydown", function(e) { if (e.key === "Escape") closeModal(); });
+
+// ── legend ────────────────────────────────────────────────────────────────────
+function buildLegend() {
+  document.getElementById("stasis-legend").innerHTML =
+    '<span style="font-size:0.78rem;color:var(--muted);margin-right:4px">Argument type:</span>'
+    + Object.entries(STASIS_COLOR).map(function(kv) {
+        return '<div class="legend-item"><div class="legend-dot" style="background:' + kv[1] + '"></div>' + kv[0] + '</div>';
+      }).join("");
+}
+
+// ── load ──────────────────────────────────────────────────────────────────────
+fetch("data/claim_positions.json")
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+    var positions = data.positions || [];
+    var shared    = (data.shared || []).map(function(p) { p.side = "shared"; return p; });
+    allPositions  = positions.concat(shared);
+    maxFreq       = Math.max.apply(null, allPositions.map(function(p) { return p.frequency; }).concat([1]));
+    buildLegend();
+    renderAll();
+    updateStanceBar();
+  });
+</script>
+</body>
+</html>

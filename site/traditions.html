@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traditions of Discourse | Discourse Integrity Map</title>
+    <style>
+      :root {
+        --bg: #f4efe6;
+        --paper: #fffaf2;
+        --ink: #201a16;
+        --muted: #62574c;
+        --line: rgba(32, 26, 22, 0.14);
+        --accent: #8f3b2e;
+        --accent-soft: #d88f61;
+        --olive: #667255;
+        --navy: #29445a;
+        --gold: #c49a57;
+        --shadow: 0 22px 60px rgba(38, 27, 16, 0.1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(196, 154, 87, 0.16), transparent 28%),
+          radial-gradient(circle at top right, rgba(143, 59, 46, 0.12), transparent 24%),
+          linear-gradient(180deg, #f7f1e8 0%, var(--bg) 100%);
+        font-family: "Avenir Next", "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .page {
+        width: min(1160px, calc(100% - 2rem));
+        margin: 0 auto;
+        padding: 4.5rem 0 4rem;
+      }
+      .topnav {
+        position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+        display: flex; justify-content: flex-end; align-items: center;
+        padding: 0 32px; height: 48px;
+        background: rgba(255, 250, 242, 0.88);
+        backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line); font-size: 0.85rem; gap: 4px;
+      }
+      .topnav a { color: var(--accent); text-decoration: none; padding: 4px 10px; border-radius: 6px; transition: background 0.13s; }
+      .topnav a:hover { background: rgba(163,71,47,0.08); }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background:
+          linear-gradient(135deg, rgba(41, 68, 90, 0.08), transparent 42%),
+          linear-gradient(180deg, rgba(255, 250, 242, 0.98), rgba(251, 243, 230, 0.96));
+        box-shadow: var(--shadow);
+        padding: 3rem;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto -6% -10% auto;
+        width: 280px;
+        height: 280px;
+        background: radial-gradient(circle, rgba(143, 59, 46, 0.15), transparent 68%);
+        pointer-events: none;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 1rem;
+        padding: 0.35rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(143, 59, 46, 0.08);
+        color: var(--accent);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+
+      h1 {
+        max-width: 11ch;
+        font-size: clamp(2.8rem, 7vw, 5.6rem);
+        line-height: 0.94;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
+        gap: 2rem;
+        align-items: end;
+      }
+
+      .hero p {
+        max-width: 62ch;
+        margin: 1.25rem 0 0;
+        font-size: 1.06rem;
+        color: var(--muted);
+      }
+
+      .hero-note {
+        padding: 1.1rem 1.2rem;
+        border-left: 4px solid var(--gold);
+        background: rgba(196, 154, 87, 0.09);
+        border-radius: 14px;
+        color: #4f4336;
+      }
+
+      .hero-note strong {
+        color: var(--ink);
+      }
+
+      .jump-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        margin-top: 1.75rem;
+      }
+
+      .jump-links a {
+        text-decoration: none;
+        padding: 0.72rem 1rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.76);
+        font-size: 0.94rem;
+        transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+      }
+
+      .jump-links a:hover {
+        transform: translateY(-1px);
+        border-color: rgba(32, 26, 22, 0.28);
+        background: #fff;
+      }
+
+      .section {
+        margin-top: 2rem;
+        padding: 2rem;
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        background: rgba(255, 250, 242, 0.92);
+        box-shadow: var(--shadow);
+      }
+
+      .section-header {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+        gap: 1.5rem;
+        align-items: start;
+        margin-bottom: 1.75rem;
+      }
+
+      .section h2 {
+        font-size: clamp(2rem, 3vw, 2.8rem);
+        margin-bottom: 0.65rem;
+      }
+
+      .section-intro {
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .frame {
+        padding: 1rem 1.05rem;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(41, 68, 90, 0.04);
+        color: #51463c;
+      }
+
+      .frame strong {
+        color: var(--navy);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .card {
+        height: 100%;
+        padding: 1.2rem 1.15rem;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 249, 240, 0.96));
+      }
+
+      .card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .label {
+        display: inline-block;
+        margin-bottom: 0.8rem;
+        padding: 0.22rem 0.55rem;
+        border-radius: 999px;
+        background: rgba(102, 114, 85, 0.12);
+        color: var(--olive);
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .card p {
+        margin: 0 0 0.8rem;
+        color: var(--muted);
+      }
+
+      .card ul,
+      .mini-list {
+        margin: 0;
+        padding-left: 1.1rem;
+      }
+
+      .card li,
+      .mini-list li {
+        margin: 0.28rem 0;
+      }
+
+      .quote-band {
+        margin-top: 1rem;
+        padding: 1.2rem 1.25rem;
+        border-left: 5px solid var(--accent);
+        border-radius: 14px;
+        background: rgba(143, 59, 46, 0.07);
+        font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+        font-size: 1.08rem;
+      }
+
+      .bridge {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 1.1rem;
+      }
+
+      .bridge .card {
+        background: linear-gradient(180deg, rgba(41, 68, 90, 0.04), rgba(255, 250, 242, 0.92));
+      }
+
+      .footnote {
+        margin-top: 1.3rem;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      .footer-note {
+        margin-top: 2rem;
+        padding: 1.25rem 1.3rem;
+        border-radius: 18px;
+        background: linear-gradient(135deg, rgba(102, 114, 85, 0.09), rgba(41, 68, 90, 0.06));
+        border: 1px solid var(--line);
+        color: #50463d;
+      }
+
+      @media (max-width: 920px) {
+        .hero-grid,
+        .section-header,
+        .grid,
+        .bridge {
+          grid-template-columns: 1fr;
+        }
+
+        .hero,
+        .section {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="topnav">
+      <a href="report.html">Report</a>
+      <a href="positions.html">Agora</a>
+      <a href="corpus.html">Corpus</a>
+      <a href="heatmap.html">Heatmap</a>
+      <a href="debate.html">Debate</a>
+      <a href="taxonomy.html">Taxonomy</a>
+      <a href="map.html">Map</a>
+      <a href="dissertation.html">Dissertation</a>
+    </nav>
+    <main class="page">
+      <section class="hero">
+        <span class="eyebrow">Educational Layer</span>
+        <div class="hero-grid">
+          <div>
+            <h1>Traditions of Discourse</h1>
+            <p>
+              A map of how different traditions thought about argument, speech,
+              truthfulness, fairness, and distortion. This page is not part of
+              the classifier. It is an interpretive and educational layer for
+              readers who want to situate today’s discourse problems in a
+              longer human history.
+            </p>
+            <div class="jump-links">
+              <a href="#greek">Greek Dialectic</a>
+              <a href="#roman">Roman Rhetoric</a>
+              <a href="#biblical">Biblical Speech Ethics</a>
+              <a href="#parliamentary">Parliamentary Procedure</a>
+              <a href="#modern">Modern Argumentation</a>
+            </div>
+          </div>
+          <aside class="hero-note">
+            <strong>Important note:</strong> these traditions are not intended to be
+            collapsed into one theory. Greek dialectic, biblical speech ethics,
+            parliamentary procedure, and modern argumentation theory are from different historical contexts; the point here is comparison and contextualisation.
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="greek">
+        <div class="section-header">
+          <div>
+            <h2>Greek Dialectic and Eristic</h2>
+            <p class="section-intro">
+              The Greek tradition gives DIM some of its strongest conceptual
+              anchors: the distinction between truth-oriented exchange and
+              victory-oriented disputation.
+            </p>
+          </div>
+          <div class="frame">
+            <strong>DIM relevance:</strong> this is the clearest historical home
+            of the dialectic/eristic axis that now underpins the project’s
+            theory of discourse quality.
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <span class="label">Core Concepts</span>
+            <h3>What matters here</h3>
+            <ul class="mini-list">
+              <li><strong>Dialectic:</strong> exchange oriented toward testing and refining a position.</li>
+              <li><strong>Eristic:</strong> exchange oriented toward winning, display, or domination.</li>
+              <li><strong>Elenchus:</strong> cross-examination by exposing contradiction.</li>
+              <li><strong>Aporia:</strong> productive puzzlement rather than false certainty.</li>
+              <li><strong>Quaestio-like focus:</strong> staying on the point actually at issue.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="label">Conduct Norms</span>
+            <h3>What fair exchange tends to look like</h3>
+            <p>
+              The etiquette layer is thinner than the logical vocabulary, but a
+              clear conduct ideal still emerges: one question at a time,
+              relevant answers, willingness to be corrected, and resistance to
+              evasive display speech.
+            </p>
+            <p>
+              Much of what DIM calls low-quality discourse can be read as
+              departures from that ideal rather than just isolated “mistakes.”
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="roman">
+        <div class="section-header">
+          <div>
+            <h2>Roman Rhetoric and Decorum</h2>
+            <p class="section-intro">
+              The Roman tradition is less about philosophical dialogue and more
+              about public speech, persuasive structure, and the character of
+              the speaker.
+            </p>
+          </div>
+          <div class="frame">
+            <strong>DIM relevance:</strong> Roman rhetoric helps explain why
+            arrangement, delivery, and tone matter even when the argument’s
+            surface logic looks adequate.
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <span class="label">Speech Architecture</span>
+            <h3>Classical parts of a speech</h3>
+            <ul class="mini-list">
+              <li><strong>Exordium:</strong> the opening and the establishment of trust.</li>
+              <li><strong>Confirmatio:</strong> the positive case.</li>
+              <li><strong>Refutatio:</strong> the answering of objections.</li>
+              <li><strong>Peroration:</strong> closing summary and emotional ending.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="label">Conduct</span>
+            <h3>Decorum</h3>
+            <p>
+              Roman rhetoric links argumentative quality to appropriateness of
+              conduct, timing, restraint, and self-command. The speaker’s
+              bearing is part of persuasion, but also part of judgment.
+            </p>
+            <p>
+              For DIM, this matters because some discourse failures are not
+              just logical. They are failures of proportion, register, and fair
+              handling of an opponent.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="biblical">
+        <div class="section-header">
+          <div>
+            <h2>Biblical Speech Ethics</h2>
+            <p class="section-intro">
+              Biblical material is less concerned with formal debate procedure
+              than with the moral character of speech: truthfulness, humility,
+              restraint, willingness to listen, and justice in how one speaks
+              of and to others.
+            </p>
+          </div>
+          <div class="frame">
+            <strong>DIM relevance:</strong> not as a classifier input, but as a
+            powerful educational strand about fair speech, false witness,
+            haste, listening, and the ethical burden of speaking well.
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <span class="label">Themes</span>
+            <h3>What this tradition emphasizes</h3>
+            <ul class="mini-list">
+              <li>truthfulness rather than evasive speech</li>
+              <li>listening before replying</li>
+              <li>restraint, humility, and slowness to anger</li>
+              <li>the moral danger of false witness and slander</li>
+              <li>justice in how one speaks about others</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <div class="grid" style="margin-top: 1rem;">
+          <article class="card">
+            <span class="label">Specific Notes</span>
+            <h3>Job</h3>
+            <p>Job is one of the richest Biblical texts for discourse ethics because it stages a sustained argumentative exchange rather than a single proverb or command.</p>
+            <ul class="mini-list">
+              <li><strong>Context:</strong> Job disputes with his friends over suffering, justice, blame, and what counts as faithful speech before God.</li>
+              <li><strong>Note:</strong> the text distinguishes between rhetorically smooth defence of a doctrine and honest struggle with a hard question.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="label">Specific Notes</span>
+            <h3>Proverbs 18:17</h3>
+            <p>“The one who states his case first seems right, until the other comes and examines him.”</p>
+            <ul class="mini-list">
+              <li><strong>Context:</strong> wisdom literature on judgment, testimony, and practical discernment.</li>
+              <li><strong>Note:</strong> this is strikingly close to a principle of cross-examination or second-side testing.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="label">Specific Notes</span>
+            <h3>James 1:19</h3>
+            <p>“Let every person be quick to hear, slow to speak, slow to anger.”</p>
+            <ul class="mini-list">
+              <li><strong>Context:</strong> instruction on disciplined speech, anger, and moral seriousness in hearing and responding.</li>
+              <li><strong>Note:</strong> this is one of the clearest speech-conduct lines for listening before reacting.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="label">Specific Notes</span>
+            <h3>Matthew 5:37</h3>
+            <p>“Let what you say be simply ‘Yes’ or ‘No’; anything more than this comes from evil.”</p>
+            <ul class="mini-list">
+              <li><strong>Context:</strong> Jesus' teaching against manipulative oath-making and evasive moral accounting.</li>
+              <li><strong>Note:</strong> the emphasis is on plainness, integrity, and not using verbal elaboration to avoid responsibility.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="label">Specific Notes</span>
+            <h3>Acts 17</h3>
+            <p>Paul is described as reasoning in synagogues and public places, including the Areopagus in Athens.</p>
+            <ul class="mini-list">
+              <li><strong>Context:</strong> public engagement in a setting already shaped by Greek intellectual culture.</li>
+              <li><strong>Note:</strong> it is one of the clearest New Testament scenes where discourse is staged as reasoned public engagement rather than proclamation alone.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="label">Specific Notes</span>
+            <h3>Hebrew <em>Emet</em></h3>
+            <p>The Hebrew idea of <em>emet</em> is often translated as truth, but also carries senses of faithfulness, reliability, and integrity.</p>
+            <ul class="mini-list">
+              <li><strong>Context:</strong> not a single “debate term,” but a broader moral-linguistic orientation.</li>
+              <li><strong>Note:</strong> this points beyond mere factual accuracy toward trustworthy speech and relational honesty.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="quote-band">
+          A future DIM educational layer could show how different traditions
+          understood truthful, fair, or destructive speech, not to collapse
+          them into a single theory, but to help users situate modern discourse
+          problems in a longer human history.
+        </div>
+      </section>
+
+      <section class="section" id="parliamentary">
+        <div class="section-header">
+          <div>
+            <h2>Parliamentary and Democratic Procedure</h2>
+            <p class="section-intro">
+              Modern democratic settings make some discourse norms explicit.
+              Floor rights, motions, objections, and time limits are ways of
+              formalizing what older traditions often left implicit.
+            </p>
+          </div>
+          <div class="frame">
+            <strong>DIM relevance:</strong> this is where fair exchange becomes
+            proceduralized. It helps explain why interruption, floor seizure,
+            and time manipulation matter structurally.
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <span class="label">Procedure</span>
+            <h3>What gets codified</h3>
+            <ul class="mini-list">
+              <li>point of order</li>
+              <li>point of information</li>
+              <li>yielding the floor</li>
+              <li>quorum and cloture</li>
+              <li>motions to table or end debate</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="label">Risk</span>
+            <h3>Formal fairness can still be gamed</h3>
+            <p>
+              Procedure can protect discourse, but it can also be weaponized.
+              Filibusters, time-flooding, performative points, and rule-lawyering
+              show that codified fairness does not automatically produce
+              substantive integrity.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="modern">
+        <div class="section-header">
+          <div>
+            <h2>Modern Argumentation Theory</h2>
+            <p class="section-intro">
+              This is where historical discourse ideas meet contemporary
+              analytical frameworks: Toulmin, pragma-dialectics, fallacy
+              theory, conversation analysis, and NLP-adjacent reasoning work.
+            </p>
+          </div>
+          <div class="frame">
+            <strong>DIM relevance:</strong> this is the most direct bridge from
+            old ideas about argument into an operational methodology.
+          </div>
+        </div>
+
+        <div class="bridge">
+          <article class="card">
+            <span class="label">Framework</span>
+            <h3><a href="https://en.wikipedia.org/wiki/Toulmin_method" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Toulmin</a></h3>
+            <p>
+              Useful for making claims, data, warrants, rebuttals, and missing
+              support visible in a way the classifier can eventually use more
+              explicitly.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="label">Framework</span>
+            <h3><a href="https://en.wikipedia.org/wiki/Pragma-dialectics" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Pragma-Dialectics</a></h3>
+            <p>
+              Especially important for DIM because it treats fallacies as
+              violations of the rules of reasonable discussion rather than just
+              isolated logic blunders.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="label">Framework</span>
+            <h3><a href="https://en.wikipedia.org/wiki/Conversation_analysis" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Conversation Analysis</a></h3>
+            <p>
+              Helps give a vocabulary for turn-taking, responsiveness,
+              interruption, floor control, and other interactional phenomena
+              that standard fallacy lists often miss.
+            </p>
+          </article>
+        </div>
+
+        <p class="footnote">
+          This is also where DIM’s more original categories can be located:
+          not as timeless absolutes, but as proposed analytical tools built in
+          dialogue with older traditions and modern research.
+        </p>
+      </section>
+
+    </main>
+  </body>
+</html>

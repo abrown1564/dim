@@ -1,0 +1,2940 @@
+[
+  {
+    "debate_id": "b5c398bd-e1a0-49ae-b7ea-4b2ea8552cd7",
+    "title": "Do you agree with Jacob Rees Mogg's opinion on wealth tax? #clip #fyp #debate #viral #money",
+    "source_url": "https://www.youtube.com/watch?v=iZiWd_-Dy1A",
+    "discourse_mode": "multi_party",
+    "stance": "mixed",
+    "chars": 1362,
+    "claim_count": 4,
+    "total_detections": 27,
+    "negative_count": 24,
+    "positive_count": 3,
+    "rhetorical_density": 6.0,
+    "agreement": "no",
+    "consensus": "no",
+    "overall_topic": "Whether a wealth tax (in particular on billionaires) is justified, effective, or motivated by envy",
+    "top_techniques": [
+      {
+        "name": "motivational delegitimisation",
+        "group": "psychological_rhetoric",
+        "count": 3
+      },
+      {
+        "name": "straw man",
+        "group": "psychological_rhetoric",
+        "count": 3
+      },
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 2
+      }
+    ],
+    "all_techniques": [
+      {
+        "name": "motivational delegitimisation",
+        "group": "psychological_rhetoric",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "a wealth tax is purely there to make people poorer as your objective",
+          "Well, why? Just because you're jealous?"
+        ]
+      },
+      {
+        "name": "straw man",
+        "group": "psychological_rhetoric",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "a wealth tax is purely there to make people poorer as your objective",
+          "So, are you saying they should sell their shares to pay this tax when they've got no income or borrow money to do it?"
+        ]
+      },
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "in every country that's tried it, it's failed.",
+          "People running tech companies may have assets of billions, but their income may be very small, because it may purely be in the paper of the company that they have founded."
+        ]
+      },
+      {
+        "name": "weasel words",
+        "group": "semantic_manipulation",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "in every country that's tried it, it's failed",
+          "may have assets of billions, but their income may be very small, because it may purely be in the paper"
+        ]
+      },
+      {
+        "name": "many questions",
+        "group": "formal_structure",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "Well, why? Just because you're jealous? No, but more because... Well, why? Why do you want to? He's paying tax anyway.",
+          "How do you know they've got a surplus? What are their commitments? How many people are they employing?"
+        ]
+      },
+      {
+        "name": "red herring",
+        "group": "psychological_rhetoric",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "He's paying tax anyway.",
+          "He's paying tax anyway."
+        ]
+      },
+      {
+        "name": "begging the question",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "a wealth tax is purely there to make people poorer as your objective"
+        ]
+      },
+      {
+        "name": "sweeping generalisation",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "a wealth tax is purely there to make people poorer as your objective"
+        ]
+      },
+      {
+        "name": "normative laundering",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "a wealth tax is purely there to make people poorer as your objective"
+        ]
+      },
+      {
+        "name": "attribution of intent",
+        "group": "source_attacks",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Well, why? Just because you're jealous?"
+        ]
+      },
+      {
+        "name": "ad hominem",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Just because you're jealous?"
+        ]
+      },
+      {
+        "name": "foreclosing interrogation",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "How do you know they've got a surplus? What are their commitments? How many people are they employing?"
+        ]
+      },
+      {
+        "name": "sealioning",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "In what view have they got a surplus? Well, if they've... / SPEAKER_00: How do you know they've got a surplus? What are their commitments? How many people are they employing?"
+        ]
+      },
+      {
+        "name": "elenchus",
+        "group": "counter_techniques",
+        "count": 1,
+        "polarity": "positive",
+        "quotes": [
+          "In what view have they got a surplus? Well, if they've... / SPEAKER_00: How do you know they've got a surplus? What are their commitments? How many people are they employing?"
+        ]
+      },
+      {
+        "name": "proof by example",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "People running tech companies may have assets of billions, but their income may be very small, because it may purely be in the paper of the company that they have founded."
+        ]
+      },
+      {
+        "name": "distributional anchoring",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "are you saying they should sell their shares to pay this tax when they've got no income or borrow money to do it?"
+        ]
+      },
+      {
+        "name": "loaded question",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "are you saying they should sell their shares to pay this tax when they've got no income or borrow money to do it?"
+        ]
+      },
+      {
+        "name": "reductio ad absurdum",
+        "group": "counter_techniques",
+        "count": 1,
+        "polarity": "positive",
+        "quotes": [
+          "So, are you saying they should sell their shares to pay this tax when they've got no income or borrow money to do it?"
+        ]
+      },
+      {
+        "name": "prolepsis",
+        "group": "counter_techniques",
+        "count": 1,
+        "polarity": "positive",
+        "quotes": [
+          "People running tech companies may have assets of billions, but their income may be very small, because it may purely be in the paper of the company that they have founded."
+        ]
+      }
+    ]
+  },
+  {
+    "debate_id": "556f5a81-0fa6-4cf2-9b8b-87d6ef62d063",
+    "title": "\u2018Preposterous!' LBC callers are divided over proposed wealth tax",
+    "source_url": "https://www.youtube.com/watch?v=no43SNtueL0",
+    "discourse_mode": "multi_party",
+    "stance": "pro",
+    "chars": 9949,
+    "claim_count": 7,
+    "total_detections": 37,
+    "negative_count": 34,
+    "positive_count": 3,
+    "rhetorical_density": 4.857,
+    "agreement": "no",
+    "consensus": "no",
+    "overall_topic": "Whether the UK should introduce a wealth tax to address inequality and fund public services",
+    "top_techniques": [
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 4
+      },
+      {
+        "name": "straw man",
+        "group": "psychological_rhetoric",
+        "count": 3
+      },
+      {
+        "name": "weasel words",
+        "group": "semantic_manipulation",
+        "count": 3
+      }
+    ],
+    "all_techniques": [
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 4,
+        "polarity": "negative",
+        "quotes": [
+          "17,000 very wealthy people want to leave and take with them a lot of they create jobs",
+          "economists say these have been tried elsewhere in the world and they've never worked"
+        ]
+      },
+      {
+        "name": "straw man",
+        "group": "psychological_rhetoric",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "success is not a sin",
+          "success is not a sin"
+        ]
+      },
+      {
+        "name": "weasel words",
+        "group": "semantic_manipulation",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "17,000 very wealthy people want to leave and take with them a lot of they create jobs",
+          "economists say these have been tried elsewhere in the world and they've never worked"
+        ]
+      },
+      {
+        "name": "loaded question",
+        "group": "psychological_rhetoric",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "Michael, what does it say about a country that 17,000 very wealthy people want to leave",
+          "economists say these have been tried elsewhere in the world and they've never worked. Should we be concerned over that?"
+        ]
+      },
+      {
+        "name": "normative laundering",
+        "group": "semantic_manipulation",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "success is not a sin",
+          "17,000 very wealthy people want to leave and take with them a lot of they create jobs"
+        ]
+      },
+      {
+        "name": "appeal to emotion",
+        "group": "psychological_rhetoric",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "It's absolutely incredible",
+          "Britain is increasingly becoming a poor country with rich people living in it"
+        ]
+      },
+      {
+        "name": "cum hoc",
+        "group": "evidence_quality",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "The collective wealth of Britain's billionaires is something like \u00a3795 billion. That is three times the annual operating budget of the NHS",
+          "the happiest countries in the world have wealth taxes"
+        ]
+      },
+      {
+        "name": "appeal to fear",
+        "group": "psychological_rhetoric",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "17,000 very wealthy people want to leave and take with them a lot of they create jobs",
+          "wealthy people who launch businesses and employ people are looking elsewhere and heading off to Dubai, Italy and other countries"
+        ]
+      },
+      {
+        "name": "appeal to authority",
+        "group": "psychological_rhetoric",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "economists say these have been tried elsewhere in the world and they've never worked",
+          "economists say these have been tried elsewhere in the world and they've never worked"
+        ]
+      },
+      {
+        "name": "prolepsis",
+        "group": "counter_techniques",
+        "count": 2,
+        "polarity": "positive",
+        "quotes": [
+          "But economists say these have been tried elsewhere in the world and they've never worked. Should we be concerned over that?",
+          "We give the NHS \u00a33 billion a week. How much do you want to give them? So it's important that that's in keeping as a percentage of our GDP."
+        ]
+      },
+      {
+        "name": "persuasive definition",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "success is not a sin"
+        ]
+      },
+      {
+        "name": "appeal to ridicule",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "as soon as we start talking about taxing the rich, oh, well, they'll just have to leave"
+        ]
+      },
+      {
+        "name": "false dilemma",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Do you agree with the principle of taxing wealth?"
+        ]
+      },
+      {
+        "name": "elenchus",
+        "group": "counter_techniques",
+        "count": 1,
+        "polarity": "positive",
+        "quotes": [
+          "Do you agree with the principle of taxing wealth?"
+        ]
+      },
+      {
+        "name": "begging the question",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "we always end up here in this kind of race to the bottom, where no one's allowed to tax the wealthy because they'll always go everywhere"
+        ]
+      },
+      {
+        "name": "slippery slope",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "we always end up here in this kind of race to the bottom, where no one's allowed to tax the wealthy because they'll always go everywhere"
+        ]
+      },
+      {
+        "name": "motivational delegitimisation",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "we always end up here in this kind of race to the bottom, where no one's allowed to tax the wealthy because they'll always go everywhere"
+        ]
+      },
+      {
+        "name": "non sequitur",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "the happiest countries in the world... they all have wealth taxes... Denmark has the best tax... it's not wealth, it's income"
+        ]
+      },
+      {
+        "name": "affirming the consequent",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "the happiest countries in the world... they all have wealth taxes"
+        ]
+      },
+      {
+        "name": "equivocation",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "wealth taxes are a fine idea... These people are already paying 45 percent"
+        ]
+      },
+      {
+        "name": "appeal to the masses",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "the happiest countries in the world all have wealth taxes"
+        ]
+      },
+      {
+        "name": "red herring",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Denmark has a very good tax... on income, not wealth"
+        ]
+      }
+    ]
+  },
+  {
+    "debate_id": "0955fc6c-0584-4e21-888e-7bac25f80436",
+    "title": "California's proposed wealth tax is 'idiotic concept,' says Tenacity Venture Capital's Narasin",
+    "source_url": "https://www.youtube.com/watch?v=ui_QxmMyYKQ",
+    "discourse_mode": "dialogic",
+    "stance": "anti",
+    "chars": 3252,
+    "claim_count": 5,
+    "total_detections": 26,
+    "negative_count": 24,
+    "positive_count": 2,
+    "rhetorical_density": 4.8,
+    "agreement": "partial",
+    "consensus": "partial",
+    "overall_topic": "California's proposed wealth tax and whether it is sound fiscal policy",
+    "top_techniques": [
+      {
+        "name": "loaded question",
+        "group": "psychological_rhetoric",
+        "count": 4
+      },
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 3
+      },
+      {
+        "name": "many questions",
+        "group": "formal_structure",
+        "count": 2
+      }
+    ],
+    "all_techniques": [
+      {
+        "name": "loaded question",
+        "group": "psychological_rhetoric",
+        "count": 4,
+        "polarity": "negative",
+        "quotes": [
+          "does California need more money to waste?",
+          "does California need more money to waste? Is that really the answer for how to deal with things out there?"
+        ]
+      },
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "does California need more money to waste? Is that really the answer for how to deal with things out there?",
+          "There's no country in the world where a wealth tax has worked with one exception at Switzerland"
+        ]
+      },
+      {
+        "name": "many questions",
+        "group": "formal_structure",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "does California need more money to waste? Is that really the answer for how to deal with things out there?",
+          "And then I think about does California need more money to waste?"
+        ]
+      },
+      {
+        "name": "attribution of intent",
+        "group": "source_attacks",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "I don't think he always did support what he's now calling a moderate wealth tax.",
+          "This is political pandering to the proletariat... it's just an idiotic concept that is nothing more than political positioning"
+        ]
+      },
+      {
+        "name": "phantom quantification",
+        "group": "evidence_quality",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "I don't know how much money it would raise. It's not going to solve California's problems",
+          "there's well documented cases where people, countries and states create wealth taxes"
+        ]
+      },
+      {
+        "name": "begging the question",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "does California need more money to waste?"
+        ]
+      },
+      {
+        "name": "poisoning the well",
+        "group": "source_attacks",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "does California need more money to waste?"
+        ]
+      },
+      {
+        "name": "persuasive definition",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "does California need more money to waste?"
+        ]
+      },
+      {
+        "name": "appeal to emotion",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "California's tech elite are angry over a potential wealth tax in the Golden State"
+        ]
+      },
+      {
+        "name": "weasel words",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "he's come down on the side of a lot of his constituents"
+        ]
+      },
+      {
+        "name": "epistemic cowardice",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "I don't think he always did support what he's now calling a moderate wealth tax. I think in the past he's come down on the side of a lot of his constituents and not."
+        ]
+      },
+      {
+        "name": "elenchus",
+        "group": "counter_techniques",
+        "count": 1,
+        "polarity": "positive",
+        "quotes": [
+          "I don't think he always did support what he's now calling a moderate wealth tax. I think in the past he's come down on the side of a lot of his constituents and not."
+        ]
+      },
+      {
+        "name": "appeal to ridicule",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "it's just an idiotic concept that is nothing more than political positioning"
+        ]
+      },
+      {
+        "name": "motivational delegitimisation",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "This is political pandering to the proletariat... a let's tax the rich and help you little guy and gal. It has no basis in anything that works."
+        ]
+      },
+      {
+        "name": "ad hominem tu quoque",
+        "group": "source_attacks",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "It's pretty tough to be so, I don't know, proven to be poor at your job of spending money that isn't yours and then to ask for more"
+        ]
+      },
+      {
+        "name": "ad rem",
+        "group": "counter_techniques",
+        "count": 1,
+        "polarity": "positive",
+        "quotes": [
+          "There's two issues here... one is if someone accrues a lot of wealth paying... Then there's founder shares that people that found a company... it's never taxed, basically."
+        ]
+      },
+      {
+        "name": "proof by example",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "France in 1989 lost, by their own numbers, 10 to 12,000 millionaires"
+        ]
+      },
+      {
+        "name": "post hoc",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "France in 1989 lost, by their own numbers, 10 to 12,000 millionaires when millionaires mattered"
+        ]
+      }
+    ]
+  },
+  {
+    "debate_id": "4b041a31-1ff2-4534-9a65-137336a969b2",
+    "title": "A Wealth Tax Doesn\u2019t Make Sense",
+    "source_url": "https://www.youtube.com/watch?v=g2sHvMjsFJs",
+    "discourse_mode": "monologic",
+    "stance": "anti",
+    "chars": 2630,
+    "claim_count": 3,
+    "total_detections": 13,
+    "negative_count": 13,
+    "positive_count": 0,
+    "rhetorical_density": 4.333,
+    "agreement": "yes",
+    "consensus": "yes",
+    "overall_topic": "Critique of Elizabeth Warren's proposed wealth tax, particularly as applied to illiquid assets like fine art",
+    "top_techniques": [
+      {
+        "name": "appeal to fear",
+        "group": "psychological_rhetoric",
+        "count": 2
+      },
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 1
+      },
+      {
+        "name": "jaqing",
+        "group": "psychological_rhetoric",
+        "count": 1
+      }
+    ],
+    "all_techniques": [
+      {
+        "name": "appeal to fear",
+        "group": "psychological_rhetoric",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "That is if politicians don't get their way. Just look at Elizabeth Warren, who for years has been promising a wealth tax.",
+          "This whole thing sounds like a massive invasion of privacy and almost impossible to implement."
+        ]
+      },
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "especially if we're talking about investment in things like art, or boats, or anything else really"
+        ]
+      },
+      {
+        "name": "jaqing",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "How's the government going to determine how much it's worth?"
+        ]
+      },
+      {
+        "name": "appeal to probability",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Or maybe in Elizabeth Warren's head, the plan is to send agents out door to door to look at what you might be hiding"
+        ]
+      },
+      {
+        "name": "false causal chain",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Do I have to register them?... Or maybe... the plan is to send agents out door to door... This whole thing sounds like a massive invasion of privacy and almost impossible to implement."
+        ]
+      },
+      {
+        "name": "attribution of intent",
+        "group": "source_attacks",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Or maybe in Elizabeth Warren's head, the plan is to send agents out door to door to look at what you might be hiding"
+        ]
+      },
+      {
+        "name": "slippery slope",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "the plan is to send agents out door to door to look at what you might be hiding"
+        ]
+      },
+      {
+        "name": "argument from incredulity",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "This whole thing sounds like a massive invasion of privacy and almost impossible to implement."
+        ]
+      },
+      {
+        "name": "nirvana fallacy",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "This whole thing sounds like a massive invasion of privacy and almost impossible to implement."
+        ]
+      },
+      {
+        "name": "weasel words",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Or maybe in Elizabeth Warren's head, the plan is to send agents out door to door to look at what you might be hiding"
+        ]
+      },
+      {
+        "name": "straw man",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Or maybe in Elizabeth Warren's head, the plan is to send agents out door to door to look at what you might be hiding"
+        ]
+      },
+      {
+        "name": "appeal to ridicule",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Or maybe in Elizabeth Warren's head, the plan is to send agents out door to door to look at what you might be hiding"
+        ]
+      }
+    ]
+  },
+  {
+    "debate_id": "039f91c4-d57a-4411-89ef-c3c13da7c80f",
+    "title": "The Jacob Rees-Mogg Illusion: Why the Rich Think They\u2019re the Victims - Barry's Economics",
+    "source_url": "https://www.youtube.com/watch?v=U33YXb-3_fA",
+    "discourse_mode": "monologic",
+    "stance": "pro",
+    "chars": 13239,
+    "claim_count": 6,
+    "total_detections": 28,
+    "negative_count": 26,
+    "positive_count": 2,
+    "rhetorical_density": 4.333,
+    "agreement": "no",
+    "consensus": "no",
+    "overall_topic": "Critique of Jacob Rees-Mogg's arguments against a mansion/wealth tax",
+    "top_techniques": [
+      {
+        "name": "motivational delegitimisation",
+        "group": "psychological_rhetoric",
+        "count": 5
+      },
+      {
+        "name": "ad hominem circumstantial",
+        "group": "source_attacks",
+        "count": 3
+      },
+      {
+        "name": "attribution of intent",
+        "group": "source_attacks",
+        "count": 3
+      }
+    ],
+    "all_techniques": [
+      {
+        "name": "motivational delegitimisation",
+        "group": "psychological_rhetoric",
+        "count": 5,
+        "polarity": "negative",
+        "quotes": [
+          "he has a vested interest in this because he lives in a mansion",
+          "it's almost like canvassing turkeys as to what should be eaten at Christmas"
+        ]
+      },
+      {
+        "name": "ad hominem circumstantial",
+        "group": "source_attacks",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "Rees-Mogg has a direct vested interest in opposing a mansion tax because he lives in a mansion",
+          "if you reframed it, it's almost like canvassing turkeys as to what should be eaten at Christmas"
+        ]
+      },
+      {
+        "name": "attribution of intent",
+        "group": "source_attacks",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "he immediately frames it as a class war without any context to any evidence or reason to say. And I do think part of that is because our opinions come from the people that we hang around with",
+          "he immediately frames it as a class war without any context to any evidence or reason to say"
+        ]
+      },
+      {
+        "name": "bulverism",
+        "group": "psychological_rhetoric",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "I think it's because when you grow up in such immense privilege, the normal social boundaries that the rest of us have just don't apply",
+          "he immediately frames it as a class war without any context to any evidence or reason to say. And I do think part of that is because our opinions come from the people that we hang around with"
+        ]
+      },
+      {
+        "name": "appeal to ridicule",
+        "group": "psychological_rhetoric",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "what I like about Jacob Rees-Mogg, and when I say like, it's a relative term, but what I like about it is he really truly has that little self-awareness",
+          "it's almost like canvassing turkeys as to what should be eaten at Christmas"
+        ]
+      },
+      {
+        "name": "figure of speech fallacy",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "you might just be asset rich and cash poor"
+        ]
+      },
+      {
+        "name": "ad hominem",
+        "group": "source_attacks",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "he really truly has that little self-awareness"
+        ]
+      },
+      {
+        "name": "poisoning the well",
+        "group": "source_attacks",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "And what I like about Jacob Rees-Mogg, and when I say like, it's a relative term, but what I like about it is he really truly has that little self-awareness"
+        ]
+      },
+      {
+        "name": "distributional anchoring",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "young Londoners with massive mortgages on a two and a half million pound property"
+        ]
+      },
+      {
+        "name": "proof by example",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Using a \u00a32m house as the example of a 'working family' home"
+        ]
+      },
+      {
+        "name": "false equivalence",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "If old people have to liquidate their assets to pay for care, it seems fair to ask millionaires to liquidate their assets to pay for society"
+        ]
+      },
+      {
+        "name": "ex concessis",
+        "group": "counter_techniques",
+        "count": 1,
+        "polarity": "positive",
+        "quotes": [
+          "If old people have to liquidate their assets to pay for care, it seems fair to ask millionaires to liquidate their assets to pay for society."
+        ]
+      },
+      {
+        "name": "argument from prior",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "you can hear the motivated reasoning in Rees-Mogg's analysis of well, it's complicated."
+        ]
+      },
+      {
+        "name": "prolepsis",
+        "group": "counter_techniques",
+        "count": 1,
+        "polarity": "positive",
+        "quotes": [
+          "Now, you may say people living in 3 million pound houses are very rich."
+        ]
+      },
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Any real wealth that's being bought up is coming into from stocks, from gold, from investments, from um asset purchase."
+        ]
+      },
+      {
+        "name": "cherry picking",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Wealth isn't being created from income and yet nobody's saying that in the public sphere"
+        ]
+      },
+      {
+        "name": "false cause",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "essentially, the mansion tax is merely a symptom of bad capital taxation policy"
+        ]
+      },
+      {
+        "name": "weasel words",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "nobody's saying that in the public sphere"
+        ]
+      }
+    ]
+  },
+  {
+    "debate_id": "25e6763a-439c-43a7-8d9a-7f8f7a472d64",
+    "title": "Debate: Would a Wealth Tax on the Top 1% Help Tackle Poverty?",
+    "source_url": "https://www.youtube.com/watch?v=-V6lLP3WWd0",
+    "discourse_mode": "multi_party",
+    "stance": "pro",
+    "chars": 10674,
+    "claim_count": 5,
+    "total_detections": 22,
+    "negative_count": 20,
+    "positive_count": 2,
+    "rhetorical_density": 4.0,
+    "agreement": "no",
+    "consensus": "no",
+    "overall_topic": "Whether a wealth tax on the top 1% would help tackle poverty in the UK",
+    "top_techniques": [
+      {
+        "name": "appeal to authority",
+        "group": "psychological_rhetoric",
+        "count": 3
+      },
+      {
+        "name": "no true scotsman",
+        "group": "semantic_manipulation",
+        "count": 2
+      },
+      {
+        "name": "prolepsis",
+        "group": "counter_techniques",
+        "count": 2
+      }
+    ],
+    "all_techniques": [
+      {
+        "name": "appeal to authority",
+        "group": "psychological_rhetoric",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "I was a central bank economist.",
+          "Even left wing economists say it doesn't work"
+        ]
+      },
+      {
+        "name": "no true scotsman",
+        "group": "semantic_manipulation",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "Even left wing economists say it doesn't work",
+          "The reason why it didn't work in other places is because they cast the nets widely. They didn't go for a one percent tax."
+        ]
+      },
+      {
+        "name": "prolepsis",
+        "group": "counter_techniques",
+        "count": 2,
+        "polarity": "positive",
+        "quotes": [
+          "The reason why it didn't work in other places is because they cast the nets widely. They didn't go for a one percent tax.",
+          "The reason why it didn't work in other places is because they cast the nets widely. They didn't go for a one percent tax. They went for much bigger tax"
+        ]
+      },
+      {
+        "name": "persuasive definition",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "right now we are taxing earned income more than we're taxing unearned wealth. This is fundamentally about fairness."
+        ]
+      },
+      {
+        "name": "normative laundering",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "right now we are taxing earned income more than we're taxing unearned wealth. This is fundamentally about fairness."
+        ]
+      },
+      {
+        "name": "appeal to emotion",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "This is fundamentally about fairness."
+        ]
+      },
+      {
+        "name": "appeal to probability",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "it'll cost it'll make everyone poorer"
+        ]
+      },
+      {
+        "name": "weasel words",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Even left wing economists say it doesn't work"
+        ]
+      },
+      {
+        "name": "performed empiricism",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "I was a central bank economist. I looked it up because it sounds great. I looked it up about a month ago when this became a topic topic and it doesn't work."
+        ]
+      },
+      {
+        "name": "appeal to fear",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "it'll make everyone poorer"
+        ]
+      },
+      {
+        "name": "false precision",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Zero point three percent of billionaires might leave."
+        ]
+      },
+      {
+        "name": "false equivalence",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Zero point three percent of billionaires might leave. Thirty percent of doctors who are working for NHS are saying they're thinking about leaving"
+        ]
+      },
+      {
+        "name": "denying the antecedent",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "The reason why it didn't work in other places is because they cast the nets widely. They didn't go for a one percent tax."
+        ]
+      },
+      {
+        "name": "cherry picking",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Why did it fail in France and Germany. Why did they give it up. Why is it working in Norway"
+        ]
+      },
+      {
+        "name": "definitional retreat",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "The reason why it didn't work in other places is because they cast the nets widely. They didn't go for a one percent tax."
+        ]
+      },
+      {
+        "name": "jaqing",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Why did it fail in France and Germany. Why did they give it up."
+        ]
+      },
+      {
+        "name": "hasty conclusion",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "The reason why it didn't work in other places is because they cast the nets widely. They didn't go for a one percent tax. They went for much bigger tax"
+        ]
+      },
+      {
+        "name": "straw man",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "The reason why it didn't work in other places is because they cast the nets widely. They didn't go for a one percent tax. They went for much bigger tax... What I am saying is a one percent tax on 10 million pounds or more."
+        ]
+      }
+    ]
+  },
+  {
+    "debate_id": "250eed74-e844-4150-85f5-d3417e7c0a34",
+    "title": "'A wealth tax will target ordinary people like me'",
+    "source_url": "https://www.youtube.com/watch?v=WNk0xcuDah4",
+    "discourse_mode": "multi_party",
+    "stance": "anti",
+    "chars": 1803,
+    "claim_count": 5,
+    "total_detections": 21,
+    "negative_count": 19,
+    "positive_count": 2,
+    "rhetorical_density": 3.8,
+    "agreement": "partial",
+    "consensus": "no",
+    "overall_topic": "Whether a UK wealth tax would target ordinary high earners or only the truly wealthy",
+    "top_techniques": [
+      {
+        "name": "distributional anchoring",
+        "group": "evidence_quality",
+        "count": 2
+      },
+      {
+        "name": "non sequitur",
+        "group": "formal_structure",
+        "count": 2
+      },
+      {
+        "name": "proof by example",
+        "group": "evidence_quality",
+        "count": 2
+      }
+    ],
+    "all_techniques": [
+      {
+        "name": "distributional anchoring",
+        "group": "evidence_quality",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "it does very much seem like people who are hard workers like me just happen to have ordinary jobs in the city",
+          "Those ordinary people who are in 9 to 5 jobs... working ordinary jobs in the city, they should not be the people who have to pay more than their fair share"
+        ]
+      },
+      {
+        "name": "non sequitur",
+        "group": "formal_structure",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "The people with one million say, oh, it's the people with 10 million. The people with 10 million say it's the people with 100 million. It's the people with 100 million who say, go after the billionaires, not me. I can't afford it. And ultimately, you know, we've all got to have to pay our fair share, don't we?",
+          "they should not be the people who have to pay more than their fair share, which is what we will have to do if there is any sort of wealth tax. Because of course, to an ordinary family working... the amount of money that I earn in the city is a huge amount"
+        ]
+      },
+      {
+        "name": "proof by example",
+        "group": "evidence_quality",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "The people with one million say, oh, it's the people with 10 million. The people with 10 million say it's the people with 100 million. It's the people with 100 million who say, go after the billionaires, not me.",
+          "Because of course, to an ordinary family working, I don't know, in the north-east of England, the amount of money that I earn in the city is a huge amount."
+        ]
+      },
+      {
+        "name": "weasel words",
+        "group": "semantic_manipulation",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "we've all got to have to pay our fair share, don't we?",
+          "they should not be the people who have to pay more than their fair share, which is what we will have to do if there is any sort of wealth tax"
+        ]
+      },
+      {
+        "name": "equivocation",
+        "group": "semantic_manipulation",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "to an ordinary family working, I don't know, in the north-east of England, the amount of money that I earn in the city is a huge amount",
+          "working ordinary jobs in the city, they should not be the people who have to pay more than their fair share... to an ordinary family working, I don't know, in the north-east of England, the amount of money that I earn in the city is a huge amount"
+        ]
+      },
+      {
+        "name": "false dilemma",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "if we're not willing to actually put those figures out there and say we're talking about people who have more than 50 million, then it does very much seem like people who are hard workers like me just happen to have ordinary jobs in the city"
+        ]
+      },
+      {
+        "name": "prolepsis",
+        "group": "counter_techniques",
+        "count": 1,
+        "polarity": "positive",
+        "quotes": [
+          "I am not the equivalent of the Duke of Westminster, who is often talked about when we talk about why aren't people paying the fair share of tax."
+        ]
+      },
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "The people with one million say, oh, it's the people with 10 million. The people with 10 million say it's the people with 100 million. It's the people with 100 million who say, go after the billionaires, not me."
+        ]
+      },
+      {
+        "name": "appeal to the masses",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "we've all got to have to pay our fair share, don't we?"
+        ]
+      },
+      {
+        "name": "begging the question",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "they should not be the people who have to pay more than their fair share, which is what we will have to do if there is any sort of wealth tax"
+        ]
+      },
+      {
+        "name": "sweeping generalisation",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "they should not be the people who have to pay more than their fair share, which is what we will have to do if there is any sort of wealth tax"
+        ]
+      },
+      {
+        "name": "persuasive definition",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "working ordinary jobs in the city"
+        ]
+      },
+      {
+        "name": "straw man",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "they should not be the people who have to pay more than their fair share, which is what we will have to do if there is any sort of wealth tax"
+        ]
+      },
+      {
+        "name": "appeal to pity",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Those ordinary people who are in 9 to 5 jobs... working ordinary jobs in the city, they should not be the people who have to pay more than their fair share"
+        ]
+      },
+      {
+        "name": "false equivalence",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "to an ordinary family working, I don't know, in the north-east of England, the amount of money that I earn in the city is a huge amount"
+        ]
+      },
+      {
+        "name": "ex concessis",
+        "group": "counter_techniques",
+        "count": 1,
+        "polarity": "positive",
+        "quotes": [
+          "unless you're a very, very good lawyer doing very, very well for yourself, which you might be, that wouldn't affect you, would it?"
+        ]
+      }
+    ]
+  },
+  {
+    "debate_id": "0cbbec6d-0664-455b-9595-b06c7f370e7a",
+    "title": "This Wealth Tax Could Change Everything #taxtherich #tax #economy",
+    "source_url": "https://www.youtube.com/watch?v=pu89sXzGBAs",
+    "discourse_mode": "monologic",
+    "stance": "pro",
+    "chars": 2457,
+    "claim_count": 5,
+    "total_detections": 21,
+    "negative_count": 19,
+    "positive_count": 2,
+    "rhetorical_density": 3.8,
+    "agreement": "no",
+    "consensus": "no",
+    "overall_topic": "Defense of California's proposed wealth/billionaire tax against common objections",
+    "top_techniques": [
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 3
+      },
+      {
+        "name": "prolepsis",
+        "group": "counter_techniques",
+        "count": 2
+      },
+      {
+        "name": "normative laundering",
+        "group": "semantic_manipulation",
+        "count": 2
+      }
+    ],
+    "all_techniques": [
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "Massachusetts increased taxes on millionaires and billionaires in 2023.",
+          "Let's be real, California's billionaires are wealthier than they've ever been. Take the CEO of AI, chipmaker, and video... That's an outcome that he says is perfectly fine with it."
+        ]
+      },
+      {
+        "name": "prolepsis",
+        "group": "counter_techniques",
+        "count": 2,
+        "polarity": "positive",
+        "quotes": [
+          "Now a few California billionaires will make headlines by leaving the state in a huff or by threatening to move assets. But if they lived in the state on January 1st, they'll be on the hook for the tax anyway.",
+          "California's billionaire tax isn't the final answer to America's disgraceful inequalities of wealth and income, of course. But it's a start."
+        ]
+      },
+      {
+        "name": "normative laundering",
+        "group": "semantic_manipulation",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "His wealth grew by $124 billion dollars over the past five years. And he'd have to pay just under $10 billion in the next five under the California proposal.",
+          "These efforts are essential not only to funding what most people need, but also to preserving our democracy."
+        ]
+      },
+      {
+        "name": "appeal to hypocrisy",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "that same tax bill doled out far more in tax cuts for the richest Americans, including the California billionaires now crying foul"
+        ]
+      },
+      {
+        "name": "appeal to authority",
+        "group": "source_attacks",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "That's an outcome that he says is perfectly fine with it."
+        ]
+      },
+      {
+        "name": "proof by example",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Take the CEO of AI, chipmaker, and video. His wealth grew by $124 billion dollars over the past five years. And he'd have to pay just under $10 billion in the next five under the California proposal."
+        ]
+      },
+      {
+        "name": "distributional anchoring",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Take the CEO of AI, chipmaker, and video. His wealth grew by $124 billion dollars over the past five years."
+        ]
+      },
+      {
+        "name": "phantom quantification",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "15 million poor and working class Californians, including 5 billion children who rely on California's Medicaid system"
+        ]
+      },
+      {
+        "name": "false dilemma",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Why are we focused on the complaints of a handful of billionaires instead of the needs of millions of their neighbors?"
+        ]
+      },
+      {
+        "name": "appeal to pity",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "15 million poor and working class Californians, including 5 billion children who rely on California's Medicaid system, would be able to go to the doctor and afford life-saving medicine"
+        ]
+      },
+      {
+        "name": "straw man",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "the complaints of a handful of billionaires"
+        ]
+      },
+      {
+        "name": "attribution of intent",
+        "group": "source_attacks",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "It may open the way to further efforts to rein in the obscenely rich, which is what some billionaires probably fear."
+        ]
+      },
+      {
+        "name": "slippery slope",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "It may open the way to further efforts to rein in the obscenely rich, which is what some billionaires probably fear."
+        ]
+      },
+      {
+        "name": "weasel words",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "which is what some billionaires probably fear"
+        ]
+      },
+      {
+        "name": "persuasive definition",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "to rein in the obscenely rich"
+        ]
+      },
+      {
+        "name": "appeal to fear",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "These efforts are essential not only to funding what most people need, but also to preserving our democracy."
+        ]
+      },
+      {
+        "name": "loaded language",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "rein in the obscenely rich"
+        ]
+      }
+    ]
+  },
+  {
+    "debate_id": "41550b8f-a878-45bd-8351-1bbf95076a4b",
+    "title": "Wealth tax: James O\u2019Brien vs LBC caller \u2018who comes from nothing\u2019",
+    "source_url": "https://www.youtube.com/watch?v=Uu0vg83L43c",
+    "discourse_mode": "dialogic",
+    "stance": "pro",
+    "chars": 10520,
+    "claim_count": 11,
+    "total_detections": 49,
+    "negative_count": 38,
+    "positive_count": 11,
+    "rhetorical_density": 3.455,
+    "agreement": "partial",
+    "consensus": "no",
+    "overall_topic": "Whether the UK should impose a wealth tax on assets over \u00a310 million",
+    "top_techniques": [
+      {
+        "name": "elenchus",
+        "group": "counter_techniques",
+        "count": 5
+      },
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 5
+      },
+      {
+        "name": "loaded question",
+        "group": "psychological_rhetoric",
+        "count": 4
+      }
+    ],
+    "all_techniques": [
+      {
+        "name": "elenchus",
+        "group": "counter_techniques",
+        "count": 5,
+        "polarity": "positive",
+        "quotes": [
+          "How are you paying income tax on the increase in your assets?",
+          "explain to me how the Duke of Westminster has been responsible for building his fortune... I want you to tell me why the Duke of Westminster shouldn't pay a wealth tax."
+        ]
+      },
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 5,
+        "polarity": "negative",
+        "quotes": [
+          "I know a few that are thinking about...",
+          "mentality of British people, if it was to go and make something of yours, rather than take something of another"
+        ]
+      },
+      {
+        "name": "loaded question",
+        "group": "psychological_rhetoric",
+        "count": 4,
+        "polarity": "negative",
+        "quotes": [
+          "Why does anybody feel entitled to go take anything of that?",
+          "Why would you, as someone, are you likely ever to be taxed on assets over 10 million pounds?"
+        ]
+      },
+      {
+        "name": "ex concessis",
+        "group": "counter_techniques",
+        "count": 3,
+        "polarity": "positive",
+        "quotes": [
+          "I don't disagree with that necessarily.",
+          "Bill Gates himself has pointed out that if he paid 99% tax, he'd still be a billionaire"
+        ]
+      },
+      {
+        "name": "begging the question",
+        "group": "formal_structure",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "if it was to go and make something of yours, rather than take something of another",
+          "What do they lose by helping everybody else out more?"
+        ]
+      },
+      {
+        "name": "distributional anchoring",
+        "group": "evidence_quality",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "But people that come into 20 million pounds through their own hard work.",
+          "if he paid 99% tax, he'd still be a billionaire"
+        ]
+      },
+      {
+        "name": "proof by example",
+        "group": "evidence_quality",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "Given that you already paid a 45% a year annually as is, to get to that point",
+          "Bill Gates himself has pointed out that if he paid 99% tax, he'd still be a billionaire"
+        ]
+      },
+      {
+        "name": "appeal to emotion",
+        "group": "psychological_rhetoric",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "people that come into 20 million pounds through their own hard work. Why does anybody feel entitled to go take anything of that?",
+          "They would still be the richest people in the country. They'd still be the richest people in the world... What do they lose by helping everybody else out more?"
+        ]
+      },
+      {
+        "name": "concept capture",
+        "group": "semantic_manipulation",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "if it was to go and make something of yours, rather than take something of another",
+          "Human nature, greed, ingrained into the DNA."
+        ]
+      },
+      {
+        "name": "motivational delegitimisation",
+        "group": "psychological_rhetoric",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "Why would you, as someone, are you likely ever to be taxed on assets over 10 million pounds?",
+          "You don't talk about the king, you don't talk about the Duke of Westminster, you don't talk about the Earl of Leicester... because the only way you can possibly ever protect that inequality is by conjuring up people who've just left to go to Dubai"
+        ]
+      },
+      {
+        "name": "bulverism",
+        "group": "psychological_rhetoric",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "Why would you, as someone, are you likely ever to be taxed on assets over 10 million pounds?",
+          "the only way you can possibly ever protect that inequality is by conjuring up people who've just left to go to Dubai"
+        ]
+      },
+      {
+        "name": "straw man",
+        "group": "psychological_rhetoric",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "the only way you can possibly ever protect that inequality is by conjuring up people who've just left to go to Dubai",
+          "Better management, less waste. All of those things are interesting, but we've been listening to that mantra for 50 years."
+        ]
+      },
+      {
+        "name": "sweeping generalisation",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "people that come into 20 million pounds through their own hard work"
+        ]
+      },
+      {
+        "name": "normative laundering",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Given that you already paid a 45% a year annually as is, to get to that point"
+        ]
+      },
+      {
+        "name": "ad rem",
+        "group": "counter_techniques",
+        "count": 1,
+        "polarity": "positive",
+        "quotes": [
+          "Yes, you are, but you're not paying tax on the profit you make from the rising value of the property."
+        ]
+      },
+      {
+        "name": "figure of speech fallacy",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "I'm saying mentality of British people, if it was to go and make something of yours, rather than take something of another."
+        ]
+      },
+      {
+        "name": "attribution of intent",
+        "group": "source_attacks",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Why would you, as someone, are you likely ever to be taxed on assets over 10 million pounds?"
+        ]
+      },
+      {
+        "name": "ad hominem circumstantial",
+        "group": "source_attacks",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Why would you, as someone, are you likely ever to be taxed on assets over 10 million pounds?"
+        ]
+      },
+      {
+        "name": "persuasive definition",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "mentality of British people, if it was to go and make something of yours, rather than take something of another"
+        ]
+      },
+      {
+        "name": "cherry picking",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "You don't talk about the king, you don't talk about the Duke of Westminster, you don't talk about the Earl of Leicester, you don't talk about any of these fortunes that have been around since 1066, because the only way you can possibly ever protect that inequality is by conjuring up people who've just left to go to Dubai"
+        ]
+      },
+      {
+        "name": "non sequitur",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "if he paid 99% tax, he'd still be a billionaire"
+        ]
+      },
+      {
+        "name": "appeal to ridicule",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "if he paid 99% tax, he'd still be a billionaire"
+        ]
+      },
+      {
+        "name": "prolepsis",
+        "group": "counter_techniques",
+        "count": 1,
+        "polarity": "positive",
+        "quotes": [
+          "Better management, less waste. All of those things are interesting, but we've been listening to that mantra for 50 years."
+        ]
+      },
+      {
+        "name": "post hoc",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "We had 14 years of cuts to everything from police numbers right through to filling in potholes and looking after newborn children. So we've done all that. We've tried it all. How do you think it's worked?"
+        ]
+      },
+      {
+        "name": "many questions",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "What do they lose by helping everybody else out more?"
+        ]
+      },
+      {
+        "name": "appeal to nature",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Human nature, greed, ingrained into the DNA."
+        ]
+      },
+      {
+        "name": "reductio ad absurdum",
+        "group": "counter_techniques",
+        "count": 1,
+        "polarity": "positive",
+        "quotes": [
+          "if you recognize under your own logic that these people are essentially the greediest, then surely they should be at the very front of the queue"
+        ]
+      }
+    ]
+  },
+  {
+    "debate_id": "6368d072-65fa-4b16-8907-2f7abb2a0211",
+    "title": "Wealth Tax DISASTER? Experts CLASH Over Britain\u2019s Future!",
+    "source_url": "https://www.youtube.com/watch?v=NiNcqO2ll3s",
+    "discourse_mode": "multi_party",
+    "stance": "pro",
+    "chars": 8467,
+    "claim_count": 7,
+    "total_detections": 24,
+    "negative_count": 22,
+    "positive_count": 2,
+    "rhetorical_density": 3.143,
+    "agreement": "no",
+    "consensus": "no",
+    "overall_topic": "Whether the UK should introduce a wealth tax, and the empirical and normative consequences of doing so",
+    "top_techniques": [
+      {
+        "name": "proof by example",
+        "group": "evidence_quality",
+        "count": 3
+      },
+      {
+        "name": "loaded question",
+        "group": "psychological_rhetoric",
+        "count": 3
+      },
+      {
+        "name": "weasel words",
+        "group": "semantic_manipulation",
+        "count": 2
+      }
+    ],
+    "all_techniques": [
+      {
+        "name": "proof by example",
+        "group": "evidence_quality",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "the owner of GB News, Paul Marshall, who's on the Sunday Times Reach list with a wealth of about 900 million pounds... probably pays a significantly lower average rate on their income than somebody like me who's a sort of upper-income earner level",
+          "do we think of Paul Marshall, who's worth 900 million, according to Sunday Times, had to pay one or two percent of that a year? Do you think that his attachment to this country and to its values and culture is very minimal that he should leave the country?"
+        ]
+      },
+      {
+        "name": "loaded question",
+        "group": "psychological_rhetoric",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "Do you know what it is through, Jonathan? Do you know what it is through? It's through risk.",
+          "Do you think that his attachment to this country and to its values and culture is very minimal that he should leave the country?"
+        ]
+      },
+      {
+        "name": "weasel words",
+        "group": "semantic_manipulation",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "We know how hedge fund people who run hedge funds get most of the money out of the hedge funds. It's not through straightforward income.",
+          "there are about 16,000 millionaires estimated to leave the UK in 2025"
+        ]
+      },
+      {
+        "name": "hasty conclusion",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "probably pays a significantly lower average rate on their income than somebody like me"
+        ]
+      },
+      {
+        "name": "ad hominem circumstantial",
+        "group": "source_attacks",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "We know how hedge fund people who run hedge funds get most of the money out of the hedge funds. It's not through straightforward income."
+        ]
+      },
+      {
+        "name": "foreclosing interrogation",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Do you know what it is through, Jonathan? Do you know what it is through? It's through risk."
+        ]
+      },
+      {
+        "name": "affirming the consequent",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Now, in the 1990s, there are about 12 countries that had wealth taxes. Now there are only three."
+        ]
+      },
+      {
+        "name": "post hoc",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "in the 1990s, there are about 12 countries that had wealth taxes. Now there are only three."
+        ]
+      },
+      {
+        "name": "false cause",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "in the 1990s, there are about 12 countries that had wealth taxes. Now there are only three."
+        ]
+      },
+      {
+        "name": "cherry picking",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "What do we really think is going to happen if we implement a wealth tax?"
+        ]
+      },
+      {
+        "name": "normative laundering",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "We know that there are about 16,000 millionaires estimated to leave the UK in 2025. What do we really think is going to happen if we implement a wealth tax?"
+        ]
+      },
+      {
+        "name": "appeal to consequences",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "We know that there are about 16,000 millionaires estimated to leave the UK in 2025. What do we really think is going to happen if we implement a wealth tax?"
+        ]
+      },
+      {
+        "name": "genetic fallacy",
+        "group": "source_attacks",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "The 16,000 figure, for example, that Reeves quoted is simply an invented one, invented by a wealth management firm. It has actual no basis in reality"
+        ]
+      },
+      {
+        "name": "many questions",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "do you think that his attachment to this country and to its values and culture is very minimal that he should leave the country?"
+        ]
+      },
+      {
+        "name": "argument from incredulity",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Do you think that his attachment to this country and to its values and culture is very minimal that he should leave the country?"
+        ]
+      },
+      {
+        "name": "jaqing",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "do we think that Paul Marshall, your owner, who, as I said, is part of my portfolio, do you think that he would leave the country?"
+        ]
+      },
+      {
+        "name": "elenchus",
+        "group": "counter_techniques",
+        "count": 1,
+        "polarity": "positive",
+        "quotes": [
+          "do we think that Paul Marshall, your owner, who, as I said, is part of my portfolio, do you think that he would leave the country?"
+        ]
+      },
+      {
+        "name": "reductio ad absurdum",
+        "group": "counter_techniques",
+        "count": 1,
+        "polarity": "positive",
+        "quotes": [
+          "Do you think that his attachment to this country and to its values and culture is very minimal that he should leave the country?"
+        ]
+      },
+      {
+        "name": "distributional anchoring",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "if I had to pay one or two percent tax on my wealth, or one or two percent tax more on my income every year to fund decent quality public services, that I would not leave the country"
+        ]
+      }
+    ]
+  },
+  {
+    "debate_id": "04c24ef8-a700-4f8d-9794-372bb3915ee8",
+    "title": "Zack Polanski and Sir John Redwood Debate: Should We Tax the Rich More?",
+    "source_url": "https://www.youtube.com/watch?v=iyWpCfCvIR8",
+    "discourse_mode": "multi_party",
+    "stance": "pro",
+    "chars": 12577,
+    "claim_count": 15,
+    "total_detections": 52,
+    "negative_count": 47,
+    "positive_count": 5,
+    "rhetorical_density": 3.133,
+    "agreement": "no",
+    "consensus": "no",
+    "overall_topic": "Whether the UK should impose an annual wealth tax on the very wealthy, and related disputes over capital flight, energy/industrial policy, and fiscal strategy",
+    "top_techniques": [
+      {
+        "name": "false cause",
+        "group": "evidence_quality",
+        "count": 5
+      },
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 4
+      },
+      {
+        "name": "straw man",
+        "group": "psychological_rhetoric",
+        "count": 3
+      }
+    ],
+    "all_techniques": [
+      {
+        "name": "false cause",
+        "group": "evidence_quality",
+        "count": 5,
+        "polarity": "negative",
+        "quotes": [
+          "We had 16,000 millionaires leave over this Labour government so far, probably more by now.",
+          "Industries leave because they see no reason to give excess money to the government."
+        ]
+      },
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 4,
+        "polarity": "negative",
+        "quotes": [
+          "And we see billionaires pulling out who make really big contributions to tax.",
+          "Wealthy people will not relocate over a 1% wealth tax."
+        ]
+      },
+      {
+        "name": "straw man",
+        "group": "psychological_rhetoric",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "it's the magic money tree world, isn't it?",
+          "If people want to flee because we're asking for a tiny amount of money relatively to their wealth, then I think we should wave them off out the door."
+        ]
+      },
+      {
+        "name": "prolepsis",
+        "group": "counter_techniques",
+        "count": 3,
+        "polarity": "positive",
+        "quotes": [
+          "We keep hearing the name of this billionaire, and that's because it's one exceptional circumstance where someone's left the country. Actually, all evidence has pretty much been debunked",
+          "I think that economists who've looked at this say, you can do a big wealth tax if it's a surprise and you do it once. But if you try and do it every year, then what then happens is people change the behaviour, they move the assets and you don't raise any money."
+        ]
+      },
+      {
+        "name": "red herring",
+        "group": "psychological_rhetoric",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "The solar farms that are being put in, they're Chinese solar farms... And they burn coal to make them.",
+          "I'm just saying that nobody does what you're proposing. So what I'm suggesting is we're a global leader in reducing inequality. We have one in three children living in poverty."
+        ]
+      },
+      {
+        "name": "appeal to ridicule",
+        "group": "psychological_rhetoric",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "No, it's totally unrealistic. I mean, it's the magic money tree world, isn't it?",
+          "then I think we should wave them off out the door"
+        ]
+      },
+      {
+        "name": "weasel words",
+        "group": "semantic_manipulation",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "Actually, all evidence has pretty much been debunked",
+          "And they burn coal to make them."
+        ]
+      },
+      {
+        "name": "false causal chain",
+        "group": "formal_structure",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "Refusing to extract UK oil and gas systematically destroys British industry and petrochemicals.",
+          "you start with the \u00a347 billion of spending cuts, and then you can actually price people back into buying houses and into jobs"
+        ]
+      },
+      {
+        "name": "appeal to consequences",
+        "group": "psychological_rhetoric",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "Importing instead of producing domestically increases world CO2.",
+          "if you add even more taxes on top as Rachel Reeves did last budget, that was an absolute economy killer"
+        ]
+      },
+      {
+        "name": "ex concessis",
+        "group": "counter_techniques",
+        "count": 2,
+        "polarity": "positive",
+        "quotes": [
+          "If we weren't giving \u00a33.2 billion to fossil fuels, those are those big oil and gas companies, in fossil fuel subsidies, we could actually spend that money on a jobs guarantee",
+          "you can do a big wealth tax if it's a surprise and you do it once. But if you try and do it every year, then what then happens is people change the behaviour"
+        ]
+      },
+      {
+        "name": "appeal to authority",
+        "group": "psychological_rhetoric",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "economists who've looked at this say",
+          "economists who've looked at this say, you can do a big wealth tax if it's a surprise and you do it once"
+        ]
+      },
+      {
+        "name": "loaded question",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "When are we going to see tough choices for multimillionaires and billionaires?"
+        ]
+      },
+      {
+        "name": "appeal to fear",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "We had 16,000 millionaires leave over this Labour government so far, probably more by now. And we see billionaires pulling out who make really big contributions to tax."
+        ]
+      },
+      {
+        "name": "genetic fallacy",
+        "group": "source_attacks",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "it's the magic money tree world, isn't it?"
+        ]
+      },
+      {
+        "name": "argument from incredulity",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "If people want to flee because we're asking for a tiny amount of money relatively to their wealth, then I think we should wave them off out the door."
+        ]
+      },
+      {
+        "name": "no true scotsman",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "If people want to flee because we're asking for a tiny amount of money relatively to their wealth, then I think we should wave them off out the door."
+        ]
+      },
+      {
+        "name": "fallacy of composition",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "The solar farms that are being put in, they're Chinese solar farms... And they burn coal to make them."
+        ]
+      },
+      {
+        "name": "cherry picking",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "The solar farms that are being put in, they're Chinese solar farms... And they burn coal to make them."
+        ]
+      },
+      {
+        "name": "composition fallacy",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "it's not really easy to move an asset. So if we look at the Duke of Westminster, he owns half of Mayfair, you can't just pick up Mayfair and move with it"
+        ]
+      },
+      {
+        "name": "ad hominem circumstantial",
+        "group": "source_attacks",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "economists are often not just independent minds"
+        ]
+      },
+      {
+        "name": "poisoning the well",
+        "group": "source_attacks",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "when we talk about economists, it's important to say that economists are often not just independent minds"
+        ]
+      },
+      {
+        "name": "proof by example",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "if we look at the Duke of Westminster, he owns half of Mayfair, you can't just pick up Mayfair and move with it"
+        ]
+      },
+      {
+        "name": "ad hominem",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "economists are often not just independent minds"
+        ]
+      },
+      {
+        "name": "bulverism",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "economists are often not just independent minds"
+        ]
+      },
+      {
+        "name": "motivational delegitimisation",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "economists are often not just independent minds"
+        ]
+      },
+      {
+        "name": "phantom quantification",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "We have one in three children living in poverty"
+        ]
+      },
+      {
+        "name": "normative laundering",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "So what I'm suggesting is we're a global leader in reducing inequality. We have one in three children living in poverty."
+        ]
+      },
+      {
+        "name": "appeal to pity",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "We have one in three children living in poverty."
+        ]
+      },
+      {
+        "name": "appeal to emotion",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "we're a global leader in reducing inequality. We have one in three children living in poverty."
+        ]
+      },
+      {
+        "name": "begging the question",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "they've got exactly the right economic strategy, you start with the \u00a347 billion of spending cuts"
+        ]
+      },
+      {
+        "name": "post hoc",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "young people are not getting jobs now because of the jobs tax and the dreadful budget"
+        ]
+      },
+      {
+        "name": "false precision",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "you start with the \u00a347 billion of spending cuts, and then you can actually price people back into buying houses and into jobs"
+        ]
+      },
+      {
+        "name": "attribution of intent",
+        "group": "source_attacks",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Attack on Wokery is all a distraction from protecting the power and wealth of the super-rich."
+        ]
+      }
+    ]
+  },
+  {
+    "debate_id": "6835406a-5581-47d6-b098-791853807a86",
+    "title": "If We Tax Rich People... They Will Just Leave!",
+    "source_url": "https://www.youtube.com/watch?v=6DXZMXZCY0I",
+    "discourse_mode": "monologic",
+    "stance": "pro",
+    "chars": 15535,
+    "claim_count": 16,
+    "total_detections": 49,
+    "negative_count": 40,
+    "positive_count": 9,
+    "rhetorical_density": 2.5,
+    "agreement": "no",
+    "consensus": "no",
+    "overall_topic": "Whether taxing the wealthy causes capital flight that reduces revenue and harms the economy",
+    "top_techniques": [
+      {
+        "name": "prolepsis",
+        "group": "counter_techniques",
+        "count": 7
+      },
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 6
+      },
+      {
+        "name": "false precision",
+        "group": "evidence_quality",
+        "count": 5
+      }
+    ],
+    "all_techniques": [
+      {
+        "name": "prolepsis",
+        "group": "counter_techniques",
+        "count": 7,
+        "polarity": "positive",
+        "quotes": [
+          "the second mistake that people make by trying to read these lines is assuming that the one and only goal of tax policy is to milk the maximum possible amount of money out of people",
+          "So yeah, millionaire exoduses do happen, but London is more of the exception that proves the rule."
+        ]
+      },
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 6,
+        "polarity": "negative",
+        "quotes": [
+          "When a country was filled up to begin with by people just looking for the best deal for them and their money, then of course those are the same kind of people to move on just as quickly when a better deal becomes available.",
+          "Most people, even those with extremely high incomes, aren't going to leave their home cities, social networks, families, customs, and way of life over some tax savings."
+        ]
+      },
+      {
+        "name": "false precision",
+        "group": "evidence_quality",
+        "count": 5,
+        "polarity": "negative",
+        "quotes": [
+          "the UK lost almost 10,000 high net worth individuals in the last calendar year to net outward migration",
+          "The study's method found that we could set top marginal tax rates as high as 76%"
+        ]
+      },
+      {
+        "name": "false cause",
+        "group": "evidence_quality",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "by trying to increase revenue, we might actually end up shrinking it",
+          "almost nobody does it because having unfettered access to Silicon Valley, Wall Street, American real estate, or financial system is worth more to most wealthy people than some tax savings"
+        ]
+      },
+      {
+        "name": "weasel words",
+        "group": "semantic_manipulation",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "According to some estimates, the UK lost almost 10,000 high net worth individuals",
+          "London is more of the exception that proves the rule"
+        ]
+      },
+      {
+        "name": "appeal to authority",
+        "group": "psychological_rhetoric",
+        "count": 3,
+        "polarity": "negative",
+        "quotes": [
+          "In that 2017 study on the Laffer Curve, America had the highest revenue-maximizing tax rate out of all OECD countries",
+          "several studies, including some from Nobel Prize winners, have been done on the impact of these people immigrating"
+        ]
+      },
+      {
+        "name": "straw man",
+        "group": "psychological_rhetoric",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "the second mistake that people make by trying to read these lines is assuming that the one and only goal of tax policy is to milk the maximum possible amount of money out of people",
+          "the assumption that most rich people choose their home by sorting low to high on a global tax database, and they are ready to jump ship the second the bill arrives"
+        ]
+      },
+      {
+        "name": "appeal to ridicule",
+        "group": "psychological_rhetoric",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "sorting low to high on a global tax database, and they are ready to jump ship the second the bill arrives",
+          "Competing in a race to the bottom to be the lowest bidder for a few thousand wealthy individuals looking to pay back as little as possible is a losing proposition."
+        ]
+      },
+      {
+        "name": "phantom quantification",
+        "group": "evidence_quality",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "According to some estimates, the UK lost almost 10,000 high net worth individuals",
+          "several studies, including some from Nobel Prize winners, have been done on the impact of these people immigrating"
+        ]
+      },
+      {
+        "name": "appeal to probability",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "If we try to tax rich people, they are just going to leave, taking with them their money, their jobs, and their businesses."
+        ]
+      },
+      {
+        "name": "false causal chain",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "if all the rich people leave, then we won't even get the taxes they were paying, which means that by trying to increase revenue, we might actually end up shrinking it"
+        ]
+      },
+      {
+        "name": "slippery slope",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "If we try to tax rich people, they are just going to leave, taking with them their money, their jobs, and their businesses. Ironically, if all the rich people leave, then we won't even get the taxes they were paying, which means that by trying to increase revenue, we might actually end up shrinking it."
+        ]
+      },
+      {
+        "name": "sweeping generalisation",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "If we try to tax rich people, they are just going to leave, taking with them their money, their jobs, and their businesses."
+        ]
+      },
+      {
+        "name": "appeal to fear",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "If we try to tax rich people, they are just going to leave, taking with them their money, their jobs, and their businesses."
+        ]
+      },
+      {
+        "name": "appeal to consequences",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Ironically, if all the rich people leave, then we won't even get the taxes they were paying, which means that by trying to increase revenue, we might actually end up shrinking it."
+        ]
+      },
+      {
+        "name": "begging the question",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "When a country was filled up to begin with by people just looking for the best deal for them and their money, then of course those are the same kind of people to move on just as quickly when a better deal becomes available."
+        ]
+      },
+      {
+        "name": "secundum quid",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "London is more of the exception that proves the rule"
+        ]
+      },
+      {
+        "name": "ecological fallacy",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "those are the same kind of people to move on just as quickly when a better deal becomes available"
+        ]
+      },
+      {
+        "name": "normative laundering",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Competing in a race to the bottom to be the lowest bidder for a few thousand wealthy individuals looking to pay back as little as possible is a losing proposition."
+        ]
+      },
+      {
+        "name": "motivational delegitimisation",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "a few thousand wealthy individuals looking to pay back as little as possible"
+        ]
+      },
+      {
+        "name": "reductio ad absurdum",
+        "group": "counter_techniques",
+        "count": 1,
+        "polarity": "positive",
+        "quotes": [
+          "When a country was filled up to begin with by people just looking for the best deal for them and their money, then of course those are the same kind of people to move on just as quickly when a better deal becomes available."
+        ]
+      },
+      {
+        "name": "post hoc",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "But even while all of this was happening, the number of millionaires in the UK actually increased. This homegrown wealth is also much less likely to leave because well, it's their home."
+        ]
+      },
+      {
+        "name": "proof by example",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "On a small scale, we saw this play out over the last five years between California and Texas."
+        ]
+      },
+      {
+        "name": "ex concessis",
+        "group": "counter_techniques",
+        "count": 1,
+        "polarity": "positive",
+        "quotes": [
+          "let's say for the sake of argument that there was some kind of change that actually did scare way a lot of wealthy people"
+        ]
+      },
+      {
+        "name": "cargo cult science",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "several studies, including some from Nobel Prize winners, have been done on the impact of these people immigrating. What they have found is that overwhelmingly, the biggest loss is the expertise of skilled workers"
+        ]
+      }
+    ]
+  },
+  {
+    "debate_id": "c4e409aa-a371-4be5-9d49-9d3686e5bd4c",
+    "title": "'People are so disgusted' - Economist Thomas Piketty on why we need a wealth tax",
+    "source_url": "https://www.youtube.com/watch?v=XeZoNTJgBZs",
+    "discourse_mode": "dialogic",
+    "stance": "pro",
+    "chars": 9265,
+    "claim_count": 8,
+    "total_detections": 16,
+    "negative_count": 12,
+    "positive_count": 4,
+    "rhetorical_density": 1.5,
+    "agreement": "partial",
+    "consensus": "partial",
+    "overall_topic": "Wealth inequality, the case for a wealth tax, and the political feasibility of redistribution",
+    "top_techniques": [
+      {
+        "name": "prolepsis",
+        "group": "counter_techniques",
+        "count": 4
+      },
+      {
+        "name": "false cause",
+        "group": "evidence_quality",
+        "count": 2
+      },
+      {
+        "name": "false causal chain",
+        "group": "formal_structure",
+        "count": 1
+      }
+    ],
+    "all_techniques": [
+      {
+        "name": "prolepsis",
+        "group": "counter_techniques",
+        "count": 4,
+        "polarity": "positive",
+        "quotes": [
+          "we have to return to a narrative where, OK, redistribution is always complicated... But you cannot decide from the beginning that this is impossible.",
+          "Because they're stuck in a set of international treaties and they cannot think the world without this"
+        ]
+      },
+      {
+        "name": "false cause",
+        "group": "evidence_quality",
+        "count": 2,
+        "polarity": "negative",
+        "quotes": [
+          "The entire sort of social contract of the post-war period is starting to collapse because of it.",
+          "the entire sort of social contract of the post-war period is starting to collapse because of this"
+        ]
+      },
+      {
+        "name": "false causal chain",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "So because we cannot get resources from people above us, we are going to eat the people below us... The entire sort of social contract of the post-war period is starting to collapse because of it."
+        ]
+      },
+      {
+        "name": "appeal to disgust",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "we are going to eat the people below us"
+        ]
+      },
+      {
+        "name": "cum hoc",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Recent decades of rising wealth concentration in UK, France, US, and Germany did not bring better incomes for average households and coincided with growth slowdown."
+        ]
+      },
+      {
+        "name": "proof by example",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "I was seeing prices for top properties in London. You know, who can pay for that with normal wage?"
+        ]
+      },
+      {
+        "name": "distributional anchoring",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "I was seeing prices for top properties in London."
+        ]
+      },
+      {
+        "name": "appeal to consequences",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "the entire sort of social contract of the post-war period is starting to collapse because of this. So, we need to change the rules."
+        ]
+      },
+      {
+        "name": "many questions",
+        "group": "formal_structure",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "What's the answer to tear up the rule of law?"
+        ]
+      },
+      {
+        "name": "semantic dodge",
+        "group": "semantic_manipulation",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "What's the answer to tear up the rule of law? SPEAKER_00: No, we have to replace it by other rules of law."
+        ]
+      },
+      {
+        "name": "straw man",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "What's the answer to tear up the rule of law?"
+        ]
+      },
+      {
+        "name": "loaded question",
+        "group": "psychological_rhetoric",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "What's the answer to tear up the rule of law?"
+        ]
+      }
+    ]
+  },
+  {
+    "debate_id": "4980639d-4252-4864-89ae-5e861ae9e791",
+    "title": "Why a wealth tax doesn\u2019t work | To the Point",
+    "source_url": "https://www.youtube.com/watch?v=YluUJWbY8ZI",
+    "discourse_mode": "monologic",
+    "stance": "anti",
+    "chars": 684,
+    "claim_count": 1,
+    "total_detections": 1,
+    "negative_count": 1,
+    "positive_count": 0,
+    "rhetorical_density": 1.0,
+    "agreement": "no",
+    "consensus": "no",
+    "overall_topic": "Whether wealth taxes are an effective policy instrument",
+    "top_techniques": [
+      {
+        "name": "post hoc",
+        "group": "evidence_quality",
+        "count": 1
+      }
+    ],
+    "all_techniques": [
+      {
+        "name": "post hoc",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Lots of OECD countries had wealth taxes in the 1990s. More or less all of them have abolished them for precisely that reason."
+        ]
+      }
+    ]
+  },
+  {
+    "debate_id": "f2efa803-6228-410d-8938-0e7596544eb5",
+    "title": "Why the Left and Right Are Both Wrong About Wealth - Barry's Economics",
+    "source_url": "https://www.youtube.com/watch?v=ARkosek5ZZs",
+    "discourse_mode": "monologic",
+    "stance": "pro",
+    "chars": 6473,
+    "claim_count": 7,
+    "total_detections": 1,
+    "negative_count": 1,
+    "positive_count": 0,
+    "rhetorical_density": 0.143,
+    "agreement": "no",
+    "consensus": "no",
+    "overall_topic": "Whether a wealth tax should be understood as a left/right ideological issue or as a matter of systemic economic health",
+    "top_techniques": [
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 1
+      }
+    ],
+    "all_techniques": [
+      {
+        "name": "hasty generalisation",
+        "group": "evidence_quality",
+        "count": 1,
+        "polarity": "negative",
+        "quotes": [
+          "Most politicians still imagine humans as individual actors."
+        ]
+      }
+    ]
+  },
+  {
+    "debate_id": "0f150e4d-8e49-442b-9df0-4f019a5edf7c",
+    "title": "Can We Tax The Rich?",
+    "source_url": "https://www.youtube.com/watch?v=2iSsu_pwHSE",
+    "discourse_mode": "monologic",
+    "stance": "pro",
+    "chars": 8084,
+    "claim_count": 3,
+    "total_detections": 0,
+    "negative_count": 0,
+    "positive_count": 0,
+    "rhetorical_density": 0.0,
+    "agreement": "no",
+    "consensus": "no",
+    "overall_topic": "Whether the rich can be effectively taxed, and the validity of the 'they will leave' objection",
+    "top_techniques": [],
+    "all_techniques": []
+  },
+  {
+    "debate_id": "500c69c2-892e-44f6-b4f6-10c1102b6e1d",
+    "title": "Is a wealth tax actually possible?",
+    "source_url": "https://www.youtube.com/watch?v=gHrxoKEnvEs",
+    "discourse_mode": "monologic",
+    "stance": "neutral",
+    "chars": 14715,
+    "claim_count": 6,
+    "total_detections": 0,
+    "negative_count": 0,
+    "positive_count": 0,
+    "rhetorical_density": 0.0,
+    "agreement": "no",
+    "consensus": "no",
+    "overall_topic": "Feasibility and proper locus of designing and implementing a wealth tax",
+    "top_techniques": [],
+    "all_techniques": []
+  }
+]
