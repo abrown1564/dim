@@ -1,0 +1,440 @@
+[
+  {
+    "id": "thesis",
+    "name": "Thesis",
+    "original_term": "θέσις (thésis)",
+    "tradition": "Ancient Greek",
+    "section": "Dialectical Structure",
+    "definition": "The proposition put forward for examination in a dialectical exchange. The starting point of structured argument — a claim that is advanced and then subjected to questioning, counter-argument, or refutation. Distinct from hypothesis in that a thesis is asserted as a position to be defended, whereas a hypothesis is provisionally accepted for the sake of argument.",
+    "notes": "In Aristotle's Topics, the thesis is the specific proposition under examination. Modern usage (thesis/antithesis/synthesis) derives from Hegel rather than Aristotle directly.",
+    "related_taxonomy_entries": [
+      "dialectic",
+      "hypothesis",
+      "syllogism"
+    ],
+    "related_debate_entries": [
+      "hypothesis",
+      "antithesis",
+      "quaestio"
+    ]
+  },
+  {
+    "id": "hypothesis",
+    "name": "Hypothesis",
+    "original_term": "ὑπόθεσις (hypóthesis)",
+    "tradition": "Ancient Greek",
+    "section": "Dialectical Structure",
+    "definition": "A provisional assumption accepted for the sake of argument — taken as true for the purposes of reasoning forward, without full commitment to its truth. Enables conditional argument: 'If we accept X, then Y follows.' Distinct from thesis, which is asserted as a position to be defended.",
+    "notes": "In modern scientific usage hypothesis has a more specific empirical meaning. The rhetorical/dialectical sense (provisional premise) is the older usage.",
+    "related_taxonomy_entries": [
+      "dialectic",
+      "begging_the_question",
+      "endoxa"
+    ],
+    "related_debate_entries": [
+      "thesis",
+      "antithesis"
+    ]
+  },
+  {
+    "id": "antithesis",
+    "name": "Antithesis",
+    "original_term": "ἀντίθεσις (antíthesis)",
+    "tradition": "Ancient Greek",
+    "section": "Dialectical Structure",
+    "definition": "The counter-proposition; the position advanced in direct opposition to the thesis. In formal dialectic, the antithesis is the starting point of genuine exchange — without it, there is assertion rather than argument.",
+    "notes": "Much political rhetoric elides the antithesis entirely, presenting the thesis as if unopposed. Distinguishing genuine from strawmanned antitheses is a core DIM analytical task.",
+    "related_taxonomy_entries": [
+      "dialectic",
+      "straw_man",
+      "steelmanning"
+    ],
+    "related_debate_entries": [
+      "thesis",
+      "hypothesis"
+    ]
+  },
+  {
+    "id": "epagoge",
+    "name": "Epagoge",
+    "original_term": "ἐπαγωγή (epagogé)",
+    "tradition": "Ancient Greek",
+    "section": "Logical Forms",
+    "definition": "Aristotle's term for inductive argument: reasoning from particular cases to a general conclusion. The legitimate form of what becomes fallacious as hasty_generalisation when insufficient or unrepresentative cases are used.",
+    "notes": "Understanding the legitimate form matters for DIM: a well-supported inductive claim is not a fallacy simply because it generalises.",
+    "related_taxonomy_entries": [
+      "hasty_generalisation",
+      "cherry_picking",
+      "sampling_bias"
+    ],
+    "related_debate_entries": [
+      "modus_ponens_tollens"
+    ]
+  },
+  {
+    "id": "anacoluthon",
+    "name": "Anacoluthon",
+    "original_term": "ἀνακόλουθον (anakólouthon)",
+    "tradition": "Ancient Greek",
+    "section": "Rhetorical Figures",
+    "definition": "A rhetorical figure in which a sentence is broken off mid-construction, creating grammatical discontinuity. Used to imply strong emotion or urgency. A stylistic device rather than an argument structure — it operates on affect rather than reasoning.",
+    "notes": "Not a fallacy in itself but frequently used in service of appeal_to_emotion — the broken sentence implies the speaker is overwhelmed by the gravity of the situation.",
+    "related_taxonomy_entries": [
+      "appeal_to_emotion",
+      "appeal_to_pity"
+    ],
+    "related_debate_entries": []
+  },
+  {
+    "id": "five_canons_of_rhetoric",
+    "name": "Five Canons of Rhetoric",
+    "original_term": "Inventio, Dispositio, Elocutio, Memoria, Pronuntiatio/Actio",
+    "tradition": "Latin/Roman",
+    "section": "Canons of Rhetoric",
+    "definition": "Cicero and Quintilian's systematic division of rhetoric into five components: (1) Inventio — discovery and selection of arguments; (2) Dispositio — arrangement and ordering; (3) Elocutio — style and expression; (4) Memoria — memorisation; (5) Pronuntiatio/Actio — delivery including voice, gesture, and physical presence.",
+    "notes": "Inventio is the most analytically relevant for DIM — cherry_picking and suppressed_evidence are failures of honest inventio. Elocutio encompasses many rhetorical manipulation techniques. Dispositio relates to framing effects.",
+    "related_taxonomy_entries": [
+      "cherry_picking",
+      "framing",
+      "lexical_credentialism"
+    ],
+    "related_debate_entries": [
+      "exordium",
+      "confirmatio",
+      "refutatio",
+      "peroration"
+    ]
+  },
+  {
+    "id": "exordium",
+    "name": "Exordium",
+    "original_term": "Exordium (Latin)",
+    "tradition": "Latin/Roman",
+    "section": "Parts of a Speech",
+    "definition": "The opening section of a classical oration, designed to establish the speaker's ethos and secure the goodwill of the audience.",
+    "notes": "Performed_empiricism and narrative_inoculation are both modern exordium strategies — establishing ethos and audience goodwill before the substantive argument is made.",
+    "related_taxonomy_entries": [
+      "performed_empiricism",
+      "narrative_inoculation",
+      "ethos"
+    ],
+    "related_debate_entries": [
+      "five_canons_of_rhetoric",
+      "confirmatio",
+      "peroration"
+    ]
+  },
+  {
+    "id": "confirmatio",
+    "name": "Confirmatio",
+    "original_term": "Confirmatio (Latin)",
+    "tradition": "Latin/Roman",
+    "section": "Parts of a Speech",
+    "definition": "The positive case section of a classical oration — the establishment of the speaker's own position through argument and evidence.",
+    "notes": "In DIM terms, the quality of the confirmatio is what the quality_score primarily measures.",
+    "related_taxonomy_entries": [
+      "burden_of_proof",
+      "logos"
+    ],
+    "related_debate_entries": [
+      "refutatio",
+      "exordium",
+      "peroration"
+    ]
+  },
+  {
+    "id": "refutatio",
+    "name": "Refutatio",
+    "original_term": "Refutatio (Latin)",
+    "tradition": "Latin/Roman",
+    "section": "Parts of a Speech",
+    "definition": "The section of a classical oration dedicated to rebutting opposing arguments — anticipating and answering objections, undermining the opponent's case.",
+    "notes": "Failure to include genuine refutatio is a marker of low dialectical quality. Its absence correlates with high eristic score. Corresponds to provides_counter_evidence in DIM's output schema.",
+    "related_taxonomy_entries": [
+      "steelmanning",
+      "reductio_ad_absurdum",
+      "elenchus"
+    ],
+    "related_debate_entries": [
+      "confirmatio",
+      "exordium",
+      "peroration"
+    ]
+  },
+  {
+    "id": "peroration",
+    "name": "Peroration",
+    "original_term": "Peroratio (Latin)",
+    "tradition": "Latin/Roman",
+    "section": "Parts of a Speech",
+    "definition": "The closing section of a classical oration: a summary of the main arguments and a final emotional appeal. Often the most emotionally intense section.",
+    "notes": "Eristic when the emotional close substitutes for absent substance earlier in the speech.",
+    "related_taxonomy_entries": [
+      "appeal_to_emotion",
+      "narrative_inoculation"
+    ],
+    "related_debate_entries": [
+      "exordium",
+      "confirmatio",
+      "refutatio"
+    ]
+  },
+  {
+    "id": "in_utramque_partem",
+    "name": "In Utramque Partem",
+    "original_term": "In utramque partem (Latin)",
+    "tradition": "Latin/Roman",
+    "section": "Debate Principles",
+    "definition": "Arguing both sides — the rhetorical training exercise and epistemic principle of constructing the strongest possible case for each side of a question. Cicero used it as a training method. As an epistemic principle, the classical precursor to steelmanning.",
+    "notes": "The inability or unwillingness to argue the other side is a marker of eristic orientation.",
+    "related_taxonomy_entries": [
+      "steelmanning",
+      "dialectic",
+      "false_balance"
+    ],
+    "related_debate_entries": [
+      "thesis",
+      "antithesis"
+    ]
+  },
+  {
+    "id": "quaestio",
+    "name": "Quaestio",
+    "original_term": "Quaestio (Latin)",
+    "tradition": "Latin/Roman",
+    "section": "Debate Principles",
+    "definition": "The formal question put to debate — the specific issue or proposition the exchange is meant to resolve. Related to stasis (identifying the point of contention). The quaestio disciplines a debate by defining what is and is not relevant.",
+    "notes": "Many eristic moves involve implicitly shifting the quaestio — moving the goalposts, whataboutism, and red herrings all involve abandoning the agreed quaestio.",
+    "related_taxonomy_entries": [
+      "red_herring",
+      "whataboutism",
+      "moving_the_goalposts",
+      "stasis"
+    ],
+    "related_debate_entries": [
+      "thesis"
+    ]
+  },
+  {
+    "id": "paideia",
+    "name": "Paideia",
+    "original_term": "παιδεία (paideía)",
+    "tradition": "Ancient Greek",
+    "section": "Conduct Standards",
+    "definition": "The ancient Greek concept of education, cultural formation, and cultivated conduct — the whole framework within which good dialectical behaviour was understood and transmitted. Debate etiquette was an expression of character, not compliance with written rules.",
+    "notes": "Paideia is the ancient answer to the modern gap in codified debate etiquette. DIM implicitly appeals to a paideia-like standard when defining the dialectical ideal.",
+    "related_taxonomy_entries": [
+      "dialectic",
+      "good_faith",
+      "decorum"
+    ],
+    "related_debate_entries": [
+      "decorum"
+    ]
+  },
+  {
+    "id": "decorum",
+    "name": "Decorum",
+    "original_term": "Decorum (Latin)",
+    "tradition": "Latin/Roman",
+    "section": "Conduct Standards",
+    "definition": "Cicero's term for appropriateness of conduct, expression, and timing — the sense of what is fitting in a given rhetorical or argumentative context. The Latin equivalent of paideia's conduct dimension, but more explicitly rhetorical.",
+    "notes": "Decorum violations — excessive emotionality, register mismatches, contempt for opponent — are markers of eristic orientation when used to destabilise rather than communicate.",
+    "related_taxonomy_entries": [
+      "tone_policing",
+      "ad_hominem",
+      "good_faith"
+    ],
+    "related_debate_entries": [
+      "paideia"
+    ]
+  },
+  {
+    "id": "dialectic",
+    "name": "Dialectic",
+    "original_term": "διαλεκτική (dialektikē)",
+    "tradition": "Ancient Greek / Modern Argumentation",
+    "section": "Conduct Standards",
+    "definition": "Reasoned exchange oriented toward testing positions, resolving disagreement, and moving closer to truth. In the classical tradition, dialectic is not just a logical method but a conduct ideal: one question at a time, relevant response, willingness to be corrected, and genuine engagement with an opponent's case.",
+    "notes": "For DIM, dialectic is the positive pole of the quality axis. It is the background norm against which eristic and fallacious conduct become legible.",
+    "related_taxonomy_entries": [
+      "dialectic",
+      "good_faith",
+      "pragma_dialectics",
+      "quaestio"
+    ],
+    "related_debate_entries": [
+      "eristic",
+      "responsiveness",
+      "turn_taking"
+    ]
+  },
+  {
+    "id": "eristic",
+    "name": "Eristic",
+    "original_term": "ἐριστική (eristikē)",
+    "tradition": "Ancient Greek / Modern Argumentation",
+    "section": "Conduct Standards",
+    "definition": "Argument oriented toward victory rather than truth. Eristic speakers use the forms of debate while subordinating the norms of fair exchange to the goal of defeating, embarrassing, or exhausting the opponent.",
+    "notes": "Many debate-etiquette violations are best understood not as isolated bad manners but as signs of eristic orientation: interruption, derailment, overload, contempt, and refusal to answer the actual point at issue.",
+    "related_taxonomy_entries": [
+      "eristic",
+      "dialectic",
+      "good_faith",
+      "foreclosing_interrogation"
+    ],
+    "related_debate_entries": [
+      "dialectic",
+      "turn_taking",
+      "responsiveness"
+    ]
+  },
+  {
+    "id": "turn_taking",
+    "name": "Turn-Taking",
+    "original_term": null,
+    "tradition": "Conversation Analysis / Debate Conduct",
+    "section": "Conduct Standards",
+    "definition": "The implicit or explicit rules governing who speaks when, how the floor is held, and what counts as a legitimate interruption. In debate contexts, turn-taking is the interactional condition that lets arguments be completed, answered, and assessed rather than drowned out.",
+    "notes": "Ancient sources do not always isolate interruption as a named technical offense, but the broader norm is visible: a speaker must be allowed to complete a point before it can be fairly tested. Modern conversation analysis gives this norm a more explicit vocabulary.",
+    "related_taxonomy_entries": [
+      "turn_taking",
+      "good_faith",
+      "foreclosing_interrogation",
+      "gish_gallop"
+    ],
+    "related_debate_entries": [
+      "responsiveness",
+      "dialectic",
+      "decorum"
+    ]
+  },
+  {
+    "id": "responsiveness",
+    "name": "Responsiveness",
+    "original_term": null,
+    "tradition": "Dialectical / Argumentative Conduct",
+    "section": "Conduct Standards",
+    "definition": "The obligation to answer the point actually made, at the level at which it was made, rather than evading, reframing, or substituting a different issue. Responsiveness is one of the clearest practical markers of good argumentative conduct.",
+    "notes": "A debate can remain civil in tone while still failing responsively. Many low-quality exchanges are not abusive so much as non-responsive: they slide off the quaestio, dodge definitions strategically, or answer a stronger objection with a weaker neighboring one.",
+    "related_taxonomy_entries": [
+      "good_faith",
+      "red_herring",
+      "whataboutism",
+      "semantic_dodge",
+      "moving_the_goalposts"
+    ],
+    "related_debate_entries": [
+      "quaestio",
+      "dialectic",
+      "turn_taking"
+    ]
+  },
+  {
+    "id": "parliamentary_procedure",
+    "name": "Parliamentary Procedure",
+    "original_term": null,
+    "tradition": "Modern Parliamentary",
+    "section": "Procedural",
+    "definition": "The codified rules governing the conduct of formal deliberative assemblies. Key terms: Point of Order (objection that procedure is not being followed); Point of Information (clarifying question interjection, British parliamentary debate); Point of Personal Privilege (objection that a member's rights are being infringed); Yielding the floor (transferring speaking rights); Cloture (mechanism to end a filibuster); Quorum (minimum participants for a legitimate proceeding); Motion to table (postpone a matter); Unanimous consent (proceeding without formal vote when no objection raised).",
+    "notes": "Several procedural mechanisms have been weaponised as eristic tactics — the filibuster being the paradigm case (see taxonomy: filibuster).",
+    "related_taxonomy_entries": [
+      "filibuster",
+      "gish_gallop",
+      "sealioning"
+    ],
+    "related_debate_entries": [
+      "paideia",
+      "decorum",
+      "quaestio"
+    ]
+  },
+  {
+    "id": "debate_format_terms",
+    "name": "Debate Format Terms",
+    "original_term": null,
+    "tradition": "Modern Parliamentary / Competitive",
+    "section": "Debate Format",
+    "definition": "Structural terms defining the formal shape of a debate: Resolution (the formal proposition being debated, equivalent to quaestio); Affirmative/Negative (the two sides, equivalent to thesis/antithesis); Rebuttal (direct response to an opponent's argument, equivalent to refutatio); Cross-examination (structured questioning, equivalent to elenchus in controlled form); Flow (in competitive debate, the written tracking of arguments and responses — makes argument-dropping visible and penalisable).",
+    "notes": "The Flow in competitive debate is structurally equivalent to DIM's classification layer — both make it impossible to ignore arguments by tracking them explicitly.",
+    "related_taxonomy_entries": [
+      "elenchus",
+      "gish_gallop",
+      "moving_the_goalposts"
+    ],
+    "related_debate_entries": [
+      "quaestio",
+      "refutatio",
+      "in_utramque_partem"
+    ]
+  },
+  {
+    "id": "modus_ponens_tollens",
+    "name": "Modus Ponens / Modus Tollens",
+    "original_term": "Modus ponendo ponens / Modus tollendo tollens",
+    "tradition": "Classical Logic / Latin",
+    "section": "Logical Forms",
+    "definition": "The two basic valid forms of conditional argument. Modus ponens: 'If P then Q; P; therefore Q.' Modus tollens: 'If P then Q; not Q; therefore not P.' Both are formally valid. The majority of fallacies in the taxonomy are invalid argument forms that mimic these valid structures.",
+    "notes": "False_causal_chain and slippery_slope are common modus ponens mimics. Affirming the consequent is the most common modus tollens mimic.",
+    "related_taxonomy_entries": [
+      "false_causal_chain",
+      "slippery_slope",
+      "syllogism",
+      "formal_fallacy"
+    ],
+    "related_debate_entries": [
+      "epagoge",
+      "toulmin_model"
+    ]
+  },
+  {
+    "id": "toulmin_model",
+    "name": "Toulmin Model",
+    "original_term": null,
+    "tradition": "Modern Argumentation",
+    "section": "Analytical Frameworks",
+    "definition": "Stephen Toulmin's six-component framework for analysing arguments (The Uses of Argument, 1958): Claim (the conclusion); Data (the evidence); Warrant (the principle connecting data to claim); Backing (support for the warrant); Qualifier (degree of certainty); Rebuttal (conditions under which the claim would not hold). More flexible than the syllogism — designed for real-world practical arguments.",
+    "notes": "Claim maps to DIM's claims[] field, Data to facts[], Warrant is what the notes field should capture, and the Rebuttal slot corresponds to provides_counter_evidence. The warrant is often where fallacies live.",
+    "related_taxonomy_entries": [
+      "enthymeme",
+      "burden_of_proof",
+      "cherry_picking"
+    ],
+    "related_debate_entries": [
+      "modus_ponens_tollens",
+      "epagoge"
+    ]
+  },
+  {
+    "id": "illustrative_probative_distinction",
+    "name": "Illustrative vs Probative Examples",
+    "tradition": "Argumentation Theory",
+    "section": "Logical Forms",
+    "definition": "A distinction in argumentation theory between two different functions that examples can serve. An illustrative example shows what a phenomenon would look like if it were true — it demonstrates the concept and aids understanding, but makes no evidential claim. A probative example constitutes evidence that the phenomenon actually obtains in some general case — it is supposed to prove something, and is therefore subject to evidential standards about representativeness, sample size, and selection. The two functions look identical on the surface: both are 'examples'. The distinction lies in the inferential role they are asked to play.",
+    "notes": "The illustrative/probative distinction is recognised in argumentation theory; Perelman and Olbrechts-Tyteca's The New Rhetoric (1958) distinguishes the use of example as illustration from its use as proof. Constructed numerical illustrations in economic and policy discourse — where a speaker builds a mathematically precise hypothetical — are almost always illustrative in function. The fallacy of proof_by_example arises when such an illustration is presented or received as probative: as if showing what the mechanism would look like also shows that the mechanism holds in the general case. Precision in the illustration actively compounds the problem, because exactness is associated with empirical grounding. A correct calculation is not the same as evidence.",
+    "related_taxonomy_entries": [
+      "proof_by_example",
+      "hasty_generalisation",
+      "performed_empiricism",
+      "sampling_bias"
+    ],
+    "related_debate_entries": [
+      "epagoge"
+    ]
+  },
+  {
+    "id": "democratic_capture",
+    "name": "Democratic Capture",
+    "tradition": "Political Theory / Political Economy",
+    "section": "Analytical Frameworks",
+    "definition": "The process by which concentrated wealth or organised private interests gain disproportionate influence over democratic institutions, procedures, and outcomes — redirecting public policy toward private benefit rather than broad collective welfare. Democratic capture is distinct from ordinary lobbying or electoral participation: it refers to a structural condition in which the formal mechanisms of democratic representation are persistently skewed toward a narrow class of interests regardless of electoral outcomes. It operates across legislatures, parties, media systems, and agenda-setting processes simultaneously.",
+    "notes": "Relevant to DIM primarily as a steelmanning reference: arguments for wealth taxation that go beyond redistributive justice — arguing that extreme wealth concentration is incompatible with functioning democratic deliberation — are frequently absent from anti-wealth-tax discourse. A failure_to_steelman finding in wealth tax or inequality debate that omits this argument is missing a significant strand of the normative and empirical case. Related to regulatory capture (where a specific regulatory body is captured by the industry it regulates) but operates at the systemic rather than institutional level. Associated with the academic work of Jacob Hacker and Paul Pierson (Winner-Take-All Politics, 2010), Martin Gilens (Affluence and Influence, 2012), and Thomas Piketty (Capital and Ideology, 2019).",
+    "related_taxonomy_entries": [
+      "failure_to_steelman",
+      "epistemic_injustice",
+      "motivated_reasoning",
+      "agenda_setting"
+    ],
+    "related_debate_entries": []
+  }
+]

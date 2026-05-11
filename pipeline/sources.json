@@ -1,0 +1,112 @@
+{
+  "_meta": {
+    "platform_weight": "Planned multiplier for reach-weighted scoring. Original intent: weight each source's reach figures by an engagement-quality factor before combining with discourse quality scores in a reach×quality scatter plot (the original Overton-map design). All values are now null — the unit of analysis shifted from whole interventions to individual claims before this weighting was implemented. Original assumed values are preserved per source in platform_weight_note. Future intent: reinstate when reach data is populated and the mapping layer is rebuilt.",
+    "reach_metric": "Planned field for per-item reach figures (e.g. view count per video, listener count per episode). Original intent: populate at classification time from the platform API or manual lookup, then multiply by platform_weight to produce a reach score for each intervention. All values are null — data collection was not completed within fellowship timeline. Future intent: automate via YouTube Data API (views, likes) and podcast API equivalents; use as the x-axis of a reach×quality scatter plot to surface high-reach low-quality arguments."
+  },
+  "sources": [
+    {
+      "id": "gary_stevenson_yt",
+      "name": "Gary Stevenson — YouTube channel",
+      "type": "youtube",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@garyseconomics",
+      "reach_metric": null,
+      "reach_type": "view count per video",
+      "platform_weight": null,
+      "platform_weight_note": "Originally 1.0 — baseline weight for YouTube view counts, assumed to represent direct engagement with no completion discount.",
+      "notes": "",
+      "issues": ["wealth_tax", "inequality"]
+    },
+    {
+      "id": "rest_is_politics",
+      "name": "The Rest Is Politics",
+      "type": "podcast_youtube",
+      "platform": "podcast",
+      "url": "https://www.youtube.com/@RestIsPolitics",
+      "reach_metric": null,
+      "reach_type": "spotify listeners + yt views",
+      "platform_weight": null,
+      "platform_weight_note": "Originally 0.7 — discounted from baseline to reflect lower assumed completion rates for long-form podcast format versus short YouTube clips. Assumption: podcast listeners may drop off before reaching argument-dense sections.",
+      "notes": "",
+      "issues": ["wealth_tax", "immigration", "nhs_funding", "ai_regulation"]
+    },
+    {
+      "id": "triggernometry",
+      "name": "Triggernometry",
+      "type": "youtube_podcast",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@Triggernometry",
+      "reach_metric": null,
+      "reach_type": "subscriber count x completion estimate",
+      "platform_weight": null,
+      "platform_weight_note": "Originally 0.85 — partial discount from baseline; completion estimated at ~60% for long-form YouTube content, offset upward slightly because the format is debate-focused and argument-dense throughout.",
+      "notes": "",
+      "issues": ["wealth_tax", "immigration"]
+    },
+    {
+      "id": "novara_media",
+      "name": "Novara Media",
+      "type": "youtube_podcast",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@novaramedia",
+      "reach_metric": null,
+      "reach_type": "view count per video",
+      "platform_weight": null,
+      "platform_weight_note": "Originally 1.0 — baseline weight, same rationale as gary_stevenson_yt.",
+      "notes": "",
+      "issues": ["wealth_tax", "inequality", "nhs_funding"]
+    },
+    {
+      "id": "jubilee",
+      "name": "Jubilee — UK Debate videos",
+      "type": "youtube",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@jubilee",
+      "reach_metric": null,
+      "reach_type": "view count per video",
+      "platform_weight": null,
+      "platform_weight_note": "Originally 1.0 — baseline weight.",
+      "notes": "",
+      "issues": ["wealth_tax", "immigration"]
+    },
+    {
+      "id": "hansard",
+      "name": "Hansard (UK Parliament)",
+      "type": "parliamentary",
+      "platform": "parliamentary",
+      "url": "https://hansard.parliament.uk",
+      "reach_metric": null,
+      "reach_type": "constituency size x media coverage multiplier",
+      "platform_weight": null,
+      "platform_weight_note": "Originally 0.5 base weight, intended to be multiplied by a media_coverage_multiplier (1.0–5.0 depending on press pickup). Rationale: direct parliamentary audience is tiny, but statements that generate press coverage reach far larger audiences. The multiplier was never implemented.",
+      "notes": "",
+      "issues": ["wealth_tax", "immigration", "nhs_funding", "ai_regulation"]
+    },
+    {
+      "id": "lbc_clips",
+      "name": "LBC / Talk TV clips",
+      "type": "youtube",
+      "platform": "broadcast",
+      "url": "https://www.youtube.com/@LBC",
+      "reach_metric": null,
+      "reach_type": "view count per clip",
+      "platform_weight": null,
+      "platform_weight_note": "Originally 1.0 — baseline weight; YouTube clip view count used as reach proxy for broadcast content.",
+      "notes": "",
+      "issues": ["wealth_tax", "immigration", "nhs_funding"]
+    },
+    {
+      "id": "rory_stewart_social",
+      "name": "Rory Stewart — Social media",
+      "type": "social",
+      "platform": "digital media",
+      "url": null,
+      "reach_metric": null,
+      "reach_type": "follower count x estimated impression rate",
+      "platform_weight": null,
+      "platform_weight_note": "Originally 0.9 — near-baseline; Twitter/X follower count used as reach proxy, with impression rate estimated at 15% of followers for viral content. Slight discount from 1.0 to reflect uncertainty in social media reach estimates.",
+      "notes": "",
+      "issues": ["inequality", "wealth_tax"]
+    }
+  ]
+}

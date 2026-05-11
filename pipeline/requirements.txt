@@ -1,0 +1,12 @@
+anthropic>=0.25.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+yt-dlp>=2024.1.0
+
+# Audio transcription
+faster-whisper>=0.10.0
+
+# Speaker diarisation (dialogic / multi_party content)
+# Requires HF_TOKEN env var and one-time model download from HuggingFace
+pyannote.audio>=3.1.0
+torch>=2.0.0
